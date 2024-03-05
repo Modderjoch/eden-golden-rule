@@ -24,9 +24,7 @@ public class ImageTracking : MonoBehaviour
             TestPanel testPanel = newPrefab.GetComponent<TestPanel>();
 
             testPanel.scaleSlider = InputManager.Instance.ScaleSlider;
-            testPanel.offsetSliderX = InputManager.Instance.OffsetSliderX;
-            testPanel.offsetSliderY = InputManager.Instance.OffsetSliderY;
-            testPanel.offsetSliderZ = InputManager.Instance.OffsetSliderZ;
+            testPanel.offsetSlider = InputManager.Instance.OffsetSlider;
             testPanel.uiParent = InputManager.Instance.UIParent;
             testPanel.objectName = InputManager.Instance.ObjectName;
 
@@ -71,6 +69,7 @@ public class ImageTracking : MonoBehaviour
         {
             GameObject prefab = spawnedPrefabs[name];
             prefab.transform.position = position;
+            prefab.transform.rotation = trackedImage.transform.rotation;
             prefab.SetActive(true);
 
             //foreach(GameObject go in spawnedPrefabs.Values)

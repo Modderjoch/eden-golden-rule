@@ -7,17 +7,13 @@ using UnityEngine.UI;
 public class InputManager : MonoBehaviour
 {
     public Slider ScaleSlider => scaleSlider;
-    public Slider OffsetSliderX => offsetSliderX;
-    public Slider OffsetSliderY => offsetSliderY;
-    public Slider OffsetSliderZ => offsetSliderZ;
+    public Slider OffsetSlider => offsetSlider;
     public GameObject UIParent => uiParent;
     public Text ObjectName => objectName;
 
     private static InputManager instance;
     [SerializeField] private Slider scaleSlider;
-    [SerializeField] private Slider offsetSliderX;
-    [SerializeField] private Slider offsetSliderY;
-    [SerializeField] private Slider offsetSliderZ;
+    [SerializeField] private Slider offsetSlider;
     [SerializeField] private GameObject uiParent;
     [SerializeField] private Text objectName;
 
