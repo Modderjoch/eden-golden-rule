@@ -17,6 +17,9 @@ public class InputManager : MonoBehaviour
     [SerializeField] private GameObject uiParent;
     [SerializeField] private Text objectName;
 
+    private int score = 0;
+    [SerializeField] private Text scoreText;
+
     public static InputManager Instance
     {
         get
@@ -80,6 +83,27 @@ public class InputManager : MonoBehaviour
                     // The 3D object is clicked
                     Debug.Log("Clicked on 3D object!");
                 }
+                else if(hit.collider != null && hit.collider.gameObject.CompareTag("Trash"))
+                {
+                    Trash trash = hit.collider.gameObject.GetComponent<Trash>();
+
+                    if (trash.PickUp())
+                    {
+                        AddScore(trash.Score);
+                    }
+                }
             }
         }
-    }}
+    }
+
+    private void AddScore(int score)
+    {
+        int oldScore = this.score;
+
+        this.score += score;
+
+        scoreText.text = "Score: " + this.score;
+
+        Debug.Log("score was: " + oldScore + " is now: " + this.score);
+    }
+}
