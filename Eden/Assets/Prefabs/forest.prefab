@@ -453,8 +453,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bab4a78c583784fb6e0184cf6701ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 4209816132849666742, guid: 4feef9f38341e3449a8acc9893c0dd8e,
-    type: 3}
+  prefabToSpawnList:
+  - {fileID: 1410096329372015973, guid: 10b67bf4ccf1b6041ad541452d5bb390, type: 3}
+  - {fileID: 5178614958447695188, guid: 9e08208b901979a4e85ed293e533f1b4, type: 3}
   numberOfObjectsToSpawn: 3
   parentToSpawnTo: {fileID: 5065317095362092448}
 --- !u!1 &4213526157450857067
