@@ -3,34 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 [RequireComponent(typeof(ARTrackedImageManager))]
 public class ImageTracking : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject[] placeablePrefabs;
-
-    private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();
-    private ARTrackedImageManager trackedImageManager;
-
-    protected void Awake()
+    public List<GameObject> PlaceablePrefabs
     {
-        trackedImageManager = FindObjectOfType<ARTrackedImageManager>();
-
-        foreach(GameObject prefab in placeablePrefabs)
-        {
-            GameObject newPrefab = Instantiate(prefab, Vector3.zero, Quaternion.identity);
-            newPrefab.name = prefab.name;
-            TestPanel testPanel = newPrefab.GetComponent<TestPanel>();
-
-            testPanel.scaleSlider = InputManager.Instance.ScaleSlider;
-            testPanel.offsetSlider = InputManager.Instance.OffsetSlider;
-            testPanel.uiParent = InputManager.Instance.UIParent;
-            testPanel.objectName = InputManager.Instance.ObjectName;
-
-            spawnedPrefabs.Add(prefab.name, newPrefab);
-        }
+        get { return placeablePrefabs; }
+        set { placeablePrefabs = value; }
     }
+
+    private List<GameObject> placeablePrefabs;
+    private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();
+    [SerializeField] private ARTrackedImageManager trackedImageManager;
+
 
     protected void OnEnable()
     {
@@ -40,6 +27,20 @@ public class ImageTracking : MonoBehaviour
     protected void OnDisable()
     {
         trackedImageManager.trackedImagesChanged -= ImageChanged;
+    }
+
+    /// <summary>
+    /// Method to spawn all spawnable prefabs, set their name and add them to
+    /// a list to keep track.
+    /// </summary>
+    public void SetSpawnablePrefabs()
+    {
+        foreach (GameObject prefab in placeablePrefabs)
+        {
+            GameObject newPrefab = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+            newPrefab.name = prefab.name;
+            spawnedPrefabs.Add(prefab.name, newPrefab);
+        }
     }
 
     private void ImageChanged(ARTrackedImagesChangedEventArgs eventArgs)

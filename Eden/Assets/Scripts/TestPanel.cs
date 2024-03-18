@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Simple class that is dependent on assigned variables, 
+/// allows the user to scale and offset the object.
+/// </summary>
 public class TestPanel : MonoBehaviour
 {
     public Slider scaleSlider;

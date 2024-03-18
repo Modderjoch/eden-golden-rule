@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 4747435247704838911
+  m_GuidHigh: 12253385621734450070
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5375890761732500171
+      m_GuidHigh: 15300249213870319534
+    m_SerializedTextureGuid:
+      m_GuidLow: 15822499409715461509
+      m_GuidHigh: 17455791271870067033
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: scene1
+    m_Texture: {fileID: 2800000, guid: c6eafd85cf61db9459f12d51ad6d3ff2, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5568184368085717602
+      m_GuidHigh: 6349473681188550316
+    m_SerializedTextureGuid:
+      m_GuidLow: 3964518721198305794
+      m_GuidHigh: 8712615129532639851
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: scene2
+    m_Texture: {fileID: 2800000, guid: a2693202ccc537046baa7c844c6de978, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5108932172235230875
+      m_GuidHigh: 3400776670688303023
+    m_SerializedTextureGuid:
+      m_GuidLow: 4676105943165539843
+      m_GuidHigh: 2599738024037845818
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: scene3
+    m_Texture: {fileID: 2800000, guid: 8a799603dd9440e43a0bda77f51f1424, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5652796314929459414
+      m_GuidHigh: 10319713132322865310
+    m_SerializedTextureGuid:
+      m_GuidLow: 158796588544299987
+      m_GuidHigh: 3351221415017826713
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: scene4
+    m_Texture: {fileID: 2800000, guid: ebba13d328a7023499c9d1151fee812e, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4637935400644505061
+      m_GuidHigh: 12522921819244701584
+    m_SerializedTextureGuid:
+      m_GuidLow: 2757338510510475732
+      m_GuidHigh: 18139892005378937531
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: scene5
+    m_Texture: {fileID: 2800000, guid: 2c7b49d408c42644bb528f6cabd7bdfb, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5158371417310893699
+      m_GuidHigh: 2460568967919586484
+    m_SerializedTextureGuid:
+      m_GuidLow: 2207978550039029780
+      m_GuidHigh: 12303920436713858664
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: forest
+    m_Texture: {fileID: 2800000, guid: fac2281450ca1ea468a6ffbe724ec0aa, type: 3}

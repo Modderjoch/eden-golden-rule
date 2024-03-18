@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3030835513569119745}
   m_Layer: 0
   m_Name: bottle
-  m_TagString: Trash
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,8 +53,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.107388034, y: 0.10688319, z: 0.18078743}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.052496016, y: 0.055381127, z: 0.0900787}
+  m_Center: {x: 0, y: 0, z: 0.0011556391}
 --- !u!114 &3030835513569119745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trashType: 0
   score: 3
 --- !u!1001 &2861147366198812825
 PrefabInstance:

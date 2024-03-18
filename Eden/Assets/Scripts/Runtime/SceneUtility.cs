@@ -14,7 +14,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
             SceneManager.sceneUnloaded += OnSceneUnloaded;
         }
 
-        void OnSceneUnloaded(Scene current)
+        void OnSceneUnloaded(SceneManagement.Scene current)
         {
             if (current == SceneManager.GetActiveScene())
             {

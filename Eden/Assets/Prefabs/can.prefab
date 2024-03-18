@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1425167385405772754}
   m_Layer: 0
   m_Name: can
-  m_TagString: Trash
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,8 +53,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.103212535, y: 0.101333976, z: 0.19729057}
-  m_Center: {x: 0, y: 0.00095939636, z: 0.097701445}
+  m_Size: {x: 0.05002439, y: 0.049109086, z: 0.09816718}
+  m_Center: {x: 0, y: 0.00095939636, z: 0.04813975}
 --- !u!114 &1425167385405772754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trashType: 1
   score: 1
 --- !u!1001 &3950251295866245264
 PrefabInstance:
