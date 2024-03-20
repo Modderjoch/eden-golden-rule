@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a31c1c5b6301f3438fe92ad18c387d1, type: 3}
   m_Name: Market
   m_EditorClassIdentifier: 
-  sceneName: LivingRoom
+  sceneName: Market
   sceneIndex: 3
   sceneUIPrefab: {fileID: 0}
   sceneEnvironmentPrefab: {fileID: 281836812921029424, guid: 1e2c1359fdb351f4887a8d59757d564f,

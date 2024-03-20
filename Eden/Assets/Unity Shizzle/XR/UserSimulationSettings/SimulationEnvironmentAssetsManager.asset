@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EnvironmentPrefabPaths:
   - Assets/Prefabs/CustomEnvironment.prefab
-  - Assets/Prefabs/CustomEnvironmentMuseum.prefab
   - Assets/Unity Shizzle/UnityXRContent/ARFoundation/SimulationEnvironments/Backyard/Backyard_45ftx40ft.prefab
   - Assets/Unity Shizzle/UnityXRContent/ARFoundation/SimulationEnvironments/Backyard/Backyard_55ftx40ft.prefab
   - Assets/Unity Shizzle/UnityXRContent/ARFoundation/SimulationEnvironments/Bedroom/Bedroom_12ftx12ft.prefab
