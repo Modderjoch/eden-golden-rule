@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Forest
   sceneIndex: 2
-  sceneUIPrefab: {fileID: 0}
+  sceneUIPrefab: {fileID: 4741976045412026158, guid: 6282faeb6060ba843894ed3c90f9a225,
+    type: 3}
   sceneEnvironmentPrefab: {fileID: 1823011224072077830, guid: eb0f883c77d0fac459e77fdca50fc1ba,
     type: 3}
   sceneState:

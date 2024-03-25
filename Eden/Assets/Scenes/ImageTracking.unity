@@ -2478,6 +2478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4379ab8d4cf5e6c499479f1fbd60122e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiParent: {fileID: 1616737895}
 --- !u!4 &1366325988
 Transform:
   m_ObjectHideFlags: 0
@@ -3060,6 +3061,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a687c1ea54a8c8f4cb10228be1cf00c3, type: 2}
   - {fileID: 11400000, guid: bbb71168b692a984f83cfa6f046f72f2, type: 2}
   - {fileID: 11400000, guid: a029ee85d47f9fb4ea9d3964726973fc, type: 2}
+  modifiableScenes: []
   playerIndex: 0
 --- !u!4 &1778396848
 Transform:
@@ -3146,7 +3148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -121.79651}
+  m_AnchoredPosition: {x: 0, y: -121.79639}
   m_SizeDelta: {x: 1430.1224, y: 243.59308}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1840061541
@@ -4245,8 +4247,8 @@ SceneRoots:
   - {fileID: 1018666869}
   - {fileID: 2097514388}
   - {fileID: 126847673}
-  - {fileID: 1018674320}
   - {fileID: 1616737895}
   - {fileID: 768875387}
   - {fileID: 1366325988}
+  - {fileID: 1018674320}
   - {fileID: 1778396848}

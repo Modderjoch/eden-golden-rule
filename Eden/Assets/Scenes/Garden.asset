@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Garden
   sceneIndex: 1
-  sceneUIPrefab: {fileID: 0}
+  sceneUIPrefab: {fileID: 5163745409156657760, guid: e7f7fa4f097d8d24d99c2c758d06f40f,
+    type: 3}
   sceneEnvironmentPrefab: {fileID: 2352742438569563111, guid: 61ee6d52ffe501c44a8689c8c14d544c,
     type: 3}
   sceneState:
