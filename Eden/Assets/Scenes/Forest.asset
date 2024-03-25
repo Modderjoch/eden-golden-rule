@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a31c1c5b6301f3438fe92ad18c387d1, type: 3}
   m_Name: Forest
   m_EditorClassIdentifier: 
-  sceneName: LivingRoom
+  sceneName: Forest
   sceneIndex: 2
-  sceneUIPrefab: {fileID: 0}
+  sceneUIPrefab: {fileID: 4741976045412026158, guid: 6282faeb6060ba843894ed3c90f9a225,
+    type: 3}
   sceneEnvironmentPrefab: {fileID: 1823011224072077830, guid: eb0f883c77d0fac459e77fdca50fc1ba,
     type: 3}
   sceneState:

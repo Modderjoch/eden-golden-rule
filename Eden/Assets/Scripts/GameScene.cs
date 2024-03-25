@@ -13,6 +13,18 @@ public class GameScene : ScriptableObject
     public GameObject sceneUIPrefab;
     public GameObject sceneEnvironmentPrefab;
     public SceneState sceneState;
+
+    public GameScene Clone()
+    {
+        GameScene clone = ScriptableObject.CreateInstance<GameScene>();
+        clone.name = sceneName;
+        clone.sceneName = this.sceneName;
+        clone.sceneIndex = this.sceneIndex;
+        clone.sceneUIPrefab = this.sceneUIPrefab;
+        clone.sceneEnvironmentPrefab = this.sceneEnvironmentPrefab;
+        clone.sceneState = new SceneState { state = this.sceneState.state };
+        return clone;
+    }
 }
 
 [Serializable]
