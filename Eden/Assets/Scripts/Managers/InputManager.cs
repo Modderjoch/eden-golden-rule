@@ -14,6 +14,11 @@ public class InputManager : MonoBehaviour
     private static InputManager instance;
     private ScoreManager scoreManager;
 
+    private PlayerControls playerControls;
+
+    [SerializeField] private float minimumSwipe = 10f;
+    private Vector2 swipeDirection;
+
     public static InputManager Instance
     {
         get
@@ -48,9 +53,16 @@ public class InputManager : MonoBehaviour
         scoreManager = ScoreManager.Instance;
     }
 
+    protected void Start()
+    {
+        playerControls = new PlayerControls();
+        playerControls.Player.Enable();
+        playerControls.Player.Touch.canceled += ProcessTouchComplete;
+        playerControls.Player.Swipe.performed += ProcessSwipeDelta;
+    }
+
     protected void Update()
     {
-        // Check for mouse click or touch using the new Input System
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame || Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
         {
             Ray ray;
@@ -66,7 +78,6 @@ public class InputManager : MonoBehaviour
 
             RaycastHit hit;
 
-            // Perform the raycast
             if (Physics.Raycast(ray, out hit))
             {
                 GameObject hitObject = hit.collider.gameObject;
@@ -92,5 +103,43 @@ public class InputManager : MonoBehaviour
                 }                
             }
         }
+    }
+
+    private void ProcessSwipeDelta(InputAction.CallbackContext context)
+    {
+        swipeDirection = context.ReadValue<Vector2>();
+    }
+
+    private void ProcessTouchComplete(InputAction.CallbackContext context)
+    {
+        Debug.Log("touch complete");
+        if (Mathf.Abs(swipeDirection.magnitude) < minimumSwipe) return;
+        Debug.Log("Swipe detected");
+
+        var position = Vector3.zero;
+
+        if(swipeDirection.x > 0)
+        {
+            Debug.Log("Swipe right");
+            position.x = 1;
+        }
+        else if(swipeDirection.x < 0)
+        {
+            Debug.Log("Swipe left");
+            position.x = -1;
+        }
+
+        if(swipeDirection.y > 0)
+        {
+            Debug.Log("Swipe up");
+            position.y = 1;
+        }
+        else if(swipeDirection.y < 0)
+        {
+            Debug.Log("Swipe down");
+            position.y = -1;
+        }
+
+        swipeDirection = Vector2.zero;
     }
 }
