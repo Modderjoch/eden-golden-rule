@@ -19,7 +19,7 @@ public class SeedManager : MonoBehaviour
     {
         GameObject newSeed = Instantiate(seedPrefab, spawnPosition, Quaternion.identity);
         Rigidbody seedRigidbody = newSeed.GetComponent<Rigidbody>();
-        Vector3 throwDirection = Vector3.up;
+        Vector3 throwDirection = new Vector3(0, .1f, 0);
         seedRigidbody.AddForce(throwDirection * seedThrowForce, ForceMode.Impulse);
     }
 }

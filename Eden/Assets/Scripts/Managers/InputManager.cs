@@ -16,8 +16,11 @@ public class InputManager : MonoBehaviour
 
     private PlayerControls playerControls;
 
+    [SerializeField] private SeedManager seedManager;
     [SerializeField] private float minimumSwipe = 10f;
     private Vector2 swipeDirection;
+
+    [SerializeField] private bool useSeed;
 
     public static InputManager Instance
     {
@@ -55,10 +58,13 @@ public class InputManager : MonoBehaviour
 
     protected void Start()
     {
-        playerControls = new PlayerControls();
-        playerControls.Player.Enable();
-        playerControls.Player.Touch.canceled += ProcessTouchComplete;
-        playerControls.Player.Swipe.performed += ProcessSwipeDelta;
+        if (useSeed)
+        {
+            playerControls = new PlayerControls();
+            playerControls.Player.Enable();
+            playerControls.Player.Touch.canceled += ProcessTouchComplete;
+            playerControls.Player.Swipe.performed += ProcessSwipeDelta;
+        }
     }
 
     protected void Update()
@@ -132,6 +138,9 @@ public class InputManager : MonoBehaviour
         if(swipeDirection.y > 0)
         {
             Debug.Log("Swipe up");
+
+            seedManager.ThrowSeed(swipeDirection);
+
             position.y = 1;
         }
         else if(swipeDirection.y < 0)
