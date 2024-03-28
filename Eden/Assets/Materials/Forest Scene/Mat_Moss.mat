@@ -46,14 +46,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _NoiseScale: 7.41
+    - _NoiseScale: 7.69
     - _QueueControl: 0
     - _QueueOffset: 0
     - _TillingMoss_1: 4.86
     m_Colors:
     - _MossDirection: {r: 0, g: 1, b: 0, a: 0}
     - _NoiseScale: {r: 0, g: 0, b: 0, a: 0}
-    - _TillingMoss: {r: 1, g: 1, b: 0, a: 0}
+    - _TillingMoss: {r: 0.22, g: 0.22, b: 0, a: 0}
     - _Vector2: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8624794647906881901
