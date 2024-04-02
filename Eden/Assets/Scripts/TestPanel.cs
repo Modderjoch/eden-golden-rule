@@ -26,12 +26,10 @@ public class TestPanel : MonoBehaviour
         objectName.text = name;
 
         scaleSlider.onValueChanged.RemoveAllListeners();
-        offsetSlider.onValueChanged.RemoveAllListeners();
+        //offsetSlider.onValueChanged.RemoveAllListeners();
         
         scaleSlider.onValueChanged.AddListener(SetScale);
-        offsetSlider.onValueChanged.AddListener(SetOffsetY);
-        
-        offsetSlider.value = 0;
+        //offsetSlider.onValueChanged.AddListener(SetOffsetY);
         
         if(scaleSlider.value != transform.localScale.x)
         {

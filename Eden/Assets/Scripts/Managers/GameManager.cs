@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        uiManager.ShowUI(modifiableScenes, scenePrefab.name);
+        //uiManager.ShowUI(modifiableScenes, scenePrefab.name);
     }
 
     private void SetPlayerIndex(int index)
