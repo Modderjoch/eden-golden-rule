@@ -7,11 +7,12 @@ TagManager:
   - Test
   - Trash
   - Interactable
+  - Seed
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Seed
   - Water
   - UI
   - 

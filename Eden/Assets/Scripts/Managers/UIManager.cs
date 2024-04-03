@@ -67,6 +67,7 @@ public class UIManager : MonoBehaviour
         {
             GameObject newPrefab = Instantiate(prefab, uiParent);
             newPrefab.name = prefab.name;
+            //newPrefab.gameObject.name = prefab.name;
             spawnedUIs.Add(prefab.name, newPrefab);
 
             newPrefab.SetActive(false);

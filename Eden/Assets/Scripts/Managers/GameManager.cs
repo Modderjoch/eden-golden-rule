@@ -86,16 +86,12 @@ public class GameManager : MonoBehaviour
                 }
 
                 scene.sceneState.state = SceneState.State.Active;
-
-                Debug.Log(scene.sceneName + scene.sceneIndex + " state was changed from " + state + " to " + scene.sceneState.state);
             }
             else
             {
                 if(scene.sceneState.state is SceneState.State.Active)
                 {
                     scene.sceneState.state = SceneState.State.Inactive;
-
-                    Debug.Log(scene.sceneName + scene.sceneIndex + " state was changed from " + state + " to " + scene.sceneState.state);
                 }
             }
         }
