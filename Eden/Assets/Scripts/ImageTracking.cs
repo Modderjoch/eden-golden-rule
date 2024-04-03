@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -8,6 +9,11 @@ using UnityEngine.XR.ARSubsystems;
 [RequireComponent(typeof(ARTrackedImageManager))]
 public class ImageTracking : MonoBehaviour
 {
+    public Slider scaleSlider;
+    //public Slider offsetSlider;
+    public GameObject uiParent;
+    public Text objectName;
+
     public List<GameObject> PlaceablePrefabs
     {
         get { return placeablePrefabs; }
@@ -77,6 +83,22 @@ public class ImageTracking : MonoBehaviour
             GameManager.Instance.SetActiveScene(prefab);
             prefab.transform.position = position;
             prefab.transform.rotation = trackedImage.transform.rotation;
+
+            if(prefab.GetComponent<TestPanel>() != null)
+            {
+                TestPanel testPanel = prefab.GetComponent<TestPanel>();
+                testPanel.scaleSlider = scaleSlider;
+                testPanel.objectName = objectName;
+
+                testPanel.ToggleUI();
+
+                uiParent.SetActive(true);
+            }
+            else
+            {
+                uiParent.SetActive(false);
+            }        
+
             prefab.SetActive(true);
 
             foreach (GameObject go in spawnedPrefabs.Values)
