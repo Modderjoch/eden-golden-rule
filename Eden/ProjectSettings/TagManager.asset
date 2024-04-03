@@ -8,6 +8,7 @@ TagManager:
   - Trash
   - Interactable
   - Seed
+  - Ground
   layers:
   - Default
   - TransparentFX

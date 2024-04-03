@@ -6,20 +6,31 @@ using UnityEngine;
 
 public class SwipeScript : MonoBehaviour
 {
-    Vector2 startPos, endPos; // Touch start position, touch end position, swipe direction
-    Vector3 direction;
-    float touchTimeStart, touchTimeFinish, timeInterval; // To calculate swipe time to sontrol throw force in Z direction
+    private const string GROUND_TAG = "Ground";
 
-    [SerializeField] float throwForceX = 1f; // To control throw force in X and Y directions
-    [SerializeField] float throwForceY = 1f;
-    [SerializeField] float throwForceZ = 50f; // To control throw force in Z direction
+    [SerializeField] private GameObject flowerPrefab;
 
-    [SerializeField] float timeToDestroy = 4f; // Time before the thrown will be destroyed
-    [SerializeField] float minSwipeDistance = 50f; // Minimum swipe distance threshold
-
-    Rigidbody rb;
-
+    [Header("Swiping")]
+    [SerializeField] float minSwipeDistance = 50f;
+    [HideInInspector] public RectTransform swipeArea;
+    private Vector2 startPos; 
+    private Vector2 endPos;
+    private Vector3 direction;
     private bool trackSwipe = true;
+
+    [Header("Timing")]
+    private float touchTimeStart;
+    private float touchTimeFinish;
+    private float timeInterval;
+
+    [Header("Throwing")]
+    [SerializeField] float throwForceX = 1f;
+    [SerializeField] float throwForceY = 1f;
+    [SerializeField] float throwForceZ = 50f;
+    [SerializeField] float timeToDestroy = 4f;
+
+
+    private Rigidbody rb;
 
     void Start()
     {
@@ -49,30 +60,61 @@ public class SwipeScript : MonoBehaviour
 
                 float swipeDistance = direction.magnitude;
 
-                if(swipeDistance >= minSwipeDistance)
+                Vector2 swipeAreaLocalPos = (Vector2)swipeArea.position - new Vector2(swipeArea.rect.width * 0.5f, swipeArea.rect.height * 0.5f);
+                Rect swipeBoundary = new Rect(swipeAreaLocalPos.x, swipeAreaLocalPos.y, swipeArea.rect.width, swipeArea.rect.height);
+
+
+                if (swipeBoundary.Contains(startPos) && swipeDistance >= minSwipeDistance)
                 {
-                    transform.SetParent(null);
-
-                    trackSwipe = false;
-
-                    // Marking time when you release it
-                    touchTimeFinish = Time.time;
-
-                    // Calculate swipe time interval 
-                    timeInterval = touchTimeFinish - touchTimeStart;
-
-                    Vector2 xyForceDirection = new Vector2(-direction.x, -direction.y);
-
-                    Vector3 force = new Vector3(xyForceDirection.x * throwForceX, xyForceDirection.y * throwForceY, 0) +
-                                Camera.main.transform.forward * (timeInterval * throwForceZ);
-
-                    // Add force to objects rigidbody in 3D space depending on swipe time, direction and throw forces
-                    rb.isKinematic = false;
-                    rb.AddRelativeForce(force);
-
-                    Destroy(gameObject, timeToDestroy);
+                    HandleSwipe();
                 }
             }
+        }
+    }
+
+    private void HandleSwipe()
+    {
+        transform.SetParent(null);
+
+        trackSwipe = false;
+
+        // Marking time when you release it
+        touchTimeFinish = Time.time;
+
+        // Calculate swipe time interval 
+        timeInterval = touchTimeFinish - touchTimeStart;
+
+        Vector2 xyForceDirection = new Vector2(-direction.x, -direction.y);
+
+        Vector3 force = new Vector3(xyForceDirection.x * throwForceX, xyForceDirection.y * throwForceY, 0) +
+                    Camera.main.transform.forward * (timeInterval * throwForceZ);
+
+        // Add force to objects rigidbody in 3D space depending on swipe time, direction and throw forces
+        rb.isKinematic = false;
+        rb.AddRelativeForce(force);
+
+        gameObject.transform.localScale = new Vector3(.01f, .01f, .01f);
+
+        Destroy(gameObject, timeToDestroy);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag == GROUND_TAG)
+        {
+            Vector3 collisionPoint = collision.contacts[0].point;
+
+            float rotationY = Random.Range(0f, 360f);
+
+            Quaternion rotation = Quaternion.Euler(0, rotationY, 0);
+
+            Instantiate(flowerPrefab, collisionPoint, rotation);
+
+            Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 }

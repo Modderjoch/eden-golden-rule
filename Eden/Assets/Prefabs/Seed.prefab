@@ -47,6 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6639879979ec19148b8343861734e25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swipeArea: {fileID: 0}
+  flowerPrefab: {fileID: 5356113716632049897, guid: 7bbaee9a32b5b9b4f89e11a312f18b31,
+    type: 3}
   throwForceX: 0.05
   throwForceY: 0.15
   throwForceZ: 1

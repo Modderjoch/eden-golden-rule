@@ -456,7 +456,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3217020520380049155}
   - component: {fileID: 2906452132027952609}
-  - component: {fileID: 933664546461428006}
   m_Layer: 0
   m_Name: scene3
   m_TagString: Untagged
@@ -496,27 +495,7 @@ MonoBehaviour:
   offsetSlider: {fileID: 0}
   uiParent: {fileID: 0}
   objectName: {fileID: 0}
---- !u!65 &933664546461428006
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8183084064354019275}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.5386124, y: 1.898278, z: 3.3954086}
-  m_Center: {x: -0.7485652, y: 0.006509185, z: 0.37753725}
+  hasCollider: 0
 --- !u!1 &8890455113222559766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,10 +1089,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1379416352347469079, guid: bc412d23232d28e418e70e99789ad0c2,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5259704173762711687, guid: bc412d23232d28e418e70e99789ad0c2,
         type: 3}
       propertyPath: m_Name
       value: Prefab_Grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259704173762711687, guid: bc412d23232d28e418e70e99789ad0c2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
