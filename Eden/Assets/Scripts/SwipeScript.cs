@@ -6,10 +6,12 @@ using UnityEngine;
 
 public class SwipeScript : MonoBehaviour
 {
-    Vector2 startPos, endPos, direction; // Touch start position, touch end position, swipe direction
+    Vector2 startPos, endPos; // Touch start position, touch end position, swipe direction
+    Vector3 direction;
     float touchTimeStart, touchTimeFinish, timeInterval; // To calculate swipe time to sontrol throw force in Z direction
 
-    [SerializeField] float throwForceXY = 1f; // To control throw force in X and Y directions
+    [SerializeField] float throwForceX = 1f; // To control throw force in X and Y directions
+    [SerializeField] float throwForceY = 1f;
     [SerializeField] float throwForceZ = 50f; // To control throw force in Z direction
 
     [SerializeField] float timeToDestroy = 4f; // Time before the thrown will be destroyed
@@ -28,6 +30,8 @@ public class SwipeScript : MonoBehaviour
     {
         if (trackSwipe)
         {
+            Vector3 startpointSwipe = Vector3.zero;
+
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 // Getting touch position and marking time when you touch the screen
@@ -57,9 +61,14 @@ public class SwipeScript : MonoBehaviour
                     // Calculate swipe time interval 
                     timeInterval = touchTimeFinish - touchTimeStart;
 
+                    Vector2 xyForceDirection = new Vector2(-direction.x, -direction.y);
+
+                    Vector3 force = new Vector3(xyForceDirection.x * throwForceX, xyForceDirection.y * throwForceY, 0) +
+                                Camera.main.transform.forward * (timeInterval * throwForceZ);
+
                     // Add force to objects rigidbody in 3D space depending on swipe time, direction and throw forces
                     rb.isKinematic = false;
-                    rb.AddForce(-direction.x * throwForceXY, -direction.y * throwForceXY, throwForceZ / timeInterval);
+                    rb.AddRelativeForce(force);
 
                     Destroy(gameObject, timeToDestroy);
                 }
