@@ -16,9 +16,14 @@ public class TestPanel : MonoBehaviour
 
     private BoxCollider boxCollider;
 
+    [SerializeField] private bool hasCollider;
+
     protected void Awake()
     {
-        boxCollider = GetComponent<BoxCollider>();
+        if(hasCollider)
+        {
+            boxCollider = GetComponent<BoxCollider>();
+        }
     }
 
     public void ToggleUI()
@@ -40,7 +45,11 @@ public class TestPanel : MonoBehaviour
     public void SetScale(float scale)
     {
         transform.localScale = new Vector3(scale, scale, scale);
-        boxCollider.transform.localScale = new Vector3(scale, scale, scale);
+
+        if (hasCollider)
+        {
+            boxCollider.transform.localScale = new Vector3(scale, scale, scale);
+        }
     }
 
     public void SetOffsetY(float offset)
