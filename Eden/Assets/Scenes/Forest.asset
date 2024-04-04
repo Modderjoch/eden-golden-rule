@@ -20,3 +20,6 @@ MonoBehaviour:
     type: 3}
   sceneState:
     state: 2
+  additionalObjects:
+  - sceneIndex: 0
+    additionalObject: {fileID: 0}

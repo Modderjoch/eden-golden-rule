@@ -108,13 +108,15 @@ public class SwipeScript : MonoBehaviour
 
             Quaternion rotation = Quaternion.Euler(0, rotationY, 0);
 
-            Instantiate(flowerPrefab, collisionPoint, rotation);
+            GameObject flower = Instantiate(flowerPrefab, collisionPoint, rotation);
+
+            flower.transform.SetParent(collision.transform.parent);
 
             Destroy(gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(gameObject, timeToDestroy);
         }
     }
 }
