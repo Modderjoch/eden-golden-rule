@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Trash : Interactable
 {
     public int Score => score;
@@ -15,6 +14,9 @@ public class Trash : Interactable
     public enum TrashType
     {
         Bottle,
+        Beer,
+        Box,
+        Chips,
         Can,
         Bag,
     }

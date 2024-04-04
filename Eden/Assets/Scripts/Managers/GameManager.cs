@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<GameScene> scenes;
     [SerializeField] private List<GameScene> modifiableScenes;
 
+    [SerializeField] private TrashProgress trashProgress;
+
     public List<GameSceneAdditionalObject> additionalObjects = new List<GameSceneAdditionalObject>();
 
     [SerializeField, Range(0, 4)] private int playerIndex = 0;
@@ -75,6 +77,10 @@ public class GameManager : MonoBehaviour
         uiManager.SetSpawnablePrefabs();
     }
 
+    /// <summary>
+    /// Sets the passed-in prefab to the active scene
+    /// </summary>
+    /// <param name="scenePrefab">The scene prefab that should be set active</param>
     public void SetActiveScene(GameObject scenePrefab)
     {
         foreach(GameScene scene in modifiableScenes)
@@ -110,6 +116,11 @@ public class GameManager : MonoBehaviour
         }
 
         //uiManager.ShowUI(modifiableScenes, scenePrefab.name);
+    }
+
+    public void SetTrashList(List<TrashItem> trashItems)
+    {
+        trashProgress.CreateItems(trashItems);
     }
 
     private void SetPlayerIndex(int index)
