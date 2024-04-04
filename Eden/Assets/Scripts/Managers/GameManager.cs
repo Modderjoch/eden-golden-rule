@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<GameScene> scenes;
     [SerializeField] private List<GameScene> modifiableScenes;
 
+    public List<GameSceneAdditionalObject> additionalObjects = new List<GameSceneAdditionalObject>();
+
     [SerializeField, Range(0, 4)] private int playerIndex = 0;
 
     private static GameManager instance;
@@ -52,6 +54,7 @@ public class GameManager : MonoBehaviour
             referenceLibrary = trackedImageManager.referenceLibrary as XRReferenceImageLibrary;
         }
 
+        AddAdditionalObjects();
         CloneScenes();
     }
 
@@ -86,12 +89,22 @@ public class GameManager : MonoBehaviour
                 }
 
                 scene.sceneState.state = SceneState.State.Active;
+
+                foreach(GameSceneAdditionalObject additionalObject in scene.additionalObjects)
+                {
+                    additionalObject.additionalObject.SetActive(true);
+                }
             }
             else
             {
                 if(scene.sceneState.state is SceneState.State.Active)
                 {
                     scene.sceneState.state = SceneState.State.Inactive;
+
+                    foreach (GameSceneAdditionalObject additionalObject in scene.additionalObjects)
+                    {
+                        additionalObject.additionalObject.SetActive(false);
+                    }
                 }
             }
         }
@@ -166,6 +179,22 @@ public class GameManager : MonoBehaviour
         foreach(GameScene scene in scenes)
         {
             modifiableScenes.Add(scene.Clone());
+        }
+    }
+
+    private void AddAdditionalObjects()
+    {
+        foreach(GameScene scene in scenes)
+        {
+            scene.additionalObjects = new List<GameSceneAdditionalObject>();
+
+            foreach(GameSceneAdditionalObject additionalObject in additionalObjects)
+            {
+                if(scene.sceneIndex == additionalObject.sceneIndex)
+                {
+                    scene.additionalObjects.Add(additionalObject);
+                }
+            }
         }
     }
 }

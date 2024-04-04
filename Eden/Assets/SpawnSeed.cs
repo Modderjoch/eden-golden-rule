@@ -7,6 +7,8 @@ public class SpawnSeed : MonoBehaviour
     [SerializeField] private GameObject spawnPrefab;
     [SerializeField] private float spawnDelay;
 
+    [SerializeField] private RectTransform swipeArea;
+
     private bool isInstantiating = false;
 
     private void OnTransformChildrenChanged()
@@ -22,8 +24,10 @@ public class SpawnSeed : MonoBehaviour
     {
         if (spawnPrefab != null)
         {
-            Instantiate(spawnPrefab, transform.position, transform.rotation, transform);
+            GameObject seed = Instantiate(spawnPrefab, transform.position, transform.rotation, transform);
+            seed.GetComponent<SwipeScript>().swipeArea = this.swipeArea;
         }
+
         isInstantiating = false;
     }
 }

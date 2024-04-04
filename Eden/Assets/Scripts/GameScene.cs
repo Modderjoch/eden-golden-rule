@@ -14,6 +14,8 @@ public class GameScene : ScriptableObject
     public GameObject sceneEnvironmentPrefab;
     public SceneState sceneState;
 
+    public List<GameSceneAdditionalObject> additionalObjects;
+
     public GameScene Clone()
     {
         GameScene clone = ScriptableObject.CreateInstance<GameScene>();
@@ -23,6 +25,7 @@ public class GameScene : ScriptableObject
         clone.sceneUIPrefab = this.sceneUIPrefab;
         clone.sceneEnvironmentPrefab = this.sceneEnvironmentPrefab;
         clone.sceneState = new SceneState { state = this.sceneState.state };
+        clone.additionalObjects = this.additionalObjects;
         return clone;
     }
 }
