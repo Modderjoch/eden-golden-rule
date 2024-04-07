@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
+    [SerializeField] private TrashProgress trashProgress;
+
     private static ScoreManager instance;
 
     private int forestScore = 0;
@@ -50,6 +52,8 @@ public class ScoreManager : MonoBehaviour
             if(interactable is Trash trash)
             {
                 forestScore += trash.Score;
+
+                trashProgress.AddScore(trash);
 
                 if (forestScores.ContainsKey(trash.trashType))
                 {
