@@ -6,58 +6,56 @@ using UnityEngine.UI;
 
 public class TrashProgress : MonoBehaviour
 {
-    [SerializeField] private GameObject itemPrefab;
-    [SerializeField] private Transform itemParent;
     [SerializeField] private Image progressBar;
+    [SerializeField] private TMP_Text progressText;
 
     private int totalScore = 0;
     private int currentScore = 0;
 
-    private Dictionary<Trash.TrashType, int> trashTypePair = new Dictionary<Trash.TrashType, int>();
-
-    public void CreateItems(List<TrashItem> trashItems)
+    protected void Start()
     {
-        List<Trash.TrashType> trashTypes = new List<Trash.TrashType>();
+        RefreshUI();
+    }
 
-        foreach(TrashItem trashItem in trashItems)
-        {
-            if (trashTypePair.ContainsKey(trashItem.trash.trashType))
-            {
-                trashTypePair[trashItem.trash.trashType] += 1;
-            }
-            else
-            {
-                trashTypePair.Add(trashItem.trash.trashType, 1);
-            }
+    public void SetTotalScore(int score)
+    {
+        totalScore += score;
 
-            if (!trashTypes.Contains(trashItem.trash.trashType))
-            {
-                trashTypes.Add(trashItem.trash.trashType);
-
-                GameObject item = Instantiate(itemPrefab, itemParent);
-
-                ItemData itemData = item.GetComponent<ItemData>();
-                itemData.icon.sprite = trashItem.icon;
-                itemData.scoreText.text = trashTypePair[trashItem.trash.trashType].ToString();
-            }
-
-            totalScore += trashItem.trash.Score;
-        }
-
-        Debug.Log(totalScore);
+        RefreshUI();
     }
 
     public void AddScore(Trash trash)
     {
         currentScore += trash.Score;
 
+        RefreshUI();
+
+        Debug.Log("Score is now: " + currentScore + " from " + (currentScore - trash.Score));
+    }
+
+    /// <summary>
+    /// Returns the total score, which is all scores of every trash object
+    /// added together.
+    /// </summary>
+    /// <returns>The total score possible</returns>
+    public int ReturnTotalScore()
+    {
+        return totalScore;
+    }
+
+    /// <summary>
+    /// Returns the current score, which is all scores of every thus far collected object
+    /// added together.
+    /// </summary>
+    /// <returns>The current score</returns>
+    public int ReturnCurrentScore()
+    {
+        return currentScore;
+    }
+
+    private void RefreshUI()
+    {
         progressBar.fillAmount = currentScore / (float)totalScore;
-
-        if (trashTypePair.ContainsKey(trash.trashType))
-        {
-            trashTypePair[trash.trashType] -= 1;
-        }
-
-        Debug.Log("Score is now: " + currentScore);
+        progressText.text = currentScore + " / " + totalScore;
     }
 }
