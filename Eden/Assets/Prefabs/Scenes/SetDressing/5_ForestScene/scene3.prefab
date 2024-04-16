@@ -505,8 +505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3217020520380049155}
-  - component: {fileID: 2906452132027952609}
-  - component: {fileID: 9002232299158241736}
+  - component: {fileID: 4514632278115457809}
   m_Layer: 0
   m_Name: scene3
   m_TagString: Untagged
@@ -531,7 +530,7 @@ Transform:
   - {fileID: 8317049453996273426}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2906452132027952609
+--- !u!114 &4514632278115457809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -540,71 +539,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8183084064354019275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86edf369c99ee8849af625e37c099a59, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cfe4f438fa424a4aa963a3c72f379ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleSlider: {fileID: 0}
-  offsetSlider: {fileID: 0}
-  uiParent: {fileID: 0}
-  objectName: {fileID: 0}
-  hasCollider: 0
---- !u!114 &9002232299158241736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8183084064354019275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fe9e3e8357f3514f980f1ac5937bb52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items:
-  - trash: {fileID: 6575780452087910227}
-    icon: {fileID: 21300000, guid: 75ea35b62683a014e83cc8f100cacf1f, type: 3}
-  - trash: {fileID: 6803137350128554562}
-    icon: {fileID: 21300000, guid: 75ea35b62683a014e83cc8f100cacf1f, type: 3}
-  - trash: {fileID: 5613031253606031895}
-    icon: {fileID: 21300000, guid: 75ea35b62683a014e83cc8f100cacf1f, type: 3}
-  - trash: {fileID: 3668830494472835384}
-    icon: {fileID: 21300000, guid: 75ea35b62683a014e83cc8f100cacf1f, type: 3}
-  - trash: {fileID: 1936139461023174402}
-    icon: {fileID: 21300000, guid: 75ea35b62683a014e83cc8f100cacf1f, type: 3}
-  - trash: {fileID: 685376991460788199}
-    icon: {fileID: 21300000, guid: 75ea35b62683a014e83cc8f100cacf1f, type: 3}
-  - trash: {fileID: 9217623208879266968}
-    icon: {fileID: 21300000, guid: 75ea35b62683a014e83cc8f100cacf1f, type: 3}
-  - trash: {fileID: 2619261959740038308}
-    icon: {fileID: 21300000, guid: 2b4cc2fa7d27e504694bfe97402551e5, type: 3}
-  - trash: {fileID: 4612108094977363788}
-    icon: {fileID: 21300000, guid: 2b4cc2fa7d27e504694bfe97402551e5, type: 3}
-  - trash: {fileID: 3856347152621621221}
-    icon: {fileID: 21300000, guid: 2b4cc2fa7d27e504694bfe97402551e5, type: 3}
-  - trash: {fileID: 1551902476174967747}
-    icon: {fileID: 21300000, guid: 3a23525885c9a154a9dac04a9dad006c, type: 3}
-  - trash: {fileID: 2166610181089115002}
-    icon: {fileID: 21300000, guid: 3a23525885c9a154a9dac04a9dad006c, type: 3}
-  - trash: {fileID: 5143571377561152850}
-    icon: {fileID: 21300000, guid: 142561b4da4aa3c479b01b72bbfa574c, type: 3}
-  - trash: {fileID: 6196105989223144742}
-    icon: {fileID: 21300000, guid: 142561b4da4aa3c479b01b72bbfa574c, type: 3}
-  - trash: {fileID: 3738021204746014729}
-    icon: {fileID: 21300000, guid: bc51629788da25241bc16d3c137e8703, type: 3}
-  - trash: {fileID: 5144144699406219220}
-    icon: {fileID: 21300000, guid: bc51629788da25241bc16d3c137e8703, type: 3}
-  - trash: {fileID: 6516760626977095644}
-    icon: {fileID: 21300000, guid: bc51629788da25241bc16d3c137e8703, type: 3}
-  - trash: {fileID: 856757904662034489}
-    icon: {fileID: 21300000, guid: bc51629788da25241bc16d3c137e8703, type: 3}
-  - trash: {fileID: 4481725879333996468}
-    icon: {fileID: 21300000, guid: bc51629788da25241bc16d3c137e8703, type: 3}
-  - trash: {fileID: 4580239843095528101}
-    icon: {fileID: 21300000, guid: bc51629788da25241bc16d3c137e8703, type: 3}
-  - trash: {fileID: 1301101479727033970}
-    icon: {fileID: 21300000, guid: 151cf63f9272f33478d0b29209f13cb3, type: 3}
-  - trash: {fileID: 5615170188136767045}
-    icon: {fileID: 21300000, guid: 151cf63f9272f33478d0b29209f13cb3, type: 3}
 --- !u!1 &8890455113222559766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,8 +1098,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 5
   score: 5
+  trashProgress: {fileID: 0}
 --- !u!64 &8745997218574054426
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1305,8 +1242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 4
   score: 1
+  trashProgress: {fileID: 0}
 --- !u!64 &7722209000518868403
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1449,8 +1386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 3
   score: 3
+  trashProgress: {fileID: 0}
 --- !u!64 &1926313876294648228
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1667,8 +1604,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 1
   score: 1
+  trashProgress: {fileID: 0}
 --- !u!64 &4125187997615672803
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1894,8 +1831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 0
   score: 2
+  trashProgress: {fileID: 0}
 --- !u!64 &6937426697536867167
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2442,8 +2379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 3
   score: 3
+  trashProgress: {fileID: 0}
 --- !u!64 &8323542844339433255
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2655,17 +2592,17 @@ PrefabInstance:
     - target: {fileID: 8100587827604949664, guid: c5a62ef476910b04aaa620c07b3d044f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.616365
+      value: -7.071
       objectReference: {fileID: 0}
     - target: {fileID: 8100587827604949664, guid: c5a62ef476910b04aaa620c07b3d044f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6392453
+      value: 1.216
       objectReference: {fileID: 0}
     - target: {fileID: 8100587827604949664, guid: c5a62ef476910b04aaa620c07b3d044f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.6482205
+      value: -3.525
       objectReference: {fileID: 0}
     - target: {fileID: 8100587827604949664, guid: c5a62ef476910b04aaa620c07b3d044f,
         type: 3}
@@ -2743,8 +2680,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 4
   score: 1
+  trashProgress: {fileID: 0}
 --- !u!64 &1997264389396442495
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2982,8 +2919,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 3
   score: 3
+  trashProgress: {fileID: 0}
 --- !u!64 &8030844485583251230
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3215,8 +3152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 1
   score: 1
+  trashProgress: {fileID: 0}
 --- !u!64 &5671652872208742236
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3364,7 +3301,7 @@ PrefabInstance:
     - target: {fileID: 8130209884325345083, guid: f561686940676074589e1485ceb50ff1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.99897
+      value: -10.63
       objectReference: {fileID: 0}
     - target: {fileID: 8130209884325345083, guid: f561686940676074589e1485ceb50ff1,
         type: 3}
@@ -3374,7 +3311,7 @@ PrefabInstance:
     - target: {fileID: 8130209884325345083, guid: f561686940676074589e1485ceb50ff1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.7194793
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 8130209884325345083, guid: f561686940676074589e1485ceb50ff1,
         type: 3}
@@ -3442,8 +3379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 3
   score: 3
+  trashProgress: {fileID: 0}
 --- !u!64 &777453030624935636
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3853,8 +3790,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 0
   score: 2
+  trashProgress: {fileID: 0}
 --- !u!64 &1288137911840286219
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4437,8 +4374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 2
   score: 1
+  trashProgress: {fileID: 0}
 --- !u!65 &9042181125474350061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5475,8 +5412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 1
   score: 1
+  trashProgress: {fileID: 0}
 --- !u!64 &5128840971289269605
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5799,8 +5736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 1
   score: 1
+  trashProgress: {fileID: 0}
 --- !u!64 &8952839447701930836
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6018,7 +5955,7 @@ PrefabInstance:
     - target: {fileID: 1711628170111757361, guid: c50d8df627394bc42b95ecc87d796dbe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.341089
+      value: -10.04
       objectReference: {fileID: 0}
     - target: {fileID: 1711628170111757361, guid: c50d8df627394bc42b95ecc87d796dbe,
         type: 3}
@@ -6028,7 +5965,7 @@ PrefabInstance:
     - target: {fileID: 1711628170111757361, guid: c50d8df627394bc42b95ecc87d796dbe,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.9685184
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1711628170111757361, guid: c50d8df627394bc42b95ecc87d796dbe,
         type: 3}
@@ -6112,8 +6049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 3
   score: 3
+  trashProgress: {fileID: 0}
 --- !u!64 &1750439332398939020
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6250,8 +6187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 1
   score: 1
+  trashProgress: {fileID: 0}
 --- !u!64 &5274960521073935147
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6394,8 +6331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 1
   score: 1
+  trashProgress: {fileID: 0}
 --- !u!64 &4874092328337749913
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6716,8 +6653,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 5
   score: 5
+  trashProgress: {fileID: 0}
 --- !u!64 &3973910407091476116
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6955,8 +6892,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 2
   score: 1
+  trashProgress: {fileID: 0}
 --- !u!64 &311759763080147017
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7167,8 +7104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 0
   score: 2
+  trashProgress: {fileID: 0}
 --- !u!64 &6637636979464176382
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7845,8 +7782,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 1
   score: 1
+  trashProgress: {fileID: 0}
 --- !u!64 &1314671275299668767
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7995,8 +7932,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e46c383d0afc764c8690d16566937ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashType: 3
   score: 3
+  trashProgress: {fileID: 0}
 --- !u!64 &75765855438550335
 MeshCollider:
   m_ObjectHideFlags: 0

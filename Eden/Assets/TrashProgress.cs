@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class TrashProgress : MonoBehaviour
@@ -11,6 +13,8 @@ public class TrashProgress : MonoBehaviour
 
     private int totalScore = 0;
     private int currentScore = 0;
+
+    public event Action OnScoreReached; // Event to be invoked when currentScore equals totalScore
 
     protected void Start()
     {
@@ -31,23 +35,18 @@ public class TrashProgress : MonoBehaviour
         RefreshUI();
 
         Debug.Log("Score is now: " + currentScore + " from " + (currentScore - trash.Score));
+
+        if (currentScore == totalScore)
+        {
+            OnScoreReached.Invoke();
+        }
     }
 
-    /// <summary>
-    /// Returns the total score, which is all scores of every trash object
-    /// added together.
-    /// </summary>
-    /// <returns>The total score possible</returns>
     public int ReturnTotalScore()
     {
         return totalScore;
     }
 
-    /// <summary>
-    /// Returns the current score, which is all scores of every thus far collected object
-    /// added together.
-    /// </summary>
-    /// <returns>The current score</returns>
     public int ReturnCurrentScore()
     {
         return currentScore;

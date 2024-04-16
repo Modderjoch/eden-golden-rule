@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
     private UIManager uiManager;
 
+    [SerializeField] private int startSceneIndex = 0;
+
     public static GameManager Instance
     {
         get
@@ -46,7 +48,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    protected void Awake()
+    protected void Start()
     {
         trackedImageManager = FindObjectOfType<ARTrackedImageManager>();
         uiManager = UIManager.Instance;
@@ -56,8 +58,19 @@ public class GameManager : MonoBehaviour
             referenceLibrary = trackedImageManager.referenceLibrary as XRReferenceImageLibrary;
         }
 
-        AddAdditionalObjects();
         CloneScenes();
+        AddAdditionalObjects();
+        SetActiveScene(startSceneIndex);
+    }
+
+    protected void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Debug.Log("Setting scene");
+
+            SetActiveScene(startSceneIndex);
+        }
     }
 
     /// <summary>
@@ -73,19 +86,94 @@ public class GameManager : MonoBehaviour
 
         SetSpawnablePrefabs();
 
+        SetActiveScene(modifiableScenes[startSceneIndex].sceneEnvironmentPrefab);
+
         imageTracking.SetSpawnablePrefabs();
-        uiManager.SetSpawnablePrefabs();
+        //uiManager.SetSpawnablePrefabs();
+    }
+
+    /// <summary>
+    /// Method to get the currently active scene.
+    /// </summary>
+    /// <returns>The currently active <see cref="GameScene"/></returns>
+    public GameScene GetActiveScene()
+    {
+        foreach(GameScene scene in modifiableScenes)
+        {
+            if(scene.sceneState.state == SceneState.State.Active)
+            {
+                return scene;
+            }
+        }
+
+        return null;
+    }
+
+    public List<GameSceneAdditionalObject> GetAddditionalObjects()
+    {
+        foreach (GameScene scene in modifiableScenes)
+        {
+            if (scene.sceneState.state == SceneState.State.Active)
+            {
+                return scene.additionalObjects;
+            }
+        }
+
+        return null;
+    }
+
+    public void SetActiveScene(int index)
+    {
+        foreach(GameScene scene in modifiableScenes)
+        {
+            if(scene.sceneIndex == index)
+            {
+                scene.sceneState.state = SceneState.State.Active;
+
+                foreach (GameSceneAdditionalObject additionalObject in scene.additionalObjects)
+                {
+                    additionalObject.additionalObject.SetActive(true);
+                }
+
+                if(scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>() != null)
+                {
+                    scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>().OnSceneEnter();
+                }
+
+                Debug.Log("Set scene " + scene.name + " to active");
+            }
+            else
+            {
+                scene.sceneState.state = SceneState.State.Inactive;
+
+                foreach (GameSceneAdditionalObject additionalObject in scene.additionalObjects)
+                {
+                    additionalObject.additionalObject.SetActive(false);
+                }
+
+                Debug.Log("Set scene " + scene.name + " to inactive");
+            }
+        }
+
+        this.startSceneIndex++;
     }
 
     /// <summary>
     /// Sets the passed-in prefab to the active scene
     /// </summary>
     /// <param name="scenePrefab">The scene prefab that should be set active</param>
-    public void SetActiveScene(GameObject scenePrefab)
+    public bool SetActiveScene(GameObject scenePrefab)
     {
         foreach(GameScene scene in modifiableScenes)
         {
             SceneState.State state = scene.sceneState.state;
+
+            if(GetActiveScene().sceneEnvironmentPrefab.name != scenePrefab.name)
+            {
+                Debug.Log("Not the active scene");
+
+                return false;
+            }
 
             if (scenePrefab.name == scene.sceneEnvironmentPrefab.name)
             {
@@ -115,7 +203,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        //uiManager.ShowUI(modifiableScenes, scenePrefab.name);
+        return true;
     }
 
     private void SetPlayerIndex(int index)
@@ -190,7 +278,7 @@ public class GameManager : MonoBehaviour
 
     private void AddAdditionalObjects()
     {
-        foreach(GameScene scene in scenes)
+        foreach(GameScene scene in modifiableScenes)
         {
             scene.additionalObjects = new List<GameSceneAdditionalObject>();
 
