@@ -6,19 +6,14 @@ using UnityEngine;
 public class Trash : Interactable
 {
     public int Score => score;
-    
-    public TrashType trashType;
 
     [SerializeField] private int score = 1;
 
-    public enum TrashType
+    [SerializeField] private TrashProgress trashProgress;
+
+    protected void Awake()
     {
-        Bottle,
-        Beer,
-        Box,
-        Chips,
-        Can,
-        Bag,
+        GameManager.Instance.trashProgress.SetTotalScore(score);
     }
 
     public bool PickUp()

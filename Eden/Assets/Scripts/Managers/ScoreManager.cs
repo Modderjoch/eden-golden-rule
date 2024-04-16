@@ -11,8 +11,6 @@ public class ScoreManager : MonoBehaviour
     private int forestScore = 0;
     private int gardenScore = 0;
 
-    private Dictionary<Trash.TrashType, int> forestScores = new Dictionary<Trash.TrashType, int>();
-
     public static ScoreManager Instance
     {
         get
@@ -54,30 +52,11 @@ public class ScoreManager : MonoBehaviour
                 forestScore += trash.Score;
 
                 trashProgress.AddScore(trash);
-
-                if (forestScores.ContainsKey(trash.trashType))
-                {
-                    forestScores[trash.trashType] += trash.Score;
-                }
-                else
-                {
-                    forestScores.Add(trash.trashType, trash.Score);
-                }
-
-                DebugForestScores();
             }
             else if(interactable is Paper paper)
             {
                 gardenScore += paper.Score;
             }
-        }
-    }
-
-    public void DebugForestScores()
-    {
-        foreach (KeyValuePair<Trash.TrashType, int> pair in forestScores)
-        {
-            Debug.Log("Trash Type: " + pair.Key + ", Score: " + pair.Value);
         }
     }
 }

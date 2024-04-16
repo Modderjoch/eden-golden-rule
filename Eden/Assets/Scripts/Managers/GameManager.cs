@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<GameScene> scenes;
     [SerializeField] private List<GameScene> modifiableScenes;
 
-    [SerializeField] private TrashProgress trashProgress;
+    public TrashProgress trashProgress;
 
     public List<GameSceneAdditionalObject> additionalObjects = new List<GameSceneAdditionalObject>();
 
@@ -116,11 +116,6 @@ public class GameManager : MonoBehaviour
         }
 
         //uiManager.ShowUI(modifiableScenes, scenePrefab.name);
-    }
-
-    public void SetTrashList(List<TrashItem> trashItems)
-    {
-        trashProgress.CreateItems(trashItems);
     }
 
     private void SetPlayerIndex(int index)
