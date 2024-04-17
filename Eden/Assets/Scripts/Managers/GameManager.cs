@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ImageTracking imageTracking;
     private ARTrackedImageManager trackedImageManager;
 
+    [SerializeField] private List<Button> languages;
+
     [SerializeField] private List<GameScene> scenes;
     [SerializeField] private List<GameScene> modifiableScenes;
 
@@ -24,8 +27,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField, Range(0, 4)] private int playerIndex = 0;
 
+    public Language Language => language;
+
     private static GameManager instance;
     private UIManager uiManager;
+    private Language language;
 
     [SerializeField] private int startSceneIndex = 0;
 
@@ -60,7 +66,6 @@ public class GameManager : MonoBehaviour
 
         CloneScenes();
         AddAdditionalObjects();
-        SetActiveScene(startSceneIndex);
     }
 
     protected void Update()
@@ -82,11 +87,13 @@ public class GameManager : MonoBehaviour
     {
         SetPlayerIndex(playerIndexDropdown.value);
 
+        SetLanguage();
+
         Destroy(mainMenuUI);
 
         SetSpawnablePrefabs();
 
-        SetActiveScene(modifiableScenes[startSceneIndex].sceneEnvironmentPrefab);
+        SetActiveScene(startSceneIndex);
 
         imageTracking.SetSpawnablePrefabs();
         //uiManager.SetSpawnablePrefabs();
@@ -122,6 +129,13 @@ public class GameManager : MonoBehaviour
         return null;
     }
 
+    public void NextScene()
+    {
+        startSceneIndex++;
+
+        SetActiveScene(startSceneIndex);
+    }
+
     public void SetActiveScene(int index)
     {
         foreach(GameScene scene in modifiableScenes)
@@ -140,7 +154,7 @@ public class GameManager : MonoBehaviour
                     scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>().OnSceneEnter();
                 }
 
-                Debug.Log("Set scene " + scene.name + " to active");
+                //Debug.Log("Set scene " + scene.name + " to active");
             }
             else
             {
@@ -151,7 +165,7 @@ public class GameManager : MonoBehaviour
                     additionalObject.additionalObject.SetActive(false);
                 }
 
-                Debug.Log("Set scene " + scene.name + " to inactive");
+                //Debug.Log("Set scene " + scene.name + " to inactive");
             }
         }
 
@@ -206,6 +220,22 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
+    private void SetLanguage()
+    {
+        Language newLanguage = null;
+
+        foreach(Button language in languages)
+        {
+            if(!language.enabled)
+            {
+                newLanguage = new Language(language.name);
+            }
+        }
+
+        language = newLanguage;
+        Debug.Log(language.currentLanguage);
+    }
+
     private void SetPlayerIndex(int index)
     {
         playerIndex = index;
@@ -248,7 +278,7 @@ public class GameManager : MonoBehaviour
         int nextSceneNumber = (sceneIndex + playerIndex) % 5 + 1;
         string sceneName = "scene" + nextSceneNumber;
 
-        Debug.Log(sceneName);
+        //Debug.Log(sceneName);
 
         return sceneName;
     }

@@ -10,25 +10,31 @@ public class ForestSceneData : GameSceneData
     private GameObject seedSpawnpoint;
     private GameObject popUp;
 
+    private TrashProgress trashProgressScript;
+
     private List<GameSceneAdditionalObject> additionalObjects;
     private AudioManager audioManager;
+    private GameManager gameManager;
 
     public override void OnSceneEnter()
     {
-        additionalObjects = GameManager.Instance.GetAddditionalObjects();
         audioManager = AudioManager.Instance;
+        gameManager = GameManager.Instance;
+        additionalObjects = gameManager.GetAddditionalObjects();
 
         trashProgress = additionalObjects[0].additionalObject;
         swipeArea = additionalObjects[1].additionalObject;
         seedSpawnpoint = additionalObjects[2].additionalObject;
         popUp = additionalObjects[3].additionalObject;
 
+        trashProgressScript = trashProgress.GetComponent<TrashProgress>();
+
         foreach(GameSceneAdditionalObject additionalObject in additionalObjects)
         {
             additionalObject.additionalObject.gameObject.SetActive(false);
         }
 
-        audioManager.PlayVoiceOver("ForestScenePart1");
+        audioManager.PlayVoiceOver("ForestScenePart1" + gameManager.Language.currentLanguage);
         audioManager.OnVoiceOverFinished += StartTrashPicking;
     }
 
@@ -43,7 +49,7 @@ public class ForestSceneData : GameSceneData
         trashProgress.SetActive(true);
 
         // Then we subscribe to new events
-        trashProgress.GetComponent<TrashProgress>().OnScoreReached += StartSeedVoiceOver;
+        trashProgressScript.OnScoreReached += StartSeedVoiceOver;
     }
 
     private void StartSeedVoiceOver()
@@ -52,10 +58,10 @@ public class ForestSceneData : GameSceneData
         trashProgress.SetActive(false);
         
         // Then we unsubscribe from previous events
-        trashProgress.GetComponent<TrashProgress>().OnScoreReached -=StartSeedVoiceOver;
+        trashProgressScript.OnScoreReached -=StartSeedVoiceOver;
         
         // Then we activate new objects and call the needed methods
-        audioManager.PlayVoiceOver("ForestScenePart2");
+        audioManager.PlayVoiceOver("ForestScenePart2" + gameManager.Language.currentLanguage);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartSeedThrowing;
@@ -86,7 +92,7 @@ public class ForestSceneData : GameSceneData
         seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsDepleted -= EndScene;
 
         // Then we activate new objects and call the needed methods
-        audioManager.PlayVoiceOver("ForestScenePart3");
+        audioManager.PlayVoiceOver("ForestScenePart3" + gameManager.Language.currentLanguage);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += OnSceneExit;
@@ -101,6 +107,7 @@ public class ForestSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         popUp.SetActive(true);
+        gameManager.NextScene();
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events

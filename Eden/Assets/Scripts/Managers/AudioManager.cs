@@ -17,6 +17,7 @@ public class Sound
     public string name;
     public AudioClip clip;
     public SoundType type;
+    public Language language;
     [Range(0f, 1f)] public float volume = 1f;
     [Range(0.1f, 3f)] public float pitch = 1f;
     public bool loop;
@@ -53,6 +54,8 @@ public class AudioManager : MonoBehaviour
             sound.source.volume = sound.volume;
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
+            sound.name = sound.name + sound.language.currentLanguage;
+            Debug.Log(sound.name);
         }
     }
 
