@@ -11,13 +11,19 @@ public enum SoundType
     VoiceOver
 }
 
+[Serializable]
+public class LocalizationID
+{
+    public string id;
+}
+
 [System.Serializable]
 public class Sound
 {
     public string name;
     public AudioClip clip;
     public SoundType type;
-    public Language language;
+    public LocalizationID localization;
     [Range(0f, 1f)] public float volume = 1f;
     [Range(0.1f, 3f)] public float pitch = 1f;
     public bool loop;
@@ -32,8 +38,6 @@ public class AudioManager : MonoBehaviour
     public List<Sound> sounds = new List<Sound>();
 
     public event Action OnVoiceOverFinished;
-
-    public RectTransform rectTransform;
 
     void Awake()
     {
@@ -54,7 +58,7 @@ public class AudioManager : MonoBehaviour
             sound.source.volume = sound.volume;
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
-            sound.name = sound.name + sound.language.currentLanguage;
+            sound.name = sound.name + sound.localization.id;
             Debug.Log(sound.name);
         }
     }

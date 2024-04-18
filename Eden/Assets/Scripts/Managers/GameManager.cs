@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -21,17 +22,21 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<GameScene> scenes;
     [SerializeField] private List<GameScene> modifiableScenes;
 
+    public List<GameScene> Scenes => modifiableScenes;
+    public GameObject PopUp => popUp;
+
     public TrashProgress trashProgress;
 
-    public List<GameSceneAdditionalObject> additionalObjects = new List<GameSceneAdditionalObject>();
+    public List<GameSceneAdditionalObject> AdditionalObjects => additionalObjects;
+
+    [SerializeField] private GameObject popUp;
+
+    [SerializeField] private List<GameSceneAdditionalObject> additionalObjects = new List<GameSceneAdditionalObject>();
 
     [SerializeField, Range(0, 4)] private int playerIndex = 0;
 
-    public Language Language => language;
-
     private static GameManager instance;
     private UIManager uiManager;
-    private Language language;
 
     [SerializeField] private int startSceneIndex = 0;
 
@@ -52,6 +57,11 @@ public class GameManager : MonoBehaviour
 
             return instance;
         }
+    }
+
+    protected void Awake()
+    {
+        SetLanguage();
     }
 
     protected void Start()
@@ -87,16 +97,15 @@ public class GameManager : MonoBehaviour
     {
         SetPlayerIndex(playerIndexDropdown.value);
 
-        SetLanguage();
-
         Destroy(mainMenuUI);
+
+        SetLanguage();
 
         SetSpawnablePrefabs();
 
         SetActiveScene(startSceneIndex);
 
         imageTracking.SetSpawnablePrefabs();
-        //uiManager.SetSpawnablePrefabs();
     }
 
     /// <summary>
@@ -191,23 +200,19 @@ public class GameManager : MonoBehaviour
 
             if (scenePrefab.name == scene.sceneEnvironmentPrefab.name)
             {
-                if(scene.sceneState.state == SceneState.State.Active)
-                {
-                    break;
-                }
-
                 scene.sceneState.state = SceneState.State.Active;
 
-                foreach(GameSceneAdditionalObject additionalObject in scene.additionalObjects)
-                {
-                    additionalObject.additionalObject.SetActive(true);
-                }
+                scene.environmentState.state = EnvironmentState.State.Shown;
+
+                scene.ActivateEnvironment();
             }
             else
             {
                 if(scene.sceneState.state is SceneState.State.Active)
                 {
                     scene.sceneState.state = SceneState.State.Inactive;
+
+                    scene.environmentState.state = EnvironmentState.State.Hidden;
 
                     foreach (GameSceneAdditionalObject additionalObject in scene.additionalObjects)
                     {
@@ -220,20 +225,20 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
-    private void SetLanguage()
+    public void SetLanguage()
     {
-        Language newLanguage = null;
+        string newLanguageID = "";
 
         foreach(Button language in languages)
         {
             if(!language.enabled)
             {
-                newLanguage = new Language(language.name);
+                newLanguageID = language.name;
             }
         }
 
-        language = newLanguage;
-        Debug.Log(language.currentLanguage);
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale(newLanguageID);
+        Debug.Log(LocalizationSettings.SelectedLocale.Formatter);
     }
 
     private void SetPlayerIndex(int index)
