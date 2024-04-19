@@ -12,7 +12,7 @@ public class PopUpScript : MonoBehaviour
     [SerializeField] private TMP_Text popUpMsg;
     public string popUpText = "gamer";
 
-    private void Start()
+    private void OnEnable()
     {
         animator = GetComponent<Animator>();
         popUpMsg.text = popUpText;
@@ -20,6 +20,7 @@ public class PopUpScript : MonoBehaviour
 
     public void PopUpEntry(string text, int x)
     {
+        gameObject.SetActive(true);
         popUpMsg.text = text;
         animator.SetTrigger("entry");
         StartCoroutine(PopUpClose(x));
@@ -29,5 +30,6 @@ public class PopUpScript : MonoBehaviour
     {
         yield return new WaitForSeconds(x);
         animator.SetTrigger("close");
+        gameObject.SetActive(false);
     }
 }

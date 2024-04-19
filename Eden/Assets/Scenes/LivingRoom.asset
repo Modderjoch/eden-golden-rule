@@ -20,3 +20,6 @@ MonoBehaviour:
     type: 3}
   sceneState:
     state: 2
+  environmentState:
+    state: 1
+  additionalObjects: []

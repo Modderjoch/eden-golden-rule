@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Forest
   sceneIndex: 2
-  sceneUIPrefab: {fileID: 8949360249851782460, guid: 91bce68eddac80c4aaac819b0d327fd9,
+  sceneUIPrefab: {fileID: 4741976045412026158, guid: 6282faeb6060ba843894ed3c90f9a225,
     type: 3}
-  sceneEnvironmentPrefab: {fileID: 8183084064354019275, guid: c53879fa3ee034548b0eae87339ef5b4,
+  sceneEnvironmentPrefab: {fileID: 8484584270671548573, guid: c53879fa3ee034548b0eae87339ef5b4,
     type: 3}
   sceneState:
     state: 2
+  environmentState:
+    state: 1
   additionalObjects: []

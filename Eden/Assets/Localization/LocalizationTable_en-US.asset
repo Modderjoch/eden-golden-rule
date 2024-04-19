@@ -34,6 +34,14 @@ MonoBehaviour:
     m_Localized: Start
     m_Metadata:
       m_Items: []
+  - m_Id: 417488452739072
+    m_Localized: Collect all the trash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 417569264394240
+    m_Localized: Plant 10 seeds
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

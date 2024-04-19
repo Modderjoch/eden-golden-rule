@@ -153,11 +153,6 @@ public class GameManager : MonoBehaviour
             {
                 scene.sceneState.state = SceneState.State.Active;
 
-                foreach (GameSceneAdditionalObject additionalObject in scene.additionalObjects)
-                {
-                    additionalObject.additionalObject.SetActive(true);
-                }
-
                 if(scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>() != null)
                 {
                     scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>().OnSceneEnter();
@@ -193,8 +188,6 @@ public class GameManager : MonoBehaviour
 
             if(GetActiveScene().sceneEnvironmentPrefab.name != scenePrefab.name)
             {
-                Debug.Log("Not the active scene");
-
                 return false;
             }
 

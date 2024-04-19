@@ -9,8 +9,10 @@ public class ForestSceneData : GameSceneData
     private GameObject trashProgress;
     private GameObject swipeArea;
     private GameObject seedSpawnpoint;
+    private GameObject swipeAnimation;
 
     private TrashProgress trashProgressScript;
+    private PopUpScript popUp;
 
     private List<GameSceneAdditionalObject> additionalObjects;
     private AudioManager audioManager;
@@ -25,13 +27,10 @@ public class ForestSceneData : GameSceneData
         trashProgress = additionalObjects[0].additionalObject;
         swipeArea = additionalObjects[1].additionalObject;
         seedSpawnpoint = additionalObjects[2].additionalObject;
+        swipeAnimation = additionalObjects[3].additionalObject;
 
         trashProgressScript = trashProgress.GetComponent<TrashProgress>();
-
-        foreach(GameSceneAdditionalObject additionalObject in additionalObjects)
-        {
-            additionalObject.additionalObject.gameObject.SetActive(false);
-        }
+        popUp = gameManager.PopUp.GetComponent<PopUpScript>();
 
         gameManager.Scenes[2].OnEnvironmentActivated += StartVoiceOver;
     }
@@ -59,6 +58,7 @@ public class ForestSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         trashProgress.SetActive(true);
+        popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("TrashCollection").Result, 3);
 
         // Then we subscribe to new events
         trashProgressScript.OnScoreReached += StartSeedVoiceOver;
@@ -89,6 +89,8 @@ public class ForestSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         swipeArea.SetActive(true);
         seedSpawnpoint.SetActive(true);
+        swipeAnimation.SetActive(true);
+        popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedString("SeedPlanting"), 5);
 
         // Then we subscribe to new events
         seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsDepleted += EndScene;
@@ -99,6 +101,7 @@ public class ForestSceneData : GameSceneData
         // First we de-activate the old objects
         swipeArea.SetActive(false);
         seedSpawnpoint.SetActive(false);
+        swipeAnimation.SetActive(false);
 
         // Then we unsubscribe from previous events
         seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsDepleted -= EndScene;
