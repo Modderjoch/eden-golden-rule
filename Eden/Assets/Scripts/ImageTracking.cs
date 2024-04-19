@@ -10,7 +10,6 @@ using UnityEngine.XR.ARSubsystems;
 public class ImageTracking : MonoBehaviour
 {
     public Slider scaleSlider;
-    //public Slider offsetSlider;
     public GameObject uiParent;
     public Text objectName;
 
@@ -80,7 +79,12 @@ public class ImageTracking : MonoBehaviour
         if (name != null && spawnedPrefabs != null)
         {
             GameObject prefab = spawnedPrefabs[name];
-            GameManager.Instance.SetActiveScene(prefab);
+            
+            if (!GameManager.Instance.SetActiveScene(prefab))
+            {
+                return;
+            }
+            
             prefab.transform.position = position;
             prefab.transform.rotation = trackedImage.transform.rotation;
 

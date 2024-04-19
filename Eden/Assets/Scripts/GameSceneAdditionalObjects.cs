@@ -7,6 +7,7 @@ using UnityEngine;
 public class GameSceneAdditionalObject
 {
     public int sceneIndex;
+    public int inSceneIndex;
     public GameObject additionalObject;
     public Transform parent;
 }

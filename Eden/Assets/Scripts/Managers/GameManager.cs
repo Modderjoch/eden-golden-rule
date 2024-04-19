@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -15,17 +17,28 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ImageTracking imageTracking;
     private ARTrackedImageManager trackedImageManager;
 
+    [SerializeField] private List<Button> languages;
+
     [SerializeField] private List<GameScene> scenes;
     [SerializeField] private List<GameScene> modifiableScenes;
 
+    public List<GameScene> Scenes => modifiableScenes;
+    public GameObject PopUp => popUp;
+
     public TrashProgress trashProgress;
 
-    public List<GameSceneAdditionalObject> additionalObjects = new List<GameSceneAdditionalObject>();
+    public List<GameSceneAdditionalObject> AdditionalObjects => additionalObjects;
+
+    [SerializeField] private GameObject popUp;
+
+    [SerializeField] private List<GameSceneAdditionalObject> additionalObjects = new List<GameSceneAdditionalObject>();
 
     [SerializeField, Range(0, 4)] private int playerIndex = 0;
 
     private static GameManager instance;
     private UIManager uiManager;
+
+    [SerializeField] private int startSceneIndex = 0;
 
     public static GameManager Instance
     {
@@ -48,6 +61,11 @@ public class GameManager : MonoBehaviour
 
     protected void Awake()
     {
+        SetLanguage();
+    }
+
+    protected void Start()
+    {
         trackedImageManager = FindObjectOfType<ARTrackedImageManager>();
         uiManager = UIManager.Instance;
 
@@ -56,8 +74,18 @@ public class GameManager : MonoBehaviour
             referenceLibrary = trackedImageManager.referenceLibrary as XRReferenceImageLibrary;
         }
 
-        AddAdditionalObjects();
         CloneScenes();
+        AddAdditionalObjects();
+    }
+
+    protected void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Debug.Log("Setting scene");
+
+            SetActiveScene(startSceneIndex);
+        }
     }
 
     /// <summary>
@@ -71,41 +99,113 @@ public class GameManager : MonoBehaviour
 
         Destroy(mainMenuUI);
 
+        SetLanguage();
+
         SetSpawnablePrefabs();
 
+        SetActiveScene(startSceneIndex);
+
         imageTracking.SetSpawnablePrefabs();
-        uiManager.SetSpawnablePrefabs();
+    }
+
+    /// <summary>
+    /// Method to get the currently active scene.
+    /// </summary>
+    /// <returns>The currently active <see cref="GameScene"/></returns>
+    public GameScene GetActiveScene()
+    {
+        foreach(GameScene scene in modifiableScenes)
+        {
+            if(scene.sceneState.state == SceneState.State.Active)
+            {
+                return scene;
+            }
+        }
+
+        return null;
+    }
+
+    public List<GameSceneAdditionalObject> GetAddditionalObjects()
+    {
+        foreach (GameScene scene in modifiableScenes)
+        {
+            if (scene.sceneState.state == SceneState.State.Active)
+            {
+                return scene.additionalObjects;
+            }
+        }
+
+        return null;
+    }
+
+    public void NextScene()
+    {
+        startSceneIndex++;
+
+        SetActiveScene(startSceneIndex);
+    }
+
+    public void SetActiveScene(int index)
+    {
+        foreach(GameScene scene in modifiableScenes)
+        {
+            if(scene.sceneIndex == index)
+            {
+                scene.sceneState.state = SceneState.State.Active;
+
+                if(scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>() != null)
+                {
+                    scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>().OnSceneEnter();
+                }
+
+                //Debug.Log("Set scene " + scene.name + " to active");
+            }
+            else
+            {
+                scene.sceneState.state = SceneState.State.Inactive;
+
+                foreach (GameSceneAdditionalObject additionalObject in scene.additionalObjects)
+                {
+                    additionalObject.additionalObject.SetActive(false);
+                }
+
+                //Debug.Log("Set scene " + scene.name + " to inactive");
+            }
+        }
+
+        this.startSceneIndex++;
     }
 
     /// <summary>
     /// Sets the passed-in prefab to the active scene
     /// </summary>
     /// <param name="scenePrefab">The scene prefab that should be set active</param>
-    public void SetActiveScene(GameObject scenePrefab)
+    public bool SetActiveScene(GameObject scenePrefab)
     {
         foreach(GameScene scene in modifiableScenes)
         {
             SceneState.State state = scene.sceneState.state;
 
+            if(GetActiveScene().sceneEnvironmentPrefab.name != scenePrefab.name)
+            {
+                return false;
+            }
+
             if (scenePrefab.name == scene.sceneEnvironmentPrefab.name)
             {
-                if(scene.sceneState.state == SceneState.State.Active)
-                {
-                    break;
-                }
-
                 scene.sceneState.state = SceneState.State.Active;
 
-                foreach(GameSceneAdditionalObject additionalObject in scene.additionalObjects)
-                {
-                    additionalObject.additionalObject.SetActive(true);
-                }
+                scene.environmentState.state = EnvironmentState.State.Shown;
+
+                scene.ActivateEnvironment();
             }
             else
             {
                 if(scene.sceneState.state is SceneState.State.Active)
                 {
                     scene.sceneState.state = SceneState.State.Inactive;
+
+                    scene.environmentState.state = EnvironmentState.State.Hidden;
 
                     foreach (GameSceneAdditionalObject additionalObject in scene.additionalObjects)
                     {
@@ -115,7 +215,23 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        //uiManager.ShowUI(modifiableScenes, scenePrefab.name);
+        return true;
+    }
+
+    public void SetLanguage()
+    {
+        string newLanguageID = "";
+
+        foreach(Button language in languages)
+        {
+            if(!language.enabled)
+            {
+                newLanguageID = language.name;
+            }
+        }
+
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale(newLanguageID);
+        Debug.Log(LocalizationSettings.SelectedLocale.Formatter);
     }
 
     private void SetPlayerIndex(int index)
@@ -160,7 +276,7 @@ public class GameManager : MonoBehaviour
         int nextSceneNumber = (sceneIndex + playerIndex) % 5 + 1;
         string sceneName = "scene" + nextSceneNumber;
 
-        Debug.Log(sceneName);
+        //Debug.Log(sceneName);
 
         return sceneName;
     }
@@ -190,7 +306,7 @@ public class GameManager : MonoBehaviour
 
     private void AddAdditionalObjects()
     {
-        foreach(GameScene scene in scenes)
+        foreach(GameScene scene in modifiableScenes)
         {
             scene.additionalObjects = new List<GameSceneAdditionalObject>();
 
