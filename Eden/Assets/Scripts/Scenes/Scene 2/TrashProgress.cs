@@ -34,8 +34,6 @@ public class TrashProgress : MonoBehaviour
 
         RefreshUI();
 
-        Debug.Log("Score is now: " + currentScore + " from " + (currentScore - trash.Score));
-
         if (currentScore == totalScore)
         {
             OnScoreReached.Invoke();
