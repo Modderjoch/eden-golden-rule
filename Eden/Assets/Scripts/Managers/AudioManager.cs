@@ -146,4 +146,15 @@ public class AudioManager : MonoBehaviour
 
         OnVoiceOverFinished?.Invoke();
     }
+
+    public void StopAllVoiceOvers()
+    {
+        foreach (Sound sound in sounds)
+        {
+            if (sound.type == SoundType.VoiceOver && sound.source.isPlaying)
+            {
+                sound.source.Stop();
+            }
+        }
+    }
 }

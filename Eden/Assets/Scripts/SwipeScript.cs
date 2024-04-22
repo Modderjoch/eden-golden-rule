@@ -1,5 +1,6 @@
 // Sourced from https://www.youtube.com/watch?v=7O9bAFyGvH8 and slightly modified
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,6 +30,7 @@ public class SwipeScript : MonoBehaviour
     [SerializeField] float throwForceZ = 50f;
     [SerializeField] float timeToDestroy = 4f;
 
+    public event Action OnSwipeDetected;
 
     private Rigidbody rb;
 
@@ -78,6 +80,11 @@ public class SwipeScript : MonoBehaviour
 
         trackSwipe = false;
 
+        if (OnSwipeDetected != null && OnSwipeDetected.GetInvocationList().Length > 0)
+        {
+            OnSwipeDetected.Invoke();
+        }
+
         // Marking time when you release it
         touchTimeFinish = Time.time;
 
@@ -104,7 +111,7 @@ public class SwipeScript : MonoBehaviour
         {
             Vector3 collisionPoint = collision.contacts[0].point;
 
-            float rotationY = Random.Range(0f, 360f);
+            float rotationY = UnityEngine.Random.Range(0f, 360f);
 
             Quaternion rotation = Quaternion.Euler(0, rotationY, 0);
 

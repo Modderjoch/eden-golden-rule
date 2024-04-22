@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,27 @@ public class ForestSceneData : GameSceneData
     private GameObject seedSpawnpoint;
     private GameObject swipeAnimation;
 
+    [SerializeField] private List<GameObject> particleSystems;
+
     private TrashProgress trashProgressScript;
     private PopUpScript popUp;
+    private SwipeScript swipeScript;
 
     private List<GameSceneAdditionalObject> additionalObjects;
     private AudioManager audioManager;
     private GameManager gameManager;
+
+    private bool isSwipeDetected = false;
+
+    public event Action OnTrashPicked;
+
+    protected void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            AudioManager.Instance.StopAllVoiceOvers();
+        }
+    }
 
     public override void OnSceneEnter()
     {
@@ -31,6 +47,12 @@ public class ForestSceneData : GameSceneData
 
         trashProgressScript = trashProgress.GetComponent<TrashProgress>();
         popUp = gameManager.PopUp.GetComponent<PopUpScript>();
+        swipeScript = seedSpawnpoint.GetComponentInChildren<SwipeScript>();
+
+        foreach (GameObject particleSystem in particleSystems)
+        {
+            particleSystem.SetActive(true);
+        }
 
         gameManager.Scenes[2].OnEnvironmentActivated += StartVoiceOver;
     }
@@ -68,7 +90,7 @@ public class ForestSceneData : GameSceneData
     {        
         // First we de-activate the old objects
         trashProgress.SetActive(false);
-        
+
         // Then we unsubscribe from previous events
         trashProgressScript.OnScoreReached -=StartSeedVoiceOver;
         
@@ -87,13 +109,14 @@ public class ForestSceneData : GameSceneData
         audioManager.OnVoiceOverFinished -= StartSeedThrowing;
 
         // Then we activate new objects and call the needed methods
+        swipeAnimation.SetActive(true);
         swipeArea.SetActive(true);
         seedSpawnpoint.SetActive(true);
-        swipeAnimation.SetActive(true);
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedString("SeedPlanting"), 5);
 
         // Then we subscribe to new events
         seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsDepleted += EndScene;
+        swipeScript.OnSwipeDetected += DisableSwipeAnimation;
     }
 
     private void EndScene()
@@ -121,10 +144,16 @@ public class ForestSceneData : GameSceneData
         audioManager.OnVoiceOverFinished -= OnSceneExit;
 
         // Then we activate new objects and call the needed methods
-        gameManager.PopUp.SetActive(true);
+        popUp.PopUpEntry("Well done!", 3);
         gameManager.NextScene();
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events
+    }
+
+    private void DisableSwipeAnimation()
+    {
+        swipeAnimation.SetActive(false);
+        swipeScript.OnSwipeDetected -= DisableSwipeAnimation;
     }
 }
