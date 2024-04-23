@@ -38,19 +38,22 @@ public class ImageTracking : MonoBehaviour
     /// Method to spawn all spawnable prefabs, set their name and add them to
     /// a list to keep track.
     /// </summary>
-    public void SetSpawnablePrefabs()
+    public List<GameObject> SetSpawnablePrefabs()
     {
         spawnedPrefabs = new Dictionary<string, GameObject>();
+        List<GameObject> result = new List<GameObject>();
 
         foreach (GameObject prefab in placeablePrefabs)
         {
             GameObject newPrefab = Instantiate(prefab, Vector3.zero, Quaternion.identity);
             newPrefab.name = prefab.name;
-            //newPrefab.gameObject.name = prefab.name;
             spawnedPrefabs.Add(prefab.name, newPrefab);
+            result.Add(newPrefab);
 
             newPrefab.SetActive(false);
         }
+
+        return result;
     }
 
     private void ImageChanged(ARTrackedImagesChangedEventArgs eventArgs)

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 
@@ -12,7 +13,11 @@ public class ForestSceneData : GameSceneData
     private GameObject seedSpawnpoint;
     private GameObject swipeAnimation;
 
-    [SerializeField] private List<GameObject> particleSystems;
+    [SerializeField] private float itemForTreeRate = 1;
+
+    [SerializeField] private List<ParticleSystem> particleSystemsBase;
+    [SerializeField] private List<ParticleSystem> particleSystemsExtra;
+    [SerializeField] private List<TreeSwitcher> treeSwitcher;
 
     private TrashProgress trashProgressScript;
     private PopUpScript popUp;
@@ -22,9 +27,8 @@ public class ForestSceneData : GameSceneData
     private AudioManager audioManager;
     private GameManager gameManager;
 
-    private bool isSwipeDetected = false;
-
-    public event Action OnTrashPicked;
+    private int deadForestItems;
+    private int actionPoint;
 
     protected void Update()
     {
@@ -49,10 +53,7 @@ public class ForestSceneData : GameSceneData
         popUp = gameManager.PopUp.GetComponent<PopUpScript>();
         swipeScript = seedSpawnpoint.GetComponentInChildren<SwipeScript>();
 
-        foreach (GameObject particleSystem in particleSystems)
-        {
-            particleSystem.SetActive(true);
-        }
+        deadForestItems = treeSwitcher.Count;
 
         gameManager.Scenes[2].OnEnvironmentActivated += StartVoiceOver;
     }
@@ -66,6 +67,7 @@ public class ForestSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("ForestScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
+        gameManager.QRScanningUI.SetActive(false);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartTrashPicking;
@@ -80,10 +82,12 @@ public class ForestSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         trashProgress.SetActive(true);
+        actionPoint = Mathf.FloorToInt(trashProgressScript.ReturnTotalScore() / deadForestItems + itemForTreeRate);
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("TrashCollection").Result, 3);
 
         // Then we subscribe to new events
         trashProgressScript.OnScoreReached += StartSeedVoiceOver;
+        trashProgressScript.OnScoreAdded += HandleTrashCollection;
     }
 
     private void StartSeedVoiceOver()
@@ -93,7 +97,8 @@ public class ForestSceneData : GameSceneData
 
         // Then we unsubscribe from previous events
         trashProgressScript.OnScoreReached -=StartSeedVoiceOver;
-        
+        trashProgressScript.OnScoreAdded -= HandleTrashCollection;
+
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("ForestScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
 
@@ -155,5 +160,25 @@ public class ForestSceneData : GameSceneData
     {
         swipeAnimation.SetActive(false);
         swipeScript.OnSwipeDetected -= DisableSwipeAnimation;
+    }
+
+    private void HandleTrashCollection()
+    {
+        int index = (int)Mathf.Floor(trashProgressScript.ReturnCurrentScore() / actionPoint);
+
+        if(index <= particleSystemsBase.Count - 1)
+        {
+            particleSystemsBase[index].GetComponent<ParticleSystem>().Stop();
+        }
+
+        if (index <= particleSystemsExtra.Count - 1)
+        {
+            particleSystemsExtra[index].GetComponent<ParticleSystem>().Stop();
+        }
+
+        if(index <= treeSwitcher.Count - 1)
+        {
+            treeSwitcher[index].ActivateTransition();
+        }
     }
 }

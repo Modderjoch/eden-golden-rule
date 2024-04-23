@@ -18,8 +18,6 @@ public class InputManager : MonoBehaviour
     private PlayerControls playerControls;
 
     [SerializeField] private SeedManager seedManager;
-    [SerializeField] private float minimumSwipe = 10f;
-    private Vector2 swipeDirection;
 
     [SerializeField] private bool useSeed;
 

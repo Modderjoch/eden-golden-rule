@@ -15,6 +15,7 @@ public class TrashProgress : MonoBehaviour
     private int currentScore = 0;
 
     public event Action OnScoreReached; // Event to be invoked when currentScore equals totalScore
+    public event Action OnScoreAdded;
 
     protected void Start()
     {
@@ -31,6 +32,8 @@ public class TrashProgress : MonoBehaviour
     public void AddScore(Trash trash)
     {
         currentScore += trash.Score;
+
+        OnScoreAdded.Invoke();
 
         RefreshUI();
 
@@ -53,6 +56,6 @@ public class TrashProgress : MonoBehaviour
     private void RefreshUI()
     {
         progressBar.fillAmount = currentScore / (float)totalScore;
-        progressText.text = currentScore + " / " + totalScore;
+        progressText.text = currentScore + "/" + totalScore;
     }
 }

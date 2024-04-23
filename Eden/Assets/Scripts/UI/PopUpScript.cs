@@ -30,6 +30,5 @@ public class PopUpScript : MonoBehaviour
     {
         yield return new WaitForSeconds(x);
         animator.SetTrigger("close");
-        gameObject.SetActive(false);
     }
 }
