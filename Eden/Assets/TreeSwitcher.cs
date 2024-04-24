@@ -42,4 +42,24 @@ public class TreeSwitcher : MonoBehaviour
     {
         transitionActivated = true;
     }
+
+    public void ToggleTrees()
+    {
+        if(deadTree.transform.localScale == Vector3.zero)
+        {
+            initialScale = liveTree.transform.localScale;
+        }
+        else { initialScale = deadTree.transform.localScale; }
+
+        if (deadTree.transform.localScale == initialScale)
+        {
+            deadTree.transform.localScale = Vector3.zero;
+            liveTree.transform.localScale = initialScale;
+        }
+        else
+        {
+            deadTree.transform.localScale = initialScale;
+            liveTree.transform.localScale = Vector3.zero;
+        }
+    }
 }

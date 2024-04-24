@@ -246,6 +246,7 @@ public class ForestSceneData : GameSceneData
         else if (currentScore > 20 && currentScore <= 25)
         {
             treeSwitcher[2].ActivateTransition();
+            treeSwitcher[10].ActivateTransition();
         }
         else if (currentScore > 25 && currentScore <= 30)
         {
@@ -263,6 +264,7 @@ public class ForestSceneData : GameSceneData
         else if (currentScore > 40 && currentScore <= 45)
         {
             treeSwitcher[7].ActivateTransition();
+            treeSwitcher[11].ActivateTransition();
         }
         else if (currentScore > 45 && currentScore <= 50)
         {
