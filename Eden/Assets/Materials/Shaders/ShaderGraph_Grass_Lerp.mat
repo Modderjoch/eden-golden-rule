@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Grass_Lerp
+  m_Name: ShaderGraph_Grass_Lerp
   m_Shader: {fileID: -6465566751694194690, guid: 7d92348536002454090ea902aa42ff01,
     type: 3}
   m_Parent: {fileID: 0}
@@ -60,7 +60,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Float: 0
-    - _GrassLerp: 0.5
+    - _GrassLerp: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors: []
