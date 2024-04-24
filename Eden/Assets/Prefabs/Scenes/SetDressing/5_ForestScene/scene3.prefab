@@ -78207,7 +78207,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cfe4f438fa424a4aa963a3c72f379ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemForTreeRate: 1.23
+  itemForTreeRate: 1.96
+  grassLerpDuration: 3
+  grassMaterial: {fileID: 2100000, guid: f84c0bedee6b3db4b8c104d0523ee769, type: 2}
+  grassClumpsMaterial: {fileID: 2100000, guid: afa3aa65056c8fd46ba26d050d101b04, type: 2}
   particleSystemsBase:
   - {fileID: 125686934426848856}
   - {fileID: 8250808678638224572}
@@ -88447,6 +88450,36 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.7643
       objectReference: {fileID: 0}
+    - target: {fileID: 4072640792111600505, guid: bc412d23232d28e418e70e99789ad0c2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072640792111600505, guid: bc412d23232d28e418e70e99789ad0c2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072640792111600505, guid: bc412d23232d28e418e70e99789ad0c2,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072640792111600505, guid: bc412d23232d28e418e70e99789ad0c2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072640792111600505, guid: bc412d23232d28e418e70e99789ad0c2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072640792111600505, guid: bc412d23232d28e418e70e99789ad0c2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.93
+      objectReference: {fileID: 0}
     - target: {fileID: 5259704173762711687, guid: bc412d23232d28e418e70e99789ad0c2,
         type: 3}
       propertyPath: m_Name
@@ -88455,7 +88488,17 @@ PrefabInstance:
     - target: {fileID: 5259704173762711687, guid: bc412d23232d28e418e70e99789ad0c2,
         type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6619297991807033411, guid: bc412d23232d28e418e70e99789ad0c2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6619297991807033411, guid: bc412d23232d28e418e70e99789ad0c2,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

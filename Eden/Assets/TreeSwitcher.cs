@@ -40,13 +40,6 @@ public class TreeSwitcher : MonoBehaviour
 
     public void ActivateTransition()
     {
-        if (transitionActivated)
-        {
-            transitionActivated = false;
-        }
-        else
-        {
-            transitionActivated = true;
-        }
+        transitionActivated = true;
     }
 }

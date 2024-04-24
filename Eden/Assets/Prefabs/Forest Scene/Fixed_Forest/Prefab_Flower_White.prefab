@@ -92,6 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3167525587143757303}
+  - component: {fileID: 1529341868028335355}
   m_Layer: 0
   m_Name: Prefab_Flower_White
   m_TagString: Untagged
@@ -115,3 +116,19 @@ Transform:
   - {fileID: 106050142495548519}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &1529341868028335355
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5488553486834936700}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9676e52c14fb87c4da64b8b2d7af0967, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9676e52c14fb87c4da64b8b2d7af0967, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

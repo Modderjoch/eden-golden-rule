@@ -13,7 +13,11 @@ public class ForestSceneData : GameSceneData
     private GameObject seedSpawnpoint;
     private GameObject swipeAnimation;
 
-    [SerializeField] private float itemForTreeRate = 1;
+    [SerializeField] private float itemForTreeRate = 3;
+    [SerializeField] private float grassLerpDuration = 3;
+
+    [SerializeField] private Material grassMaterial;
+    [SerializeField] private Material grassClumpsMaterial;
 
     [SerializeField] private List<ParticleSystem> particleSystemsBase;
     [SerializeField] private List<ParticleSystem> particleSystemsExtra;
@@ -30,11 +34,31 @@ public class ForestSceneData : GameSceneData
     private int deadForestItems;
     private int actionPoint;
 
+    private float lerpTimer = 0f;
+
+    private bool transitionGrass = false;
+
     protected void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
             AudioManager.Instance.StopAllVoiceOvers();
+        }
+
+        if(transitionGrass)
+        {
+            lerpTimer += Time.deltaTime;
+
+            float lerpValue = Mathf.Clamp01(lerpTimer / grassLerpDuration);
+
+            grassMaterial.SetFloat("_GrassLerp", lerpValue);
+
+            grassClumpsMaterial.SetFloat("_GrassClump_Lerp", lerpValue);
+
+            if(lerpTimer > grassLerpDuration)
+            {
+                transitionGrass = false;
+            }
         }
     }
 
@@ -54,6 +78,10 @@ public class ForestSceneData : GameSceneData
         swipeScript = seedSpawnpoint.GetComponentInChildren<SwipeScript>();
 
         deadForestItems = treeSwitcher.Count;
+
+        grassMaterial.SetFloat("_GrassLerp", 0);
+        grassClumpsMaterial.SetFloat("_GrassClump_Lerp", 0);
+
 
         gameManager.Scenes[2].OnEnvironmentActivated += StartVoiceOver;
     }
@@ -100,6 +128,7 @@ public class ForestSceneData : GameSceneData
         trashProgressScript.OnScoreAdded -= HandleTrashCollection;
 
         // Then we activate new objects and call the needed methods
+        transitionGrass = true;
         audioManager.PlayVoiceOver("ForestScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
@@ -164,21 +193,81 @@ public class ForestSceneData : GameSceneData
 
     private void HandleTrashCollection()
     {
-        int index = (int)Mathf.Floor(trashProgressScript.ReturnCurrentScore() / actionPoint);
+        //int index = (int)Mathf.Floor(trashProgressScript.ReturnCurrentScore() / actionPoint);
 
-        if(index <= particleSystemsBase.Count - 1)
+        //if(index <= particleSystemsBase.Count - 1)
+        //{
+        //    particleSystemsBase[index].GetComponent<ParticleSystem>().Stop();
+
+        //    if(index <= particleSystemsExtra.Count)
+        //    particleSystemsExtra[index].GetComponent<ParticleSystem>().Stop();
+        //}
+        //else
+        //{
+        //    index -= particleSystemsBase.Count;
+
+        //    if (index <= treeSwitcher.Count - 1)
+        //    {
+        //        treeSwitcher[index].ActivateTransition();
+        //    }
+        //}
+
+        int currentScore = trashProgressScript.ReturnCurrentScore();
+
+        if (currentScore > 0 && currentScore <= 5)
         {
-            particleSystemsBase[index].GetComponent<ParticleSystem>().Stop();
+            particleSystemsBase[0].Stop();
+            particleSystemsBase[1].Stop();
+            particleSystemsBase[2].Stop();
         }
-
-        if (index <= particleSystemsExtra.Count - 1)
+        else if (currentScore > 5 && currentScore <= 10)
         {
-            particleSystemsExtra[index].GetComponent<ParticleSystem>().Stop();
+            particleSystemsBase[3].Stop();
+            particleSystemsBase[4].Stop();
+            particleSystemsBase[5].Stop();
+            particleSystemsBase[6].Stop();
+
+            particleSystemsExtra[0].Stop();
+            particleSystemsExtra[1].Stop();
+            particleSystemsExtra[2].Stop();
+            particleSystemsExtra[3].Stop();
         }
-
-        if(index <= treeSwitcher.Count - 1)
+        else if (currentScore > 10 && currentScore <= 15)
         {
-            treeSwitcher[index].ActivateTransition();
+            particleSystemsExtra[4].Stop();
+            particleSystemsExtra[5].Stop();
+            particleSystemsExtra[6].Stop();
+        }
+        else if (currentScore > 15 && currentScore <= 20)
+        {
+            treeSwitcher[0].ActivateTransition();
+            treeSwitcher[1].ActivateTransition();
+        }
+        else if (currentScore > 20 && currentScore <= 25)
+        {
+            treeSwitcher[2].ActivateTransition();
+        }
+        else if (currentScore > 25 && currentScore <= 30)
+        {
+            treeSwitcher[3].ActivateTransition();
+        }
+        else if (currentScore > 30 && currentScore <= 35)
+        {
+            treeSwitcher[4].ActivateTransition();
+            treeSwitcher[5].ActivateTransition();
+        }
+        else if (currentScore > 35 && currentScore <= 40)
+        {
+            treeSwitcher[6].ActivateTransition();
+        }
+        else if (currentScore > 40 && currentScore <= 45)
+        {
+            treeSwitcher[7].ActivateTransition();
+        }
+        else if (currentScore > 45 && currentScore <= 50)
+        {
+            treeSwitcher[8].ActivateTransition();
+            treeSwitcher[9].ActivateTransition();
         }
     }
 }

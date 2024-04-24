@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3390883376584367568}
+  - component: {fileID: 4244657036359638267}
   m_Layer: 0
   m_Name: Prefab_Flower_Blue
   m_TagString: Untagged
@@ -32,6 +33,22 @@ Transform:
   - {fileID: 3032490668598059709}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &4244657036359638267
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8648183938958743694}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9676e52c14fb87c4da64b8b2d7af0967, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9676e52c14fb87c4da64b8b2d7af0967, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &8963838843110379333
 GameObject:
   m_ObjectHideFlags: 0

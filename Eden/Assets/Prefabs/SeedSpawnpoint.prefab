@@ -48,6 +48,8 @@ MonoBehaviour:
   spawnPrefab: {fileID: 3674188698255009793, guid: 878c07a644d499f46ade01242bafe158,
     type: 3}
   spawnDelay: 2.5
+  swipeArea: {fileID: 0}
+  numberOfSeeds: 10
 --- !u!1001 &1436336292160353031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61,6 +63,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Seed
       objectReference: {fileID: 0}
+    - target: {fileID: 5533580498762591517, guid: 878c07a644d499f46ade01242bafe158,
+        type: 3}
+      propertyPath: flowerPrefab
+      value: 
+      objectReference: {fileID: 8648183938958743694, guid: 856cab11d10b5f947b141dd221fefe11,
+        type: 3}
     - target: {fileID: 8205119275113321463, guid: 878c07a644d499f46ade01242bafe158,
         type: 3}
       propertyPath: m_LocalPosition.x
