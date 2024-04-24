@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Setting scene");
 
-            SetActiveScene(startSceneIndex);
+            NextScene();
         }
     }
 
@@ -148,6 +148,11 @@ public class GameManager : MonoBehaviour
     {
         startSceneIndex++;
 
+        if(startSceneIndex >= modifiableScenes.Count)
+        {
+            startSceneIndex = 0;
+        }
+
         SetActiveScene(startSceneIndex);
     }
 
@@ -162,7 +167,7 @@ public class GameManager : MonoBehaviour
                 if(scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>() != null)
                 {
                     scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>().OnSceneEnter();
-                    activeSceneData = scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>();
+                    //activeSceneData = scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>();
                 }
 
                 //Debug.Log("Set scene " + scene.name + " to active");
@@ -179,8 +184,6 @@ public class GameManager : MonoBehaviour
                 //Debug.Log("Set scene " + scene.name + " to inactive");
             }
         }
-
-        this.startSceneIndex++;
     }
 
     /// <summary>
