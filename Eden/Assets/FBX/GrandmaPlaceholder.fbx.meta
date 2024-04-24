@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 50b426d12e3c92c4c81c8fd4034e7feb
+guid: 2d4f13ca61d2edf4fa92cd0f77a839d1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_GrandmaPlaceholder
+    second: {fileID: 2100000, guid: 9b9e6c0b3827d1148aee58a86adf0286, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
