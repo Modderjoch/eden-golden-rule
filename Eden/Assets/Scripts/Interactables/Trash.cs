@@ -13,7 +13,7 @@ public class Trash : Interactable
 
     protected void Awake()
     {
-        GameManager.Instance.trashProgress.SetTotalScore(score);
+        GameManager.Instance.TrashProgress.SetTotalScore(score);
     }
 
     public bool PickUp()

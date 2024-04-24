@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 
@@ -12,7 +13,15 @@ public class ForestSceneData : GameSceneData
     private GameObject seedSpawnpoint;
     private GameObject swipeAnimation;
 
-    [SerializeField] private List<GameObject> particleSystems;
+    [SerializeField] private float itemForTreeRate = 3;
+    [SerializeField] private float grassLerpDuration = 3;
+
+    [SerializeField] private Material grassMaterial;
+    [SerializeField] private Material grassClumpsMaterial;
+
+    [SerializeField] private List<ParticleSystem> particleSystemsBase;
+    [SerializeField] private List<ParticleSystem> particleSystemsExtra;
+    [SerializeField] private List<TreeSwitcher> treeSwitcher;
 
     private TrashProgress trashProgressScript;
     private PopUpScript popUp;
@@ -22,15 +31,34 @@ public class ForestSceneData : GameSceneData
     private AudioManager audioManager;
     private GameManager gameManager;
 
-    private bool isSwipeDetected = false;
+    private int deadForestItems;
+    private int actionPoint;
 
-    public event Action OnTrashPicked;
+    private float lerpTimer = 0f;
+
+    private bool transitionGrass = false;
 
     protected void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
             AudioManager.Instance.StopAllVoiceOvers();
+        }
+
+        if(transitionGrass)
+        {
+            lerpTimer += Time.deltaTime;
+
+            float lerpValue = Mathf.Clamp01(lerpTimer / grassLerpDuration);
+
+            grassMaterial.SetFloat("_GrassLerp", lerpValue);
+
+            grassClumpsMaterial.SetFloat("_GrassClump_Lerp", lerpValue);
+
+            if(lerpTimer > grassLerpDuration)
+            {
+                transitionGrass = false;
+            }
         }
     }
 
@@ -49,10 +77,11 @@ public class ForestSceneData : GameSceneData
         popUp = gameManager.PopUp.GetComponent<PopUpScript>();
         swipeScript = seedSpawnpoint.GetComponentInChildren<SwipeScript>();
 
-        foreach (GameObject particleSystem in particleSystems)
-        {
-            particleSystem.SetActive(true);
-        }
+        deadForestItems = treeSwitcher.Count;
+
+        grassMaterial.SetFloat("_GrassLerp", 0);
+        grassClumpsMaterial.SetFloat("_GrassClump_Lerp", 0);
+
 
         gameManager.Scenes[2].OnEnvironmentActivated += StartVoiceOver;
     }
@@ -66,6 +95,7 @@ public class ForestSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("ForestScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
+        gameManager.QRScanningUI.SetActive(false);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartTrashPicking;
@@ -80,10 +110,12 @@ public class ForestSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         trashProgress.SetActive(true);
+        actionPoint = Mathf.FloorToInt(trashProgressScript.ReturnTotalScore() / deadForestItems + itemForTreeRate);
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("TrashCollection").Result, 3);
 
         // Then we subscribe to new events
         trashProgressScript.OnScoreReached += StartSeedVoiceOver;
+        trashProgressScript.OnScoreAdded += HandleTrashCollection;
     }
 
     private void StartSeedVoiceOver()
@@ -93,8 +125,10 @@ public class ForestSceneData : GameSceneData
 
         // Then we unsubscribe from previous events
         trashProgressScript.OnScoreReached -=StartSeedVoiceOver;
-        
+        trashProgressScript.OnScoreAdded -= HandleTrashCollection;
+
         // Then we activate new objects and call the needed methods
+        transitionGrass = true;
         audioManager.PlayVoiceOver("ForestScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
@@ -155,5 +189,87 @@ public class ForestSceneData : GameSceneData
     {
         swipeAnimation.SetActive(false);
         swipeScript.OnSwipeDetected -= DisableSwipeAnimation;
+    }
+
+    private void HandleTrashCollection()
+    {
+        //int index = (int)Mathf.Floor(trashProgressScript.ReturnCurrentScore() / actionPoint);
+
+        //if(index <= particleSystemsBase.Count - 1)
+        //{
+        //    particleSystemsBase[index].GetComponent<ParticleSystem>().Stop();
+
+        //    if(index <= particleSystemsExtra.Count)
+        //    particleSystemsExtra[index].GetComponent<ParticleSystem>().Stop();
+        //}
+        //else
+        //{
+        //    index -= particleSystemsBase.Count;
+
+        //    if (index <= treeSwitcher.Count - 1)
+        //    {
+        //        treeSwitcher[index].ActivateTransition();
+        //    }
+        //}
+
+        int currentScore = trashProgressScript.ReturnCurrentScore();
+
+        if (currentScore > 0 && currentScore <= 5)
+        {
+            particleSystemsBase[0].Stop();
+            particleSystemsBase[1].Stop();
+            particleSystemsBase[2].Stop();
+        }
+        else if (currentScore > 5 && currentScore <= 10)
+        {
+            particleSystemsBase[3].Stop();
+            particleSystemsBase[4].Stop();
+            particleSystemsBase[5].Stop();
+            particleSystemsBase[6].Stop();
+
+            particleSystemsExtra[0].Stop();
+            particleSystemsExtra[1].Stop();
+            particleSystemsExtra[2].Stop();
+            particleSystemsExtra[3].Stop();
+        }
+        else if (currentScore > 10 && currentScore <= 15)
+        {
+            particleSystemsExtra[4].Stop();
+            particleSystemsExtra[5].Stop();
+            particleSystemsExtra[6].Stop();
+        }
+        else if (currentScore > 15 && currentScore <= 20)
+        {
+            treeSwitcher[0].ActivateTransition();
+            treeSwitcher[1].ActivateTransition();
+        }
+        else if (currentScore > 20 && currentScore <= 25)
+        {
+            treeSwitcher[2].ActivateTransition();
+            treeSwitcher[10].ActivateTransition();
+        }
+        else if (currentScore > 25 && currentScore <= 30)
+        {
+            treeSwitcher[3].ActivateTransition();
+        }
+        else if (currentScore > 30 && currentScore <= 35)
+        {
+            treeSwitcher[4].ActivateTransition();
+            treeSwitcher[5].ActivateTransition();
+        }
+        else if (currentScore > 35 && currentScore <= 40)
+        {
+            treeSwitcher[6].ActivateTransition();
+        }
+        else if (currentScore > 40 && currentScore <= 45)
+        {
+            treeSwitcher[7].ActivateTransition();
+            treeSwitcher[11].ActivateTransition();
+        }
+        else if (currentScore > 45 && currentScore <= 50)
+        {
+            treeSwitcher[8].ActivateTransition();
+            treeSwitcher[9].ActivateTransition();
+        }
     }
 }

@@ -10,35 +10,39 @@ using UnityEngine.XR.ARSubsystems;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] GameObject mainMenuUI;
-    [SerializeField] TMP_Dropdown playerIndexDropdown;
+    public GameObject PopUp => popUp;
+    public TrashProgress TrashProgress => trashProgress;
+    public List<GameScene> Scenes => modifiableScenes;
+    public GameObject QRScanningUI => qrScanningUI;
+    public List<GameSceneAdditionalObject> AdditionalObjects => additionalObjects;
 
+
+    [Header("AR Foundation")]
     [SerializeField] private XRReferenceImageLibrary referenceLibrary;
     [SerializeField] private ImageTracking imageTracking;
     private ARTrackedImageManager trackedImageManager;
 
+    [Header("Data")]
     [SerializeField] private List<Button> languages;
+    [SerializeField] private List<GameSceneAdditionalObject> additionalObjects = new List<GameSceneAdditionalObject>();
+    [SerializeField, Range(0, 4)] private int playerIndex = 0;
+    [SerializeField] private int startSceneIndex = 0;
+    [SerializeField] private TrashProgress trashProgress;
 
+    [Header("Scenes")]
     [SerializeField] private List<GameScene> scenes;
     [SerializeField] private List<GameScene> modifiableScenes;
 
-    public List<GameScene> Scenes => modifiableScenes;
-    public GameObject PopUp => popUp;
-
-    public TrashProgress trashProgress;
-
-    public List<GameSceneAdditionalObject> AdditionalObjects => additionalObjects;
-
+    [Header("UI")]
     [SerializeField] private GameObject popUp;
-
-    [SerializeField] private List<GameSceneAdditionalObject> additionalObjects = new List<GameSceneAdditionalObject>();
-
-    [SerializeField, Range(0, 4)] private int playerIndex = 0;
+    [SerializeField] GameObject mainMenuUI;
+    [SerializeField] GameObject qrScanningUI;
+    [SerializeField] TMP_Dropdown playerIndexDropdown;
 
     private static GameManager instance;
     private UIManager uiManager;
 
-    [SerializeField] private int startSceneIndex = 0;
+    private GameSceneData activeSceneData;
 
     public static GameManager Instance
     {
@@ -62,10 +66,7 @@ public class GameManager : MonoBehaviour
     protected void Awake()
     {
         SetLanguage();
-    }
 
-    protected void Start()
-    {
         trackedImageManager = FindObjectOfType<ARTrackedImageManager>();
         uiManager = UIManager.Instance;
 
@@ -84,7 +85,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Setting scene");
 
-            SetActiveScene(startSceneIndex);
+            NextScene();
         }
     }
 
@@ -103,9 +104,14 @@ public class GameManager : MonoBehaviour
 
         SetSpawnablePrefabs();
 
-        SetActiveScene(startSceneIndex);
+        List<GameObject> newPrefabs = imageTracking.SetSpawnablePrefabs();
 
-        imageTracking.SetSpawnablePrefabs();
+        for (int i = 0; i < modifiableScenes.Count; i++)
+        {
+            modifiableScenes[i].sceneEnvironmentPrefab = newPrefabs[i];
+        }
+
+        SetActiveScene(startSceneIndex);
     }
 
     /// <summary>
@@ -142,6 +148,11 @@ public class GameManager : MonoBehaviour
     {
         startSceneIndex++;
 
+        if(startSceneIndex >= modifiableScenes.Count)
+        {
+            startSceneIndex = 0;
+        }
+
         SetActiveScene(startSceneIndex);
     }
 
@@ -156,6 +167,7 @@ public class GameManager : MonoBehaviour
                 if(scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>() != null)
                 {
                     scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>().OnSceneEnter();
+                    //activeSceneData = scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>();
                 }
 
                 //Debug.Log("Set scene " + scene.name + " to active");
@@ -172,8 +184,6 @@ public class GameManager : MonoBehaviour
                 //Debug.Log("Set scene " + scene.name + " to inactive");
             }
         }
-
-        this.startSceneIndex++;
     }
 
     /// <summary>

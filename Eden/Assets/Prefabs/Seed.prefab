@@ -47,14 +47,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6639879979ec19148b8343861734e25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swipeArea: {fileID: 0}
-  flowerPrefab: {fileID: 5356113716632049897, guid: 7bbaee9a32b5b9b4f89e11a312f18b31,
+  flowerPrefab: {fileID: 8648183938958743694, guid: 856cab11d10b5f947b141dd221fefe11,
     type: 3}
+  flowerScale: {x: 1, y: 1, z: 1}
+  minSwipeDistance: 0.9
+  swipeArea: {fileID: 0}
   throwForceX: 0.05
   throwForceY: 0.15
   throwForceZ: 1
   timeToDestroy: 5
-  minSwipeDistance: 0.9
 --- !u!54 &573697198886782582
 Rigidbody:
   m_ObjectHideFlags: 0
