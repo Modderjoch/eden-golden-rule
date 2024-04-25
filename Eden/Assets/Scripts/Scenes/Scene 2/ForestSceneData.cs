@@ -12,6 +12,7 @@ public class ForestSceneData : GameSceneData
     private GameObject swipeArea;
     private GameObject seedSpawnpoint;
     private GameObject swipeAnimation;
+    private GameObject seedPacks;
 
     [SerializeField] private float itemForTreeRate = 3;
     [SerializeField] private float grassLerpDuration = 3;
@@ -72,6 +73,7 @@ public class ForestSceneData : GameSceneData
         swipeArea = additionalObjects[1].additionalObject;
         seedSpawnpoint = additionalObjects[2].additionalObject;
         swipeAnimation = additionalObjects[3].additionalObject;
+        seedPacks = additionalObjects[4].additionalObject;
 
         trashProgressScript = trashProgress.GetComponent<TrashProgress>();
         popUp = gameManager.PopUp.GetComponent<PopUpScript>();
@@ -132,15 +134,30 @@ public class ForestSceneData : GameSceneData
         audioManager.PlayVoiceOver("ForestScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
-        audioManager.OnVoiceOverFinished += StartSeedThrowing;
+        audioManager.OnVoiceOverFinished += ChooseSeedPack;
+    }
+
+    private void ChooseSeedPack()
+    {
+        // First we de-activate the old objects
+
+        // Then we unsubscribe from previous events
+        audioManager.OnVoiceOverFinished -= ChooseSeedPack;
+
+        // Then we activate new objects and call the needed methods
+        seedPacks.SetActive(true);
+
+        // Then we subscribe to new events
+        seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsChosen += StartSeedThrowing;
     }
 
     private void StartSeedThrowing()
     {
         // First we de-activate the old objects
+        seedPacks.SetActive(false);
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= StartSeedThrowing;
+        seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsChosen -= StartSeedThrowing;
 
         // Then we activate new objects and call the needed methods
         swipeAnimation.SetActive(true);
