@@ -12,8 +12,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Mat_Foliage
+      name: Mat_Alpha
     second: {fileID: 2100000, guid: 26e190e1af9f64b42b107fcdfc1c3b16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Tree_Leaves
+    second: {fileID: 2100000, guid: 8686825fa0785414687557a13095cb9f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

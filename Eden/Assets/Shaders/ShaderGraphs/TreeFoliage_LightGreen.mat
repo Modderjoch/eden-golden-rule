@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Tree Foliage
+  m_Name: TreeFoliage_LightGreen
   m_Shader: {fileID: -6465566751694194690, guid: 739b77238a22345429e0aa2a0b493fcc,
     type: 3}
   m_Parent: {fileID: 0}
@@ -55,7 +55,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _GradientHeight: 1.97
+    - _GradientHeight: 2.09
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
