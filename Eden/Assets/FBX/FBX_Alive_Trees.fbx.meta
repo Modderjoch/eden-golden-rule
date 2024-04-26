@@ -12,8 +12,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Mat_Alpha
-    second: {fileID: 2100000, guid: 26e190e1af9f64b42b107fcdfc1c3b16, type: 2}
+      name: Mat_Pine_Leaf
+    second: {fileID: 2100000, guid: cc1e21b551eb21d4a90f5cef63f33e89, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
