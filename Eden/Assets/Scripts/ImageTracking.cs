@@ -45,7 +45,7 @@ public class ImageTracking : MonoBehaviour
 
         foreach (GameObject prefab in placeablePrefabs)
         {
-            GameObject newPrefab = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+            GameObject newPrefab = Instantiate(prefab, Vector3.zero, prefab.transform.rotation);
             newPrefab.name = prefab.name;
             spawnedPrefabs.Add(prefab.name, newPrefab);
             result.Add(newPrefab);
@@ -89,7 +89,7 @@ public class ImageTracking : MonoBehaviour
             }
             
             prefab.transform.position = position;
-            prefab.transform.rotation = trackedImage.transform.rotation;
+            //prefab.transform.rotation = trackedImage.transform.rotation;
 
             if(prefab.GetComponent<TestPanel>() != null)
             {
