@@ -1,0 +1,1680 @@
+fileFormatVersion: 2
+guid: 248d22e9738b41d429afc97e3898301c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Garbagehint_ss1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746dcc45cd1ad49429f64b381e848ff3
+      internalID: 1113521940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_1
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 7000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fdf70f7c1d78546bb5fb31a344360e
+      internalID: -230512696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 7000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94306a48d66ad10458e85d6b10677461
+      internalID: -771301800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_3
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 7000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2518353f3d571a949b5e78ed8268b1ac
+      internalID: 189189572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_4
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 7000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4bfbb769a880c94895314be7efffe4b
+      internalID: 1764847144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_5
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 7000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f6f586ea61fe8428c7e688570524c1
+      internalID: -1111550638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_6
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 7000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5443bcb9372914091f3f68d648ff36
+      internalID: 1391379381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_7
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 7000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b82248bf4369545b21549c19a4c332
+      internalID: -1320771688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_8
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 7000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7386bacf71533e4c93150be391ba28b
+      internalID: -876581860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56dadd568dc01e64c8d67ec91263a3fd
+      internalID: -411226444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_10
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 6000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7621fa934964b744a3a050296e581a5
+      internalID: 339975506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_11
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 6000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d58c7dbdb6583469543593d8b74965
+      internalID: 719496760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_12
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 6000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46110fc2106824a45aa6f56b138c16ef
+      internalID: 1412662421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_13
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 6000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9726e48064c1082408564c559f130e45
+      internalID: -144797534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_14
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 6000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602745124cb1bf24094b20fa0013cd62
+      internalID: 1408144746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_15
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 6000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41f3520d100d9d4cacf04ef694ad41b
+      internalID: 601569854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_16
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 6000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d52d3678f3bbb4bb3d107297b9789c
+      internalID: -104362480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_17
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 6000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10c6f0c000b518429922e7d82010d6f
+      internalID: -1053490114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dac9c3e7accd874e8daa6d6a21cb688
+      internalID: -2116713190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_19
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4de407f2254cc4e9720624c06bfa1f
+      internalID: -1271108876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_20
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 5000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbe817802e7d094c9af722aec765d3c
+      internalID: -361732105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_21
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 5000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e0913a70eb33a41acbc7dcc136d143
+      internalID: -1852131171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_22
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ff34cdc805b8e4e9ae49b60c2c77cc
+      internalID: -1471468124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_23
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 5000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e4c2a0d26f8ee45a7afab3e8a98bfb
+      internalID: 485698729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_24
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 5000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e884399e2af58e4eac8e3b657e3b83f
+      internalID: -1401755047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_25
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 5000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fbe6426f2a40f644a560e8418642082
+      internalID: -695027806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_26
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 5000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c4ec94b7bac5a4b9afed6699bf4eab
+      internalID: -176054077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a32d81d9a64874694277b2ce96738e
+      internalID: -1055567388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_28
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425f4c867f35e3b46a75ee1e24419175
+      internalID: 1368883887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_29
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e2af146c57606458c3267dd7cfdeb1
+      internalID: -290446555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_30
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 4000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4c7b722642bf142b9a4d3644d8ce5f
+      internalID: -844988734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_31
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 4000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b86f41dd7c85b40be23da1f10bfa5d
+      internalID: -505196105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_32
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 4000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a8ca6cb17e9a54c932164627586122
+      internalID: -1557524958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_33
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 4000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24d9ff68b7070c41b04e84f5aacd3b4
+      internalID: 2087095074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_34
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 4000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d766632110cbac448948510cb1e07b6d
+      internalID: 659468283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_35
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 4000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 612054fdcb32bf24bb0a361241115550
+      internalID: -1224962279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c47cf1a33292243b70fb606d46a60d
+      internalID: -873769355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_37
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1432264bf9c4fa347be50f10493db6e1
+      internalID: -532917011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_38
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 3000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4a6ea270939014bb32413c67405bd5
+      internalID: -298280846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_39
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 3000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5efb6bc9ebc49c14e99ef09e7df88789
+      internalID: -1204580610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_40
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6505bb17c9034ef46b486b03a739e0fe
+      internalID: -1350463738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_41
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1300cfb698ed9a34f9c70a88cdc1a16d
+      internalID: -1606677917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_42
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 3000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38410a9dfc5cc44dae1244d8393ea89
+      internalID: -1699672867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_43
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 3000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae9a6f539ff5b04e9b4a39aff6021f7
+      internalID: 1251545531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_44
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 3000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812f19312af911140be47a76abec8f26
+      internalID: -916362944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8c3381df5f0f1478f793630a833997
+      internalID: 73566022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_46
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef044927a12ef74ca0cf5dc91ab5fae
+      internalID: 1889078670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_47
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e1e1a26eecaaa49a5b5b7b16238f2b
+      internalID: -1334030443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_48
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b251e85b472dd9740b8c51259ca99e84
+      internalID: -824456662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_49
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c9e009ee5ddd342852c32271dfb554
+      internalID: -517318132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_50
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306b32fc1f762e24f95f5385f18bbb94
+      internalID: -883680686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_51
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51827b9a77008b340937d3095bd0da0c
+      internalID: 1687191187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_52
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 2000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d04d0ebebcaa2e42ae349b220f88d62
+      internalID: 1044370619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_53
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5c4428ee9d29b448b7611a9d44352f
+      internalID: 257259816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83af2dbcdb4e8904f8113b65dfeef96c
+      internalID: -713534805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_55
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0fcd6b9b5c38c4c8683f38c66d3c8c
+      internalID: -1908378091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_56
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d300dec94b1162c488006bcd2fa0f475
+      internalID: -2106948033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_57
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aabcbfb9d3a67644cb40b75c0319b3fa
+      internalID: -1949988909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_58
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02fc45f934a10504496cf3e4e5465dd8
+      internalID: 1036646313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_59
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4294f2f9b1d2b424ba65c9a7667e5846
+      internalID: 1529846766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_60
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10e6aedb3dcfb242a0737d8802ee3e7
+      internalID: 820106934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_61
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 1000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53cffd59e5d0cf9488f7f8f2c9f8ab29
+      internalID: -57918797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_62
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1000
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728685bce736dc749a905e4632b4a820
+      internalID: -1526875285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8345aa87016a9648b769567d4de3997
+      internalID: -1864497076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_64
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768c09b9c7a985641bdc44244285ad00
+      internalID: 389363974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_65
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effe3f2630e0fbe4483a35475ddb6a18
+      internalID: -243656652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_66
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0425456bc02ea11439fa1b7acc813676
+      internalID: -1934172849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_67
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27fee3945f9941048982b3ec8ae2f8f6
+      internalID: -1277952249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_68
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc632354cc7dc744ca50ef226fa4e914
+      internalID: 1699717525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbagehint_ss1_69
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 600
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1409c7a43d9278449b75d415e849ab2d
+      internalID: -1202453187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9c9ed1fc7083e134cb645645255b61b4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Garbagehint_ss1_0: 1113521940
+      Garbagehint_ss1_1: -230512696
+      Garbagehint_ss1_10: 339975506
+      Garbagehint_ss1_11: 719496760
+      Garbagehint_ss1_12: 1412662421
+      Garbagehint_ss1_13: -144797534
+      Garbagehint_ss1_14: 1408144746
+      Garbagehint_ss1_15: 601569854
+      Garbagehint_ss1_16: -104362480
+      Garbagehint_ss1_17: -1053490114
+      Garbagehint_ss1_18: -2116713190
+      Garbagehint_ss1_19: -1271108876
+      Garbagehint_ss1_2: -771301800
+      Garbagehint_ss1_20: -361732105
+      Garbagehint_ss1_21: -1852131171
+      Garbagehint_ss1_22: -1471468124
+      Garbagehint_ss1_23: 485698729
+      Garbagehint_ss1_24: -1401755047
+      Garbagehint_ss1_25: -695027806
+      Garbagehint_ss1_26: -176054077
+      Garbagehint_ss1_27: -1055567388
+      Garbagehint_ss1_28: 1368883887
+      Garbagehint_ss1_29: -290446555
+      Garbagehint_ss1_3: 189189572
+      Garbagehint_ss1_30: -844988734
+      Garbagehint_ss1_31: -505196105
+      Garbagehint_ss1_32: -1557524958
+      Garbagehint_ss1_33: 2087095074
+      Garbagehint_ss1_34: 659468283
+      Garbagehint_ss1_35: -1224962279
+      Garbagehint_ss1_36: -873769355
+      Garbagehint_ss1_37: -532917011
+      Garbagehint_ss1_38: -298280846
+      Garbagehint_ss1_39: -1204580610
+      Garbagehint_ss1_4: 1764847144
+      Garbagehint_ss1_40: -1350463738
+      Garbagehint_ss1_41: -1606677917
+      Garbagehint_ss1_42: -1699672867
+      Garbagehint_ss1_43: 1251545531
+      Garbagehint_ss1_44: -916362944
+      Garbagehint_ss1_45: 73566022
+      Garbagehint_ss1_46: 1889078670
+      Garbagehint_ss1_47: -1334030443
+      Garbagehint_ss1_48: -824456662
+      Garbagehint_ss1_49: -517318132
+      Garbagehint_ss1_5: -1111550638
+      Garbagehint_ss1_50: -883680686
+      Garbagehint_ss1_51: 1687191187
+      Garbagehint_ss1_52: 1044370619
+      Garbagehint_ss1_53: 257259816
+      Garbagehint_ss1_54: -713534805
+      Garbagehint_ss1_55: -1908378091
+      Garbagehint_ss1_56: -2106948033
+      Garbagehint_ss1_57: -1949988909
+      Garbagehint_ss1_58: 1036646313
+      Garbagehint_ss1_59: 1529846766
+      Garbagehint_ss1_6: 1391379381
+      Garbagehint_ss1_60: 820106934
+      Garbagehint_ss1_61: -57918797
+      Garbagehint_ss1_62: -1526875285
+      Garbagehint_ss1_63: -1864497076
+      Garbagehint_ss1_64: 389363974
+      Garbagehint_ss1_65: -243656652
+      Garbagehint_ss1_66: -1934172849
+      Garbagehint_ss1_67: -1277952249
+      Garbagehint_ss1_68: 1699717525
+      Garbagehint_ss1_69: -1202453187
+      Garbagehint_ss1_7: -1320771688
+      Garbagehint_ss1_8: -876581860
+      Garbagehint_ss1_9: -411226444
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
