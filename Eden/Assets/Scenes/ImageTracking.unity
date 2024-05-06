@@ -5088,7 +5088,7 @@ MonoBehaviour:
     additionalObject: {fileID: 171475808}
     parent: {fileID: 1616737895}
   playerIndex: 0
-  startSceneIndex: 2
+  startSceneIndex: 1
   trashProgress: {fileID: 409695568}
   scenes:
   - {fileID: 11400000, guid: a3c9fe02e15b36c449c5e721ebf48532, type: 2}
@@ -6565,6 +6565,51 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ForestScenePart3
     clip: {fileID: 8300000, guid: 8cd1e3fe28f1eb84da9079ce5696c01c, type: 3}
+    type: 2
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GardenScenePart1
+    clip: {fileID: 8300000, guid: 72ba2b457749d5845a050db76a1cdd43, type: 3}
+    type: 2
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GardenScenePart2
+    clip: {fileID: 8300000, guid: bce6ebfb41f16434dbaab8416f3af4c7, type: 3}
+    type: 2
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GardenScenePart3
+    clip: {fileID: 8300000, guid: 3a3dce9d41364f54f8fe642bfe242594, type: 3}
+    type: 2
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GardenScenePart4
+    clip: {fileID: 8300000, guid: e27b6870971eee844ba325f8ddc98a65, type: 3}
+    type: 2
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GardenScenePart5
+    clip: {fileID: 8300000, guid: dbdb353ce8802704abb0380f0e2e536e, type: 3}
     type: 2
     localization:
       id: en-US

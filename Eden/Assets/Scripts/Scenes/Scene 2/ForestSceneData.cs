@@ -193,25 +193,6 @@ public class ForestSceneData : GameSceneData
 
     private void HandleTrashCollection()
     {
-        //int index = (int)Mathf.Floor(trashProgressScript.ReturnCurrentScore() / actionPoint);
-
-        //if(index <= particleSystemsBase.Count - 1)
-        //{
-        //    particleSystemsBase[index].GetComponent<ParticleSystem>().Stop();
-
-        //    if(index <= particleSystemsExtra.Count)
-        //    particleSystemsExtra[index].GetComponent<ParticleSystem>().Stop();
-        //}
-        //else
-        //{
-        //    index -= particleSystemsBase.Count;
-
-        //    if (index <= treeSwitcher.Count - 1)
-        //    {
-        //        treeSwitcher[index].ActivateTransition();
-        //    }
-        //}
-
         int currentScore = trashProgressScript.ReturnCurrentScore();
 
         if (currentScore > 0 && currentScore <= 5)
