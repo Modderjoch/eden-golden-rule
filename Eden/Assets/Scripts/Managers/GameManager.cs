@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject PopUp => popUp;
     public TrashProgress TrashProgress => trashProgress;
+    public PaperProgress PaperProgress => paperProgress;
     public List<GameScene> Scenes => modifiableScenes;
     public GameObject QRScanningUI => qrScanningUI;
     public List<GameSceneAdditionalObject> AdditionalObjects => additionalObjects;
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
     [SerializeField, Range(0, 4)] private int playerIndex = 0;
     [SerializeField] private int startSceneIndex = 0;
     [SerializeField] private TrashProgress trashProgress;
+    [SerializeField] private PaperProgress paperProgress;
 
     [Header("Scenes")]
     [SerializeField] private List<GameScene> scenes;
@@ -79,6 +81,7 @@ public class GameManager : MonoBehaviour
         AddAdditionalObjects();
     }
 
+#if UNITY_EDITOR
     protected void Update()
     {
         if (Input.GetKeyDown(KeyCode.K))
@@ -88,6 +91,7 @@ public class GameManager : MonoBehaviour
             NextScene();
         }
     }
+#endif
 
     /// <summary>
     /// Method to start the game from the Main Menu,

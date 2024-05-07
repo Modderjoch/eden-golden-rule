@@ -1,18 +1,10 @@
 using UnityEngine;
 
-public class BlowIntoAir : MonoBehaviour
+public class PaperSheet : MonoBehaviour
 {
     public float blowForce = 10f;
 
     public float maxSideForce = 2f;
-
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            Blow();
-        }
-    }
 
     public void Blow()
     {

@@ -40,10 +40,12 @@ public class ForestSceneData : GameSceneData
 
     protected void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.P))
         {
             AudioManager.Instance.StopAllVoiceOvers();
         }
+#endif
 
         if(transitionGrass)
         {

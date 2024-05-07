@@ -16,7 +16,7 @@ MonoBehaviour:
   sceneIndex: 1
   sceneUIPrefab: {fileID: 5163745409156657760, guid: e7f7fa4f097d8d24d99c2c758d06f40f,
     type: 3}
-  sceneEnvironmentPrefab: {fileID: 5501570739944241377, guid: 6c2dc82a13a1a4b42a57524c28b7c4df,
+  sceneEnvironmentPrefab: {fileID: 5501570739944241377, guid: 2a9c433e4b70c3d4580a8a04a8e2e828,
     type: 3}
   sceneState:
     state: 2

@@ -9,13 +9,16 @@ public class GardenSceneData : GameSceneData
     private GameObject paperProgress;
     private GameObject paperAnimation;
 
+    [SerializeField] private PaperController paperController;
+
     private PopUpScript popUp;
-    private
+    private PaperProgress paperProgressScript;
 
     private List<GameSceneAdditionalObject> additionalObjects;
     private AudioManager audioManager;
     private GameManager gameManager;
 
+#if UNITY_EDITOR
     protected void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
@@ -23,7 +26,7 @@ public class GardenSceneData : GameSceneData
             AudioManager.Instance.StopAllVoiceOvers();
         }
     }
-
+#endif
     public override void OnSceneEnter()
     {
         audioManager = AudioManager.Instance;
@@ -32,6 +35,9 @@ public class GardenSceneData : GameSceneData
 
         paperProgress = additionalObjects[0].additionalObject;
         paperAnimation = additionalObjects[1].additionalObject;
+
+        paperProgressScript = paperProgress.GetComponent<PaperProgress>();
+        popUp = gameManager.PopUp.GetComponent<PopUpScript>();
 
         gameManager.Scenes[1].OnEnvironmentActivated += StartVoiceOver;
     }
@@ -61,24 +67,30 @@ public class GardenSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
 
-        // Then we subscribe to new events
-        audioManager.OnVoiceOverFinished += StartPaperCollecting;
-    }
-
-    private void StartPaperCollecting()
-    {
-        // First we de-activate the old objects
-
-        // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= StartPaperCollecting;
-
-        // Then we activate new objects and call the needed methods
         paperProgress.SetActive(true);
         paperAnimation.SetActive(true);
+        paperController.BlowPapers();
 
         // Then we subscribe to new events
-
+        paperProgressScript.OnScoreReached += StartPaperCollectedVoiceOver;
+        paperProgressScript.OnScoreAdded += DisablePickUpHint;
     }
+
+    //private void StartPaperCollecting()
+    //{
+    //    // First we de-activate the old objects
+
+    //    // Then we unsubscribe from previous events
+    //    audioManager.OnVoiceOverFinished -= StartPaperCollecting;
+
+    //    // Then we activate new objects and call the needed methods
+    //    paperProgress.SetActive(true);
+    //    paperAnimation.SetActive(true);
+    //    paperController.BlowPapers();
+
+    //    // Then we subscribe to new events
+    //    paperProgressScript.OnScoreReached += StartPaperCollectedVoiceOver;
+    //}
 
     private void StartPaperCollectedVoiceOver()
     {
@@ -87,11 +99,13 @@ public class GardenSceneData : GameSceneData
         paperAnimation.SetActive(false);
 
         // Then we unsubscribe from previous events
-
+        paperProgressScript.OnScoreReached -= StartPaperCollectedVoiceOver;
 
         // Then we activate new objects and call the needed methods
+        audioManager.PlayVoiceOver("GardenScenePart3" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
+        audioManager.OnVoiceOverFinished += StartContinueVoiceOver;
     }
 
     private void StartContinueVoiceOver()
@@ -99,10 +113,13 @@ public class GardenSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
+        audioManager.OnVoiceOverFinished -= StartContinueVoiceOver;
 
         // Then we activate new objects and call the needed methods
+        audioManager.PlayVoiceOver("GardenScenePart4" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
+        audioManager.OnVoiceOverFinished += StartMotherWolfVoiceOver;
     }
 
     private void StartMotherWolfVoiceOver()
@@ -110,10 +127,13 @@ public class GardenSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
+        audioManager.OnVoiceOverFinished -= StartMotherWolfVoiceOver;
 
         // Then we activate new objects and call the needed methods
+        audioManager.PlayVoiceOver("GardenScenePart5" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
+        audioManager.OnVoiceOverFinished += OnSceneExit;
     }
 
     public override void OnSceneExit()
@@ -121,6 +141,7 @@ public class GardenSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
+        audioManager.OnVoiceOverFinished -= OnSceneExit;
 
         // Then we activate new objects and call the needed methods
         popUp.PopUpEntry("Find mother Wolf", 4);
@@ -128,5 +149,11 @@ public class GardenSceneData : GameSceneData
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events
+    }
+
+    private void DisablePickUpHint()
+    {
+        paperAnimation.SetActive(false);
+        paperProgressScript.OnScoreAdded -= DisablePickUpHint;
     }
 }
