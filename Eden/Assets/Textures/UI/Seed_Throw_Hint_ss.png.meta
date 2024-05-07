@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b8ac81d4d54ef944ba48aa6233f836a9
+guid: 42b26fe7016148a4498ab8d78b36e0eb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -123,427 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PaperPickUpSheet2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 10000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9dbc09fccaa1ad146a9af87549f07b81
-      internalID: 720137091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_1
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 10000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f12dbfa4e66d2b842b7f78793a341fdd
-      internalID: -1483275188
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_2
-      rect:
-        serializedVersion: 2
-        x: 1200
-        y: 10000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 603d46337a05a794dadd6a0e028b7043
-      internalID: 727166136
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_3
-      rect:
-        serializedVersion: 2
-        x: 1800
-        y: 10000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8a8735ca10656847a11b8889c321082
-      internalID: -1308929702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_4
-      rect:
-        serializedVersion: 2
-        x: 2400
-        y: 10000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 182e5f52c0c0f44488976f5300a9022d
-      internalID: -543840319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_5
-      rect:
-        serializedVersion: 2
-        x: 3000
-        y: 10000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7398b3b37985eb4fa2236bd756a6fae
-      internalID: -1288132037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_6
-      rect:
-        serializedVersion: 2
-        x: 3600
-        y: 10000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dff7b6e15777f2b47800bb4be1aea949
-      internalID: 422931425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_7
-      rect:
-        serializedVersion: 2
-        x: 4200
-        y: 10000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4aaf14cebd1884347b3185297658e23f
-      internalID: 1933831555
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_8
-      rect:
-        serializedVersion: 2
-        x: 4800
-        y: 10000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cea286aeabe486b4e8d0e31d8681a7e6
-      internalID: 554450024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_9
-      rect:
-        serializedVersion: 2
-        x: 5400
-        y: 10000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6599c62ddc8963b42b9e8903ddf82d49
-      internalID: 694317276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 9000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25a6e82b833f7924e97100d825c6d259
-      internalID: -915344970
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_11
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 9000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7bbd3e6ff07b6ee4fba2373c249ed5ed
-      internalID: 62379789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_12
-      rect:
-        serializedVersion: 2
-        x: 1200
-        y: 9000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2050cc84dcf89f748977b8c90944f571
-      internalID: 1217831751
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_13
-      rect:
-        serializedVersion: 2
-        x: 1800
-        y: 9000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5256c90e598308243a95fb411f7b062a
-      internalID: -767178134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_14
-      rect:
-        serializedVersion: 2
-        x: 2400
-        y: 9000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9380890fc1ed26741aab57f7915a82cd
-      internalID: -815407059
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_15
-      rect:
-        serializedVersion: 2
-        x: 3000
-        y: 9000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d9107babc8034e4dad95f97259ca7f5
-      internalID: 1432194299
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_16
-      rect:
-        serializedVersion: 2
-        x: 3600
-        y: 9000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28618d4ec1355b24eb2754641246f311
-      internalID: -1337663855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_17
-      rect:
-        serializedVersion: 2
-        x: 4200
-        y: 9000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f72466e9e8ca594c918b731ecd1ff44
-      internalID: 388958563
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_18
-      rect:
-        serializedVersion: 2
-        x: 4800
-        y: 9000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d051d989e3f40554aa54c1a7ce194c67
-      internalID: -122957727
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_19
-      rect:
-        serializedVersion: 2
-        x: 5400
-        y: 9000
-        width: 600
-        height: 1000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 936e7a07374f9864eb31e88fd0fa13bc
-      internalID: -2010233811
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PaperPickUpSheet2_20
+      name: Seed_Throw_Hint_ss_0
       rect:
         serializedVersion: 2
         x: 0
@@ -551,20 +131,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25e3a99bbf38ad142b0e5e764dd8dbd7
-      internalID: -1718733641
+      spriteID: 4d1dbc5a34c0c6c40aa8e30d552736e2
+      internalID: 132494186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_21
+      name: Seed_Throw_Hint_ss_1
       rect:
         serializedVersion: 2
         x: 600
@@ -572,20 +152,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca47d19fff8acc4499cac17b1d428c26
-      internalID: -1144787785
+      spriteID: 609cb245f98d543498102f5d7d8a80f2
+      internalID: -1790995373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_22
+      name: Seed_Throw_Hint_ss_2
       rect:
         serializedVersion: 2
         x: 1200
@@ -593,20 +173,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 061a9d9cf76d7924aa8f4701693cd4c3
-      internalID: -1381622029
+      spriteID: f21e9051ebb564c48b9bc3ef1d3750fd
+      internalID: -622122788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_23
+      name: Seed_Throw_Hint_ss_3
       rect:
         serializedVersion: 2
         x: 1800
@@ -614,20 +194,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6dfe1c7d2ba6d444ba015fa8910069b
-      internalID: 1151594882
+      spriteID: cdd39d220dc98b9499b75a36bbcc63a1
+      internalID: 213188202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_24
+      name: Seed_Throw_Hint_ss_4
       rect:
         serializedVersion: 2
         x: 2400
@@ -635,20 +215,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63f86efb9bec8414c97007fb751c3c60
-      internalID: 1121775180
+      spriteID: 55ad710a8c0e0b14e9e73bb14e4be5b9
+      internalID: 1558992635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_25
+      name: Seed_Throw_Hint_ss_5
       rect:
         serializedVersion: 2
         x: 3000
@@ -656,20 +236,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef104ea671f3b924781b9d6257b284d1
-      internalID: 1897821063
+      spriteID: b32ec69dac9e3714b9108cb9ba1b4f07
+      internalID: -1748233335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_26
+      name: Seed_Throw_Hint_ss_6
       rect:
         serializedVersion: 2
         x: 3600
@@ -677,20 +257,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bd25947a23db1b47a5af8d3ab35a283
-      internalID: -401211358
+      spriteID: 3e510bb8fdfac144c99ebc92918d7357
+      internalID: -1306252275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_27
+      name: Seed_Throw_Hint_ss_7
       rect:
         serializedVersion: 2
         x: 4200
@@ -698,20 +278,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d9479b55ccae31448a36375db8c1625
-      internalID: 1236347208
+      spriteID: 6cf4e0120f379674d9bd33f854c8185d
+      internalID: -1552066566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_28
+      name: Seed_Throw_Hint_ss_8
       rect:
         serializedVersion: 2
         x: 4800
@@ -719,20 +299,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d1c30e94e9ff88478891b9588137982
-      internalID: 1659177336
+      spriteID: c3eb33f6c8aa6734fa62c8fec74c8a0d
+      internalID: -1444256353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_29
+      name: Seed_Throw_Hint_ss_9
       rect:
         serializedVersion: 2
         x: 5400
@@ -740,20 +320,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 658e74153b8864d4aa65eb8a9e4c1bf7
-      internalID: 2140889262
+      spriteID: 11c81280df8ea0a4ba37211f9c08b221
+      internalID: 1956167750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_30
+      name: Seed_Throw_Hint_ss_10
       rect:
         serializedVersion: 2
         x: 0
@@ -761,20 +341,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa60997037ee2e645b4062229774432a
-      internalID: 1107646705
+      spriteID: 1e252f0b49182b045940b2c9fb6c03f3
+      internalID: 494564047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_31
+      name: Seed_Throw_Hint_ss_11
       rect:
         serializedVersion: 2
         x: 600
@@ -782,20 +362,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c88f8a018aaf8bb4cbd4da9af2cb1b8f
-      internalID: 464840343
+      spriteID: 508aca7362d2368478dd95b19ec5383b
+      internalID: 337092709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_32
+      name: Seed_Throw_Hint_ss_12
       rect:
         serializedVersion: 2
         x: 1200
@@ -803,20 +383,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c35f4f3fe026d04aa2c271c586d366d
-      internalID: 795237589
+      spriteID: 00a28d41935ca5f44b313c5a71b09499
+      internalID: -1772826870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_33
+      name: Seed_Throw_Hint_ss_13
       rect:
         serializedVersion: 2
         x: 1800
@@ -824,20 +404,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19fb63c6dcc5f3349b3a2b826e7fec02
-      internalID: -522613453
+      spriteID: 1a96cd49ec324094bb3c2bba0accf475
+      internalID: 4818604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_34
+      name: Seed_Throw_Hint_ss_14
       rect:
         serializedVersion: 2
         x: 2400
@@ -845,20 +425,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8d69a575cdee0f4ba49d0ca23bc9935
-      internalID: 1553280743
+      spriteID: 8a508383ba966ec4e99b189c0b57a57b
+      internalID: -1902056907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_35
+      name: Seed_Throw_Hint_ss_15
       rect:
         serializedVersion: 2
         x: 3000
@@ -866,20 +446,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b8c9be95e58ab34e97dbace92bfa0f8
-      internalID: 1448484399
+      spriteID: bdcf7209f61507e418b64ed3c07c621a
+      internalID: 1947555953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_36
+      name: Seed_Throw_Hint_ss_16
       rect:
         serializedVersion: 2
         x: 3600
@@ -887,20 +467,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41ef02cf681b5fd4ebd8d776c309c7dc
-      internalID: 1555859432
+      spriteID: 22dcb3a016c80154ea196d7f2f8c9071
+      internalID: -10801137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_37
+      name: Seed_Throw_Hint_ss_17
       rect:
         serializedVersion: 2
         x: 4200
@@ -908,20 +488,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b59a459217d268a45b0c4be1a9f786c6
-      internalID: -299237155
+      spriteID: d16a356106278e84dae72f2078f8f048
+      internalID: 1026668879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_38
+      name: Seed_Throw_Hint_ss_18
       rect:
         serializedVersion: 2
         x: 4800
@@ -929,20 +509,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e581bec0535249c49b4a6bf76784a899
-      internalID: 1245868768
+      spriteID: f79bc265590f1b142bc764dd07656e05
+      internalID: 1251644060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_39
+      name: Seed_Throw_Hint_ss_19
       rect:
         serializedVersion: 2
         x: 5400
@@ -950,20 +530,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9af388a9fffb5b24e964aa86d8b0f035
-      internalID: 2012917185
+      spriteID: 9b2e63c11244f4e4eb23392ec0385ff1
+      internalID: -722484018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_40
+      name: Seed_Throw_Hint_ss_20
       rect:
         serializedVersion: 2
         x: 0
@@ -971,20 +551,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 466a2004e9007a142a81bb9792c7b2f1
-      internalID: -223522039
+      spriteID: ef29a486b108e2344b108735ee80bc59
+      internalID: 931183975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_41
+      name: Seed_Throw_Hint_ss_21
       rect:
         serializedVersion: 2
         x: 600
@@ -992,20 +572,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d79d138676eeb0a4c93f3c8d32068a04
-      internalID: 767161041
+      spriteID: e5a01529bbbbd9d4aa005c9acab398f1
+      internalID: -1696015109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_42
+      name: Seed_Throw_Hint_ss_22
       rect:
         serializedVersion: 2
         x: 1200
@@ -1013,20 +593,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c979e0db36da6314b83040a4d7844529
-      internalID: -1154990891
+      spriteID: 587b97fdd9ba96f46bb14f206667e600
+      internalID: 1132762292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_43
+      name: Seed_Throw_Hint_ss_23
       rect:
         serializedVersion: 2
         x: 1800
@@ -1034,20 +614,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37144cc4170dd044ab13e20ee0b186ef
-      internalID: 1871455562
+      spriteID: 18c9581154e68f740825ec1000df6081
+      internalID: -1913878520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_44
+      name: Seed_Throw_Hint_ss_24
       rect:
         serializedVersion: 2
         x: 2400
@@ -1055,20 +635,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45bc27d0b07a6714bbd97a7118aa8f27
-      internalID: 1846238553
+      spriteID: 55cff2ea2478319438b9ccf844da4d1c
+      internalID: 1583656608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_45
+      name: Seed_Throw_Hint_ss_25
       rect:
         serializedVersion: 2
         x: 3000
@@ -1076,20 +656,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a6cccf26750ef14bbfd536432abdaba
-      internalID: 630951725
+      spriteID: c915d5f1ef97254499a97a08262a6f1f
+      internalID: -284582859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_46
+      name: Seed_Throw_Hint_ss_26
       rect:
         serializedVersion: 2
         x: 3600
@@ -1097,20 +677,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28133aa50cc20ba4abcf2d0ceeeca967
-      internalID: -103033370
+      spriteID: 57f1797733baf25459b45c2501a97e55
+      internalID: 1237136659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_47
+      name: Seed_Throw_Hint_ss_27
       rect:
         serializedVersion: 2
         x: 4200
@@ -1118,20 +698,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d711a2b7ba7bc5f4590a7ca85d6a742a
-      internalID: -981036410
+      spriteID: 3d99e7ab972a6344d93dad07cbb81636
+      internalID: -1175644845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_48
+      name: Seed_Throw_Hint_ss_28
       rect:
         serializedVersion: 2
         x: 4800
@@ -1139,20 +719,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e615fda7baef186428beec81fe6dfec5
-      internalID: 1285449520
+      spriteID: 3fff2827d3056674cb5bf3530385ea52
+      internalID: 716170742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_49
+      name: Seed_Throw_Hint_ss_29
       rect:
         serializedVersion: 2
         x: 5400
@@ -1160,20 +740,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35108dbf702e57e45b4c83d7b21b2a10
-      internalID: -1798551766
+      spriteID: 54d4a7d70aca05949a3b0a0543cd796f
+      internalID: -743662592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_50
+      name: Seed_Throw_Hint_ss_30
       rect:
         serializedVersion: 2
         x: 0
@@ -1181,20 +761,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1326ab6fdc9531848b882aa01777498d
-      internalID: 102706009
+      spriteID: d823d58b5edddb44280dbf5146b4db3b
+      internalID: 906352802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_51
+      name: Seed_Throw_Hint_ss_31
       rect:
         serializedVersion: 2
         x: 600
@@ -1202,20 +782,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a44db934c4d9f64597ef18db2865b88
-      internalID: -436583485
+      spriteID: 49ae0f38d3bc1ca42af53a3750bfecc0
+      internalID: 1350530078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_52
+      name: Seed_Throw_Hint_ss_32
       rect:
         serializedVersion: 2
         x: 1200
@@ -1223,20 +803,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2142eac931162f84e9dcaace1534cf76
-      internalID: -778776146
+      spriteID: 86a94bcf71fca484d911574c56e47e39
+      internalID: 640006931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_53
+      name: Seed_Throw_Hint_ss_33
       rect:
         serializedVersion: 2
         x: 1800
@@ -1244,20 +824,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4148cd699f651a04a9cc64945c9406e7
-      internalID: 1410508450
+      spriteID: 4c8f48aad437bc44e8820d2a92b07c90
+      internalID: 1782320326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_54
+      name: Seed_Throw_Hint_ss_34
       rect:
         serializedVersion: 2
         x: 2400
@@ -1265,20 +845,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f48eafce91607c44fa32c2b5962cddcc
-      internalID: -227193680
+      spriteID: c911126deffb41d4fbdaae8d36335cc9
+      internalID: 1396819890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_55
+      name: Seed_Throw_Hint_ss_35
       rect:
         serializedVersion: 2
         x: 3000
@@ -1286,20 +866,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfac30bf2b66e2841b1119b3f2cc776f
-      internalID: -1609363689
+      spriteID: 4aed1187fce4981488a63bf7e188cf3e
+      internalID: 304745845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_56
+      name: Seed_Throw_Hint_ss_36
       rect:
         serializedVersion: 2
         x: 3600
@@ -1307,20 +887,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59078b4c18e85d84bb5aa07e381f5801
-      internalID: -1195177748
+      spriteID: 4112a50702dbdf344bdf0f670b2a4288
+      internalID: -83678384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_57
+      name: Seed_Throw_Hint_ss_37
       rect:
         serializedVersion: 2
         x: 4200
@@ -1328,20 +908,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d82427347bd6ad4db34f6666fb8d232
-      internalID: -210936642
+      spriteID: 9dcc7d8064540a74a999d95c074a517d
+      internalID: 1790541353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_58
+      name: Seed_Throw_Hint_ss_38
       rect:
         serializedVersion: 2
         x: 4800
@@ -1349,20 +929,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9886c0f6dd34a9048b6131b1950deb7f
-      internalID: 924501801
+      spriteID: 85cb07babf6ecca4cbecdb8407b1b626
+      internalID: -1206479825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_59
+      name: Seed_Throw_Hint_ss_39
       rect:
         serializedVersion: 2
         x: 5400
@@ -1370,20 +950,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecee5f8ea94c3e14c9dcb6cf9d7ad4c1
-      internalID: -175421383
+      spriteID: bfa3b83f3405cf44ba3ddd447f71ce2a
+      internalID: -1277478452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_60
+      name: Seed_Throw_Hint_ss_40
       rect:
         serializedVersion: 2
         x: 0
@@ -1391,20 +971,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3fb77574f2bc0f40a6d0c82804b7852
-      internalID: 1253909022
+      spriteID: 376ff79a8861cd54097b8a47284ea423
+      internalID: 1199010661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_61
+      name: Seed_Throw_Hint_ss_41
       rect:
         serializedVersion: 2
         x: 600
@@ -1412,20 +992,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e9fafcfa818d06488ef4d00358e8219
-      internalID: 1227756543
+      spriteID: 951db8df5898af34ab4f2e44cb4fe392
+      internalID: -450505394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_62
+      name: Seed_Throw_Hint_ss_42
       rect:
         serializedVersion: 2
         x: 1200
@@ -1433,20 +1013,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b040cf6b7880cc147b2fdc594ed54fdd
-      internalID: -541387337
+      spriteID: 4eb9c1c4d62800a46b4cdad7110bb32c
+      internalID: -42685466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_63
+      name: Seed_Throw_Hint_ss_43
       rect:
         serializedVersion: 2
         x: 1800
@@ -1454,20 +1034,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7d458834014c774987c3661904dca10
-      internalID: 1544964855
+      spriteID: 8ca7b8c3253ff5a4d95a92576be233d2
+      internalID: -27600171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_64
+      name: Seed_Throw_Hint_ss_44
       rect:
         serializedVersion: 2
         x: 2400
@@ -1475,20 +1055,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0287d5b81d1a0447af60fa3aea46323
-      internalID: -6521224
+      spriteID: b8d6d7b5a339afe4ea4d55427f24bf99
+      internalID: -1026331164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_65
+      name: Seed_Throw_Hint_ss_45
       rect:
         serializedVersion: 2
         x: 3000
@@ -1496,20 +1076,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1c35efaeeb17f94f86555dce8680f3b
-      internalID: 1327775044
+      spriteID: a9fcf2646d8ac5447838d09582651c7b
+      internalID: 888646591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_66
+      name: Seed_Throw_Hint_ss_46
       rect:
         serializedVersion: 2
         x: 3600
@@ -1517,20 +1097,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6f6ca3158e05554996b9d3362ced985
-      internalID: -1115266201
+      spriteID: 9765ee61da52ca04caa33291557e0fee
+      internalID: 1538985633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_67
+      name: Seed_Throw_Hint_ss_47
       rect:
         serializedVersion: 2
         x: 4200
@@ -1538,20 +1118,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61cbd4ec4054cfe4da31c17c6e539a4a
-      internalID: -865662315
+      spriteID: 188af9193eaf618459e6e1fcf85c9483
+      internalID: -1180278360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_68
+      name: Seed_Throw_Hint_ss_48
       rect:
         serializedVersion: 2
         x: 4800
@@ -1559,20 +1139,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 297bfafb5ccc47749b4fd2aa123f20c5
-      internalID: 660719923
+      spriteID: 5588428acdd23714dba7e750b1e9964f
+      internalID: -986954849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_69
+      name: Seed_Throw_Hint_ss_49
       rect:
         serializedVersion: 2
         x: 5400
@@ -1580,20 +1160,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9966032498da8df4b9279b06eeee0b93
-      internalID: 1215328885
+      spriteID: 4a3ab9d3735f93941be1ab0325cf4bdb
+      internalID: 557122284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_70
+      name: Seed_Throw_Hint_ss_50
       rect:
         serializedVersion: 2
         x: 0
@@ -1601,20 +1181,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ae16c71b0ea41649920469f0be68f95
-      internalID: -1765898075
+      spriteID: a63308b354ff22b4cb7a316b75ae6235
+      internalID: 121058764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_71
+      name: Seed_Throw_Hint_ss_51
       rect:
         serializedVersion: 2
         x: 600
@@ -1622,20 +1202,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dbb64c7fa9ce5a4e932d0a94e546983
-      internalID: 385456636
+      spriteID: 208c09c0e54ef5e4c8a3f66e3843c85b
+      internalID: 706210331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_72
+      name: Seed_Throw_Hint_ss_52
       rect:
         serializedVersion: 2
         x: 1200
@@ -1643,20 +1223,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 728a170a18f4c2548903f714b6592410
-      internalID: 871329353
+      spriteID: 62e9987e744617d4b9e6af0ba09b9305
+      internalID: -140986052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_73
+      name: Seed_Throw_Hint_ss_53
       rect:
         serializedVersion: 2
         x: 1800
@@ -1664,20 +1244,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a956a3ae7c1a63249b8cf29d01e5409c
-      internalID: 2026486296
+      spriteID: 02906faf61f77a742ac5d00bbca3275c
+      internalID: 297919015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_74
+      name: Seed_Throw_Hint_ss_54
       rect:
         serializedVersion: 2
         x: 2400
@@ -1685,20 +1265,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc81ed6b9b203634285cc19845819113
-      internalID: 1696811155
+      spriteID: 12949dfb1c092b24da70e23bbd88a99e
+      internalID: 1801527110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_75
+      name: Seed_Throw_Hint_ss_55
       rect:
         serializedVersion: 2
         x: 3000
@@ -1706,20 +1286,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73201164d1835234fbba3264df981904
-      internalID: -1240305136
+      spriteID: b81748674c5a80e4588cfc3ab46ddea5
+      internalID: 2110474249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_76
+      name: Seed_Throw_Hint_ss_56
       rect:
         serializedVersion: 2
         x: 3600
@@ -1727,20 +1307,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9358aa89fd73b604da7baffdaf6c17e6
-      internalID: -77537239
+      spriteID: 6e834e6952be75c439d8258d78c0bd7f
+      internalID: -594599189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_77
+      name: Seed_Throw_Hint_ss_57
       rect:
         serializedVersion: 2
         x: 4200
@@ -1748,20 +1328,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4214962f53ce9c04eac0c3ec17bf3a0e
-      internalID: 153719958
+      spriteID: 59c5a2cbeccb3ca44b1d4aeed0572e45
+      internalID: -662544970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_78
+      name: Seed_Throw_Hint_ss_58
       rect:
         serializedVersion: 2
         x: 4800
@@ -1769,20 +1349,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dabb4149fd67cb4bb2967cf0b422355
-      internalID: -447005095
+      spriteID: 4fe9cdc906386394cb20e56ec81db855
+      internalID: -68819868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_79
+      name: Seed_Throw_Hint_ss_59
       rect:
         serializedVersion: 2
         x: 5400
@@ -1790,20 +1370,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73460a753e5fd964fa87b83a0137a4b3
-      internalID: -494381205
+      spriteID: 3f7544811e6ba284d99968c097a62361
+      internalID: -234445506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_80
+      name: Seed_Throw_Hint_ss_60
       rect:
         serializedVersion: 2
         x: 0
@@ -1811,20 +1391,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 636aead86bd01a046911f860ad1bad89
-      internalID: 45391676
+      spriteID: ffbff144cefcfa74c990b5e59925872b
+      internalID: 1508372442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_81
+      name: Seed_Throw_Hint_ss_61
       rect:
         serializedVersion: 2
         x: 600
@@ -1832,20 +1412,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f32f245ee36159d40a19abfdee9c7549
-      internalID: 1317588507
+      spriteID: 61c5f00f59dbb594dbb95f869c61cc40
+      internalID: -57350077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_82
+      name: Seed_Throw_Hint_ss_62
       rect:
         serializedVersion: 2
         x: 1200
@@ -1853,20 +1433,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d67a77915f28434598a3cc9a0cb7722
-      internalID: 1126669489
+      spriteID: 309dbc10021bd214da5364f0d7268de1
+      internalID: -348779773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_83
+      name: Seed_Throw_Hint_ss_63
       rect:
         serializedVersion: 2
         x: 1800
@@ -1874,20 +1454,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba812de3bd2032b44af9c7bb402b04ee
-      internalID: 1993850308
+      spriteID: f8417b988ff97bd4d80378cad242c458
+      internalID: 1685721191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_84
+      name: Seed_Throw_Hint_ss_64
       rect:
         serializedVersion: 2
         x: 2400
@@ -1895,20 +1475,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4005051b131057b42a155f33e3e62f95
-      internalID: 9162425
+      spriteID: a511cbcd5770ab241a2ae45de670240c
+      internalID: 1319246524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_85
+      name: Seed_Throw_Hint_ss_65
       rect:
         serializedVersion: 2
         x: 3000
@@ -1916,20 +1496,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78424571a4a45444d89542777c2f1d8b
-      internalID: -941087657
+      spriteID: 5fed48d603845e040a39be5689f9aeef
+      internalID: -878438127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_86
+      name: Seed_Throw_Hint_ss_66
       rect:
         serializedVersion: 2
         x: 3600
@@ -1937,20 +1517,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69fb51a558b58974f8297f0f2dfa15f6
-      internalID: 775296194
+      spriteID: 0ba1c0a80009e70459208c15fce5cbec
+      internalID: 703321390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_87
+      name: Seed_Throw_Hint_ss_67
       rect:
         serializedVersion: 2
         x: 4200
@@ -1958,20 +1538,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 791a8e6bc0225a8429af195a94e3385f
-      internalID: 687614492
+      spriteID: b8b83d671a897124ca54696fc66fa09d
+      internalID: -403948066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_88
+      name: Seed_Throw_Hint_ss_68
       rect:
         serializedVersion: 2
         x: 4800
@@ -1979,20 +1559,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 879de1298a8015f4b9869266b0dfee49
-      internalID: -1466547740
+      spriteID: 599888980cff22748ad54da00aae3841
+      internalID: -821781487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_89
+      name: Seed_Throw_Hint_ss_69
       rect:
         serializedVersion: 2
         x: 5400
@@ -2000,20 +1580,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0357d4b61520e3a4486cabe6283a3cb6
-      internalID: 1910108055
+      spriteID: deba2049431767b499a797868aa463f7
+      internalID: 1520343592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_90
+      name: Seed_Throw_Hint_ss_70
       rect:
         serializedVersion: 2
         x: 0
@@ -2021,20 +1601,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb5ffaf5ca819204097fc44385c6911a
-      internalID: 921190691
+      spriteID: f0f59bf74eca7e04e84e3bea40b37699
+      internalID: -516414859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_91
+      name: Seed_Throw_Hint_ss_71
       rect:
         serializedVersion: 2
         x: 600
@@ -2042,20 +1622,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4971b7076009f354cbe660f08e7ee8c2
-      internalID: 2108412422
+      spriteID: c7cb497365c18884fad9e1fbeabe873e
+      internalID: -1352432905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_92
+      name: Seed_Throw_Hint_ss_72
       rect:
         serializedVersion: 2
         x: 1200
@@ -2063,20 +1643,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc50af2d5dbf0d34ca3e459e3754ad20
-      internalID: -49749319
+      spriteID: a8ca6dd8c7c293c44a6694c6dec4832b
+      internalID: 1338385207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_93
+      name: Seed_Throw_Hint_ss_73
       rect:
         serializedVersion: 2
         x: 1800
@@ -2084,20 +1664,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8260114736ad52418483a7b1bd64976
-      internalID: 2025795117
+      spriteID: 3d26a976211fed54fa25553de93120c4
+      internalID: 1105784296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_94
+      name: Seed_Throw_Hint_ss_74
       rect:
         serializedVersion: 2
         x: 2400
@@ -2105,20 +1685,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d5c23b32c33b2f41822c1e365d3d805
-      internalID: 1922833123
+      spriteID: 384a84cd162707e46a9f75b7720abb9e
+      internalID: 1719401007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_95
+      name: Seed_Throw_Hint_ss_75
       rect:
         serializedVersion: 2
         x: 3000
@@ -2126,20 +1706,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fa6cc22fcdbd2b45ae2f9327989cfa8
-      internalID: -946219371
+      spriteID: 07b6e1dad26af6e4c98c549388851e58
+      internalID: -1667599191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_96
+      name: Seed_Throw_Hint_ss_76
       rect:
         serializedVersion: 2
         x: 3600
@@ -2147,20 +1727,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71991597a4c4ade41ba1a73d94cec74a
-      internalID: 153378021
+      spriteID: fe2f45bb1b9594a4f8c65f4738944829
+      internalID: -2052201182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_97
+      name: Seed_Throw_Hint_ss_77
       rect:
         serializedVersion: 2
         x: 4200
@@ -2168,20 +1748,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd94a165c4578b343b6a77923a96bdec
-      internalID: 614429463
+      spriteID: 05cc39bb2c5d2dd4d9bd3b1973921130
+      internalID: 428289916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_98
+      name: Seed_Throw_Hint_ss_78
       rect:
         serializedVersion: 2
         x: 4800
@@ -2189,20 +1769,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94d82f67df96ac34d86e71adaf0d874d
-      internalID: 520830491
+      spriteID: 3add31b0524a56848af338478134f8b2
+      internalID: 1426963122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_99
+      name: Seed_Throw_Hint_ss_79
       rect:
         serializedVersion: 2
         x: 5400
@@ -2210,20 +1790,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db6f63e05c95c4541b743e43e3f70390
-      internalID: 544361543
+      spriteID: 57ef761a2b63432488e761d9043c1b45
+      internalID: -16079645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_100
+      name: Seed_Throw_Hint_ss_80
       rect:
         serializedVersion: 2
         x: 0
@@ -2231,20 +1811,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d7d0cf2a05bf9345b59f6e4875cd860
-      internalID: -897859194
+      spriteID: aeb66dbba64088248ac00a312d100ec4
+      internalID: 918372242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_101
+      name: Seed_Throw_Hint_ss_81
       rect:
         serializedVersion: 2
         x: 600
@@ -2252,20 +1832,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 472b75b118c6b92449f21b9f06d00035
-      internalID: -1942094511
+      spriteID: eec40742afcd89340bf6aab3e6972943
+      internalID: -1510035534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_102
+      name: Seed_Throw_Hint_ss_82
       rect:
         serializedVersion: 2
         x: 1200
@@ -2273,20 +1853,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16e1f966eb8d71c4080e98e1760304ee
-      internalID: 1428392620
+      spriteID: deb7dddd40c0abc418db972487408b1e
+      internalID: -86452368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_103
+      name: Seed_Throw_Hint_ss_83
       rect:
         serializedVersion: 2
         x: 1800
@@ -2294,20 +1874,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 729d8ebba8382b44c9011c316809360b
-      internalID: -1830709589
+      spriteID: 565775fd93d2cf84db1f9c2f0ff55ef1
+      internalID: -65903055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_104
+      name: Seed_Throw_Hint_ss_84
       rect:
         serializedVersion: 2
         x: 2400
@@ -2315,20 +1895,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8c03b91333fb9f4982e1a99d2cab811
-      internalID: -1143206200
+      spriteID: f2c7c3f09e31773438a52b1b3c9619d2
+      internalID: 2111117390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_105
+      name: Seed_Throw_Hint_ss_85
       rect:
         serializedVersion: 2
         x: 3000
@@ -2336,20 +1916,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f689b86959be30c4bae53b1722333a0c
-      internalID: -462537421
+      spriteID: 98b454eacc6defc40a13f8359dc215c9
+      internalID: -585908776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_106
+      name: Seed_Throw_Hint_ss_86
       rect:
         serializedVersion: 2
         x: 3600
@@ -2357,20 +1937,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07694035c2ee9e245be9e327d344dfb8
-      internalID: 922034744
+      spriteID: d340c52fbb031444b850bb0da751bef9
+      internalID: -879743097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_107
+      name: Seed_Throw_Hint_ss_87
       rect:
         serializedVersion: 2
         x: 4200
@@ -2378,20 +1958,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d417bca7bcf4127438a7b08b4943cec7
-      internalID: -2132645263
+      spriteID: 66f78a96fe0185340bc96083ffd820df
+      internalID: -1465298522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_108
+      name: Seed_Throw_Hint_ss_88
       rect:
         serializedVersion: 2
         x: 4800
@@ -2399,20 +1979,20 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 321ed457a096bdf40806fc3682f176a2
-      internalID: -1087016579
+      spriteID: 4727f20320d2e8746b5d3fb6014ef25e
+      internalID: 438973992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PaperPickUpSheet2_109
+      name: Seed_Throw_Hint_ss_89
       rect:
         serializedVersion: 2
         x: 5400
@@ -2420,14 +2000,14 @@ TextureImporter:
         width: 600
         height: 1000
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbfd2b1e31b84f84cb7fd8330c27e0cc
-      internalID: 38272128
+      spriteID: 2ff0d13be356fd245b575803ef337ce1
+      internalID: -1249024157
       vertices: []
       indices: 
       edges: []
@@ -2435,7 +2015,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2647e448fb2920d4db43d771bf1249ad
+    spriteID: 0be3eeee381b1ab40b8521685a5d815c
     internalID: 0
     vertices: []
     indices: 
@@ -2443,116 +2023,96 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PaperPickUpSheet2_0: 720137091
-      PaperPickUpSheet2_1: -1483275188
-      PaperPickUpSheet2_10: -915344970
-      PaperPickUpSheet2_100: -897859194
-      PaperPickUpSheet2_101: -1942094511
-      PaperPickUpSheet2_102: 1428392620
-      PaperPickUpSheet2_103: -1830709589
-      PaperPickUpSheet2_104: -1143206200
-      PaperPickUpSheet2_105: -462537421
-      PaperPickUpSheet2_106: 922034744
-      PaperPickUpSheet2_107: -2132645263
-      PaperPickUpSheet2_108: -1087016579
-      PaperPickUpSheet2_109: 38272128
-      PaperPickUpSheet2_11: 62379789
-      PaperPickUpSheet2_12: 1217831751
-      PaperPickUpSheet2_13: -767178134
-      PaperPickUpSheet2_14: -815407059
-      PaperPickUpSheet2_15: 1432194299
-      PaperPickUpSheet2_16: -1337663855
-      PaperPickUpSheet2_17: 388958563
-      PaperPickUpSheet2_18: -122957727
-      PaperPickUpSheet2_19: -2010233811
-      PaperPickUpSheet2_2: 727166136
-      PaperPickUpSheet2_20: -1718733641
-      PaperPickUpSheet2_21: -1144787785
-      PaperPickUpSheet2_22: -1381622029
-      PaperPickUpSheet2_23: 1151594882
-      PaperPickUpSheet2_24: 1121775180
-      PaperPickUpSheet2_25: 1897821063
-      PaperPickUpSheet2_26: -401211358
-      PaperPickUpSheet2_27: 1236347208
-      PaperPickUpSheet2_28: 1659177336
-      PaperPickUpSheet2_29: 2140889262
-      PaperPickUpSheet2_3: -1308929702
-      PaperPickUpSheet2_30: 1107646705
-      PaperPickUpSheet2_31: 464840343
-      PaperPickUpSheet2_32: 795237589
-      PaperPickUpSheet2_33: -522613453
-      PaperPickUpSheet2_34: 1553280743
-      PaperPickUpSheet2_35: 1448484399
-      PaperPickUpSheet2_36: 1555859432
-      PaperPickUpSheet2_37: -299237155
-      PaperPickUpSheet2_38: 1245868768
-      PaperPickUpSheet2_39: 2012917185
-      PaperPickUpSheet2_4: -543840319
-      PaperPickUpSheet2_40: -223522039
-      PaperPickUpSheet2_41: 767161041
-      PaperPickUpSheet2_42: -1154990891
-      PaperPickUpSheet2_43: 1871455562
-      PaperPickUpSheet2_44: 1846238553
-      PaperPickUpSheet2_45: 630951725
-      PaperPickUpSheet2_46: -103033370
-      PaperPickUpSheet2_47: -981036410
-      PaperPickUpSheet2_48: 1285449520
-      PaperPickUpSheet2_49: -1798551766
-      PaperPickUpSheet2_5: -1288132037
-      PaperPickUpSheet2_50: 102706009
-      PaperPickUpSheet2_51: -436583485
-      PaperPickUpSheet2_52: -778776146
-      PaperPickUpSheet2_53: 1410508450
-      PaperPickUpSheet2_54: -227193680
-      PaperPickUpSheet2_55: -1609363689
-      PaperPickUpSheet2_56: -1195177748
-      PaperPickUpSheet2_57: -210936642
-      PaperPickUpSheet2_58: 924501801
-      PaperPickUpSheet2_59: -175421383
-      PaperPickUpSheet2_6: 422931425
-      PaperPickUpSheet2_60: 1253909022
-      PaperPickUpSheet2_61: 1227756543
-      PaperPickUpSheet2_62: -541387337
-      PaperPickUpSheet2_63: 1544964855
-      PaperPickUpSheet2_64: -6521224
-      PaperPickUpSheet2_65: 1327775044
-      PaperPickUpSheet2_66: -1115266201
-      PaperPickUpSheet2_67: -865662315
-      PaperPickUpSheet2_68: 660719923
-      PaperPickUpSheet2_69: 1215328885
-      PaperPickUpSheet2_7: 1933831555
-      PaperPickUpSheet2_70: -1765898075
-      PaperPickUpSheet2_71: 385456636
-      PaperPickUpSheet2_72: 871329353
-      PaperPickUpSheet2_73: 2026486296
-      PaperPickUpSheet2_74: 1696811155
-      PaperPickUpSheet2_75: -1240305136
-      PaperPickUpSheet2_76: -77537239
-      PaperPickUpSheet2_77: 153719958
-      PaperPickUpSheet2_78: -447005095
-      PaperPickUpSheet2_79: -494381205
-      PaperPickUpSheet2_8: 554450024
-      PaperPickUpSheet2_80: 45391676
-      PaperPickUpSheet2_81: 1317588507
-      PaperPickUpSheet2_82: 1126669489
-      PaperPickUpSheet2_83: 1993850308
-      PaperPickUpSheet2_84: 9162425
-      PaperPickUpSheet2_85: -941087657
-      PaperPickUpSheet2_86: 775296194
-      PaperPickUpSheet2_87: 687614492
-      PaperPickUpSheet2_88: -1466547740
-      PaperPickUpSheet2_89: 1910108055
-      PaperPickUpSheet2_9: 694317276
-      PaperPickUpSheet2_90: 921190691
-      PaperPickUpSheet2_91: 2108412422
-      PaperPickUpSheet2_92: -49749319
-      PaperPickUpSheet2_93: 2025795117
-      PaperPickUpSheet2_94: 1922833123
-      PaperPickUpSheet2_95: -946219371
-      PaperPickUpSheet2_96: 153378021
-      PaperPickUpSheet2_97: 614429463
-      PaperPickUpSheet2_98: 520830491
-      PaperPickUpSheet2_99: 544361543
+      Seed_Throw_Hint_ss_0: 132494186
+      Seed_Throw_Hint_ss_1: -1790995373
+      Seed_Throw_Hint_ss_10: 494564047
+      Seed_Throw_Hint_ss_11: 337092709
+      Seed_Throw_Hint_ss_12: -1772826870
+      Seed_Throw_Hint_ss_13: 4818604
+      Seed_Throw_Hint_ss_14: -1902056907
+      Seed_Throw_Hint_ss_15: 1947555953
+      Seed_Throw_Hint_ss_16: -10801137
+      Seed_Throw_Hint_ss_17: 1026668879
+      Seed_Throw_Hint_ss_18: 1251644060
+      Seed_Throw_Hint_ss_19: -722484018
+      Seed_Throw_Hint_ss_2: -622122788
+      Seed_Throw_Hint_ss_20: 931183975
+      Seed_Throw_Hint_ss_21: -1696015109
+      Seed_Throw_Hint_ss_22: 1132762292
+      Seed_Throw_Hint_ss_23: -1913878520
+      Seed_Throw_Hint_ss_24: 1583656608
+      Seed_Throw_Hint_ss_25: -284582859
+      Seed_Throw_Hint_ss_26: 1237136659
+      Seed_Throw_Hint_ss_27: -1175644845
+      Seed_Throw_Hint_ss_28: 716170742
+      Seed_Throw_Hint_ss_29: -743662592
+      Seed_Throw_Hint_ss_3: 213188202
+      Seed_Throw_Hint_ss_30: 906352802
+      Seed_Throw_Hint_ss_31: 1350530078
+      Seed_Throw_Hint_ss_32: 640006931
+      Seed_Throw_Hint_ss_33: 1782320326
+      Seed_Throw_Hint_ss_34: 1396819890
+      Seed_Throw_Hint_ss_35: 304745845
+      Seed_Throw_Hint_ss_36: -83678384
+      Seed_Throw_Hint_ss_37: 1790541353
+      Seed_Throw_Hint_ss_38: -1206479825
+      Seed_Throw_Hint_ss_39: -1277478452
+      Seed_Throw_Hint_ss_4: 1558992635
+      Seed_Throw_Hint_ss_40: 1199010661
+      Seed_Throw_Hint_ss_41: -450505394
+      Seed_Throw_Hint_ss_42: -42685466
+      Seed_Throw_Hint_ss_43: -27600171
+      Seed_Throw_Hint_ss_44: -1026331164
+      Seed_Throw_Hint_ss_45: 888646591
+      Seed_Throw_Hint_ss_46: 1538985633
+      Seed_Throw_Hint_ss_47: -1180278360
+      Seed_Throw_Hint_ss_48: -986954849
+      Seed_Throw_Hint_ss_49: 557122284
+      Seed_Throw_Hint_ss_5: -1748233335
+      Seed_Throw_Hint_ss_50: 121058764
+      Seed_Throw_Hint_ss_51: 706210331
+      Seed_Throw_Hint_ss_52: -140986052
+      Seed_Throw_Hint_ss_53: 297919015
+      Seed_Throw_Hint_ss_54: 1801527110
+      Seed_Throw_Hint_ss_55: 2110474249
+      Seed_Throw_Hint_ss_56: -594599189
+      Seed_Throw_Hint_ss_57: -662544970
+      Seed_Throw_Hint_ss_58: -68819868
+      Seed_Throw_Hint_ss_59: -234445506
+      Seed_Throw_Hint_ss_6: -1306252275
+      Seed_Throw_Hint_ss_60: 1508372442
+      Seed_Throw_Hint_ss_61: -57350077
+      Seed_Throw_Hint_ss_62: -348779773
+      Seed_Throw_Hint_ss_63: 1685721191
+      Seed_Throw_Hint_ss_64: 1319246524
+      Seed_Throw_Hint_ss_65: -878438127
+      Seed_Throw_Hint_ss_66: 703321390
+      Seed_Throw_Hint_ss_67: -403948066
+      Seed_Throw_Hint_ss_68: -821781487
+      Seed_Throw_Hint_ss_69: 1520343592
+      Seed_Throw_Hint_ss_7: -1552066566
+      Seed_Throw_Hint_ss_70: -516414859
+      Seed_Throw_Hint_ss_71: -1352432905
+      Seed_Throw_Hint_ss_72: 1338385207
+      Seed_Throw_Hint_ss_73: 1105784296
+      Seed_Throw_Hint_ss_74: 1719401007
+      Seed_Throw_Hint_ss_75: -1667599191
+      Seed_Throw_Hint_ss_76: -2052201182
+      Seed_Throw_Hint_ss_77: 428289916
+      Seed_Throw_Hint_ss_78: 1426963122
+      Seed_Throw_Hint_ss_79: -16079645
+      Seed_Throw_Hint_ss_8: -1444256353
+      Seed_Throw_Hint_ss_80: 918372242
+      Seed_Throw_Hint_ss_81: -1510035534
+      Seed_Throw_Hint_ss_82: -86452368
+      Seed_Throw_Hint_ss_83: -65903055
+      Seed_Throw_Hint_ss_84: 2111117390
+      Seed_Throw_Hint_ss_85: -585908776
+      Seed_Throw_Hint_ss_86: -879743097
+      Seed_Throw_Hint_ss_87: -1465298522
+      Seed_Throw_Hint_ss_88: 438973992
+      Seed_Throw_Hint_ss_89: -1249024157
+      Seed_Throw_Hint_ss_9: 1956167750
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
