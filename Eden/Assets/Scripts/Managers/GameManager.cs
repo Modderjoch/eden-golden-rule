@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject mainMenuUI;
     [SerializeField] GameObject qrScanningUI;
     [SerializeField] TMP_Dropdown playerIndexDropdown;
+    [SerializeField] SetNextLocationImage setNextLocationImage; 
 
     private static GameManager instance;
     private UIManager uiManager;
@@ -187,6 +189,16 @@ public class GameManager : MonoBehaviour
 
                 //Debug.Log("Set scene " + scene.name + " to inactive");
             }
+        }
+
+        for (int i = 0; i < referenceLibrary.count; i++)
+        {
+            if(i == startSceneIndex + playerIndex)
+            {
+                Sprite sprite = Sprite.Create(referenceLibrary[i].texture, new Rect(0, 0, referenceLibrary[i].texture.width, referenceLibrary[i].texture.height), Vector2.zero);
+                setNextLocationImage.SetNextImage(sprite);
+            }
+
         }
     }
 

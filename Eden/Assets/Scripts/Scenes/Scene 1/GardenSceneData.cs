@@ -149,6 +149,7 @@ public class GardenSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindMotherWolf").Result, 4);
         gameManager.NextScene();
+        gameManager.QRScanningUI.SetActive(true);
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events

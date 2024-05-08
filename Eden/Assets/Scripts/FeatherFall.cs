@@ -51,17 +51,26 @@ public class FeatherFall : MonoBehaviour {
 		}
 	}
 
-	private void UpdateSlide() {
-		// This generates a vector along the plane of the object pointing most downward.
-		Vector3 normal = transform.up;
-		m_SlideVector.x = normal.x*normal.y;
-		m_SlideVector.z = normal.z*normal.y;
-		m_SlideVector.y = -(normal.x*normal.x) - normal.z*normal.z;
-		m_SlideVector = m_SlideVector*m_SlidePower;
-		m_Rigidbody.AddForce(m_SlideVector);
-	}
+    private void UpdateSlide()
+    {
+        // This generates a vector along the plane of the object pointing most downward.
+        Vector3 normal = transform.up;
+        m_SlideVector.x = normal.x * normal.y;
+        m_SlideVector.z = normal.z * normal.y;
+        m_SlideVector.y = -(normal.x * normal.x) - normal.z * normal.z;
+        m_SlideVector = m_SlideVector * m_SlidePower;
 
-	private void UpdatePuffs() {
+        // Apply slide force
+        m_Rigidbody.AddForce(m_SlideVector);
+
+        // Slow down rotation
+        Vector3 angularVelocity = m_Rigidbody.angularVelocity;
+        Vector3 oppositeTorque = -angularVelocity * m_Rigidbody.angularDrag;
+        m_Rigidbody.AddTorque(oppositeTorque);
+    }
+
+
+    private void UpdatePuffs() {
 		if (m_LastTime + m_Delay < Time.time) {
 			Puff();
 		}
