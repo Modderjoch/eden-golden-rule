@@ -7351,7 +7351,7 @@ MonoBehaviour:
     type: 2
     localization:
       id: en-US
-    volume: 1
+    volume: 10
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -7360,7 +7360,7 @@ MonoBehaviour:
     type: 2
     localization:
       id: en-US
-    volume: 1
+    volume: 2
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -7369,7 +7369,7 @@ MonoBehaviour:
     type: 2
     localization:
       id: en-US
-    volume: 1
+    volume: 2
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -7378,7 +7378,7 @@ MonoBehaviour:
     type: 2
     localization:
       id: en-US
-    volume: 1
+    volume: 2
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -7387,7 +7387,7 @@ MonoBehaviour:
     type: 2
     localization:
       id: en-US
-    volume: 1
+    volume: 2
     pitch: 1
     loop: 0
     source: {fileID: 0}

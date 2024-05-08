@@ -44,6 +44,11 @@ public class FeatherFall : MonoBehaviour {
 	private void Update() {
 		UpdateSlide();
 		UpdatePuffs();
+
+		if(transform.position.y < -5)
+		{
+			Destroy(gameObject);
+		}
 	}
 
 	private void UpdateSlide() {

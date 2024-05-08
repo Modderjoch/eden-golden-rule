@@ -39,6 +39,14 @@ MonoBehaviour:
     m_Key: SeedPlanting
     m_Metadata:
       m_Items: []
+  - m_Id: 7253629332504576
+    m_Key: PaperCollection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7253776175087616
+    m_Key: FindMotherWolf
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

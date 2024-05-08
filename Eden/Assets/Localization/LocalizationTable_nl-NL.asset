@@ -42,6 +42,14 @@ MonoBehaviour:
     m_Localized: Plant 10 zaadjes
     m_Metadata:
       m_Items: []
+  - m_Id: 7253629332504576
+    m_Localized: Verzamel alle regels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7253776175087616
+    m_Localized: Ga op zoek naar Moeder Wolf
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
