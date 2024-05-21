@@ -24,7 +24,6 @@ public abstract class Progress : MonoBehaviour
 
     public void SetTotalScore(int score)
     {
-        Debug.Log("Adding score of " + score);
         totalScore += score;
 
         RefreshUI();

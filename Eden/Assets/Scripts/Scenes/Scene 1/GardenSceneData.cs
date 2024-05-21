@@ -11,6 +11,7 @@ public class GardenSceneData : GameSceneData
 
     [SerializeField] private GameObject decoyCollider;
     [SerializeField] private PaperController paperController;
+    [SerializeField] private CharacterTextureReplacing grandmaCharacterTexture;
 
     private PopUpScript popUp;
     private PaperProgress paperProgressScript;
@@ -28,6 +29,7 @@ public class GardenSceneData : GameSceneData
         }
     }
 #endif
+
     public override void OnSceneEnter()
     {
         audioManager = AudioManager.Instance;
@@ -53,6 +55,7 @@ public class GardenSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         gameManager.QRScanningUI.SetActive(false);
+        grandmaCharacterTexture.SetPose("Pose1");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartPaperCollection;
@@ -73,27 +76,12 @@ public class GardenSceneData : GameSceneData
         paperAnimation.SetActive(true);
         paperController.BlowPapers();
         Destroy(decoyCollider);
+        grandmaCharacterTexture.SetPose("Pose2");
 
         // Then we subscribe to new events
         paperProgressScript.OnScoreReached += StartPaperCollectedVoiceOver;
         paperProgressScript.OnScoreAdded += DisablePickUpHint;
     }
-
-    //private void StartPaperCollecting()
-    //{
-    //    // First we de-activate the old objects
-
-    //    // Then we unsubscribe from previous events
-    //    audioManager.OnVoiceOverFinished -= StartPaperCollecting;
-
-    //    // Then we activate new objects and call the needed methods
-    //    paperProgress.SetActive(true);
-    //    paperAnimation.SetActive(true);
-    //    paperController.BlowPapers();
-
-    //    // Then we subscribe to new events
-    //    paperProgressScript.OnScoreReached += StartPaperCollectedVoiceOver;
-    //}
 
     private void StartPaperCollectedVoiceOver()
     {
@@ -106,6 +94,7 @@ public class GardenSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart3" + LocalizationSettings.SelectedLocale.Formatter);
+        grandmaCharacterTexture.SetPose("Pose3");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartContinueVoiceOver;
@@ -120,6 +109,7 @@ public class GardenSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart4" + LocalizationSettings.SelectedLocale.Formatter);
+        grandmaCharacterTexture.SetPose("Pose4");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartMotherWolfVoiceOver;
@@ -134,6 +124,7 @@ public class GardenSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart5" + LocalizationSettings.SelectedLocale.Formatter);
+        grandmaCharacterTexture.SetPose("Pose5");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += OnSceneExit;
@@ -150,6 +141,8 @@ public class GardenSceneData : GameSceneData
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindMotherWolf").Result, 4);
         gameManager.NextScene();
         gameManager.QRScanningUI.SetActive(true);
+        grandmaCharacterTexture.SetPose("Pose1");
+
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events

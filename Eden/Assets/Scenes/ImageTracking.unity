@@ -3698,6 +3698,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seedManager: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1073742075
   useSeed: 0
 --- !u!4 &1018674320
 Transform:

@@ -3053,7 +3053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 22109410300619811}
   - component: {fileID: 4219318186128214423}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6651,7 +6651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8146794232536175934}
   - component: {fileID: 1386309029394962650}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9506,7 +9506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 370341607527729733}
   - component: {fileID: 1906870800884200050}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11563,8 +11563,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c7509c1e497e764db2a4a7acc9e051d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decoyCollider: {fileID: 3127749633891507988}
+  decoyCollider: {fileID: 0}
   paperController: {fileID: 8519304569507476490}
+  grandmaCharacterTexture: {fileID: 349554297266234919}
 --- !u!1 &5663448911317569050
 GameObject:
   m_ObjectHideFlags: 0
@@ -14601,7 +14602,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6113622780485966654}
   - component: {fileID: 7129632727174425842}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17698,7 +17699,7 @@ GameObject:
   - component: {fileID: 7865186508910267984}
   - component: {fileID: 6020495213152210568}
   - component: {fileID: 1282617381848159051}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: PaperCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17714,8 +17715,8 @@ Transform:
   m_GameObject: {fileID: 8745765133407534371}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.22, z: 0}
-  m_LocalScale: {x: 40, y: 0.1, z: 40}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalScale: {x: 40, y: 1, z: 40}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2265965153020825579}
@@ -22855,7 +22856,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 349554297266234919}
   m_SourcePrefab: {fileID: 100100000, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1, type: 3}
 --- !u!4 &4836519912446788736 stripped
 Transform:
@@ -22863,6 +22868,42 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4941711310766465899}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5212095855608127034 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4941711310766465899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &349554297266234919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5212095855608127034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poses:
+  - name: Pose1
+    texture: {fileID: 2800000, guid: fc727cf15b375bb4d9cc08c525a222f9, type: 3}
+    description: The pose when we enter the scene.
+  - name: Pose2
+    texture: {fileID: 2800000, guid: 5a900ab2214855a47b63f35d8c300b3a, type: 3}
+    description: The pose during the paper collection, while it all flies away.
+  - name: Pose3
+    texture: {fileID: 2800000, guid: d6d0e8f318d1e7241bad5640b6eb6aa9, type: 3}
+    description: The pose after all paper is collected.
+  - name: Pose4
+    texture: {fileID: 2800000, guid: 037e2ad42d3f28843ae2f16b065c2d2d, type: 3}
+    description: The pose while saying the book is too big and there are too many
+      rules.
+  - name: Pose5
+    texture: {fileID: 2800000, guid: 037e2ad42d3f28843ae2f16b065c2d2d, type: 3}
+    description: The pose when pointing the player towards mother wolf.
+  material: {fileID: 2100000, guid: 9b9e6c0b3827d1148aee58a86adf0286, type: 2}
 --- !u!1001 &4995817303454888927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23873,6 +23914,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 393599966210488245}
     m_Modifications:
+    - target: {fileID: 1064711010104462831, guid: 84789e3135309264494128592707bfd1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306089156747528937, guid: 84789e3135309264494128592707bfd1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7186235936216228976, guid: 84789e3135309264494128592707bfd1,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -23942,6 +23993,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prefab_Wood_Arc
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935436793444475339, guid: 84789e3135309264494128592707bfd1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
