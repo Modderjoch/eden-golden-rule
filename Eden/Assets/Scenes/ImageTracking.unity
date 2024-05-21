@@ -6896,6 +6896,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: ForestScenePart4
+    clip: {fileID: 8300000, guid: 182bcaed17038d74ea6c0bdcef6424da, type: 3}
+    type: 2
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &2000814356
 Transform:
   m_ObjectHideFlags: 0
