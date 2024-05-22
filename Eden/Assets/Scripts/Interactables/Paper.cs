@@ -8,6 +8,11 @@ public class Paper : Interactable
 
     [SerializeField] private int score = 1;
 
+    protected void Awake()
+    {
+        GameManager.Instance.PaperProgress.SetTotalScore(score);
+    }
+
     public bool PickUp()
     {
         Destroy(gameObject);

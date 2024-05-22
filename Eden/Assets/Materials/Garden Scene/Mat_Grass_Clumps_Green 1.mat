@@ -26,6 +26,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _GrassClump_Lerp: 1
     - _QueueOffset: 1
     m_Colors:
     - _BaseColor: {r: 0.54187053, g: 0.57861626, b: 0.27111262, a: 1}
