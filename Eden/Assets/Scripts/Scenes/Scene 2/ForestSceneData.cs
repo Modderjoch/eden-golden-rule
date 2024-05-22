@@ -100,6 +100,20 @@ public class ForestSceneData : GameSceneData
         gameManager.QRScanningUI.SetActive(false);
 
         // Then we subscribe to new events
+        audioManager.OnVoiceOverFinished += StartMotherWolfAppearance;
+    }
+
+    private void StartMotherWolfAppearance()
+    {
+        // First we de-activate the old objects
+
+        // Then we unsubscribe from previous events
+        audioManager.OnVoiceOverFinished -= StartMotherWolfAppearance;
+
+        // Then we activate new objects and call the needed methods
+        audioManager.PlayVoiceOver("ForestScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
+
+        // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartTrashPicking;
     }
 
@@ -131,7 +145,7 @@ public class ForestSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         transitionGrass = true;
-        audioManager.PlayVoiceOver("ForestScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
+        audioManager.PlayVoiceOver("ForestScenePart3" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartSeedThrowing;
@@ -166,7 +180,7 @@ public class ForestSceneData : GameSceneData
         seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsDepleted -= EndScene;
 
         // Then we activate new objects and call the needed methods
-        audioManager.PlayVoiceOver("ForestScenePart3" + LocalizationSettings.SelectedLocale.Formatter);
+        audioManager.PlayVoiceOver("ForestScenePart4" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += OnSceneExit;
