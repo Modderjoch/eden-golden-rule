@@ -59,7 +59,6 @@ public class AudioManager : MonoBehaviour
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
             sound.name = sound.name + sound.localization.id;
-            Debug.Log(sound.name);
         }
     }
 

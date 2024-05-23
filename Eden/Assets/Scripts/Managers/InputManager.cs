@@ -107,6 +107,10 @@ public class InputManager : MonoBehaviour
                     {
                         bracelet.CollectBracelet();
                     }
+                    else if(interactable is Compass compass)
+                    {
+                        compass.CollectCompass();
+                    }
                 }                
             }
         }

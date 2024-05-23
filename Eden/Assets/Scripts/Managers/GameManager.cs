@@ -257,7 +257,6 @@ public class GameManager : MonoBehaviour
         }
 
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale(newLanguageID);
-        Debug.Log(LocalizationSettings.SelectedLocale.Formatter);
     }
 
     private void SetPlayerIndex(int index)
