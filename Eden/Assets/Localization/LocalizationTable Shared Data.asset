@@ -51,6 +51,10 @@ MonoBehaviour:
     m_Key: NextQR
     m_Metadata:
       m_Items: []
+  - m_Id: 12719637941477376
+    m_Key: FindHome
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -54,6 +54,10 @@ MonoBehaviour:
     m_Localized: Vind de volgende locatie
     m_Metadata:
       m_Items: []
+  - m_Id: 12719637941477376
+    m_Localized: Ga terug naar huis
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
