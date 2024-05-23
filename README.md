@@ -17,13 +17,14 @@ In this guide, we’ll describe the steps necessary to install and play the expe
 - A USB cable for the Android device.
 
 #### Steps:
-1.	Connect the device to your computer with the USB cable.
+1.	Connect the Android device to your computer with the USB cable.
 2.	Head over to the release page.
 3.	Find the latest release or any release you want to install.
 -	Click “Assets” to see the associated files.
 -	Download the “.apk” file.
 -	Download the “Images” folder.
-4.	Transfer the downloaded “.apk” file to your device and open it.
+4.	Transfer the downloaded “.apk” file to your Android device and open it.
+- Go to "Files" on your Android device to open it.
 -	This should prompt you to install said file.
 - Install said file.
 5.	Unzip the “Images” folder.
