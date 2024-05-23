@@ -54,6 +54,10 @@ MonoBehaviour:
     m_Localized: Find the next location
     m_Metadata:
       m_Items: []
+  - m_Id: 12719637941477376
+    m_Localized: Find your way back home
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

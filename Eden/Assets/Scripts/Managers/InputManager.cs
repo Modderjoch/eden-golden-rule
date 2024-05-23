@@ -103,6 +103,10 @@ public class InputManager : MonoBehaviour
                             scoreManager.AddScore(paper);
                         }
                     }
+                    else if(interactable is Bracelet bracelet)
+                    {
+                        bracelet.CollectBracelet();
+                    }
                 }                
             }
         }
