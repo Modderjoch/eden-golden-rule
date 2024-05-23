@@ -22888,21 +22888,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poses:
   - name: Pose1
-    texture: {fileID: 2800000, guid: fc727cf15b375bb4d9cc08c525a222f9, type: 3}
-    description: The pose when we enter the scene.
+    subPoses:
+    - name: Standing
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: fc727cf15b375bb4d9cc08c525a222f9, type: 3}
+      description: Just grandma standing around
+    - name: Book reveal
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 5a900ab2214855a47b63f35d8c300b3a, type: 3}
+      description: Grandma revealing the book
+    description: The poses when entering the scene
   - name: Pose2
-    texture: {fileID: 2800000, guid: 5a900ab2214855a47b63f35d8c300b3a, type: 3}
-    description: The pose during the paper collection, while it all flies away.
+    subPoses:
+    - name: Scared
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 5a900ab2214855a47b63f35d8c300b3a, type: 3}
+      description: When the paper flies around
+    - name: Tasking the player
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: d6d0e8f318d1e7241bad5640b6eb6aa9, type: 3}
+      description: When grandma says to collect the paper
+    description: The poses when the book flies open and papers fly out
   - name: Pose3
-    texture: {fileID: 2800000, guid: d6d0e8f318d1e7241bad5640b6eb6aa9, type: 3}
-    description: The pose after all paper is collected.
+    subPoses:
+    - name: Standing
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: fc727cf15b375bb4d9cc08c525a222f9, type: 3}
+      description: Listening to Eden talk about the amount of paper
+    description: Listening to Eden talk about the amount of paper
   - name: Pose4
-    texture: {fileID: 2800000, guid: 037e2ad42d3f28843ae2f16b065c2d2d, type: 3}
-    description: The pose while saying the book is too big and there are too many
-      rules.
+    subPoses:
+    - name: Thinking
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 037e2ad42d3f28843ae2f16b065c2d2d, type: 3}
+      description: Saying this might be too big a book
+    description: Going "hmmm" this book might be too big
   - name: Pose5
-    texture: {fileID: 2800000, guid: 037e2ad42d3f28843ae2f16b065c2d2d, type: 3}
-    description: The pose when pointing the player towards mother wolf.
+    subPoses:
+    - name: Idea
+      delayToNextPose: 4.2
+      texture: {fileID: 2800000, guid: 5a900ab2214855a47b63f35d8c300b3a, type: 3}
+      description: Saying she knows what to do
+    - name: Nature talk
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: d6d0e8f318d1e7241bad5640b6eb6aa9, type: 3}
+      description: '"Nature is a powerful ally"'
+    description: Ending the scene and pointing the player towards mother wolf
   material: {fileID: 2100000, guid: 9b9e6c0b3827d1148aee58a86adf0286, type: 2}
 --- !u!1001 &4995817303454888927
 PrefabInstance:
