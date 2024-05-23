@@ -1,6 +1,7 @@
 # Eden
 
-![Screenshot 2024-03-22 000653](https://github.com/Modderjoch/eden-golden-rule/assets/78732327/f52f24bb-53c6-4dbb-be5a-d92cc9954574)
+![Screenshot_2](https://github.com/Modderjoch/eden-golden-rule/assets/78732327/e2f3726e-dbe8-4d78-af39-5141ce7fb86e)
+
 
 ## Overview
 Repository for our Augmented Reality application, Eden's Golden Rule. A journey during which Eden learns about the Golden Rule. 
@@ -19,12 +20,12 @@ In this guide, we’ll describe the steps necessary to install and play the expe
 1.	Connect the device to your computer with the USB cable.
 2.	Head over to the release page.
 3.	Find the latest release or any release you want to install.
-a.	Click “Assets” to see the associated files.
-b.	Download the “.apk” file.
-c.	Download the “Images” folder.
+-	Click “Assets” to see the associated files.
+-	Download the “.apk” file.
+-	Download the “Images” folder.
 4.	Transfer the downloaded “.apk” file to your device and open it.
-a.	This should prompt you to install said file.
-b.	Install said file.
+-	This should prompt you to install said file.
+- Install said file.
 5.	Unzip the “Images” folder.
 6.	Print the needed images (meaning the scenes you want to play) on A4 paper.
 7.	Open the installed application.
