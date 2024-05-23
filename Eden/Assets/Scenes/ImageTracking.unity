@@ -7399,12 +7399,21 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: ForestScenePart4
+    clip: {fileID: 8300000, guid: 182bcaed17038d74ea6c0bdcef6424da, type: 3}
+    type: 2
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   - name: GardenScenePart1
     clip: {fileID: 8300000, guid: 72ba2b457749d5845a050db76a1cdd43, type: 3}
     type: 2
     localization:
       id: en-US
-    volume: 10
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -7413,7 +7422,7 @@ MonoBehaviour:
     type: 2
     localization:
       id: en-US
-    volume: 2
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -7422,7 +7431,7 @@ MonoBehaviour:
     type: 2
     localization:
       id: en-US
-    volume: 2
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -7431,7 +7440,7 @@ MonoBehaviour:
     type: 2
     localization:
       id: en-US
-    volume: 2
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
