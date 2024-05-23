@@ -58,6 +58,18 @@ MonoBehaviour:
     m_Localized: Ga terug naar huis
     m_Metadata:
       m_Items: []
+  - m_Id: 12745675622866944
+    m_Localized: Ga verder om te leren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12749784270790656
+    m_Localized: Klik om de armband mee te nemen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12756629773377536
+    m_Localized: Je hebt de Gulden Regel geleerd!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -5837,7 +5837,7 @@ MonoBehaviour:
     additionalObject: {fileID: 1452990831}
     parent: {fileID: 221212717}
   playerIndex: 0
-  startSceneIndex: 3
+  startSceneIndex: 4
   trashProgress: {fileID: 409695568}
   paperProgress: {fileID: 326071307}
   scenes:
@@ -7372,44 +7372,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: ForestScenePart1
-    clip: {fileID: 8300000, guid: e99dbc26dbe24e544851aa99eb03d991, type: 3}
-    type: 2
-    localization:
-      id: en-US
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: ForestScenePart2
-    clip: {fileID: 8300000, guid: a2ce211a50b23a146a55beda48fd15d1, type: 3}
-    type: 2
-    localization:
-      id: en-US
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: ForestScenePart3
-    clip: {fileID: 8300000, guid: 8cd1e3fe28f1eb84da9079ce5696c01c, type: 3}
-    type: 2
-    localization:
-      id: en-US
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: ForestScenePart4
-    clip: {fileID: 8300000, guid: 182bcaed17038d74ea6c0bdcef6424da, type: 3}
-    type: 2
-    localization:
-      id: en-US
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - name: GardenScenePart1
     clip: {fileID: 8300000, guid: 72ba2b457749d5845a050db76a1cdd43, type: 3}
+    type: 2
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LivingRoomBeginScenePart1
+    clip: {fileID: 8300000, guid: 1f77df0bf1b9b9240889b262f3173426, type: 3}
+    type: 2
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LivingRoomBeginScenePart2
+    clip: {fileID: 8300000, guid: 1281374e099376f4381604e4740b4c96, type: 3}
     type: 2
     localization:
       id: en-US
@@ -7449,7 +7431,43 @@ MonoBehaviour:
     type: 2
     localization:
       id: en-US
-    volume: 2
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ForestScenePart1
+    clip: {fileID: 8300000, guid: e99dbc26dbe24e544851aa99eb03d991, type: 3}
+    type: 2
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ForestScenePart2
+    clip: {fileID: 8300000, guid: a2ce211a50b23a146a55beda48fd15d1, type: 3}
+    type: 2
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ForestScenePart3
+    clip: {fileID: 8300000, guid: 8cd1e3fe28f1eb84da9079ce5696c01c, type: 3}
+    type: 2
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ForestScenePart4
+    clip: {fileID: 8300000, guid: 182bcaed17038d74ea6c0bdcef6424da, type: 3}
+    type: 2
+    localization:
+      id: en-US
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -7458,7 +7476,7 @@ MonoBehaviour:
     type: 2
     localization:
       id: en-US
-    volume: 2
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -7500,6 +7518,15 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: MarketScenePart6
     clip: {fileID: 8300000, guid: 17d5d4f5da482ea459340d1be6f3eeec, type: 3}
+    type: 2
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LivingRoomEndScenePart1
+    clip: {fileID: 8300000, guid: acbe1093a3cd4a84badd8c89221a8f06, type: 3}
     type: 2
     localization:
       id: en-US
