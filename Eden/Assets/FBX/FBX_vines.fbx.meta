@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0d6da0f34ad80ee4cb5cdae4bf111c9c
+guid: dac58e54e76de084a9ac773cfcfc8135
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Mat_Alpha
+      name: lambert18
     second: {fileID: 2100000, guid: 26e190e1af9f64b42b107fcdfc1c3b16, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Mat_Garden_Decor_03
-    second: {fileID: 2100000, guid: 144de65fcc7b7854d86249c712b1384f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
