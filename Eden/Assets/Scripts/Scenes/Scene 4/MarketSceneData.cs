@@ -46,6 +46,7 @@ public class MarketSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
+        audioManager.Play("Confirm");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartBreadFamilyVoiceOver;
