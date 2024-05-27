@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TreeFoliage_Olive
+  m_Name: TreeFoliage_Olive_V2
   m_Shader: {fileID: -6465566751694194690, guid: 739b77238a22345429e0aa2a0b493fcc,
     type: 3}
   m_Parent: {fileID: 2100000, guid: 8686825fa0785414687557a13095cb9f, type: 2}
@@ -43,8 +43,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _GradientHeight: 1.62
+    - _GradientHeight: 2.55
     m_Colors:
-    - _GradientColor: {r: 0.2565276, g: 0.30980393, b: 0.21960784, a: 0}
-    - _MainColor: {r: 0.48621058, g: 0.52156866, b: 0.2509804, a: 0}
+    - _GradientColor: {r: 0.31205085, g: 0.32156864, b: 0.1882353, a: 0}
+    - _MainColor: {r: 0.78616345, g: 0.66573966, b: 0.29913756, a: 0}
   m_BuildTextureStacks: []
