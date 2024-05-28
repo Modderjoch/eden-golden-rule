@@ -5,11 +5,9 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private TrashProgress trashProgress;
+    [SerializeField] private PaperProgress paperProgress;
 
     private static ScoreManager instance;
-
-    private int forestScore = 0;
-    private int gardenScore = 0;
 
     public static ScoreManager Instance
     {
@@ -49,13 +47,11 @@ public class ScoreManager : MonoBehaviour
         {
             if(interactable is Trash trash)
             {
-                forestScore += trash.Score;
-
                 trashProgress.AddScore(trash);
             }
             else if(interactable is Paper paper)
             {
-                gardenScore += paper.Score;
+                paperProgress.AddScore(paper);
             }
         }
     }

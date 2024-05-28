@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject PopUp => popUp;
     public TrashProgress TrashProgress => trashProgress;
+    public PaperProgress PaperProgress => paperProgress;
     public List<GameScene> Scenes => modifiableScenes;
     public GameObject QRScanningUI => qrScanningUI;
     public List<GameSceneAdditionalObject> AdditionalObjects => additionalObjects;
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
     [SerializeField, Range(0, 4)] private int playerIndex = 0;
     [SerializeField] private int startSceneIndex = 0;
     [SerializeField] private TrashProgress trashProgress;
+    [SerializeField] private PaperProgress paperProgress;
 
     [Header("Scenes")]
     [SerializeField] private List<GameScene> scenes;
@@ -38,6 +41,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject mainMenuUI;
     [SerializeField] GameObject qrScanningUI;
     [SerializeField] TMP_Dropdown playerIndexDropdown;
+    [SerializeField] SetNextLocationImage setNextLocationImage; 
 
     private static GameManager instance;
     private UIManager uiManager;
@@ -79,6 +83,7 @@ public class GameManager : MonoBehaviour
         AddAdditionalObjects();
     }
 
+#if UNITY_EDITOR
     protected void Update()
     {
         if (Input.GetKeyDown(KeyCode.K))
@@ -88,6 +93,7 @@ public class GameManager : MonoBehaviour
             NextScene();
         }
     }
+#endif
 
     /// <summary>
     /// Method to start the game from the Main Menu,
@@ -184,6 +190,16 @@ public class GameManager : MonoBehaviour
                 //Debug.Log("Set scene " + scene.name + " to inactive");
             }
         }
+
+        for (int i = 0; i < referenceLibrary.count; i++)
+        {
+            if(i == startSceneIndex + playerIndex)
+            {
+                Sprite sprite = Sprite.Create(referenceLibrary[i].texture, new Rect(0, 0, referenceLibrary[i].texture.width, referenceLibrary[i].texture.height), Vector2.zero);
+                setNextLocationImage.SetNextImage(sprite);
+            }
+
+        }
     }
 
     /// <summary>
@@ -241,7 +257,6 @@ public class GameManager : MonoBehaviour
         }
 
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale(newLanguageID);
-        Debug.Log(LocalizationSettings.SelectedLocale.Formatter);
     }
 
     private void SetPlayerIndex(int index)

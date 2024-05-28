@@ -18,7 +18,7 @@ public class InputManager : MonoBehaviour
     private PlayerControls playerControls;
 
     [SerializeField] private SeedManager seedManager;
-
+    [SerializeField] private LayerMask layerMask;
     [SerializeField] private bool useSeed;
 
     public static InputManager Instance
@@ -81,7 +81,7 @@ public class InputManager : MonoBehaviour
 
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, layerMask))
             {
                 GameObject hitObject = hit.collider.gameObject;
 
@@ -102,6 +102,14 @@ public class InputManager : MonoBehaviour
                         {
                             scoreManager.AddScore(paper);
                         }
+                    }
+                    else if(interactable is Bracelet bracelet)
+                    {
+                        bracelet.CollectBracelet();
+                    }
+                    else if(interactable is Compass compass)
+                    {
+                        compass.CollectCompass();
                     }
                 }                
             }
