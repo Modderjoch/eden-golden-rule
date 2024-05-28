@@ -89,6 +89,7 @@ public class ImageTracking : MonoBehaviour
             }
             
             prefab.transform.position = position;
+            
             //prefab.transform.rotation = trackedImage.transform.rotation;
 
             if(prefab.GetComponent<TestPanel>() != null)

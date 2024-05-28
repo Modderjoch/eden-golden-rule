@@ -5885,7 +5885,7 @@ MonoBehaviour:
     additionalObject: {fileID: 1452990831}
     parent: {fileID: 221212717}
   playerIndex: 0
-  startSceneIndex: 0
+  startSceneIndex: 1
   trashProgress: {fileID: 409695568}
   paperProgress: {fileID: 326071307}
   scenes:
@@ -7619,7 +7619,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Paper1
-    clip: {fileID: 8300000, guid: e7e89d58447800042baceca9d9ce0fdd, type: 3}
+    clip: {fileID: 8300000, guid: ad4c6a144ff7eea4e9c4aec79778553e, type: 3}
     type: 0
     localization:
       id: en-US
@@ -7683,6 +7683,15 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: PlasticBottle
     clip: {fileID: 8300000, guid: 6e6fcbfb1ab9d4d4daedbc9596a84ec3, type: 3}
+    type: 0
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PaperFlying
+    clip: {fileID: 8300000, guid: 70f69701eede02248a521dc106f3e196, type: 3}
     type: 0
     localization:
       id: en-US

@@ -259,6 +259,12 @@ public class GameManager : MonoBehaviour
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale(newLanguageID);
     }
 
+    public void SetRotation(Transform transform)
+    {
+        transform.rotation = Quaternion.Euler(0, (transform.eulerAngles.y) - Camera.main.transform.eulerAngles.y, 0);
+    }
+
+
     private void SetPlayerIndex(int index)
     {
         playerIndex = index;

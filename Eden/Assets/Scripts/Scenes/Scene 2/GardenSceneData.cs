@@ -57,6 +57,7 @@ public class GardenSceneData : GameSceneData
         gameManager.QRScanningUI.SetActive(false);
         grandmaCharacterTexture.SetPose("Pose1");
         audioManager.Play("Confirm");
+        gameManager.SetRotation(transform);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartPaperCollection;
@@ -72,6 +73,7 @@ public class GardenSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("PaperCollection").Result, 3);
+        audioManager.Play("PaperFlying");
 
         paperProgress.SetActive(true);
         paperAnimation.SetActive(true);
