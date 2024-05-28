@@ -15,6 +15,10 @@ public class Paper : Interactable
 
     public bool PickUp()
     {
+        int randomIndex = Random.Range(0, 3);
+
+        AudioManager.Instance.Play("Paper" +  randomIndex);
+
         Destroy(gameObject);
 
         return true;

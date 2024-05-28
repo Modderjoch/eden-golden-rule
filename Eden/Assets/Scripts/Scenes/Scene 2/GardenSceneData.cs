@@ -56,6 +56,7 @@ public class GardenSceneData : GameSceneData
         audioManager.PlayVoiceOver("GardenScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         gameManager.QRScanningUI.SetActive(false);
         grandmaCharacterTexture.SetPose("Pose1");
+        audioManager.Play("Confirm");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartPaperCollection;

@@ -10,7 +10,10 @@ public class PaperController : MonoBehaviour
     {
         foreach(PaperSheet paper in papers)
         {
-            paper.Blow();
+            if(paper.gameObject.activeSelf)
+            {
+                paper.Blow();
+            }
         }
     }
 }
