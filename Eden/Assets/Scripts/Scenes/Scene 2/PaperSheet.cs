@@ -6,24 +6,7 @@ public class PaperSheet : MonoBehaviour
 
     public float maxSideForce = 2f;
 
-    private AudioSource audioSource;
-    private bool audioIsPlaying = false;
-
     private Rigidbody rb;
-
-    protected void Update()
-    {
-        if (audioIsPlaying)
-        {
-            if(audioSource != null)
-            {
-                if (audioSource.isPlaying)
-                {
-                    audioSource.volume = Mathf.Clamp01((rb.velocity.x + rb.velocity.y + rb.velocity.z) / 3);
-                }
-            }
-        }
-    }
 
     public void Blow()
     {
