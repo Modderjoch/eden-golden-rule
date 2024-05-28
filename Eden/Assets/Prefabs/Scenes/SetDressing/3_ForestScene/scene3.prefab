@@ -78309,7 +78309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8484584270671548573}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.17364825, z: 0, w: 0.9848078}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -78319,7 +78319,7 @@ Transform:
   - {fileID: 6151050964049283058}
   - {fileID: 2915855180402100157}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -20, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &8660816890460192908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88754,7 +88754,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 2
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &4487041860523351942
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -89190,7 +89189,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 1
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &4704210952971206444
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -89545,7 +89543,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 3
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &1103188254798421895
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -89690,7 +89687,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 3
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &3970926299223781856
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -89835,7 +89831,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 1
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &1190153840546527430
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -90162,7 +90157,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 1
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!65 &1546139811611488253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90643,7 +90637,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 2
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &7481116971317291896
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -91004,7 +90997,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 1
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &1531332964757554695
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -91232,7 +91224,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 3
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &980973443854198793
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -91347,31 +91338,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 50b426d12e3c92c4c81c8fd4034e7feb,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 938606625842865276}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50b426d12e3c92c4c81c8fd4034e7feb, type: 3}
---- !u!1 &2539153307552308487 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 50b426d12e3c92c4c81c8fd4034e7feb,
-    type: 3}
-  m_PrefabInstance: {fileID: 3458073655628849238}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &938606625842865276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2539153307552308487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e34ff83e21b2b824f916f29a9006bced, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!4 &2915855180402100157 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 50b426d12e3c92c4c81c8fd4034e7feb,
@@ -91678,7 +91646,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 3
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &8187313442973549495
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -91823,7 +91790,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 1
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &706131869818003026
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -92178,7 +92144,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 1
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &3156080312583389400
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -92880,7 +92845,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 5
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &7828686535946304015
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -93298,7 +93262,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 1
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &4302967982446087844
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -93443,7 +93406,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 2
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &5644804928539434913
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -93932,11 +93894,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 538425519245806495}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d, type: 3}
 --- !u!4 &6151050964049283058 stripped
 Transform:
@@ -93944,25 +93902,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5969052082609987609}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6779954763401993544 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-    type: 3}
-  m_PrefabInstance: {fileID: 5969052082609987609}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &538425519245806495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6779954763401993544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e34ff83e21b2b824f916f29a9006bced, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1001 &6192631113377689238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94079,7 +94018,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 5
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &4115722551477773579
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -94325,7 +94263,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 1
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &1642385916002490195
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -94648,7 +94585,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 1
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &6810222184306732307
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -95078,7 +95014,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 1
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &1922375443706715511
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -95427,7 +95362,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 3
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &1444283690877911491
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -95572,7 +95506,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 5
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &8867027526099017574
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -95812,7 +95745,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 1
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &7268825754378730841
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -96583,7 +96515,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 3
   trashProgress: {fileID: 0}
-  audioFile: 
 --- !u!64 &6522182637411566391
 MeshCollider:
   m_ObjectHideFlags: 0

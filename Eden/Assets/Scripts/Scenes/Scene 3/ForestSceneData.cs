@@ -99,7 +99,6 @@ public class ForestSceneData : GameSceneData
         audioManager.PlayVoiceOver("ForestScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         gameManager.QRScanningUI.SetActive(false);
         audioManager.Play("Confirm");
-        gameManager.SetRotation(transform);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartMotherWolfAppearance;
