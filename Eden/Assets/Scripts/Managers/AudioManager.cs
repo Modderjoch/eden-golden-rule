@@ -160,4 +160,16 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
+
+    public AudioSource ReturnAudioSource(string name)
+    {
+        Sound sound = sounds.Find(s => s.name == name);
+        if (sound == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return null;
+        }
+
+        return sound.source;
+    }
 }
