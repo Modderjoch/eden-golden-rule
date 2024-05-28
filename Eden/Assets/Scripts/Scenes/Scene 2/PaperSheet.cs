@@ -26,9 +26,5 @@ public class PaperSheet : MonoBehaviour
         {
             Debug.LogWarning("Rigidbody component not found. Add a Rigidbody component to the object to use BlowIntoAir.");
         }
-
-        AudioManager.Instance.Play("PaperFlying");
-        audioSource = AudioManager.Instance.ReturnAudioSource("PaperFlying");
-        audioIsPlaying = true;
     }
 }
