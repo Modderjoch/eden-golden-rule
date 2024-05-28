@@ -15,6 +15,8 @@ public class MarketSceneData : GameSceneData
     private AudioManager audioManager;
     private GameManager gameManager;
 
+    private bool rotateEnvironment = false;
+
 #if UNITY_EDITOR
     protected void Update()
     {
@@ -22,6 +24,18 @@ public class MarketSceneData : GameSceneData
         {
             AudioManager.Instance.StopAllVoiceOvers();
         }
+
+        if (rotateEnvironment)
+        {
+            Vector3 relativePos = transform.position - Camera.main.transform.position;
+
+            relativePos.y = 0;
+
+            Quaternion rotation = Quaternion.LookRotation(relativePos);
+            transform.rotation = rotation;
+        }
+
+        rotateEnvironment = false;
     }
 #endif
 
@@ -47,6 +61,9 @@ public class MarketSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         audioManager.Play("Confirm");
+
+        rotateEnvironment = true;
+        CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartBreadFamilyVoiceOver;
@@ -153,5 +170,12 @@ public class MarketSceneData : GameSceneData
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events
+    }
+
+    private IEnumerator DisableRotation(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        rotateEnvironment = false;
     }
 }

@@ -261,7 +261,10 @@ public class GameManager : MonoBehaviour
 
     public void SetRotation(Transform transform)
     {
-        transform.rotation = Quaternion.Euler(0, (transform.eulerAngles.y) - Camera.main.transform.eulerAngles.y, 0);
+        Vector3 relativePos = transform.position - Camera.main.transform.position;
+        relativePos.y = 0;
+        Quaternion rotation = Quaternion.LookRotation(relativePos);
+        transform.rotation = rotation;
     }
 
 
