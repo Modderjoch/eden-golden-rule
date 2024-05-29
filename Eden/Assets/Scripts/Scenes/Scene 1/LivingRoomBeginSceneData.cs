@@ -44,6 +44,7 @@ public class LivingRoomBeginSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("LivingRoomBeginScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
+        audioManager.Play("Confirm");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartCompassCollection;

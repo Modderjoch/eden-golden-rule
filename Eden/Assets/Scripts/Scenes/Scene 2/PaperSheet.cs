@@ -6,9 +6,11 @@ public class PaperSheet : MonoBehaviour
 
     public float maxSideForce = 2f;
 
+    private Rigidbody rb;
+
     public void Blow()
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
 
         if (rb != null)
         {

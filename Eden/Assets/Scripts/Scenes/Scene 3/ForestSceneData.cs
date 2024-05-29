@@ -98,6 +98,8 @@ public class ForestSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("ForestScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         gameManager.QRScanningUI.SetActive(false);
+        audioManager.Play("Confirm");
+        gameManager.SetRotation(transform);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartMotherWolfAppearance;
@@ -196,6 +198,7 @@ public class ForestSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         popUp.PopUpEntry("Well done!", 3);
         gameManager.NextScene();
+        gameManager.QRScanningUI.SetActive(true);
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events

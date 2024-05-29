@@ -492,6 +492,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2000814355}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &61237248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3347,6 +3359,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2000814355}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &728555727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4983,6 +5007,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2000814355}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1474769313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5698,7 +5734,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2000814355}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Drop
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1747124049
 MonoBehaviour:
@@ -5837,7 +5885,7 @@ MonoBehaviour:
     additionalObject: {fileID: 1452990831}
     parent: {fileID: 221212717}
   playerIndex: 0
-  startSceneIndex: 4
+  startSceneIndex: 1
   trashProgress: {fileID: 409695568}
   paperProgress: {fileID: 326071307}
   scenes:
@@ -7528,6 +7576,123 @@ MonoBehaviour:
   - name: LivingRoomEndScenePart1
     clip: {fileID: 8300000, guid: acbe1093a3cd4a84badd8c89221a8f06, type: 3}
     type: 2
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: 044e436aadffbdd40a3291ea6efbe5a1, type: 3}
+    type: 0
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Drop
+    clip: {fileID: 8300000, guid: 504afd0072445774dbc2466dcf4d27bf, type: 3}
+    type: 0
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Confirm
+    clip: {fileID: 8300000, guid: bb32fde8884bf66499ec7631064f79df, type: 3}
+    type: 0
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Paper0
+    clip: {fileID: 8300000, guid: 86225cd313d54024c9ddb71db85db41d, type: 3}
+    type: 0
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Paper1
+    clip: {fileID: 8300000, guid: ad4c6a144ff7eea4e9c4aec79778553e, type: 3}
+    type: 0
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Paper2
+    clip: {fileID: 8300000, guid: d31406c05d0d90c498db611b1e65b6dd, type: 3}
+    type: 0
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GlassBottle
+    clip: {fileID: 8300000, guid: ed5313b6fe9515e4180618d94fd33db1, type: 3}
+    type: 0
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Box
+    clip: {fileID: 8300000, guid: a41f506933d42394fb611a43d82a33d5, type: 3}
+    type: 0
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TinCan
+    clip: {fileID: 8300000, guid: 6a8d2c07ad6f1e940b9e2c059de38bf5, type: 3}
+    type: 0
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ChipBag
+    clip: {fileID: 8300000, guid: 8f9b8ec2b9ca8194a8c552b967ecd77f, type: 3}
+    type: 0
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TrashBag
+    clip: {fileID: 8300000, guid: 057c157e42ddd004a81025b172550d2e, type: 3}
+    type: 0
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlasticBottle
+    clip: {fileID: 8300000, guid: 6e6fcbfb1ab9d4d4daedbc9596a84ec3, type: 3}
+    type: 0
+    localization:
+      id: en-US
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PaperFlying
+    clip: {fileID: 8300000, guid: 70f69701eede02248a521dc106f3e196, type: 3}
+    type: 0
     localization:
       id: en-US
     volume: 1
