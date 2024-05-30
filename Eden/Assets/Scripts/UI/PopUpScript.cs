@@ -20,6 +20,8 @@ public class PopUpScript : MonoBehaviour
 
     public void PopUpEntry(string text, int x)
     {
+        AudioManager.Instance.Play("Popup");
+
         gameObject.SetActive(true);
         popUpMsg.text = text;
         animator.SetTrigger("entry");

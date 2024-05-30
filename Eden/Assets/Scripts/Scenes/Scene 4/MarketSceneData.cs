@@ -6,8 +6,7 @@ using UnityEngine.Localization.Settings;
 public class MarketSceneData : GameSceneData
 {
     [Header("Additional Objects")]
-
-    [SerializeField] private Bracelet bracelet;
+    private Bracelet bracelet;
 
     private PopUpScript popUp;
 
@@ -44,6 +43,15 @@ public class MarketSceneData : GameSceneData
         audioManager = AudioManager.Instance;
         gameManager = GameManager.Instance;
         additionalObjects = gameManager.GetAddditionalObjects();
+
+        if (LocalizationSettings.SelectedLocale.Formatter.ToString() == "en-US")
+        {
+            bracelet = additionalObjects[0].additionalObject.GetComponent<Bracelet>();
+        }
+        else
+        {
+            bracelet = additionalObjects[1].additionalObject.GetComponent<Bracelet>();
+        }
 
         popUp = gameManager.PopUp.GetComponent<PopUpScript>();
 
@@ -120,7 +128,7 @@ public class MarketSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         bracelet.gameObject.SetActive(true);
-        popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("BraceletCollection").Result, 2);
+        popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("BraceletCollection").Result, 4);
 
         // Then we subscribe to new events
         bracelet.OnBraceletCollected += StartBraceletVoiceOver;
