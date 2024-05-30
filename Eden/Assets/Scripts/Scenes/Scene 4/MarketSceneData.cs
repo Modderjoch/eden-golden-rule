@@ -6,14 +6,15 @@ using UnityEngine.Localization.Settings;
 public class MarketSceneData : GameSceneData
 {
     [Header("Additional Objects")]
-
-    [SerializeField] private Bracelet bracelet;
+    private Bracelet bracelet;
 
     private PopUpScript popUp;
 
     private List<GameSceneAdditionalObject> additionalObjects;
     private AudioManager audioManager;
     private GameManager gameManager;
+
+    private bool rotateEnvironment = false;
 
 #if UNITY_EDITOR
     protected void Update()
@@ -22,6 +23,18 @@ public class MarketSceneData : GameSceneData
         {
             AudioManager.Instance.StopAllVoiceOvers();
         }
+
+        if (rotateEnvironment)
+        {
+            Vector3 relativePos = transform.position - Camera.main.transform.position;
+
+            relativePos.y = 0;
+
+            Quaternion rotation = Quaternion.LookRotation(relativePos);
+            transform.rotation = rotation;
+        }
+
+        rotateEnvironment = false;
     }
 #endif
 
@@ -30,6 +43,15 @@ public class MarketSceneData : GameSceneData
         audioManager = AudioManager.Instance;
         gameManager = GameManager.Instance;
         additionalObjects = gameManager.GetAddditionalObjects();
+
+        if (LocalizationSettings.SelectedLocale.Formatter.ToString() == "en-US")
+        {
+            bracelet = additionalObjects[0].additionalObject.GetComponent<Bracelet>();
+        }
+        else
+        {
+            bracelet = additionalObjects[1].additionalObject.GetComponent<Bracelet>();
+        }
 
         popUp = gameManager.PopUp.GetComponent<PopUpScript>();
 
@@ -47,6 +69,9 @@ public class MarketSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         audioManager.Play("Confirm");
+
+        rotateEnvironment = true;
+        CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartBreadFamilyVoiceOver;
@@ -103,7 +128,7 @@ public class MarketSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         bracelet.gameObject.SetActive(true);
-        popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("BraceletCollection").Result, 2);
+        popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("BraceletCollection").Result, 4);
 
         // Then we subscribe to new events
         bracelet.OnBraceletCollected += StartBraceletVoiceOver;
@@ -153,5 +178,12 @@ public class MarketSceneData : GameSceneData
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events
+    }
+
+    private IEnumerator DisableRotation(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        rotateEnvironment = false;
     }
 }

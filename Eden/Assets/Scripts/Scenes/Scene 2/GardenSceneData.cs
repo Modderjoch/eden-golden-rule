@@ -20,6 +20,8 @@ public class GardenSceneData : GameSceneData
     private AudioManager audioManager;
     private GameManager gameManager;
 
+    private bool rotateEnvironment = false;
+
 #if UNITY_EDITOR
     protected void Update()
     {
@@ -27,6 +29,18 @@ public class GardenSceneData : GameSceneData
         {
             AudioManager.Instance.StopAllVoiceOvers();
         }
+
+        if (rotateEnvironment)
+        {
+            Vector3 relativePos = transform.position - Camera.main.transform.position;
+
+            relativePos.y = 0;
+
+            Quaternion rotation = Quaternion.LookRotation(relativePos);
+            transform.rotation = rotation;
+        }
+
+        rotateEnvironment = false;
     }
 #endif
 
@@ -57,7 +71,9 @@ public class GardenSceneData : GameSceneData
         gameManager.QRScanningUI.SetActive(false);
         grandmaCharacterTexture.SetPose("Pose1");
         audioManager.Play("Confirm");
-        gameManager.SetRotation(transform);
+
+        rotateEnvironment = true;
+        CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartPaperCollection;
@@ -149,6 +165,13 @@ public class GardenSceneData : GameSceneData
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events
+    }
+
+    private IEnumerator DisableRotation(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        rotateEnvironment = false;
     }
 
     private void DisablePickUpHint()

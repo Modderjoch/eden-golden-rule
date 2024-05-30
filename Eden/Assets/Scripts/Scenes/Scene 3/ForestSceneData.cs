@@ -38,6 +38,8 @@ public class ForestSceneData : GameSceneData
 
     private bool transitionGrass = false;
 
+    private bool rotateEnvironment = false;
+
     protected void Update()
     {
 #if UNITY_EDITOR
@@ -88,6 +90,19 @@ public class ForestSceneData : GameSceneData
         gameManager.Scenes[2].OnEnvironmentActivated += StartVoiceOver;
     }
 
+    protected void FixedUpdate()
+    {
+        if (rotateEnvironment)
+        {
+            Vector3 relativePos = transform.position - Camera.main.transform.position;
+
+            relativePos.y = 0;
+
+            Quaternion rotation = Quaternion.LookRotation(relativePos);
+            transform.rotation = rotation;
+        }
+    }
+
     private void StartVoiceOver()
     {
         // First we de-activate the old objects
@@ -99,7 +114,9 @@ public class ForestSceneData : GameSceneData
         audioManager.PlayVoiceOver("ForestScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         gameManager.QRScanningUI.SetActive(false);
         audioManager.Play("Confirm");
-        gameManager.SetRotation(transform);
+
+        rotateEnvironment = true;
+        CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartMotherWolfAppearance;
@@ -209,6 +226,14 @@ public class ForestSceneData : GameSceneData
         swipeAnimation.SetActive(false);
         swipeScript.OnSwipeDetected -= DisableSwipeAnimation;
     }
+
+    private IEnumerator DisableRotation(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        rotateEnvironment = false;
+    }
+
 
     private void HandleTrashCollection()
     {

@@ -6406,7 +6406,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.085, y: 0.085, z: 0.085}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4955304305279728212}
@@ -11563,7 +11563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c7509c1e497e764db2a4a7acc9e051d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decoyCollider: {fileID: 0}
+  decoyCollider: {fileID: 3127749633891507988}
   paperController: {fileID: 8519304569507476490}
   grandmaCharacterTexture: {fileID: 349554297266234919}
 --- !u!1 &5663448911317569050
@@ -20018,7 +20018,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8228660228513137645}
   m_SourcePrefab: {fileID: 100100000, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d, type: 3}
 --- !u!4 &2362944254249587204 stripped
 Transform:
@@ -20026,6 +20030,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2828370769953011183}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3134802119537232062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2828370769953011183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8228660228513137645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3134802119537232062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34ff83e21b2b824f916f29a9006bced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1001 &3035623582642454836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22861,6 +22884,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 349554297266234919}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5202447706994429238}
   m_SourcePrefab: {fileID: 100100000, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1, type: 3}
 --- !u!4 &4836519912446788736 stripped
 Transform:
@@ -22935,6 +22962,19 @@ MonoBehaviour:
       description: '"Nature is a powerful ally"'
     description: Ending the scene and pointing the player towards mother wolf
   material: {fileID: 2100000, guid: 9b9e6c0b3827d1148aee58a86adf0286, type: 2}
+--- !u!114 &5202447706994429238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5212095855608127034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34ff83e21b2b824f916f29a9006bced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1001 &4995817303454888927
 PrefabInstance:
   m_ObjectHideFlags: 0
