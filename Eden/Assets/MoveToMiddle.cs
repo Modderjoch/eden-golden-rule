@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,14 +9,19 @@ public class MoveToMiddle : MonoBehaviour
 
     private bool moveToMiddle = false;
     private RectTransform rectTransform;
-    private Vector2 targetPosition = Vector2.zero;
+    private Vector2 targetPosition;
     public float speed = 5f;
+
+    public GameObject[] otherPacks;
+
+    public event Action OnMiddleReached;
 
     [SerializeField] 
 
     protected void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
+        targetPosition = new Vector2(0, -400);
     }
 
     protected void Update()
@@ -32,6 +38,7 @@ public class MoveToMiddle : MonoBehaviour
             if (Vector2.Distance(rectTransform.anchoredPosition, targetPosition) < 0.1f)
             {
                 rectTransform.anchoredPosition = targetPosition;
+                OnMiddleReached.Invoke();
                 moveToMiddle = false;
             }
         }
@@ -42,5 +49,13 @@ public class MoveToMiddle : MonoBehaviour
         Debug.Log("Moving to middle");
 
         moveToMiddle = true;
+    }
+
+    public void DeactivateOtherPacks()
+    {
+        for (int i = 0; i < otherPacks.Length; i++)
+        {
+            otherPacks[i].gameObject.SetActive(false);
+        }
     }
 }
