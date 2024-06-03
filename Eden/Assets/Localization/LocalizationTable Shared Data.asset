@@ -39,6 +39,34 @@ MonoBehaviour:
     m_Key: SeedPlanting
     m_Metadata:
       m_Items: []
+  - m_Id: 7253629332504576
+    m_Key: PaperCollection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7253776175087616
+    m_Key: FindMotherWolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7293536595755008
+    m_Key: NextQR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12719637941477376
+    m_Key: FindHome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12745675622866944
+    m_Key: FindGrandma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12749784270790656
+    m_Key: BraceletCollection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12756629773377536
+    m_Key: Finish
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

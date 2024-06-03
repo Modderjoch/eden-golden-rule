@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.XR;
 using UnityEngine.XR.ARFoundation;
@@ -12,6 +13,7 @@ public class ImageTracking : MonoBehaviour
     public Slider scaleSlider;
     public GameObject uiParent;
     public Text objectName;
+    public Transform sceneParent;
 
     public List<GameObject> PlaceablePrefabs
     {
@@ -23,6 +25,7 @@ public class ImageTracking : MonoBehaviour
     private Dictionary<string, GameObject> spawnedPrefabs;
     [SerializeField] private ARTrackedImageManager trackedImageManager;
 
+    private bool removeEnvironments = false;
 
     protected void OnEnable()
     {
@@ -32,6 +35,29 @@ public class ImageTracking : MonoBehaviour
     protected void OnDisable()
     {
         trackedImageManager.trackedImagesChanged -= ImageChanged;
+    }
+
+    protected void Update()
+    {
+        if (removeEnvironments)
+        {
+            while (sceneParent.childCount > 0)
+            {
+                DestroyImmediate(sceneParent.GetChild(0).gameObject);
+            }
+
+            removeEnvironments = false;
+        }
+    }
+
+    public bool EnvironmentsAreRemoved()
+    {
+        if(sceneParent.childCount == 0)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>
@@ -45,7 +71,7 @@ public class ImageTracking : MonoBehaviour
 
         foreach (GameObject prefab in placeablePrefabs)
         {
-            GameObject newPrefab = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+            GameObject newPrefab = Instantiate(prefab, Vector3.zero, prefab.transform.rotation, sceneParent);
             newPrefab.name = prefab.name;
             spawnedPrefabs.Add(prefab.name, newPrefab);
             result.Add(newPrefab);
@@ -54,6 +80,11 @@ public class ImageTracking : MonoBehaviour
         }
 
         return result;
+    }
+
+    public void RemoveEnvironments(bool value)
+    {
+        removeEnvironments = value;
     }
 
     private void ImageChanged(ARTrackedImagesChangedEventArgs eventArgs)
@@ -79,17 +110,30 @@ public class ImageTracking : MonoBehaviour
         string name = trackedImage.referenceImage.name;
         Vector3 position = trackedImage.transform.position;
 
+        if (removeEnvironments)
+        {
+            return;
+        }
+
         if (name != null && spawnedPrefabs != null)
         {
             GameObject prefab = spawnedPrefabs[name];
             
-            if (!GameManager.Instance.SetActiveScene(prefab))
+            if(prefab != null)
+            {
+                if (!GameManager.Instance.SetActiveScene(prefab))
+                {
+                    return;
+                }
+            }
+            else
             {
                 return;
-            }
+            }            
             
             prefab.transform.position = position;
-            prefab.transform.rotation = trackedImage.transform.rotation;
+            
+            //prefab.transform.rotation = trackedImage.transform.rotation;
 
             if(prefab.GetComponent<TestPanel>() != null)
             {
