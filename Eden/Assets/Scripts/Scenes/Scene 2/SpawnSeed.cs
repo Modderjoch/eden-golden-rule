@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +17,9 @@ public class SpawnSeed : MonoBehaviour
     public event Action OnSeedsDepleted;
     public event Action OnSeedsChosen;
 
+    [SerializeField] private MoveToMiddle moveToMiddle;
+    [SerializeField] private Animator animator;
+
     public void SetFlowerPrefab(GameObject prefab)
     {
         if(prefab.name != "null")
@@ -28,6 +32,13 @@ public class SpawnSeed : MonoBehaviour
         }
 
         gameObject.GetComponentInChildren<SwipeScript>().SetFlowerPrefab(ReturnFlower());
+    }
+
+    private IEnumerator OpenPack()
+    {
+        yield return new WaitUntil(() => moveToMiddle.MiddleMove);
+
+        animator.SetTrigger("Open");
 
         OnSeedsChosen.Invoke();
     }
