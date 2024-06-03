@@ -29,6 +29,10 @@ public class GardenSceneData : GameSceneData
         {
             AudioManager.Instance.StopAllVoiceOvers();
         }
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            CoroutineHandler.Instance.StartCoroutine(CollectPaperAutomatically());
+        }
 
         if (rotateEnvironment)
         {
@@ -161,10 +165,20 @@ public class GardenSceneData : GameSceneData
         gameManager.NextScene();
         gameManager.QRScanningUI.SetActive(true);
         grandmaCharacterTexture.SetPose("Pose1");
-
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events
+    }
+
+    private IEnumerator CollectPaperAutomatically()
+    {
+        Paper paper = new Paper(1);
+
+        for (int i = 0; i < paperProgressScript.ReturnTotalScore(); i++)
+        {
+            paperProgressScript.AddScore(paper);
+            yield return null;
+        }
     }
 
     private IEnumerator DisableRotation(float seconds)
@@ -173,6 +187,7 @@ public class GardenSceneData : GameSceneData
 
         rotateEnvironment = false;
     }
+
 
     private void DisablePickUpHint()
     {

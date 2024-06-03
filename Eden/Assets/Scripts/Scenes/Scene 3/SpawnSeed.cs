@@ -12,6 +12,11 @@ public class SpawnSeed : MonoBehaviour
 
     public event Action OnSeedsDepleted;
 
+    public void DepleteSeeds()
+    {
+        numberOfSeeds = 0;
+    }
+
     private void OnTransformChildrenChanged()
     {
         if (!isInstantiating)

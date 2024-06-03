@@ -47,6 +47,14 @@ public class ForestSceneData : GameSceneData
         {
             AudioManager.Instance.StopAllVoiceOvers();
         }
+        if(Input.GetKeyDown(KeyCode.Alpha0)) 
+        {
+            CoroutineHandler.Instance.StartCoroutine(CollectTrashAutomatically());
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            seedSpawnpoint.GetComponent<SpawnSeed>().DepleteSeeds();
+        }
 #endif
 
         if(transitionGrass)
@@ -85,7 +93,6 @@ public class ForestSceneData : GameSceneData
 
         grassMaterial.SetFloat("_GrassLerp", 0);
         grassClumpsMaterial.SetFloat("_GrassClump_Lerp", 0);
-
 
         gameManager.Scenes[2].OnEnvironmentActivated += StartVoiceOver;
     }
@@ -219,6 +226,17 @@ public class ForestSceneData : GameSceneData
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events
+    }
+
+    private IEnumerator CollectTrashAutomatically()
+    {
+        Trash trash = new Trash(1);
+
+        for (int i = 0; i < trashProgressScript.ReturnTotalScore(); i++)
+        {
+            trashProgressScript.AddScore(trash);
+            yield return null;
+        }
     }
 
     private void DisableSwipeAnimation()

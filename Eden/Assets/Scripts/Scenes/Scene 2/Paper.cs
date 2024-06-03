@@ -8,6 +8,11 @@ public class Paper : Interactable
 
     [SerializeField] private int score = 1;
 
+    public Paper(int score)
+    {
+        this.score = score;
+    }
+
     protected void Awake()
     {
         GameManager.Instance.PaperProgress.SetTotalScore(score);

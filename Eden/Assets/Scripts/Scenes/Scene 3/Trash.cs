@@ -13,6 +13,11 @@ public class Trash : Interactable
 
     [SerializeField] private string audioFile;
 
+    public Trash(int score)
+    {
+        this.score = score;
+    }
+
     protected void Awake()
     {
         GameManager.Instance.TrashProgress.SetTotalScore(score);

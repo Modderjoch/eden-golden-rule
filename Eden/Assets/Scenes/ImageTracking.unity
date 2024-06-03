@@ -6285,7 +6285,7 @@ MonoBehaviour:
     additionalObject: {fileID: 1653167222}
     parent: {fileID: 346928495}
   playerIndex: 0
-  startSceneIndex: 3
+  startSceneIndex: 4
   trashProgress: {fileID: 409695568}
   paperProgress: {fileID: 326071307}
   scenes:
@@ -8123,6 +8123,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2030243282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2030243283}
+  m_Layer: 0
+  m_Name: Scenes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2030243283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030243282}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.35658577, y: 1.1792681, z: 0.510986}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2071695369
 GameObject:
   m_ObjectHideFlags: 0
@@ -8315,6 +8346,7 @@ MonoBehaviour:
   scaleSlider: {fileID: 294660127}
   uiParent: {fileID: 204492978}
   objectName: {fileID: 2071695371}
+  sceneParent: {fileID: 2030243283}
   trackedImageManager: {fileID: 2097514389}
 --- !u!1 &2122979221
 GameObject:
@@ -8513,6 +8545,7 @@ SceneRoots:
   - {fileID: 1018666869}
   - {fileID: 126847673}
   - {fileID: 1616737895}
+  - {fileID: 2030243283}
   - {fileID: 768875387}
   - {fileID: 1366325988}
   - {fileID: 1018674320}
