@@ -20,6 +20,12 @@ public class SpawnSeed : MonoBehaviour
     [SerializeField] private MoveToMiddle moveToMiddle;
     [SerializeField] private Animator animator;
 
+
+    public void SetMoveToMiddle(MoveToMiddle moveToMiddle) 
+    {
+        this.moveToMiddle = moveToMiddle;
+    }
+
     public void SetFlowerPrefab(GameObject prefab)
     {
         if(prefab.name != "null")
@@ -32,13 +38,32 @@ public class SpawnSeed : MonoBehaviour
         }
 
         gameObject.GetComponentInChildren<SwipeScript>().SetFlowerPrefab(ReturnFlower());
+
+        moveToMiddle.DeactivateOtherPacks();
+
+        moveToMiddle.OnMiddleReached += OpenPack;
+
+        SetAnimator();
     }
 
-    private IEnumerator OpenPack()
+    public void DepleteSeeds()
     {
-        yield return new WaitUntil(() => moveToMiddle.MiddleMove);
+        numberOfSeeds = 0;
+    }
 
+    private void OpenPack()
+    {
         animator.SetTrigger("Open");
+
+        AnimatorStateInfo animationState = animator.GetCurrentAnimatorStateInfo(0);
+        float animationDuration = animationState.length;
+
+        CoroutineHandler.Instance.StartCoroutine(SeedPackOpened(animationDuration));
+    }
+
+    private IEnumerator SeedPackOpened(float time)
+    {
+        yield return new WaitForSeconds(time);
 
         OnSeedsChosen.Invoke();
     }
@@ -49,6 +74,19 @@ public class SpawnSeed : MonoBehaviour
         {
             isInstantiating = true;
             Invoke("InstantiateObject", spawnDelay);
+        }
+    }
+
+    private void SetAnimator()
+    {
+        GameObject[] packs = GameObject.FindGameObjectsWithTag("FlowerPack");
+
+        foreach (GameObject pack in packs)
+        {
+            if (pack.activeSelf)
+            {
+                animator = pack.GetComponent<Animator>();
+            }
         }
     }
 
