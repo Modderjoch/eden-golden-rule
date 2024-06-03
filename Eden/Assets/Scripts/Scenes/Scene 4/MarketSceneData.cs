@@ -174,7 +174,6 @@ public class MarketSceneData : GameSceneData
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindHome").Result, 4);
         gameManager.NextScene();
         gameManager.QRScanningUI.SetActive(true);
-
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events

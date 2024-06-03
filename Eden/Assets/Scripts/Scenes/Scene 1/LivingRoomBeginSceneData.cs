@@ -90,7 +90,6 @@ public class LivingRoomBeginSceneData : GameSceneData
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindGrandma").Result, 4);
         gameManager.NextScene();
         gameManager.QRScanningUI.SetActive(true);
-
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events

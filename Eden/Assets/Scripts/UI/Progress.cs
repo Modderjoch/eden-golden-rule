@@ -29,6 +29,14 @@ public abstract class Progress : MonoBehaviour
         RefreshUI();
     }
 
+    public void ResetScore()
+    {
+        totalScore = 0;
+        currentScore = 0;
+
+        RefreshUI();
+    }
+
     public void AddScore(Interactable interactable)
     {
         if(interactable is Trash trash)
