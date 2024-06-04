@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
     private ARTrackedImageManager trackedImageManager;
 
     [Header("Data")]
-    [SerializeField] private List<Button> languages;
     [SerializeField] private List<GameSceneAdditionalObject> additionalObjects = new List<GameSceneAdditionalObject>();
     [SerializeField, Range(0, 4)] private int playerIndex = 0;
     [SerializeField] private int startSceneIndex = 0;
@@ -40,9 +39,16 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject popUp;
     [SerializeField] GameObject mainMenuUI;
+    [SerializeField] GameObject pauseMenuUI;
     [SerializeField] GameObject qrScanningUI;
     [SerializeField] TMP_Dropdown playerIndexDropdown;
-    [SerializeField] SetNextLocationImage setNextLocationImage; 
+    [SerializeField] SetNextLocationImage setNextLocationImage;
+
+    [Header("Easy exit")]
+    [SerializeField] private int numberOfTouches = 5;
+    private int currentTouches = 0;
+    [SerializeField] private float timeInBetweenTouches = 1;
+    private float timeSinceLastTouch = 0;
 
     private static GameManager instance;
     private UIManager uiManager;
@@ -50,6 +56,10 @@ public class GameManager : MonoBehaviour
     private GameSceneData activeSceneData;
 
     private bool isFirstStart = true;
+
+    private bool isPaused = false;
+
+    private string currentLanguage;
 
     public static GameManager Instance
     {
@@ -72,7 +82,7 @@ public class GameManager : MonoBehaviour
 
     protected void Awake()
     {
-        SetLanguage();
+        SetLanguage("en-US");
 
         trackedImageManager = FindObjectOfType<ARTrackedImageManager>();
         uiManager = UIManager.Instance;
@@ -86,17 +96,19 @@ public class GameManager : MonoBehaviour
         AddAdditionalObjects();
     }
 
-#if UNITY_EDITOR
+
     protected void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.K))
         {
             Debug.Log("Setting scene");
 
             NextScene();
         }
-    }
 #endif
+    }
+
 
     /// <summary>
     /// Method to start the game from the Main Menu,
@@ -109,7 +121,7 @@ public class GameManager : MonoBehaviour
 
         mainMenuUI.SetActive(false);
 
-        SetLanguage();
+        SetLanguage("en-US");
 
         if (isFirstStart)
         {
@@ -121,14 +133,25 @@ public class GameManager : MonoBehaviour
             {
                 modifiableScenes[i].sceneEnvironmentPrefab = newPrefabs[i];
             }
-            
+
             SetActiveScene(startSceneIndex);
         }
 
 
+        qrScanningUI.SetActive(true);
+
         isFirstStart = false;
     }
 
+    public void ResetGameNow()
+    {
+        CoroutineHandler.Instance.StartCoroutine(ResetGame());
+    }
+
+    /// <summary>
+    /// IEnumerator to reset the game and instantiate new environments.
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator ResetGame()
     {
         trashProgress.ResetScore();
@@ -143,7 +166,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitUntil(imageTracking.EnvironmentsAreRemoved);
 
         imageTracking.RemoveEnvironments(false);
-        
+
         SetSpawnablePrefabs();
 
         List<GameObject> newPrefabs = imageTracking.SetSpawnablePrefabs();
@@ -153,8 +176,14 @@ public class GameManager : MonoBehaviour
             modifiableScenes[i].sceneEnvironmentPrefab = newPrefabs[i];
         }
 
-        NextScene();
-        
+        startSceneIndex = 0;
+
+        SetActiveScene(startSceneIndex);
+
+        AudioManager.Instance.StopAllVoiceOvers();
+
+        DeactivateAdditionalObjects();
+
         mainMenuUI.SetActive(true);
     }
 
@@ -164,15 +193,43 @@ public class GameManager : MonoBehaviour
     /// <returns>The currently active <see cref="GameScene"/></returns>
     public GameScene GetActiveScene()
     {
-        foreach(GameScene scene in modifiableScenes)
+        foreach (GameScene scene in modifiableScenes)
         {
-            if(scene.sceneState.state == SceneState.State.Active)
+            if (scene.sceneState.state == SceneState.State.Active)
             {
                 return scene;
             }
         }
 
         return null;
+    }
+
+    public void AddTouch()
+    {
+        Debug.Log("Touch");
+
+        if (Time.time - timeSinceLastTouch > timeInBetweenTouches)
+        {
+            currentTouches = 1;
+
+            timeSinceLastTouch = Time.time;
+        }
+        else
+        {
+            currentTouches++;
+
+            if (currentTouches >= numberOfTouches)
+            {
+                Debug.Log("Quit!");
+
+                pauseMenuUI.SetActive(true);
+                Pause();
+
+                currentTouches = 0;
+
+                timeSinceLastTouch = Time.time;
+            }
+        }
     }
 
     /// <summary>
@@ -199,7 +256,7 @@ public class GameManager : MonoBehaviour
     {
         startSceneIndex++;
 
-        if(startSceneIndex >= modifiableScenes.Count)
+        if (startSceneIndex >= modifiableScenes.Count)
         {
             startSceneIndex = 0;
         }
@@ -213,13 +270,13 @@ public class GameManager : MonoBehaviour
     /// <param name="index">The index of the scene to activate</param>
     public void SetActiveScene(int index)
     {
-        foreach(GameScene scene in modifiableScenes)
+        foreach (GameScene scene in modifiableScenes)
         {
-            if(scene.sceneIndex == index)
+            if (scene.sceneIndex == index)
             {
                 scene.sceneState.state = SceneState.State.Active;
 
-                if(scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>() != null)
+                if (scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>() != null)
                 {
                     scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>().OnSceneEnter();
                 }
@@ -237,7 +294,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < referenceLibrary.count; i++)
         {
-            if(i == startSceneIndex + playerIndex)
+            if (i == startSceneIndex + playerIndex)
             {
                 Sprite sprite = Sprite.Create(referenceLibrary[i].texture, new Rect(0, 0, referenceLibrary[i].texture.width, referenceLibrary[i].texture.height), Vector2.zero);
                 setNextLocationImage.SetNextImage(sprite);
@@ -252,11 +309,11 @@ public class GameManager : MonoBehaviour
     /// <param name="scenePrefab">The scene prefab that should be set active</param>
     public bool SetActiveScene(GameObject scenePrefab)
     {
-        foreach(GameScene scene in modifiableScenes)
+        foreach (GameScene scene in modifiableScenes)
         {
             SceneState.State state = scene.sceneState.state;
 
-            if(GetActiveScene().sceneEnvironmentPrefab.name != scenePrefab.name)
+            if (GetActiveScene().sceneEnvironmentPrefab.name != scenePrefab.name)
             {
                 return false;
             }
@@ -271,7 +328,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                if(scene.sceneState.state is SceneState.State.Active)
+                if (scene.sceneState.state is SceneState.State.Active)
                 {
                     scene.sceneState.state = SceneState.State.Inactive;
 
@@ -292,20 +349,37 @@ public class GameManager : MonoBehaviour
     /// Used to set the language based on
     /// the inactive button in the main menu
     /// </summary>
-    public void SetLanguage()
+    public void SetLanguage(string languageID)
     {
-        string newLanguageID = "";
+        currentLanguage = languageID;
 
-        foreach(Button language in languages)
-        {
-            if(!language.enabled)
-            {
-                newLanguageID = language.name;
-            }
-        }
-
-        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale(newLanguageID);
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale(languageID);
     }
+
+    public string GetLanguage()
+    {
+        return currentLanguage;
+    }
+
+    /// <summary>
+    /// Method to set <see cref="Time.timeScale"/> to 0 or 1. Depending on the current state.
+    /// </summary>
+    public void Pause()
+    {
+        if (!isPaused)
+        {
+            AudioManager.Instance.PauseAllVoiceOvers();
+
+            isPaused = true;
+        }
+        else
+        {
+            AudioManager.Instance.UnPauseAllVoiceOvers();
+
+            isPaused = false;
+        }
+    }
+
 
     /// <summary>
     /// Used to rotate the environment towards the player
@@ -368,9 +442,9 @@ public class GameManager : MonoBehaviour
 
     public int GetSceneIndex(string sceneName)
     {
-        foreach(GameScene scene in modifiableScenes)
+        foreach (GameScene scene in modifiableScenes)
         {
-            if(scene.sceneName == sceneName)
+            if (scene.sceneName == sceneName)
             {
                 return scene.sceneIndex;
             }
@@ -381,9 +455,9 @@ public class GameManager : MonoBehaviour
 
     private GameObject GetSceneUI(GameObject scenePrefab)
     {
-        foreach(GameScene scene in modifiableScenes)
+        foreach (GameScene scene in modifiableScenes)
         {
-            if(scene.sceneEnvironmentPrefab == scenePrefab)
+            if (scene.sceneEnvironmentPrefab == scenePrefab)
             {
                 return scene.sceneUIPrefab;
             }
@@ -396,7 +470,7 @@ public class GameManager : MonoBehaviour
     {
         modifiableScenes = new List<GameScene>();
 
-        foreach(GameScene scene in scenes)
+        foreach (GameScene scene in scenes)
         {
             modifiableScenes.Add(scene.Clone());
         }
@@ -404,16 +478,27 @@ public class GameManager : MonoBehaviour
 
     private void AddAdditionalObjects()
     {
-        foreach(GameScene scene in modifiableScenes)
+        foreach (GameScene scene in modifiableScenes)
         {
             scene.additionalObjects = new List<GameSceneAdditionalObject>();
 
-            foreach(GameSceneAdditionalObject additionalObject in additionalObjects)
+            foreach (GameSceneAdditionalObject additionalObject in additionalObjects)
             {
-                if(scene.sceneIndex == additionalObject.sceneIndex)
+                if (scene.sceneIndex == additionalObject.sceneIndex)
                 {
                     scene.additionalObjects.Add(additionalObject);
                 }
+            }
+        }
+    }
+
+    private void DeactivateAdditionalObjects()
+    {
+        foreach (GameScene scene in modifiableScenes)
+        {
+            foreach (GameSceneAdditionalObject obj in scene.additionalObjects)
+            {
+                obj.additionalObject.SetActive(false);
             }
         }
     }

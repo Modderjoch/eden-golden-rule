@@ -70,6 +70,14 @@ MonoBehaviour:
     m_Localized: You have learned the Golden Rule!
     m_Metadata:
       m_Items: []
+  - m_Id: 17085058384019456
+    m_Localized: Restart game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17085299241926656
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

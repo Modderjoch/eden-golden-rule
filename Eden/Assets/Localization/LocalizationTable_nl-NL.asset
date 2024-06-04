@@ -70,6 +70,14 @@ MonoBehaviour:
     m_Localized: Je hebt de Gulden Regel geleerd!
     m_Metadata:
       m_Items: []
+  - m_Id: 17085058384019456
+    m_Localized: Begin opnieuw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17085299241926656
+    m_Localized: Terug
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
