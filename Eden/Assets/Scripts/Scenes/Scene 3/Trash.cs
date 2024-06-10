@@ -11,6 +11,13 @@ public class Trash : Interactable
 
     [SerializeField] private TrashProgress trashProgress;
 
+    [SerializeField] private string audioFile;
+
+    public Trash(int score)
+    {
+        this.score = score;
+    }
+
     protected void Awake()
     {
         GameManager.Instance.TrashProgress.SetTotalScore(score);
@@ -18,6 +25,8 @@ public class Trash : Interactable
 
     public bool PickUp()
     {
+        AudioManager.Instance.Play(audioFile);
+
         Destroy(gameObject);
 
         return true;

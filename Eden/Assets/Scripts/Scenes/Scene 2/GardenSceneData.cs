@@ -20,6 +20,8 @@ public class GardenSceneData : GameSceneData
     private AudioManager audioManager;
     private GameManager gameManager;
 
+    private bool rotateEnvironment = false;
+
 #if UNITY_EDITOR
     protected void Update()
     {
@@ -27,6 +29,22 @@ public class GardenSceneData : GameSceneData
         {
             AudioManager.Instance.StopAllVoiceOvers();
         }
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            CoroutineHandler.Instance.StartCoroutine(CollectPaperAutomatically());
+        }
+
+        if (rotateEnvironment)
+        {
+            Vector3 relativePos = transform.position - Camera.main.transform.position;
+
+            relativePos.y = 0;
+
+            Quaternion rotation = Quaternion.LookRotation(relativePos);
+            transform.rotation = rotation;
+        }
+
+        rotateEnvironment = false;
     }
 #endif
 
@@ -56,6 +74,10 @@ public class GardenSceneData : GameSceneData
         audioManager.PlayVoiceOver("GardenScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         gameManager.QRScanningUI.SetActive(false);
         grandmaCharacterTexture.SetPose("Pose1");
+        audioManager.Play("Confirm");
+
+        rotateEnvironment = true;
+        CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartPaperCollection;
@@ -71,6 +93,7 @@ public class GardenSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("PaperCollection").Result, 3);
+        audioManager.Play("PaperFlying");
 
         paperProgress.SetActive(true);
         paperAnimation.SetActive(true);
@@ -142,11 +165,29 @@ public class GardenSceneData : GameSceneData
         gameManager.NextScene();
         gameManager.QRScanningUI.SetActive(true);
         grandmaCharacterTexture.SetPose("Pose1");
-
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events
     }
+
+    private IEnumerator CollectPaperAutomatically()
+    {
+        Paper paper = new Paper(1);
+
+        for (int i = 0; i < paperProgressScript.ReturnTotalScore(); i++)
+        {
+            paperProgressScript.AddScore(paper);
+            yield return null;
+        }
+    }
+
+    private IEnumerator DisableRotation(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        rotateEnvironment = false;
+    }
+
 
     private void DisablePickUpHint()
     {

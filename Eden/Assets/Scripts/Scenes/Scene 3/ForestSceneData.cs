@@ -12,6 +12,7 @@ public class ForestSceneData : GameSceneData
     private GameObject swipeArea;
     private GameObject seedSpawnpoint;
     private GameObject swipeAnimation;
+    private GameObject flowerPacks;
 
     [SerializeField] private float itemForTreeRate = 3;
     [SerializeField] private float grassLerpDuration = 3;
@@ -38,12 +39,22 @@ public class ForestSceneData : GameSceneData
 
     private bool transitionGrass = false;
 
+    private bool rotateEnvironment = false;
+
     protected void Update()
     {
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.P))
         {
             AudioManager.Instance.StopAllVoiceOvers();
+        }
+        if(Input.GetKeyDown(KeyCode.Alpha0)) 
+        {
+            CoroutineHandler.Instance.StartCoroutine(CollectTrashAutomatically());
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            seedSpawnpoint.GetComponent<SpawnSeed>().DepleteSeeds();
         }
 #endif
 
@@ -74,6 +85,7 @@ public class ForestSceneData : GameSceneData
         swipeArea = additionalObjects[1].additionalObject;
         seedSpawnpoint = additionalObjects[2].additionalObject;
         swipeAnimation = additionalObjects[3].additionalObject;
+        flowerPacks = additionalObjects[4].additionalObject;
 
         trashProgressScript = trashProgress.GetComponent<TrashProgress>();
         popUp = gameManager.PopUp.GetComponent<PopUpScript>();
@@ -84,8 +96,20 @@ public class ForestSceneData : GameSceneData
         grassMaterial.SetFloat("_GrassLerp", 0);
         grassClumpsMaterial.SetFloat("_GrassClump_Lerp", 0);
 
-
         gameManager.Scenes[2].OnEnvironmentActivated += StartVoiceOver;
+    }
+
+    protected void FixedUpdate()
+    {
+        if (rotateEnvironment)
+        {
+            Vector3 relativePos = transform.position - Camera.main.transform.position;
+
+            relativePos.y = 0;
+
+            Quaternion rotation = Quaternion.LookRotation(relativePos);
+            transform.rotation = rotation;
+        }
     }
 
     private void StartVoiceOver()
@@ -98,6 +122,10 @@ public class ForestSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("ForestScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         gameManager.QRScanningUI.SetActive(false);
+        audioManager.Play("Confirm");
+
+        rotateEnvironment = true;
+        CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartMotherWolfAppearance;
@@ -148,7 +176,21 @@ public class ForestSceneData : GameSceneData
         audioManager.PlayVoiceOver("ForestScenePart3" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
-        audioManager.OnVoiceOverFinished += StartSeedThrowing;
+        audioManager.OnVoiceOverFinished += StartSeedPicking;
+    }
+
+    private void StartSeedPicking()
+    {
+        // First we de-activate the old objects
+
+        // Then we unsubscribe from previous events
+        audioManager.OnVoiceOverFinished -= StartSeedPicking;
+
+        // Then we activate new objects and call the needed methods
+        flowerPacks.SetActive(true);
+
+        // Then we subscribe to new events
+        seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsChosen += StartSeedThrowing;
     }
 
     private void StartSeedThrowing()
@@ -156,7 +198,7 @@ public class ForestSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= StartSeedThrowing;
+        seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsChosen -= StartSeedThrowing;
 
         // Then we activate new objects and call the needed methods
         swipeAnimation.SetActive(true);
@@ -196,9 +238,21 @@ public class ForestSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         popUp.PopUpEntry("Well done!", 3);
         gameManager.NextScene();
+        gameManager.QRScanningUI.SetActive(true);
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events
+    }
+
+    private IEnumerator CollectTrashAutomatically()
+    {
+        Trash trash = new Trash(1);
+
+        for (int i = 0; i < trashProgressScript.ReturnTotalScore(); i++)
+        {
+            trashProgressScript.AddScore(trash);
+            yield return null;
+        }
     }
 
     private void DisableSwipeAnimation()
@@ -206,6 +260,14 @@ public class ForestSceneData : GameSceneData
         swipeAnimation.SetActive(false);
         swipeScript.OnSwipeDetected -= DisableSwipeAnimation;
     }
+
+    private IEnumerator DisableRotation(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        rotateEnvironment = false;
+    }
+
 
     private void HandleTrashCollection()
     {

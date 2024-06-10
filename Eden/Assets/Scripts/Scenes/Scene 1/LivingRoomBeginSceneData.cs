@@ -44,6 +44,7 @@ public class LivingRoomBeginSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("LivingRoomBeginScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
+        audioManager.Play("Confirm");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartCompassCollection;
@@ -89,7 +90,6 @@ public class LivingRoomBeginSceneData : GameSceneData
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindGrandma").Result, 4);
         gameManager.NextScene();
         gameManager.QRScanningUI.SetActive(true);
-
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events

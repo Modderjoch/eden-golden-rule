@@ -9,6 +9,8 @@ public class Bracelet : Interactable
 
     public void CollectBracelet()
     {
+        AudioManager.Instance.Play("Paper1");
+
         OnBraceletCollected.Invoke();
     }
 }

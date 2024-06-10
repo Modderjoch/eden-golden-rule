@@ -42,6 +42,7 @@ public class LivingRoomEndSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("LivingRoomEndScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
+        audioManager.Play("Confirm");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += OnSceneExit;
@@ -56,7 +57,7 @@ public class LivingRoomEndSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("Finish").Result, 5);
-
+        CoroutineHandler.Instance.StartCoroutine(gameManager.ResetGame());
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events

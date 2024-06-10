@@ -34,12 +34,12 @@ public class SwipeScript : MonoBehaviour
 
     private Rigidbody rb;
 
-    void Start()
+    protected void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    protected void Update()
     {
         if (trackSwipe)
         {
@@ -72,6 +72,11 @@ public class SwipeScript : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SetFlowerPrefab(GameObject prefab)
+    {
+        flowerPrefab = prefab;
     }
 
     private void HandleSwipe()
