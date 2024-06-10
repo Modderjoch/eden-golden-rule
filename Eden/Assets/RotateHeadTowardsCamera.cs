@@ -28,7 +28,7 @@ public class RotateHeadTowardsCamera : MonoBehaviour
         // Clamp the rotation to prevent full 360-degree rotation and excessive looking up/down
         float minHorizontalAngle = -140f; // minimum angle to rotate left from the initial forward direction
         float maxHorizontalAngle = 0f;  // maximum angle to rotate right from the initial forward direction
-        float minVerticalAngle = 30f;   // minimum angle to look down
+        float minVerticalAngle = 40f;   // minimum angle to look down
         float maxVerticalAngle = 100f;    // maximum angle to look up
         head.rotation = ClampRotation(head.rotation, minHorizontalAngle, maxHorizontalAngle, minVerticalAngle, maxVerticalAngle);
     }
