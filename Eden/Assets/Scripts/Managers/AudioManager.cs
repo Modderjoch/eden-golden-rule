@@ -1,3 +1,5 @@
+// Copyright Oebe Rademaker All rights reserved.
+
 using UnityEngine;
 using UnityEngine.Audio;
 using System;
