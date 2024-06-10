@@ -84,6 +84,8 @@ public class GameManager : MonoBehaviour
 
         CloneScenes();
         AddAdditionalObjects();
+
+        Application.targetFrameRate = 60;
     }
 
 #if UNITY_EDITOR
