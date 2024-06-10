@@ -16,6 +16,11 @@ public class MarketSceneData : GameSceneData
 
     private bool rotateEnvironment = false;
 
+    // Store the event handlers to unsubscribe later
+    private System.Action environmentActivatedHandler;
+    private System.Action voiceOverFinishedHandler;
+    private System.Action braceletCollectedHandler;
+
 #if UNITY_EDITOR
     protected void Update()
     {
@@ -55,7 +60,13 @@ public class MarketSceneData : GameSceneData
 
         popUp = gameManager.PopUp.GetComponent<PopUpScript>();
 
-        gameManager.Scenes[3].OnEnvironmentActivated += StartVoiceOver;
+        environmentActivatedHandler = StartVoiceOver;
+        gameManager.Scenes[3].OnEnvironmentActivated += environmentActivatedHandler;
+    }
+
+    private void OnDisable()
+    {
+        UnsubscribeFromAll();
     }
 
     private void StartVoiceOver()
@@ -64,7 +75,7 @@ public class MarketSceneData : GameSceneData
         gameManager.QRScanningUI.SetActive(false);
 
         // Then we unsubscribe from previous events
-        gameManager.Scenes[3].OnEnvironmentActivated -= StartVoiceOver;
+        gameManager.Scenes[3].OnEnvironmentActivated -= environmentActivatedHandler;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
@@ -74,7 +85,8 @@ public class MarketSceneData : GameSceneData
         CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
 
         // Then we subscribe to new events
-        audioManager.OnVoiceOverFinished += StartBreadFamilyVoiceOver;
+        voiceOverFinishedHandler = StartBreadFamilyVoiceOver;
+        audioManager.OnVoiceOverFinished += voiceOverFinishedHandler;
     }
 
     private void StartBreadFamilyVoiceOver()
@@ -82,13 +94,14 @@ public class MarketSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= StartBreadFamilyVoiceOver;
+        audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
-        audioManager.OnVoiceOverFinished += StartRevealVoiceOver;
+        voiceOverFinishedHandler = StartRevealVoiceOver;
+        audioManager.OnVoiceOverFinished += voiceOverFinishedHandler;
     }
 
     private void StartRevealVoiceOver()
@@ -96,13 +109,14 @@ public class MarketSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= StartRevealVoiceOver;
+        audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart3" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
-        audioManager.OnVoiceOverFinished += StartGoldenRuleVoiceOver;
+        voiceOverFinishedHandler = StartGoldenRuleVoiceOver;
+        audioManager.OnVoiceOverFinished += voiceOverFinishedHandler;
     }
 
     private void StartGoldenRuleVoiceOver()
@@ -110,13 +124,14 @@ public class MarketSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= StartGoldenRuleVoiceOver;
+        audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart4" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
-        audioManager.OnVoiceOverFinished += StartBraceletInteraction;
+        voiceOverFinishedHandler = StartBraceletInteraction;
+        audioManager.OnVoiceOverFinished += voiceOverFinishedHandler;
     }
 
     private void StartBraceletInteraction()
@@ -124,14 +139,15 @@ public class MarketSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= StartBraceletInteraction;
+        audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
 
         // Then we activate new objects and call the needed methods
         bracelet.gameObject.SetActive(true);
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("BraceletCollection").Result, 4);
 
         // Then we subscribe to new events
-        bracelet.OnBraceletCollected += StartBraceletVoiceOver;
+        braceletCollectedHandler = StartBraceletVoiceOver;
+        bracelet.OnBraceletCollected += braceletCollectedHandler;
     }
 
     private void StartBraceletVoiceOver()
@@ -140,13 +156,14 @@ public class MarketSceneData : GameSceneData
         bracelet.gameObject.SetActive(false);
 
         // Then we unsubscribe from previous events
-        bracelet.OnBraceletCollected -= StartBraceletVoiceOver;
+        bracelet.OnBraceletCollected -= braceletCollectedHandler;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart5" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
-        audioManager.OnVoiceOverFinished += StartGratitudeVoiceOver;
+        voiceOverFinishedHandler = StartGratitudeVoiceOver;
+        audioManager.OnVoiceOverFinished += voiceOverFinishedHandler;
     }
 
     private void StartGratitudeVoiceOver()
@@ -154,13 +171,14 @@ public class MarketSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= StartGratitudeVoiceOver;
+        audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart6" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
-        audioManager.OnVoiceOverFinished += OnSceneExit;
+        voiceOverFinishedHandler = OnSceneExit;
+        audioManager.OnVoiceOverFinished += voiceOverFinishedHandler;
     }
 
     public override void OnSceneExit()
@@ -168,7 +186,7 @@ public class MarketSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= OnSceneExit;
+        audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
 
         // Then we activate new objects and call the needed methods
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindHome").Result, 4);
@@ -184,5 +202,24 @@ public class MarketSceneData : GameSceneData
         yield return new WaitForSeconds(seconds);
 
         rotateEnvironment = false;
+    }
+
+    public override void UnsubscribeFromAll()
+    {
+        // Unsubscribe from events
+        if (gameManager != null)
+        {
+            gameManager.Scenes[3].OnEnvironmentActivated -= environmentActivatedHandler;
+        }
+
+        if (audioManager != null)
+        {
+            audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
+        }
+
+        if (bracelet != null)
+        {
+            bracelet.OnBraceletCollected -= braceletCollectedHandler;
+        }
     }
 }

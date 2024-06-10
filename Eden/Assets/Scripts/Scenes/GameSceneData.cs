@@ -6,4 +6,5 @@ public abstract class GameSceneData : MonoBehaviour
 {
     public abstract void OnSceneEnter();
     public abstract void OnSceneExit();
+    public abstract void UnsubscribeFromAll();
 }

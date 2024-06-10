@@ -157,6 +157,8 @@ public class GameManager : MonoBehaviour
         trashProgress.ResetScore();
         paperProgress.ResetScore();
 
+        activeSceneData.UnsubscribeFromAll();
+
         CloneScenes();
 
         AddAdditionalObjects();
@@ -278,6 +280,8 @@ public class GameManager : MonoBehaviour
 
                 if (scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>() != null)
                 {
+                    activeSceneData = scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>();
+
                     scene.sceneEnvironmentPrefab.GetComponent<GameSceneData>().OnSceneEnter();
                 }
             }

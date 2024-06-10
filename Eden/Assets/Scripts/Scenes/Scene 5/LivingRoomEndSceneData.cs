@@ -27,16 +27,7 @@ public class LivingRoomEndSceneData : GameSceneData
 
     protected void OnDisable()
     {
-        // Unsubscribe from events
-        if (gameManager != null)
-        {
-            gameManager.Scenes[4].OnEnvironmentActivated -= environmentActivatedHandler;
-        }
-
-        if (audioManager != null)
-        {
-            audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
-        }
+        
     }
 
     public override void OnSceneEnter()
@@ -81,5 +72,19 @@ public class LivingRoomEndSceneData : GameSceneData
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events
+    }
+
+    public override void UnsubscribeFromAll()
+    {
+        // Unsubscribe from events
+        if (gameManager != null)
+        {
+            gameManager.Scenes[4].OnEnvironmentActivated -= environmentActivatedHandler;
+        }
+
+        if (audioManager != null)
+        {
+            audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
+        }
     }
 }
