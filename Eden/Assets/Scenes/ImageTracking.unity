@@ -8055,7 +8055,7 @@ MonoBehaviour:
     additionalObject: {fileID: 1653167222}
     parent: {fileID: 346928495}
   playerIndex: 0
-  startSceneIndex: 2
+  startSceneIndex: 1
   trashProgress: {fileID: 409695568}
   paperProgress: {fileID: 326071307}
   scenes:
