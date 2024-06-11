@@ -70,6 +70,10 @@ MonoBehaviour:
     m_Localized: You have learned the Golden Rule!
     m_Metadata:
       m_Items: []
+  - m_Id: 19634884824940544
+    m_Localized: Click to collect the compass
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

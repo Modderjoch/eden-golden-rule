@@ -11,6 +11,8 @@ public class Compass : Interactable
 
     public void CollectCompass()
     {
+        AudioManager.Instance.Play("TinCan");
+
         OnCompassCollected.Invoke();
     }
 }

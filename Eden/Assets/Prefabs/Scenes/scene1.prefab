@@ -119,7 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14ba90403f40504f97f2be101cc4897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  compass: {fileID: 4425176358368729976}
 --- !u!1 &5003575715632029915
 GameObject:
   m_ObjectHideFlags: 0
