@@ -14,9 +14,12 @@ public class GardenSceneData : GameSceneData
     [SerializeField] private GameObject decoyCollider;
     [SerializeField] private PaperController paperController;
     [SerializeField] private CharacterTextureReplacing grandmaCharacterTexture;
+    [SerializeField] private GameObject book;
+    [SerializeField] private GameObject paper;
 
     private PopUpScript popUp;
     private PaperProgress paperProgressScript;
+    private Animator bookAnimator;
 
     private List<GameSceneAdditionalObject> additionalObjects;
     private AudioManager audioManager;
@@ -61,6 +64,7 @@ public class GardenSceneData : GameSceneData
 
         paperProgressScript = paperProgress.GetComponent<PaperProgress>();
         popUp = gameManager.PopUp.GetComponent<PopUpScript>();
+        bookAnimator = book.GetComponent<Animator>();
 
         gameManager.Scenes[1].OnEnvironmentActivated += StartVoiceOver;
     }
@@ -80,6 +84,7 @@ public class GardenSceneData : GameSceneData
 
         rotateEnvironment = true;
         CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
+        CoroutineHandler.Instance.StartCoroutine(OpenBook(12f, true));
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartPaperCollection;
@@ -102,6 +107,7 @@ public class GardenSceneData : GameSceneData
         paperController.BlowPapers();
         Destroy(decoyCollider);
         grandmaCharacterTexture.SetPose("Pose2");
+        paper.SetActive(false);
 
         // Then we subscribe to new events
         paperProgressScript.OnScoreReached += StartPaperCollectedVoiceOver;
@@ -120,6 +126,8 @@ public class GardenSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart3" + LocalizationSettings.SelectedLocale.Formatter);
         grandmaCharacterTexture.SetPose("Pose3");
+        CoroutineHandler.Instance.StartCoroutine(OpenBook(6.5f, false));
+        paper.SetActive(true);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartContinueVoiceOver;
@@ -188,6 +196,13 @@ public class GardenSceneData : GameSceneData
         yield return new WaitForSeconds(seconds);
 
         rotateEnvironment = false;
+    }
+
+    private IEnumerator OpenBook(float seconds, bool active)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        book.SetActive(active);
     }
 
 

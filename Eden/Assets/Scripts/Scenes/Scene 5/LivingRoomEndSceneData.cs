@@ -1,4 +1,4 @@
-// Copyright Oebe Rademaker All rights reserved.
+// Copyright Oebe Rademaker All rights reserved
 
 using System.Collections;
 using System.Collections.Generic;
@@ -13,15 +13,27 @@ public class LivingRoomEndSceneData : GameSceneData
     private AudioManager audioManager;
     private GameManager gameManager;
 
-#if UNITY_EDITOR
+    private bool rotateEnvironment = false;
+
+
     protected void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.P))
         {
             AudioManager.Instance.StopAllVoiceOvers();
         }
-    }
 #endif
+        if (rotateEnvironment)
+        {
+            Vector3 relativePos = transform.position - Camera.main.transform.position;
+
+            relativePos.y = 0;
+
+            Quaternion rotation = Quaternion.LookRotation(relativePos);
+            transform.rotation = rotation;
+        }
+    }
 
     public override void OnSceneEnter()
     {
@@ -43,6 +55,8 @@ public class LivingRoomEndSceneData : GameSceneData
         gameManager.Scenes[4].OnEnvironmentActivated -= StartVoiceOver;
 
         // Then we activate new objects and call the needed methods
+        rotateEnvironment = true;
+        CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
         audioManager.PlayVoiceOver("LivingRoomEndScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         audioManager.Play("Confirm");
 
@@ -59,9 +73,16 @@ public class LivingRoomEndSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("Finish").Result, 5);
-        CoroutineHandler.Instance.StartCoroutine(gameManager.ResetGame());
+        CoroutineHandler.Instance.StartCoroutine(gameManager.ResetGame(10f));
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events
+    }
+
+    private IEnumerator DisableRotation(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        rotateEnvironment = false;
     }
 }

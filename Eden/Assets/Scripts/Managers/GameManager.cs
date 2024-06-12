@@ -1,4 +1,4 @@
-// Copyright Oebe Rademaker All rights reserved.
+// Copyright Oebe Rademaker All rights reserved
 
 using System;
 using System.Collections;
@@ -133,8 +133,10 @@ public class GameManager : MonoBehaviour
         isFirstStart = false;
     }
 
-    public IEnumerator ResetGame()
+    public IEnumerator ResetGame(float seconds)
     {
+        yield return new WaitForSeconds(seconds);
+
         trashProgress.ResetScore();
         paperProgress.ResetScore();
 

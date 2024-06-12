@@ -7,7 +7,8 @@ using UnityEngine.Localization.Settings;
 
 public class LivingRoomBeginSceneData : GameSceneData
 {
-    [SerializeField] private Compass compass;
+    [Header("Additional Objects")]
+    private Compass compass;
 
     private PopUpScript popUp;
 
@@ -15,21 +16,34 @@ public class LivingRoomBeginSceneData : GameSceneData
     private AudioManager audioManager;
     private GameManager gameManager;
 
-#if UNITY_EDITOR
+    private bool rotateEnvironment = false;
+
     protected void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.P))
         {
             AudioManager.Instance.StopAllVoiceOvers();
         }
-    }
 #endif
+        if (rotateEnvironment)
+        {
+            Vector3 relativePos = transform.position - Camera.main.transform.position;
+
+            relativePos.y = 0;
+
+            Quaternion rotation = Quaternion.LookRotation(relativePos);
+            transform.rotation = rotation;
+        }
+    }
 
     public override void OnSceneEnter()
     {
         audioManager = AudioManager.Instance;
         gameManager = GameManager.Instance;
         additionalObjects = gameManager.GetAddditionalObjects();
+
+        compass = additionalObjects[0].additionalObject.GetComponent<Compass>();
 
         popUp = gameManager.PopUp.GetComponent<PopUpScript>();
 
@@ -45,6 +59,8 @@ public class LivingRoomBeginSceneData : GameSceneData
         gameManager.Scenes[0].OnEnvironmentActivated -= StartVoiceOver;
 
         // Then we activate new objects and call the needed methods
+        rotateEnvironment = true;
+        CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
         audioManager.PlayVoiceOver("LivingRoomBeginScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         audioManager.Play("Confirm");
 
@@ -61,6 +77,7 @@ public class LivingRoomBeginSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         compass.gameObject.SetActive(true);
+        popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("CompassCollection").Result, 3);
 
         // Then we subscribe to new events
         compass.OnCompassCollected += StartOneLegVoiceOver;
@@ -95,5 +112,12 @@ public class LivingRoomBeginSceneData : GameSceneData
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events
+    }
+
+    private IEnumerator DisableRotation(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        rotateEnvironment = false;
     }
 }
