@@ -163,28 +163,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PauseAllVoiceOvers()
-    {
-        foreach (Sound sound in sounds)
-        {
-            if (sound.type == SoundType.VoiceOver && sound.source.isPlaying)
-            {
-                sound.source.Pause();
-            }
-        }
-    }
-
-    public void UnPauseAllVoiceOvers()
-    {
-        foreach (Sound sound in sounds)
-        {
-            if (sound.type == SoundType.VoiceOver && sound.source.isPlaying)
-            {
-                sound.source.UnPause();
-            }
-        }
-    }
-
     public AudioSource ReturnAudioSource(string name)
     {
         Sound sound = sounds.Find(s => s.name == name);

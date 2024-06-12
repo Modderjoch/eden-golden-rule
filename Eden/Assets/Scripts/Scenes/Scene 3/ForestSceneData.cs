@@ -40,17 +40,8 @@ public class ForestSceneData : GameSceneData
     private float lerpTimer = 0f;
 
     private bool transitionGrass = false;
-    private bool rotateEnvironment = false;
 
-    // Store the event handlers to unsubscribe later
-    private System.Action environmentActivatedHandler;
-    private System.Action voiceOverFinishedHandler;
-    private System.Action trashScoreReachedHandler;
-    private System.Action trashScoreAddedHandler;
-    private System.Action seedVoiceOverHandler;
-    private System.Action seedPickingHandler;
-    private System.Action seedThrowingHandler;
-    private System.Action endSceneHandler;
+    private bool rotateEnvironment = false;
 
     protected void Update()
     {
@@ -59,7 +50,7 @@ public class ForestSceneData : GameSceneData
         {
             AudioManager.Instance.StopAllVoiceOvers();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha0))
+        if(Input.GetKeyDown(KeyCode.Alpha0)) 
         {
             CoroutineHandler.Instance.StartCoroutine(CollectTrashAutomatically());
         }
@@ -69,16 +60,17 @@ public class ForestSceneData : GameSceneData
         }
 #endif
 
-        if (transitionGrass)
+        if(transitionGrass)
         {
             lerpTimer += Time.deltaTime;
 
             float lerpValue = Mathf.Clamp01(lerpTimer / grassLerpDuration);
 
             grassMaterial.SetFloat("_GrassLerp", lerpValue);
+
             grassClumpsMaterial.SetFloat("_GrassClump_Lerp", lerpValue);
 
-            if (lerpTimer > grassLerpDuration)
+            if(lerpTimer > grassLerpDuration)
             {
                 transitionGrass = false;
             }
@@ -106,13 +98,7 @@ public class ForestSceneData : GameSceneData
         grassMaterial.SetFloat("_GrassLerp", 0);
         grassClumpsMaterial.SetFloat("_GrassClump_Lerp", 0);
 
-        environmentActivatedHandler = StartVoiceOver;
-        gameManager.Scenes[2].OnEnvironmentActivated += environmentActivatedHandler;
-    }
-
-    protected void OnDisable()
-    {
-        UnsubscribeFromAll();
+        gameManager.Scenes[2].OnEnvironmentActivated += StartVoiceOver;
     }
 
     protected void FixedUpdate()
@@ -120,6 +106,7 @@ public class ForestSceneData : GameSceneData
         if (rotateEnvironment)
         {
             Vector3 relativePos = transform.position - Camera.main.transform.position;
+
             relativePos.y = 0;
 
             Quaternion rotation = Quaternion.LookRotation(relativePos);
@@ -132,7 +119,7 @@ public class ForestSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        gameManager.Scenes[2].OnEnvironmentActivated -= environmentActivatedHandler;
+        gameManager.Scenes[2].OnEnvironmentActivated -= StartVoiceOver;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("ForestScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
@@ -143,8 +130,7 @@ public class ForestSceneData : GameSceneData
         CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
 
         // Then we subscribe to new events
-        voiceOverFinishedHandler = StartMotherWolfAppearance;
-        audioManager.OnVoiceOverFinished += voiceOverFinishedHandler;
+        audioManager.OnVoiceOverFinished += StartMotherWolfAppearance;
     }
 
     private void StartMotherWolfAppearance()
@@ -152,14 +138,13 @@ public class ForestSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
+        audioManager.OnVoiceOverFinished -= StartMotherWolfAppearance;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("ForestScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
-        voiceOverFinishedHandler = StartTrashPicking;
-        audioManager.OnVoiceOverFinished += voiceOverFinishedHandler;
+        audioManager.OnVoiceOverFinished += StartTrashPicking;
     }
 
     private void StartTrashPicking()
@@ -167,7 +152,7 @@ public class ForestSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
+        audioManager.OnVoiceOverFinished -= StartTrashPicking;
 
         // Then we activate new objects and call the needed methods
         trashProgress.SetActive(true);
@@ -175,29 +160,25 @@ public class ForestSceneData : GameSceneData
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("TrashCollection").Result, 3);
 
         // Then we subscribe to new events
-        trashScoreReachedHandler = StartSeedVoiceOver;
-        trashProgressScript.OnScoreReached += trashScoreReachedHandler;
-
-        trashScoreAddedHandler = HandleTrashCollection;
-        trashProgressScript.OnScoreAdded += trashScoreAddedHandler;
+        trashProgressScript.OnScoreReached += StartSeedVoiceOver;
+        trashProgressScript.OnScoreAdded += HandleTrashCollection;
     }
 
     private void StartSeedVoiceOver()
-    {
+    {        
         // First we de-activate the old objects
         trashProgress.SetActive(false);
 
         // Then we unsubscribe from previous events
-        trashProgressScript.OnScoreReached -= trashScoreReachedHandler;
-        trashProgressScript.OnScoreAdded -= trashScoreAddedHandler;
+        trashProgressScript.OnScoreReached -=StartSeedVoiceOver;
+        trashProgressScript.OnScoreAdded -= HandleTrashCollection;
 
         // Then we activate new objects and call the needed methods
         transitionGrass = true;
         audioManager.PlayVoiceOver("ForestScenePart3" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
-        seedVoiceOverHandler = StartSeedPicking;
-        audioManager.OnVoiceOverFinished += seedVoiceOverHandler;
+        audioManager.OnVoiceOverFinished += StartSeedPicking;
     }
 
     private void StartSeedPicking()
@@ -205,14 +186,13 @@ public class ForestSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= seedVoiceOverHandler;
+        audioManager.OnVoiceOverFinished -= StartSeedPicking;
 
         // Then we activate new objects and call the needed methods
         flowerPacks.SetActive(true);
 
         // Then we subscribe to new events
-        seedThrowingHandler = StartSeedThrowing;
-        seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsChosen += seedThrowingHandler;
+        seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsChosen += StartSeedThrowing;
     }
 
     private void StartSeedThrowing()
@@ -220,7 +200,7 @@ public class ForestSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsChosen -= seedThrowingHandler;
+        seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsChosen -= StartSeedThrowing;
 
         // Then we activate new objects and call the needed methods
         swipeAnimation.SetActive(true);
@@ -229,8 +209,7 @@ public class ForestSceneData : GameSceneData
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedString("SeedPlanting"), 5);
 
         // Then we subscribe to new events
-        endSceneHandler = EndScene;
-        seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsDepleted += endSceneHandler;
+        seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsDepleted += EndScene;
         swipeScript.OnSwipeDetected += DisableSwipeAnimation;
     }
 
@@ -242,14 +221,13 @@ public class ForestSceneData : GameSceneData
         swipeAnimation.SetActive(false);
 
         // Then we unsubscribe from previous events
-        seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsDepleted -= endSceneHandler;
+        seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsDepleted -= EndScene;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("ForestScenePart4" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
-        voiceOverFinishedHandler = OnSceneExit;
-        audioManager.OnVoiceOverFinished += voiceOverFinishedHandler;
+        audioManager.OnVoiceOverFinished += OnSceneExit;
     }
 
     public override void OnSceneExit()
@@ -257,7 +235,7 @@ public class ForestSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
+        audioManager.OnVoiceOverFinished -= OnSceneExit;
 
         // Then we activate new objects and call the needed methods
         popUp.PopUpEntry("Well done!", 3);
@@ -288,8 +266,10 @@ public class ForestSceneData : GameSceneData
     private IEnumerator DisableRotation(float seconds)
     {
         yield return new WaitForSeconds(seconds);
+
         rotateEnvironment = false;
     }
+
 
     private void HandleTrashCollection()
     {
@@ -352,41 +332,5 @@ public class ForestSceneData : GameSceneData
             treeSwitcher[8].ActivateTransition();
             treeSwitcher[9].ActivateTransition();
         }
-    }
-
-    public override void UnsubscribeFromAll()
-    {
-        // Unsubscribe from events
-        if (gameManager != null)
-        {
-            gameManager.Scenes[2].OnEnvironmentActivated -= environmentActivatedHandler;
-        }
-
-        if (audioManager != null)
-        {
-            audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
-            audioManager.OnVoiceOverFinished -= seedVoiceOverHandler;
-            audioManager.OnVoiceOverFinished -= seedPickingHandler;
-            audioManager.OnVoiceOverFinished -= endSceneHandler;
-        }
-
-        if (trashProgressScript != null)
-        {
-            trashProgressScript.OnScoreReached -= trashScoreReachedHandler;
-            trashProgressScript.OnScoreAdded -= trashScoreAddedHandler;
-        }
-
-        if (seedSpawnpoint != null)
-        {
-            seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsChosen -= seedThrowingHandler;
-            seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsDepleted -= endSceneHandler;
-        }
-
-        if (swipeScript != null)
-        {
-            swipeScript.OnSwipeDetected -= DisableSwipeAnimation;
-        }
-
-        AudioManager.Instance.StopAllVoiceOvers();
     }
 }

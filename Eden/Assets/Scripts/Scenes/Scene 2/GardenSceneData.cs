@@ -27,15 +27,6 @@ public class GardenSceneData : GameSceneData
 
     private bool rotateEnvironment = false;
 
-    // Store the event handlers to unsubscribe later
-    private System.Action environmentActivatedHandler;
-    private System.Action voiceOverFinishedHandler;
-    private System.Action paperScoreReachedHandler;
-    private System.Action paperScoreAddedHandler;
-    private System.Action continueVoiceOverHandler;
-    private System.Action motherWolfVoiceOverHandler;
-    private System.Action sceneExitHandler;
-
 #if UNITY_EDITOR
     protected void Update()
     {
@@ -51,6 +42,7 @@ public class GardenSceneData : GameSceneData
         if (rotateEnvironment)
         {
             Vector3 relativePos = transform.position - Camera.main.transform.position;
+
             relativePos.y = 0;
 
             Quaternion rotation = Quaternion.LookRotation(relativePos);
@@ -60,11 +52,6 @@ public class GardenSceneData : GameSceneData
         rotateEnvironment = false;
     }
 #endif
-
-    protected void OnDisable()
-    {
-        UnsubscribeFromAll();
-    }
 
     public override void OnSceneEnter()
     {
@@ -79,8 +66,7 @@ public class GardenSceneData : GameSceneData
         popUp = gameManager.PopUp.GetComponent<PopUpScript>();
         bookAnimator = book.GetComponent<Animator>();
 
-        environmentActivatedHandler = StartVoiceOver;
-        gameManager.Scenes[1].OnEnvironmentActivated += environmentActivatedHandler;
+        gameManager.Scenes[1].OnEnvironmentActivated += StartVoiceOver;
     }
 
     private void StartVoiceOver()
@@ -88,7 +74,7 @@ public class GardenSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        gameManager.Scenes[1].OnEnvironmentActivated -= environmentActivatedHandler;
+        gameManager.Scenes[1].OnEnvironmentActivated -= StartVoiceOver;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
@@ -101,8 +87,7 @@ public class GardenSceneData : GameSceneData
         CoroutineHandler.Instance.StartCoroutine(OpenBook(12f, true));
 
         // Then we subscribe to new events
-        voiceOverFinishedHandler = StartPaperCollection;
-        audioManager.OnVoiceOverFinished += voiceOverFinishedHandler;
+        audioManager.OnVoiceOverFinished += StartPaperCollection;
     }
 
     private void StartPaperCollection()
@@ -110,7 +95,7 @@ public class GardenSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
+        audioManager.OnVoiceOverFinished -= StartPaperCollection;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
@@ -125,11 +110,8 @@ public class GardenSceneData : GameSceneData
         paper.SetActive(false);
 
         // Then we subscribe to new events
-        paperScoreReachedHandler = StartPaperCollectedVoiceOver;
-        paperProgressScript.OnScoreReached += paperScoreReachedHandler;
-
-        paperScoreAddedHandler = DisablePickUpHint;
-        paperProgressScript.OnScoreAdded += paperScoreAddedHandler;
+        paperProgressScript.OnScoreReached += StartPaperCollectedVoiceOver;
+        paperProgressScript.OnScoreAdded += DisablePickUpHint;
     }
 
     private void StartPaperCollectedVoiceOver()
@@ -139,7 +121,7 @@ public class GardenSceneData : GameSceneData
         paperAnimation.SetActive(false);
 
         // Then we unsubscribe from previous events
-        paperProgressScript.OnScoreReached -= paperScoreReachedHandler;
+        paperProgressScript.OnScoreReached -= StartPaperCollectedVoiceOver;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart3" + LocalizationSettings.SelectedLocale.Formatter);
@@ -148,8 +130,7 @@ public class GardenSceneData : GameSceneData
         paper.SetActive(true);
 
         // Then we subscribe to new events
-        continueVoiceOverHandler = StartContinueVoiceOver;
-        audioManager.OnVoiceOverFinished += continueVoiceOverHandler;
+        audioManager.OnVoiceOverFinished += StartContinueVoiceOver;
     }
 
     private void StartContinueVoiceOver()
@@ -157,15 +138,14 @@ public class GardenSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= continueVoiceOverHandler;
+        audioManager.OnVoiceOverFinished -= StartContinueVoiceOver;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart4" + LocalizationSettings.SelectedLocale.Formatter);
         grandmaCharacterTexture.SetPose("Pose4");
 
         // Then we subscribe to new events
-        motherWolfVoiceOverHandler = StartMotherWolfVoiceOver;
-        audioManager.OnVoiceOverFinished += motherWolfVoiceOverHandler;
+        audioManager.OnVoiceOverFinished += StartMotherWolfVoiceOver;
     }
 
     private void StartMotherWolfVoiceOver()
@@ -173,15 +153,14 @@ public class GardenSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= motherWolfVoiceOverHandler;
+        audioManager.OnVoiceOverFinished -= StartMotherWolfVoiceOver;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart5" + LocalizationSettings.SelectedLocale.Formatter);
         grandmaCharacterTexture.SetPose("Pose5");
 
         // Then we subscribe to new events
-        sceneExitHandler = OnSceneExit;
-        audioManager.OnVoiceOverFinished += sceneExitHandler;
+        audioManager.OnVoiceOverFinished += OnSceneExit;
     }
 
     public override void OnSceneExit()
@@ -189,7 +168,7 @@ public class GardenSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= sceneExitHandler;
+        audioManager.OnVoiceOverFinished -= OnSceneExit;
 
         // Then we activate new objects and call the needed methods
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindMotherWolf").Result, 4);
@@ -212,7 +191,6 @@ public class GardenSceneData : GameSceneData
         }
     }
 
-
     private IEnumerator DisableRotation(float seconds)
     {
         yield return new WaitForSeconds(seconds);
@@ -227,34 +205,10 @@ public class GardenSceneData : GameSceneData
         book.SetActive(active);
     }
 
+
     private void DisablePickUpHint()
     {
         paperAnimation.SetActive(false);
-        paperProgressScript.OnScoreAdded -= paperScoreAddedHandler;
-    }
-
-    public override void UnsubscribeFromAll()
-    {
-        // Unsubscribe from events
-        if (gameManager != null)
-        {
-            gameManager.Scenes[1].OnEnvironmentActivated -= environmentActivatedHandler;
-        }
-
-        if (audioManager != null)
-        {
-            audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
-            audioManager.OnVoiceOverFinished -= continueVoiceOverHandler;
-            audioManager.OnVoiceOverFinished -= motherWolfVoiceOverHandler;
-            audioManager.OnVoiceOverFinished -= sceneExitHandler;
-        }
-
-        if (paperProgressScript != null)
-        {
-            paperProgressScript.OnScoreReached -= paperScoreReachedHandler;
-            paperProgressScript.OnScoreAdded -= paperScoreAddedHandler;
-        }
-
-        AudioManager.Instance.StopAllVoiceOvers();
+        paperProgressScript.OnScoreAdded -= DisablePickUpHint;
     }
 }

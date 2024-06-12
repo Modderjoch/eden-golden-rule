@@ -26,6 +26,8 @@ public class UIManager : MonoBehaviour
     private List<GameObject> sceneUIs;
     private Dictionary<string, GameObject> spawnedUIs;
 
+    [SerializeField] private Button languageButton;
+
     public static UIManager Instance
     {
         get
@@ -56,6 +58,11 @@ public class UIManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
+    }
+
+    protected void Start()
+    {
+        languageButton.enabled = false;
     }
 
     /// <summary>
