@@ -1,3 +1,5 @@
+// Copyright Oebe Rademaker All rights reserved.
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,6 +11,8 @@ public class Compass : Interactable
 
     public void CollectCompass()
     {
+        AudioManager.Instance.Play("TinCan");
+
         OnCompassCollected.Invoke();
     }
 }

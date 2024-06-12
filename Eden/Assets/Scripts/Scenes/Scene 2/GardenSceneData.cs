@@ -1,3 +1,5 @@
+// Copyright Oebe Rademaker All rights reserved.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,9 +14,12 @@ public class GardenSceneData : GameSceneData
     [SerializeField] private GameObject decoyCollider;
     [SerializeField] private PaperController paperController;
     [SerializeField] private CharacterTextureReplacing grandmaCharacterTexture;
+    [SerializeField] private GameObject book;
+    [SerializeField] private GameObject paper;
 
     private PopUpScript popUp;
     private PaperProgress paperProgressScript;
+    private Animator bookAnimator;
 
     private List<GameSceneAdditionalObject> additionalObjects;
     private AudioManager audioManager;
@@ -72,6 +77,7 @@ public class GardenSceneData : GameSceneData
 
         paperProgressScript = paperProgress.GetComponent<PaperProgress>();
         popUp = gameManager.PopUp.GetComponent<PopUpScript>();
+        bookAnimator = book.GetComponent<Animator>();
 
         environmentActivatedHandler = StartVoiceOver;
         gameManager.Scenes[1].OnEnvironmentActivated += environmentActivatedHandler;
@@ -92,6 +98,7 @@ public class GardenSceneData : GameSceneData
 
         rotateEnvironment = true;
         CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
+        CoroutineHandler.Instance.StartCoroutine(OpenBook(12f, true));
 
         // Then we subscribe to new events
         voiceOverFinishedHandler = StartPaperCollection;
@@ -115,6 +122,7 @@ public class GardenSceneData : GameSceneData
         paperController.BlowPapers();
         Destroy(decoyCollider);
         grandmaCharacterTexture.SetPose("Pose2");
+        paper.SetActive(false);
 
         // Then we subscribe to new events
         paperScoreReachedHandler = StartPaperCollectedVoiceOver;
@@ -136,6 +144,8 @@ public class GardenSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart3" + LocalizationSettings.SelectedLocale.Formatter);
         grandmaCharacterTexture.SetPose("Pose3");
+        CoroutineHandler.Instance.StartCoroutine(OpenBook(6.5f, false));
+        paper.SetActive(true);
 
         // Then we subscribe to new events
         continueVoiceOverHandler = StartContinueVoiceOver;
@@ -202,11 +212,19 @@ public class GardenSceneData : GameSceneData
         }
     }
 
+
     private IEnumerator DisableRotation(float seconds)
     {
         yield return new WaitForSeconds(seconds);
 
         rotateEnvironment = false;
+    }
+
+    private IEnumerator OpenBook(float seconds, bool active)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        book.SetActive(active);
     }
 
     private void DisablePickUpHint()

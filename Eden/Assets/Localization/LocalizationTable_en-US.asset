@@ -76,6 +76,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 17085299241926656
     m_Localized: Back
+  - m_Id: 19634884824940544
+    m_Localized: Click to collect the compass
     m_Metadata:
       m_Items: []
   references:

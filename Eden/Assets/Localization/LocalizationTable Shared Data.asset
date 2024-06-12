@@ -73,6 +73,9 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 17085299241926656
     m_Key: Return
+  - m_Id: 19634884824940544
+    m_Key: CompassCollection
+
     m_Metadata:
       m_Items: []
   m_Metadata:

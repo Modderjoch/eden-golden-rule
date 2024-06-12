@@ -1,3 +1,5 @@
+// Copyright Oebe Rademaker All rights reserved
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -94,6 +96,8 @@ public class GameManager : MonoBehaviour
 
         CloneScenes();
         AddAdditionalObjects();
+
+        Application.targetFrameRate = 60;
     }
 
 
@@ -152,8 +156,10 @@ public class GameManager : MonoBehaviour
     /// IEnumerator to reset the game and instantiate new environments.
     /// </summary>
     /// <returns></returns>
-    public IEnumerator ResetGame()
+    public IEnumerator ResetGame(float seconds)
     {
+        yield return new WaitForSeconds(seconds);
+
         trashProgress.ResetScore();
         paperProgress.ResetScore();
 

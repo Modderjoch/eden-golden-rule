@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿// Copyright Oebe Rademaker All rights reserved.
+
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider), typeof(Rigidbody), typeof(ConstantForce))]
