@@ -1,5 +1,3 @@
-// Copyright Oebe Rademaker All rights reserved.
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -104,14 +102,6 @@ public class InputManager : MonoBehaviour
                         {
                             scoreManager.AddScore(paper);
                         }
-                    }
-                    else if(interactable is Bracelet bracelet)
-                    {
-                        bracelet.CollectBracelet();
-                    }
-                    else if(interactable is Compass compass)
-                    {
-                        compass.CollectCompass();
                     }
                 }                
             }

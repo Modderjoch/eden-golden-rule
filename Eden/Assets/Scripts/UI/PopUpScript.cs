@@ -1,5 +1,3 @@
-// Copyright Oebe Rademaker All rights reserved.
-
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,8 +20,6 @@ public class PopUpScript : MonoBehaviour
 
     public void PopUpEntry(string text, int x)
     {
-        AudioManager.Instance.Play("Popup");
-
         gameObject.SetActive(true);
         popUpMsg.text = text;
         animator.SetTrigger("entry");
