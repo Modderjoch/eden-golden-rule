@@ -1,5 +1,3 @@
-// Copyright Oebe Rademaker All rights reserved.
-
 using UnityEngine;
 
 public class SimpleRotation : MonoBehaviour

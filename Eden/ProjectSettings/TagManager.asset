@@ -9,7 +9,6 @@ TagManager:
   - Interactable
   - Seed
   - Ground
-  - FlowerPack
   layers:
   - Default
   - TransparentFX

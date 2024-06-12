@@ -1,5 +1,3 @@
-// Copyright Oebe Rademaker All rights reserved.
-
 using UnityEngine;
 using UnityEngine.Audio;
 using System;
@@ -60,11 +58,8 @@ public class AudioManager : MonoBehaviour
             sound.source.volume = sound.volume;
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
-
-            if (sound.type.Equals(SoundType.VoiceOver))
-            {
-                sound.name = sound.name + sound.localization.id;
-            }
+            sound.name = sound.name + sound.localization.id;
+            Debug.Log(sound.name);
         }
     }
 
@@ -161,17 +156,5 @@ public class AudioManager : MonoBehaviour
                 sound.source.Stop();
             }
         }
-    }
-
-    public AudioSource ReturnAudioSource(string name)
-    {
-        Sound sound = sounds.Find(s => s.name == name);
-        if (sound == null)
-        {
-            Debug.LogWarning("Sound: " + name + " not found!");
-            return null;
-        }
-
-        return sound.source;
     }
 }

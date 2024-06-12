@@ -2,7 +2,6 @@
   "dependencies": {
     "app.rive.rive-unity": "https://github.com/rive-app/rive-unity.git?path=package#v0.1.97",
     "com.alexeytaranov.serializereferencedropdown": "https://github.com/AlexeyTaranov/SerializeReferenceDropdown.git",
-    "com.somedeveloper.unitytodo": "https://github.com/somedeveloper00/UnityTodo.git",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.navigation": "1.1.5",
     "com.unity.collab-proxy": "2.2.0",
