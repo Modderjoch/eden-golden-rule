@@ -54,6 +54,32 @@ MonoBehaviour:
     m_Localized: Find the next location
     m_Metadata:
       m_Items: []
+  - m_Id: 12719637941477376
+    m_Localized: Find your way back home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12745675622866944
+    m_Localized: Go forth and learn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12749784270790656
+    m_Localized: Click to collect the bracelet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12756629773377536
+    m_Localized: You have learned the Golden Rule!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17085058384019456
+    m_Localized: Restart game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17085299241926656
+    m_Localized: Back
+  - m_Id: 19634884824940544
+    m_Localized: Click to collect the compass
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
