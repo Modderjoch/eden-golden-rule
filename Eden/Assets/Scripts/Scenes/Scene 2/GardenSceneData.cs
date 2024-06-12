@@ -202,6 +202,7 @@ public class GardenSceneData : GameSceneData
     {
         yield return new WaitForSeconds(seconds);
 
+        if(book != null)
         book.SetActive(active);
     }
 
