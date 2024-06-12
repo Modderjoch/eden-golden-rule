@@ -23,7 +23,7 @@ public class RotateHeadTowardsCamera : MonoBehaviour
         head.rotation = Quaternion.LookRotation(newDirection);
 
         float minHorizontalAngle = -140f;
-        float maxHorizontalAngle = 0f; 
+        float maxHorizontalAngle = 20f; 
         float minVerticalAngle = 40f; 
         float maxVerticalAngle = 100f;
         head.rotation = ClampRotation(head.rotation, minHorizontalAngle, maxHorizontalAngle, minVerticalAngle, maxVerticalAngle);

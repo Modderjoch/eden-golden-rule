@@ -8287,7 +8287,7 @@ MonoBehaviour:
     additionalObject: {fileID: 1653167222}
     parent: {fileID: 346928495}
   playerIndex: 0
-  startSceneIndex: 0
+  startSceneIndex: 1
   trashProgress: {fileID: 409695568}
   paperProgress: {fileID: 326071307}
   scenes:
@@ -8310,7 +8310,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778396846}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10798,6 +10798,6 @@ SceneRoots:
   - {fileID: 768875387}
   - {fileID: 1366325988}
   - {fileID: 1018674320}
-  - {fileID: 1778396848}
   - {fileID: 2000814356}
+  - {fileID: 1778396848}
   - {fileID: 204053853}

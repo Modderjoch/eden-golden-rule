@@ -1,4 +1,4 @@
-// Copyright Oebe Rademaker All rights reserved.
+// Copyright Oebe Rademaker All rights reserved
 
 using System.Collections;
 using System.Collections.Generic;

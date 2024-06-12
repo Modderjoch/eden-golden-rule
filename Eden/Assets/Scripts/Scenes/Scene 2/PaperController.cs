@@ -12,9 +12,12 @@ public class PaperController : MonoBehaviour
     {
         foreach(PaperSheet paper in papers)
         {
+            paper.gameObject.SetActive(true);
+
             if(paper.gameObject.activeSelf)
             {
                 paper.Blow();
+                paper.transform.parent = null;
             }
         }
     }

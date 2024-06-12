@@ -1,4 +1,4 @@
-// Copyright Oebe Rademaker All rights reserved.
+// Copyright Oebe Rademaker All rights reserved
 
 using System.Collections;
 using System.Collections.Generic;
@@ -73,7 +73,7 @@ public class LivingRoomEndSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("Finish").Result, 5);
-        CoroutineHandler.Instance.StartCoroutine(gameManager.ResetGame());
+        CoroutineHandler.Instance.StartCoroutine(gameManager.ResetGame(10f));
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events
