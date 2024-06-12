@@ -16,6 +16,11 @@ public class LivingRoomBeginSceneData : GameSceneData
     private AudioManager audioManager;
     private GameManager gameManager;
 
+    // Store the event handlers to unsubscribe later
+    private System.Action environmentActivatedHandler;
+    private System.Action voiceOverFinishedHandler;
+    private System.Action compassCollectedHandler;
+
     private bool rotateEnvironment = false;
 
     protected void Update()
@@ -47,7 +52,13 @@ public class LivingRoomBeginSceneData : GameSceneData
 
         popUp = gameManager.PopUp.GetComponent<PopUpScript>();
 
-        gameManager.Scenes[0].OnEnvironmentActivated += StartVoiceOver;
+        environmentActivatedHandler = StartVoiceOver;
+        gameManager.Scenes[0].OnEnvironmentActivated += environmentActivatedHandler;
+    }
+
+    private void OnDisable()
+    {
+        UnsubscribeFromAll();
     }
 
     private void StartVoiceOver()
@@ -56,7 +67,7 @@ public class LivingRoomBeginSceneData : GameSceneData
         gameManager.QRScanningUI.SetActive(false);
 
         // Then we unsubscribe from previous events
-        gameManager.Scenes[0].OnEnvironmentActivated -= StartVoiceOver;
+        gameManager.Scenes[0].OnEnvironmentActivated -= environmentActivatedHandler;
 
         // Then we activate new objects and call the needed methods
         rotateEnvironment = true;
@@ -65,7 +76,8 @@ public class LivingRoomBeginSceneData : GameSceneData
         audioManager.Play("Confirm");
 
         // Then we subscribe to new events
-        audioManager.OnVoiceOverFinished += StartCompassCollection;
+        voiceOverFinishedHandler = StartCompassCollection;
+        audioManager.OnVoiceOverFinished += voiceOverFinishedHandler;
     }
 
     private void StartCompassCollection()
@@ -73,14 +85,15 @@ public class LivingRoomBeginSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= StartCompassCollection;
+        audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
 
         // Then we activate new objects and call the needed methods
-        compass.gameObject.SetActive(true);
-        popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("CompassCollection").Result, 3);
 
         // Then we subscribe to new events
-        compass.OnCompassCollected += StartOneLegVoiceOver;
+        compassCollectedHandler = StartOneLegVoiceOver;
+        compass.OnCompassCollected += compassCollectedHandler;
+        compass.gameObject.SetActive(true);
+        popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("CompassCollection").Result, 3);
     }
 
     private void StartOneLegVoiceOver()
@@ -89,13 +102,14 @@ public class LivingRoomBeginSceneData : GameSceneData
         compass.gameObject.SetActive(false);
 
         // Then we unsubscribe from previous events
-        compass.OnCompassCollected -= StartOneLegVoiceOver;
+        compass.OnCompassCollected -= compassCollectedHandler;
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("LivingRoomBeginScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
-        audioManager.OnVoiceOverFinished += OnSceneExit;
+        voiceOverFinishedHandler = OnSceneExit;
+        audioManager.OnVoiceOverFinished += voiceOverFinishedHandler;
     }
 
     public override void OnSceneExit()
@@ -103,7 +117,7 @@ public class LivingRoomBeginSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= OnSceneExit;
+        audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
 
         // Then we activate new objects and call the needed methods
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindGrandma").Result, 4);
@@ -111,7 +125,28 @@ public class LivingRoomBeginSceneData : GameSceneData
         gameManager.QRScanningUI.SetActive(true);
         Debug.Log("Finished scene");
 
-        // Then we subscribe to new events
+        // No new event subscriptions here as the scene is ending
+    }
+
+    public override void UnsubscribeFromAll()
+    {
+        // Unsubscribe from events
+        if (gameManager != null)
+        {
+            gameManager.Scenes[0].OnEnvironmentActivated -= environmentActivatedHandler;
+        }
+
+        if (audioManager != null)
+        {
+            audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
+        }
+
+        if (compass != null)
+        {
+            compass.OnCompassCollected -= compassCollectedHandler;
+        }
+
+        AudioManager.Instance.StopAllVoiceOvers();
     }
 
     private IEnumerator DisableRotation(float seconds)
@@ -121,3 +156,4 @@ public class LivingRoomBeginSceneData : GameSceneData
         rotateEnvironment = false;
     }
 }
+

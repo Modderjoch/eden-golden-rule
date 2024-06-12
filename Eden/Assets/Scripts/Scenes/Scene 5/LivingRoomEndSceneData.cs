@@ -35,6 +35,15 @@ public class LivingRoomEndSceneData : GameSceneData
         }
     }
 
+    // Store the event handlers to unsubscribe later
+    private System.Action environmentActivatedHandler;
+    private System.Action voiceOverFinishedHandler;
+
+    protected void OnDisable()
+    {
+        
+    }
+
     public override void OnSceneEnter()
     {
         audioManager = AudioManager.Instance;
@@ -43,7 +52,8 @@ public class LivingRoomEndSceneData : GameSceneData
 
         popUp = gameManager.PopUp.GetComponent<PopUpScript>();
 
-        gameManager.Scenes[4].OnEnvironmentActivated += StartVoiceOver;
+        environmentActivatedHandler = StartVoiceOver;
+        gameManager.Scenes[4].OnEnvironmentActivated += environmentActivatedHandler;
     }
 
     private void StartVoiceOver()
@@ -52,16 +62,18 @@ public class LivingRoomEndSceneData : GameSceneData
         gameManager.QRScanningUI.SetActive(false);
 
         // Then we unsubscribe from previous events
-        gameManager.Scenes[4].OnEnvironmentActivated -= StartVoiceOver;
+        gameManager.Scenes[4].OnEnvironmentActivated -= environmentActivatedHandler;
 
         // Then we activate new objects and call the needed methods
+
         rotateEnvironment = true;
         CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
         audioManager.PlayVoiceOver("LivingRoomEndScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         audioManager.Play("Confirm");
 
         // Then we subscribe to new events
-        audioManager.OnVoiceOverFinished += OnSceneExit;
+        voiceOverFinishedHandler = OnSceneExit;
+        audioManager.OnVoiceOverFinished += voiceOverFinishedHandler;
     }
 
     public override void OnSceneExit()
@@ -69,7 +81,7 @@ public class LivingRoomEndSceneData : GameSceneData
         // First we de-activate the old objects
 
         // Then we unsubscribe from previous events
-        audioManager.OnVoiceOverFinished -= OnSceneExit;
+        audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
 
         // Then we activate new objects and call the needed methods
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("Finish").Result, 5);
@@ -79,10 +91,26 @@ public class LivingRoomEndSceneData : GameSceneData
         // Then we subscribe to new events
     }
 
+    public override void UnsubscribeFromAll()
+    {
+        // Unsubscribe from events
+        if (gameManager != null)
+        {
+            gameManager.Scenes[4].OnEnvironmentActivated -= environmentActivatedHandler;
+        }
+
+        if (audioManager != null)
+        {
+            audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
+        }
+
+        AudioManager.Instance.StopAllVoiceOvers();
+
     private IEnumerator DisableRotation(float seconds)
     {
         yield return new WaitForSeconds(seconds);
 
         rotateEnvironment = false;
+
     }
 }
