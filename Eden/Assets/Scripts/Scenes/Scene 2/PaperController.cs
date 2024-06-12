@@ -12,6 +12,8 @@ public class PaperController : MonoBehaviour
     {
         foreach(PaperSheet paper in papers)
         {
+            if(paper != null)
+
             paper.gameObject.SetActive(true);
 
             if(paper.gameObject.activeSelf)

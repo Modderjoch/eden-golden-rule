@@ -70,6 +70,12 @@ MonoBehaviour:
     m_Localized: Je hebt de Gulden Regel geleerd!
     m_Metadata:
       m_Items: []
+  - m_Id: 17085058384019456
+    m_Localized: Begin opnieuw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17085299241926656
+    m_Localized: Terug
   - m_Id: 19634884824940544
     m_Localized: Klik om het kompas mee te nemen
     m_Metadata:
