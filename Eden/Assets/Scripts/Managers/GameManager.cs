@@ -182,8 +182,6 @@ public class GameManager : MonoBehaviour
 
         SetActiveScene(startSceneIndex);
 
-        AudioManager.Instance.StopAllVoiceOvers();
-
         DeactivateAdditionalObjects();
 
         mainMenuUI.SetActive(true);

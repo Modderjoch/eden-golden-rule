@@ -221,5 +221,7 @@ public class MarketSceneData : GameSceneData
         {
             bracelet.OnBraceletCollected -= braceletCollectedHandler;
         }
+
+        AudioManager.Instance.StopAllVoiceOvers();
     }
 }

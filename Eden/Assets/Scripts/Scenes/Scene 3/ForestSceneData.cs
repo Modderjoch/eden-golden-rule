@@ -384,5 +384,7 @@ public class ForestSceneData : GameSceneData
         {
             swipeScript.OnSwipeDetected -= DisableSwipeAnimation;
         }
+
+        AudioManager.Instance.StopAllVoiceOvers();
     }
 }

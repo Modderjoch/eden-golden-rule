@@ -58,7 +58,7 @@ public class GardenSceneData : GameSceneData
 
     protected void OnDisable()
     {
-        
+        UnsubscribeFromAll();
     }
 
     public override void OnSceneEnter()
@@ -236,5 +236,7 @@ public class GardenSceneData : GameSceneData
             paperProgressScript.OnScoreReached -= paperScoreReachedHandler;
             paperProgressScript.OnScoreAdded -= paperScoreAddedHandler;
         }
+
+        AudioManager.Instance.StopAllVoiceOvers();
     }
 }

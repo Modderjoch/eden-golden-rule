@@ -86,5 +86,7 @@ public class LivingRoomEndSceneData : GameSceneData
         {
             audioManager.OnVoiceOverFinished -= voiceOverFinishedHandler;
         }
+
+        AudioManager.Instance.StopAllVoiceOvers();
     }
 }

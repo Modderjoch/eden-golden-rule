@@ -126,6 +126,8 @@ public class LivingRoomBeginSceneData : GameSceneData
         {
             compass.OnCompassCollected -= compassCollectedHandler;
         }
+
+        AudioManager.Instance.StopAllVoiceOvers();
     }
 }
 
