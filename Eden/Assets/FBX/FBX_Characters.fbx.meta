@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb825fec3b1f2424d8407d2344197aaf
+guid: af4e8d1ece504844f8c6c43ef675ec0d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,43 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Mat_Ayala
+    second: {fileID: 2100000, guid: 626ee06de53cfe14daccaae402f88e37, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Benny
+    second: {fileID: 2100000, guid: ba160f728d9a77f44b543fea6fa2be92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Bram
+    second: {fileID: 2100000, guid: b4c51d8de855ff042aaa6d5f0048a062, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Gita
+    second: {fileID: 2100000, guid: b6c8e86ae7f55de4ea32691361b77639, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Grandma
+    second: {fileID: 2100000, guid: 9b9e6c0b3827d1148aee58a86adf0286, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Max
+    second: {fileID: 2100000, guid: 93c3f0d6e99ff1c4b9ba9562984dd60d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Mat_Mother
     second: {fileID: 2100000, guid: 6f73afacda3d7c04e8798e59416454db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Tzipi
+    second: {fileID: 2100000, guid: 928535c6822fd274a9ee3bbf339a86a1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
