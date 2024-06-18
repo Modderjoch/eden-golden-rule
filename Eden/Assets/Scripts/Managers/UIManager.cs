@@ -1,3 +1,5 @@
+// Copyright Oebe Rademaker All rights reserved.
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -23,8 +25,6 @@ public class UIManager : MonoBehaviour
 
     private List<GameObject> sceneUIs;
     private Dictionary<string, GameObject> spawnedUIs;
-
-    [SerializeField] private Button languageButton;
 
     public static UIManager Instance
     {
@@ -56,11 +56,6 @@ public class UIManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
-    }
-
-    protected void Start()
-    {
-        languageButton.enabled = false;
     }
 
     /// <summary>

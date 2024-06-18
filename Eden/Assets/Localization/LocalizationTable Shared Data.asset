@@ -51,15 +51,43 @@ MonoBehaviour:
     m_Key: NextQR
     m_Metadata:
       m_Items: []
+  - m_Id: 12719637941477376
+    m_Key: FindHome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12745675622866944
+    m_Key: FindGrandma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12749784270790656
+    m_Key: BraceletCollection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12756629773377536
+    m_Key: Finish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17085058384019456
+    m_Key: ResetGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17085299241926656
+    m_Key: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19634884824940544
+    m_Key: CompassCollection
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 7233976587150950428
+    rid: 3327141157267832850
   references:
     version: 2
     RefIds:
-    - rid: 7233976587150950428
+    - rid: 3327141157267832850
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
         asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1713432067166
+        m_CustomEpoch: 1718188797316
