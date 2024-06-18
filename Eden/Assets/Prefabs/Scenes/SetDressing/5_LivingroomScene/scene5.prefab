@@ -404,6 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 927bc15ade243f24398835663969aa92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  motherTextureReplacing: {fileID: 0}
 --- !u!1 &6839538604968436861
 GameObject:
   m_ObjectHideFlags: 0
@@ -7110,7 +7111,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2592491124854576440, guid: 9aea19e7ea791cd4ebf80083f1e8dedb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3736521028810765813}
   m_SourcePrefab: {fileID: 100100000, guid: 9aea19e7ea791cd4ebf80083f1e8dedb, type: 3}
 --- !u!4 &5889432421686098710 stripped
 Transform:
@@ -7118,6 +7123,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8722003292877206676}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6552921324937077164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2592491124854576440, guid: 9aea19e7ea791cd4ebf80083f1e8dedb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8722003292877206676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3736521028810765813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6552921324937077164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poses:
+  - name: Entry
+    subPoses:
+    - name: Happy
+      delayToNextPose: 20
+      texture: {fileID: 2800000, guid: b5535e08326b29248b582fe8c6ec7341, type: 3}
+      description: 
+    - name: Pointing up
+      delayToNextPose: 7
+      texture: {fileID: 2800000, guid: ee38ebc72f733424aa8971103a608da6, type: 3}
+      description: 
+    - name: Standing on one leg
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 0b490a68ae9577746b30a43f91f3b4fa, type: 3}
+      description: 
+    description: 
+  material: {fileID: 2100000, guid: 6f73afacda3d7c04e8798e59416454db, type: 2}
 --- !u!1001 &8749977235470121736
 PrefabInstance:
   m_ObjectHideFlags: 0

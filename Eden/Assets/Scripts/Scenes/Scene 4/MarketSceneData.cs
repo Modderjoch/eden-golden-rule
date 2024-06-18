@@ -175,7 +175,7 @@ public class MarketSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindHome").Result, 4);
         gameManager.NextScene();
-        gameManager.QRScanningUI.SetActive(true);
+        gameManager.Compass.SetInteger("sceneprogress", 4);
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events

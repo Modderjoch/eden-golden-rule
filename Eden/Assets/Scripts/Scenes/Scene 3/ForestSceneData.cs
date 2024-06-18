@@ -240,7 +240,7 @@ public class ForestSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         popUp.PopUpEntry("Well done!", 3);
         gameManager.NextScene();
-        gameManager.QRScanningUI.SetActive(true);
+        gameManager.Compass.SetInteger("sceneprogress", 3);
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events

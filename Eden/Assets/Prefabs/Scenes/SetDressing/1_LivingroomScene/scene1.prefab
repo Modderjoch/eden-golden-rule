@@ -404,6 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14ba90403f40504f97f2be101cc4897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  motherTextureReplacing: {fileID: 2773676132083859949}
 --- !u!1 &6839538604968436861
 GameObject:
   m_ObjectHideFlags: 0
@@ -4418,8 +4419,62 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2592491124854576440, guid: 9aea19e7ea791cd4ebf80083f1e8dedb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2773676132083859949}
   m_SourcePrefab: {fileID: 100100000, guid: 9aea19e7ea791cd4ebf80083f1e8dedb, type: 3}
+--- !u!1 &7447110059825349475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2592491124854576440, guid: 9aea19e7ea791cd4ebf80083f1e8dedb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4945818624879203931}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2773676132083859949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7447110059825349475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poses:
+  - name: Entry
+    subPoses:
+    - name: Happy
+      delayToNextPose: 4
+      texture: {fileID: 2800000, guid: b5535e08326b29248b582fe8c6ec7341, type: 3}
+      description: 
+    - name: Idle
+      delayToNextPose: 19
+      texture: {fileID: 2800000, guid: 959d3717f701beb419622d4103f53f5e, type: 3}
+      description: 
+    - name: Compass mention
+      delayToNextPose: 7
+      texture: {fileID: 2800000, guid: ee38ebc72f733424aa8971103a608da6, type: 3}
+      description: 
+    description: Entering the scene and listening to Eden talk
+  - name: Exit
+    subPoses:
+    - name: Idle
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: 959d3717f701beb419622d4103f53f5e, type: 3}
+      description: 
+    - name: Pointing
+      delayToNextPose: 7
+      texture: {fileID: 2800000, guid: ee38ebc72f733424aa8971103a608da6, type: 3}
+      description: 
+    - name: Happy
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: b5535e08326b29248b582fe8c6ec7341, type: 3}
+      description: 
+    description: 
+  material: {fileID: 2100000, guid: 6f73afacda3d7c04e8798e59416454db, type: 2}
 --- !u!4 &7787466510415469017 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2932318749614608258, guid: 9aea19e7ea791cd4ebf80083f1e8dedb,
