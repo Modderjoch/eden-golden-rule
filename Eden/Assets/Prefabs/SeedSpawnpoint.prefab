@@ -50,6 +50,11 @@ MonoBehaviour:
   spawnDelay: 2.5
   swipeArea: {fileID: 0}
   numberOfSeeds: 10
+  availableFlowers:
+  - {fileID: 8648183938958743694, guid: 856cab11d10b5f947b141dd221fefe11, type: 3}
+  - {fileID: 7174677769120027929, guid: 2b1b79249a444d442a3521f241904340, type: 3}
+  - {fileID: 5488553486834936700, guid: e7f78c9b27f45f44ba2687daf2ab594f, type: 3}
+  - {fileID: 7318555843042169755, guid: 8a4b5776adcd6614f93b713ac006f514, type: 3}
 --- !u!1001 &1436336292160353031
 PrefabInstance:
   m_ObjectHideFlags: 0
