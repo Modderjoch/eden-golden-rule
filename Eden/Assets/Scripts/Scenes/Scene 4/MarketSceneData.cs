@@ -8,6 +8,7 @@ using UnityEngine.Localization.Settings;
 public class MarketSceneData : GameSceneData
 {
     [Header("Additional Objects")]
+    [SerializeField] private List<CharacterTextureReplacing> characterTextures = new List<CharacterTextureReplacing>();
     private Bracelet bracelet;
 
     private PopUpScript popUp;
@@ -75,6 +76,8 @@ public class MarketSceneData : GameSceneData
         rotateEnvironment = true;
         CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
 
+        SetPoseForCharacters("Angry");
+
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartBreadFamilyVoiceOver;
     }
@@ -88,6 +91,7 @@ public class MarketSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
+        SetPoseForCharacters("Explaining");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartRevealVoiceOver;
@@ -102,6 +106,7 @@ public class MarketSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart3" + LocalizationSettings.SelectedLocale.Formatter);
+        SetPoseForCharacters("Standing on leg");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartGoldenRuleVoiceOver;
@@ -116,6 +121,7 @@ public class MarketSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart4" + LocalizationSettings.SelectedLocale.Formatter);
+        SetPoseForCharacters("Listening");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartBraceletInteraction;
@@ -160,6 +166,7 @@ public class MarketSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart6" + LocalizationSettings.SelectedLocale.Formatter);
+        SetPoseForCharacters("Standing on leg again");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += OnSceneExit;
@@ -173,9 +180,9 @@ public class MarketSceneData : GameSceneData
         audioManager.OnVoiceOverFinished -= OnSceneExit;
 
         // Then we activate new objects and call the needed methods
-        popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindHome").Result, 4);
+        //popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindHome").Result, 4);
         gameManager.NextScene();
-        gameManager.QRScanningUI.SetActive(true);
+        gameManager.Compass.SetInteger("sceneprogress", 4);
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events
@@ -186,5 +193,13 @@ public class MarketSceneData : GameSceneData
         yield return new WaitForSeconds(seconds);
 
         rotateEnvironment = false;
+    }
+
+    private void SetPoseForCharacters(string pose)
+    {
+        foreach(CharacterTextureReplacing character in characterTextures)
+        {
+            character.SetPose(pose);
+        }
     }
 }

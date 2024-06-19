@@ -60,4 +60,12 @@ public class MoveToMiddle : MonoBehaviour
             otherPacks[i].gameObject.SetActive(false);
         }
     }
+
+    public void ActivateOtherPacks()
+    {
+        for (int i = 0; i < otherPacks.Length; i++)
+        {
+            otherPacks[i].gameObject.SetActive(true);
+        }
+    }
 }

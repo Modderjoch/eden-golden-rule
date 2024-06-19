@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     public GameObject QRScanningUI => qrScanningUI;
     public GameObject MainMenuUI => mainMenuUI;
     public List<GameSceneAdditionalObject> AdditionalObjects => additionalObjects;
+    public Animator Compass => compass;
+    public int CurrentSceneIndex => startSceneIndex;
 
 
     [Header("AR Foundation")]
@@ -40,11 +42,12 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private GameObject popUp;
-    [SerializeField] GameObject mainMenuUI;
-    [SerializeField] GameObject pauseMenuUI;
-    [SerializeField] GameObject qrScanningUI;
-    [SerializeField] TMP_Dropdown playerIndexDropdown;
-    [SerializeField] SetNextLocationImage setNextLocationImage;
+    [SerializeField] private GameObject mainMenuUI;
+    [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private GameObject qrScanningUI;
+    [SerializeField] private TMP_Dropdown playerIndexDropdown;
+    [SerializeField] private SetNextLocationImage setNextLocationImage;
+    [SerializeField] private Animator compass;
 
     [Header("Easy exit")]
     [SerializeField] private int numberOfTouches = 5;

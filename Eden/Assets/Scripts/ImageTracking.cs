@@ -12,9 +12,6 @@ using UnityEngine.XR.ARSubsystems;
 [RequireComponent(typeof(ARTrackedImageManager))]
 public class ImageTracking : MonoBehaviour
 {
-    public Slider scaleSlider;
-    public GameObject uiParent;
-    public Text objectName;
     public Transform sceneParent;
 
     public List<GameObject> PlaceablePrefabs
@@ -134,23 +131,6 @@ public class ImageTracking : MonoBehaviour
             }            
             
             prefab.transform.position = position;
-            
-            //prefab.transform.rotation = trackedImage.transform.rotation;
-
-            if(prefab.GetComponent<TestPanel>() != null)
-            {
-                TestPanel testPanel = prefab.GetComponent<TestPanel>();
-                testPanel.scaleSlider = scaleSlider;
-                testPanel.objectName = objectName;
-
-                testPanel.ToggleUI();
-
-                uiParent.SetActive(true);
-            }
-            else
-            {
-                uiParent.SetActive(false);
-            }        
 
             prefab.SetActive(true);
 

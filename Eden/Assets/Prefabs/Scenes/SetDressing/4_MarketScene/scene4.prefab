@@ -847,6 +847,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3513a09d1d781c94ea71809d91a21adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterTextures:
+  - {fileID: 3877861313534220399}
+  - {fileID: 5164751525108041285}
+  - {fileID: 6172216914792351983}
+  - {fileID: 3643882418549375836}
+  - {fileID: 3082289926636408744}
+  - {fileID: 2171989523639737261}
 --- !u!1 &4964741806071315066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1951,6 +1958,12 @@ Transform:
   - {fileID: 1705474458933571447}
   - {fileID: 96365666738615037}
   - {fileID: 560703656061333926}
+  - {fileID: 7668329500802535122}
+  - {fileID: 5684811481626110763}
+  - {fileID: 1608738709958912329}
+  - {fileID: 3400698657895833183}
+  - {fileID: 569472664315147315}
+  - {fileID: 6555498341916451695}
   m_Father: {fileID: 8636435195114427092}
   m_LocalEulerAnglesHint: {x: 0, y: -185, z: 0}
 --- !u!1001 &100780954619891815
@@ -2269,6 +2282,211 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 272280002325740023}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &273190186523986918
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5136771923415555811}
+    m_Modifications:
+    - target: {fileID: 301104935996374997, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 301104935996374997, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 301104935996374997, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 301104935996374997, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.849
+      objectReference: {fileID: 0}
+    - target: {fileID: 301104935996374997, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 301104935996374997, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.259
+      objectReference: {fileID: 0}
+    - target: {fileID: 301104935996374997, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 301104935996374997, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 301104935996374997, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 301104935996374997, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 301104935996374997, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 301104935996374997, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 301104935996374997, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743276099332445786, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_Gita
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5743276099332445786, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7836700750307058531}
+    - targetCorrespondingSourceObject: {fileID: 5743276099332445786, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3082289926636408744}
+  m_SourcePrefab: {fileID: 100100000, guid: d13e3d3d3ce895a4ebddf78d0d2cc748, type: 3}
+--- !u!4 &569472664315147315 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 301104935996374997, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+    type: 3}
+  m_PrefabInstance: {fileID: 273190186523986918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5512025685017828796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5743276099332445786, guid: d13e3d3d3ce895a4ebddf78d0d2cc748,
+    type: 3}
+  m_PrefabInstance: {fileID: 273190186523986918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7836700750307058531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512025685017828796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79a73349016aaf4093291ee6a0c3ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+--- !u!114 &3082289926636408744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512025685017828796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poses:
+  - name: Angry
+    subPoses:
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: be56b61ab0666b74f85c27a4574923b4, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: ec0b45f1434151841abe0eb955ddca63, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 9eb8d07f0c3fa8c4d84622d0eb22b6fc, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: a769f4fbb963c2f45b3c069f309b52a6, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 112d31e0d6bc114488c95f2fbc8837bd, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 27e291324137e134bae597b415009a11, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 670c89c576f29314ca9129f1228ae7d7, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Explaining
+    subPoses:
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: a769f4fbb963c2f45b3c069f309b52a6, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 3.5
+      texture: {fileID: 2800000, guid: 27e291324137e134bae597b415009a11, type: 3}
+      description: 
+    description: Explaining the fight
+  - name: Listening
+    subPoses:
+    - name: 
+      delayToNextPose: 16
+      texture: {fileID: 2800000, guid: 180830788258ca243aa6560d3da2453b, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 01c5102fe6f202b429810d8614108338, type: 3}
+      description: 
+    description: Explaining the fight
+  - name: Standing on leg
+    subPoses:
+    - name: 
+      delayToNextPose: 10
+      texture: {fileID: 2800000, guid: 670c89c576f29314ca9129f1228ae7d7, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 180830788258ca243aa6560d3da2453b, type: 3}
+      description: 
+    description: Explaining the fight
+  - name: Standing on leg again
+    subPoses:
+    - name: 
+      delayToNextPose: 6
+      texture: {fileID: 2800000, guid: 01c5102fe6f202b429810d8614108338, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 180830788258ca243aa6560d3da2453b, type: 3}
+      description: 
+    description: Explaining the fight
+  material: {fileID: 2100000, guid: b6c8e86ae7f55de4ea32691361b77639, type: 2}
 --- !u!1001 &427992632771129122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3192,6 +3410,200 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2399913792716260820, guid: ca143c748da8d284398354ccd594dc75,
     type: 3}
   m_PrefabInstance: {fileID: 1854923468796439997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1880736935109603023
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5136771923415555811}
+    m_Modifications:
+    - target: {fileID: 37726522447359646, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_Benny
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674867552768069024, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674867552768069024, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674867552768069024, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674867552768069024, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674867552768069024, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674867552768069024, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674867552768069024, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674867552768069024, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674867552768069024, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674867552768069024, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674867552768069024, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674867552768069024, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674867552768069024, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 37726522447359646, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7373343230920131355}
+    - targetCorrespondingSourceObject: {fileID: 37726522447359646, guid: a55589f11d1eb6546ac83ace34845ca6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2171989523639737261}
+  m_SourcePrefab: {fileID: 100100000, guid: a55589f11d1eb6546ac83ace34845ca6, type: 3}
+--- !u!1 &1918445848157470801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 37726522447359646, guid: a55589f11d1eb6546ac83ace34845ca6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1880736935109603023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7373343230920131355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918445848157470801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79a73349016aaf4093291ee6a0c3ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+--- !u!114 &2171989523639737261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918445848157470801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poses:
+  - name: Angry
+    subPoses:
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 80d7e8ae07ce7644b8e542b5cc58a16f, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 73109792db161684594e3d974c8369b8, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 31bfe7f52a8fcf14188152748a4ae807, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 6b9995cedb7c310408702c6d307b92f4, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: cbd709ae32d6d594dafb3ed92ef6ffac, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 41b05fea6adcf504aa98801c15438b9e, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 2e5e4d121ccd0af45a3c34bf66341d5c, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Listening
+    subPoses:
+    - name: 
+      delayToNextPose: 13
+      texture: {fileID: 2800000, guid: 52c5daa9130630c4d86f561d0e78b172, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: bb5a73b4cf89c9e418ee4865c7f84407, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Standing on leg
+    subPoses:
+    - name: 
+      delayToNextPose: 9.25
+      texture: {fileID: 2800000, guid: 2e5e4d121ccd0af45a3c34bf66341d5c, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 52c5daa9130630c4d86f561d0e78b172, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Standing on leg again
+    subPoses:
+    - name: 
+      delayToNextPose: 6
+      texture: {fileID: 2800000, guid: bb5a73b4cf89c9e418ee4865c7f84407, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 52c5daa9130630c4d86f561d0e78b172, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  material: {fileID: 2100000, guid: ba160f728d9a77f44b543fea6fa2be92, type: 2}
+--- !u!4 &6555498341916451695 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4674867552768069024, guid: a55589f11d1eb6546ac83ace34845ca6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1880736935109603023}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2014193116898347514
 PrefabInstance:
@@ -6858,6 +7270,216 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6263273247601781814}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6312290645101170761
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5136771923415555811}
+    m_Modifications:
+    - target: {fileID: 3154841938133715841, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463810400722165403, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463810400722165403, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463810400722165403, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463810400722165403, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463810400722165403, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463810400722165403, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463810400722165403, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463810400722165403, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463810400722165403, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463810400722165403, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463810400722165403, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463810400722165403, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463810400722165403, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912069476260571233, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_Ayala
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5912069476260571233, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7035168429065480236}
+    - targetCorrespondingSourceObject: {fileID: 5912069476260571233, guid: b73b627308dbe314d9618750c4bf0e53,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3877861313534220399}
+  m_SourcePrefab: {fileID: 100100000, guid: b73b627308dbe314d9618750c4bf0e53, type: 3}
+--- !u!1 &401419844139235368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5912069476260571233, guid: b73b627308dbe314d9618750c4bf0e53,
+    type: 3}
+  m_PrefabInstance: {fileID: 6312290645101170761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7035168429065480236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401419844139235368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79a73349016aaf4093291ee6a0c3ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+--- !u!114 &3877861313534220399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401419844139235368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poses:
+  - name: Angry
+    subPoses:
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 6e68e12c43cc98a42a84036845b0d4c0, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: a51c86c3c2b6e224882c9f704a32dcaa, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 66926d214af833d44b8fb113638452ed, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 432c80fb4da9cf14ebb7a04834cc6958, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 50b275d442f404747a97fbede41fdb10, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: a151cca0588ff644ea0d42e691f9275c, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 62dc234c3f15ffa478d57394512c2217, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Explaining
+    subPoses:
+    - name: 
+      delayToNextPose: 4.5
+      texture: {fileID: 2800000, guid: 62dc234c3f15ffa478d57394512c2217, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: 432c80fb4da9cf14ebb7a04834cc6958, type: 3}
+      description: 
+    description: Explaining why they fight
+  - name: Listening
+    subPoses:
+    - name: 
+      delayToNextPose: 9
+      texture: {fileID: 2800000, guid: 18f95e6b62fcbfa4d932feb82220707c, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: d894b9d140792af41ad2088afd6013d2, type: 3}
+      description: 
+    description: Standing on one leg
+  - name: Standing on leg
+    subPoses:
+    - name: 
+      delayToNextPose: 10
+      texture: {fileID: 2800000, guid: 432c80fb4da9cf14ebb7a04834cc6958, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 18f95e6b62fcbfa4d932feb82220707c, type: 3}
+      description: 
+    description: Standing on one leg
+  - name: Standing on leg again
+    subPoses:
+    - name: 
+      delayToNextPose: 6
+      texture: {fileID: 2800000, guid: d894b9d140792af41ad2088afd6013d2, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 18f95e6b62fcbfa4d932feb82220707c, type: 3}
+      description: 
+    description: Standing on one leg
+  material: {fileID: 2100000, guid: 626ee06de53cfe14daccaae402f88e37, type: 2}
+--- !u!4 &7668329500802535122 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4463810400722165403, guid: b73b627308dbe314d9618750c4bf0e53,
+    type: 3}
+  m_PrefabInstance: {fileID: 6312290645101170761}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6429885048473583080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7085,6 +7707,223 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6454855774189808448}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6577034636366995218
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5136771923415555811}
+    m_Modifications:
+    - target: {fileID: 4090063082176141933, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_Tzipi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554400085281683035, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554400085281683035, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554400085281683035, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554400085281683035, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554400085281683035, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554400085281683035, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554400085281683035, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554400085281683035, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554400085281683035, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554400085281683035, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554400085281683035, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554400085281683035, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554400085281683035, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4090063082176141933, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7794441434206540369}
+    - targetCorrespondingSourceObject: {fileID: 4090063082176141933, guid: b6e68c193e88a044380470071cd1259c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6172216914792351983}
+  m_SourcePrefab: {fileID: 100100000, guid: b6e68c193e88a044380470071cd1259c, type: 3}
+--- !u!4 &1608738709958912329 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5554400085281683035, guid: b6e68c193e88a044380470071cd1259c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6577034636366995218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7170997878651094399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4090063082176141933, guid: b6e68c193e88a044380470071cd1259c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6577034636366995218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7794441434206540369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7170997878651094399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79a73349016aaf4093291ee6a0c3ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+--- !u!114 &6172216914792351983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7170997878651094399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poses:
+  - name: Angry
+    subPoses:
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 58a3391ead86e8646913b936a3fe6a1c, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 20384414304e2714f9efaf9bbe68c51a, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 81edf7aa8544b714fb29342517541329, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 2c8f133f6a6195f43a99898343ebfb55, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 6eb6684e157616a4fb278629a4ce449f, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: b8683ee69a59e8d4eb5d4387e8fc3f2a, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 9133995204f8ad241a88102170ea45d9, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Explaining
+    subPoses:
+    - name: 
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: 9133995204f8ad241a88102170ea45d9, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 6eb6684e157616a4fb278629a4ce449f, type: 3}
+      description: 
+    description: 'Explaining why they fight
+
+
+'
+  - name: Listening
+    subPoses:
+    - name: 
+      delayToNextPose: 15
+      texture: {fileID: 2800000, guid: 6d2960cf69012744890b5b49bf3c74a7, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: bc15ac7a0f3fec34dadb06421759a43d, type: 3}
+      description: 
+    description: 'Explaining why they fight
+
+
+'
+  - name: Standing on leg
+    subPoses:
+    - name: 
+      delayToNextPose: 9.5
+      texture: {fileID: 2800000, guid: 6eb6684e157616a4fb278629a4ce449f, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 6d2960cf69012744890b5b49bf3c74a7, type: 3}
+      description: 
+    description: 'Explaining why they fight
+
+
+'
+  - name: Standing on leg again
+    subPoses:
+    - name: 
+      delayToNextPose: 6
+      texture: {fileID: 2800000, guid: bc15ac7a0f3fec34dadb06421759a43d, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 6d2960cf69012744890b5b49bf3c74a7, type: 3}
+      description: 
+    description: 'Explaining why they fight
+
+
+'
+  material: {fileID: 2100000, guid: 928535c6822fd274a9ee3bbf339a86a1, type: 2}
 --- !u!1001 &6887416623004020010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7821,6 +8660,211 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7453875371121595591}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7464150943798291468
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5136771923415555811}
+    m_Modifications:
+    - target: {fileID: 5234388750720119379, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234388750720119379, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234388750720119379, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234388750720119379, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234388750720119379, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234388750720119379, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234388750720119379, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234388750720119379, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234388750720119379, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234388750720119379, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234388750720119379, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234388750720119379, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234388750720119379, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981829557877628189, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_Bram
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8981829557877628189, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3263520014674360238}
+    - targetCorrespondingSourceObject: {fileID: 8981829557877628189, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3643882418549375836}
+  m_SourcePrefab: {fileID: 100100000, guid: 3f63860fbc41ecd429491aebeb4d5d1f, type: 3}
+--- !u!1 &1959105255850914065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8981829557877628189, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7464150943798291468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3263520014674360238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959105255850914065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79a73349016aaf4093291ee6a0c3ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+--- !u!114 &3643882418549375836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959105255850914065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poses:
+  - name: Angry
+    subPoses:
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 7bc6b5e46cffb9f41b5cef61d2aa145e, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 06f4cff9f442ca34fbfd8eb56de853c3, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 69f464981bdcf1f439ccb30ab7e3f1d7, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 3a84d4bc251154042b585fd5a2f9ab89, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 8cb9ccb1a799e09408922d8aef0364e0, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: ef75a6d108003f647a9dd8a3f925dc03, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 951598086f338af44beb5045d769f28f, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Explaining
+    subPoses:
+    - name: 
+      delayToNextPose: 7.5
+      texture: {fileID: 2800000, guid: 951598086f338af44beb5045d769f28f, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: ef75a6d108003f647a9dd8a3f925dc03, type: 3}
+      description: 
+    description: Explaining why they fight
+  - name: Listening
+    subPoses:
+    - name: 
+      delayToNextPose: 11
+      texture: {fileID: 2800000, guid: 2830ba7ee6ed29048bf7406f0de53cec, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 6e415e016dd947f4eb2e74ef3cfca60c, type: 3}
+      description: 
+    description: Explaining why they fight
+  - name: Standing on leg
+    subPoses:
+    - name: 
+      delayToNextPose: 9.75
+      texture: {fileID: 2800000, guid: ef75a6d108003f647a9dd8a3f925dc03, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 2830ba7ee6ed29048bf7406f0de53cec, type: 3}
+      description: 
+    description: Explaining why they fight
+  - name: Standing on leg again
+    subPoses:
+    - name: 
+      delayToNextPose: 6
+      texture: {fileID: 2800000, guid: 6e415e016dd947f4eb2e74ef3cfca60c, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 2830ba7ee6ed29048bf7406f0de53cec, type: 3}
+      description: 
+    description: Explaining why they fight
+  material: {fileID: 2100000, guid: b4c51d8de855ff042aaa6d5f0048a062, type: 2}
+--- !u!4 &3400698657895833183 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5234388750720119379, guid: 3f63860fbc41ecd429491aebeb4d5d1f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7464150943798291468}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7495569707876484553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8531,6 +9575,200 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5727383354002114440, guid: a028fe771aad7894eac0b4edf2f9ea12,
     type: 3}
   m_PrefabInstance: {fileID: 7888133733667339856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7995561788325470234
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5136771923415555811}
+    m_Modifications:
+    - target: {fileID: 2310752302286326577, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310752302286326577, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310752302286326577, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310752302286326577, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310752302286326577, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310752302286326577, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310752302286326577, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310752302286326577, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310752302286326577, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310752302286326577, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310752302286326577, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310752302286326577, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310752302286326577, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813115576600708886, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_Max
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2813115576600708886, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4905695805692178861}
+    - targetCorrespondingSourceObject: {fileID: 2813115576600708886, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5164751525108041285}
+  m_SourcePrefab: {fileID: 100100000, guid: e235b7542ee25ac4d93aba5646d4a8ee, type: 3}
+--- !u!1 &5332192293694007052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2813115576600708886, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 7995561788325470234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4905695805692178861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5332192293694007052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79a73349016aaf4093291ee6a0c3ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+--- !u!114 &5164751525108041285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5332192293694007052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poses:
+  - name: Angry
+    subPoses:
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 738aceabc83fb974dbea5508267113c4, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: fb41432c2d629d84bbbf2e29465cdfcf, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 2a1fb24e20c9cc34a827967bd412d4f4, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 464d09a94007efc43ae9bea2071ef83a, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 5f87a88e77acd0c4c898ab590f5ae8f4, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 5faadaaf5e81acd4d8124ffac455094b, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 12d4450477b31fe4b882b01d2baa5139, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Listening
+    subPoses:
+    - name: 
+      delayToNextPose: 14
+      texture: {fileID: 2800000, guid: e47483c07950078489a7654d9ea5b705, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: aa2ac5f66ea2e4746ac4f86786f25017, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Standing on leg
+    subPoses:
+    - name: 
+      delayToNextPose: 9.25
+      texture: {fileID: 2800000, guid: 12d4450477b31fe4b882b01d2baa5139, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: e47483c07950078489a7654d9ea5b705, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Standing on leg again
+    subPoses:
+    - name: 
+      delayToNextPose: 6
+      texture: {fileID: 2800000, guid: aa2ac5f66ea2e4746ac4f86786f25017, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: e47483c07950078489a7654d9ea5b705, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  material: {fileID: 2100000, guid: 93c3f0d6e99ff1c4b9ba9562984dd60d, type: 2}
+--- !u!4 &5684811481626110763 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2310752302286326577, guid: e235b7542ee25ac4d93aba5646d4a8ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 7995561788325470234}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7998347581074011896
 PrefabInstance:

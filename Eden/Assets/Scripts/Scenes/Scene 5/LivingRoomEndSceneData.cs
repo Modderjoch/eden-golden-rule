@@ -15,6 +15,8 @@ public class LivingRoomEndSceneData : GameSceneData
 
     private bool rotateEnvironment = false;
 
+    [SerializeField] CharacterTextureReplacing motherTextureReplacing;
+
 
     protected void Update()
     {
@@ -59,6 +61,22 @@ public class LivingRoomEndSceneData : GameSceneData
         CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
         audioManager.PlayVoiceOver("LivingRoomEndScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         audioManager.Play("Confirm");
+        motherTextureReplacing.SetPose("Entry");
+
+        // Then we subscribe to new events
+        audioManager.OnVoiceOverFinished += StartSongVoiceOver;
+    }
+
+    private void StartSongVoiceOver()
+    {
+        // First we de-activate the old objects
+
+        // Then we unsubscribe from previous events
+        audioManager.OnVoiceOverFinished -= StartSongVoiceOver;
+
+        // Then we activate new objects and call the needed methods
+        audioManager.PlayVoiceOver("LivingRoomEndScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
+        gameManager.Compass.SetInteger("sceneprogress", 5);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += OnSceneExit;
@@ -72,7 +90,6 @@ public class LivingRoomEndSceneData : GameSceneData
         audioManager.OnVoiceOverFinished -= OnSceneExit;
 
         // Then we activate new objects and call the needed methods
-        popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("Finish").Result, 5);
         CoroutineHandler.Instance.StartCoroutine(gameManager.ResetGame(10f));
         Debug.Log("Finished scene");
 

@@ -171,9 +171,9 @@ public class GardenSceneData : GameSceneData
         audioManager.OnVoiceOverFinished -= OnSceneExit;
 
         // Then we activate new objects and call the needed methods
-        popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindMotherWolf").Result, 4);
+        //popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindMotherWolf").Result, 4);
         gameManager.NextScene();
-        gameManager.QRScanningUI.SetActive(true);
+        gameManager.Compass.SetInteger("sceneprogress", 2);
         grandmaCharacterTexture.SetPose("Pose1");
         Debug.Log("Finished scene");
 

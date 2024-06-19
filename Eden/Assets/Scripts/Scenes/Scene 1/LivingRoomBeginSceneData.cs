@@ -8,6 +8,7 @@ using UnityEngine.Localization.Settings;
 public class LivingRoomBeginSceneData : GameSceneData
 {
     [Header("Additional Objects")]
+    [SerializeField] CharacterTextureReplacing motherTextureReplacing;
     private Compass compass;
 
     private PopUpScript popUp;
@@ -63,6 +64,7 @@ public class LivingRoomBeginSceneData : GameSceneData
         CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
         audioManager.PlayVoiceOver("LivingRoomBeginScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         audioManager.Play("Confirm");
+        motherTextureReplacing.SetPose("Entry");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartCompassCollection;
@@ -93,6 +95,7 @@ public class LivingRoomBeginSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("LivingRoomBeginScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
+        motherTextureReplacing.SetPose("Exit");
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += OnSceneExit;
@@ -106,10 +109,9 @@ public class LivingRoomBeginSceneData : GameSceneData
         audioManager.OnVoiceOverFinished -= OnSceneExit;
 
         // Then we activate new objects and call the needed methods
-        popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindGrandma").Result, 4);
+        //popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindGrandma").Result, 4);
         gameManager.NextScene();
-        gameManager.QRScanningUI.SetActive(true);
-        Debug.Log("Finished scene");
+        gameManager.Compass.SetInteger("sceneprogress", 1);
 
         // Then we subscribe to new events
     }
