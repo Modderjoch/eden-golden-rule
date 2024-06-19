@@ -13,7 +13,9 @@ public class resetSceneProgressValue : StateMachineBehaviour
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(GameManager.Instance.CurrentSceneIndex < 4)
-        GameManager.Instance.QRScanningUI.SetActive(true);
+        if(GameManager.Instance.CurrentSceneIndex <= 4)
+        {
+            GameManager.Instance.QRScanningUI.SetActive(true);
+        }
     }
 }

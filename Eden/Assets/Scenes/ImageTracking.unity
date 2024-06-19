@@ -4073,6 +4073,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 346928495}
     m_Modifications:
+    - target: {fileID: 3193782352239585909, guid: f9847bf58d8196348886e6157571df28,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193782352239585909, guid: f9847bf58d8196348886e6157571df28,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26e190e1af9f64b42b107fcdfc1c3b16, type: 2}
     - target: {fileID: 5159712647287205443, guid: f9847bf58d8196348886e6157571df28,
         type: 3}
       propertyPath: m_Name
@@ -5011,6 +5021,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838566735472559882, guid: 938e0bef26d239841aad398c7e95742b,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524884577684391126, guid: 938e0bef26d239841aad398c7e95742b,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7637614205595812730, guid: 938e0bef26d239841aad398c7e95742b,
         type: 3}
@@ -8760,6 +8780,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 5913803946476886361, guid: 04290f28107722a4c935bbb0e8e085e3,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913803946476886361, guid: 04290f28107722a4c935bbb0e8e085e3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26e190e1af9f64b42b107fcdfc1c3b16, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9317,7 +9347,7 @@ MonoBehaviour:
     additionalObject: {fileID: 1653167222}
     parent: {fileID: 346928495}
   playerIndex: 0
-  startSceneIndex: 4
+  startSceneIndex: 0
   trashProgress: {fileID: 409695568}
   paperProgress: {fileID: 326071307}
   scenes:

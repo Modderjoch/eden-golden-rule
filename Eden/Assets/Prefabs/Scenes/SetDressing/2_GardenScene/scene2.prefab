@@ -7004,7 +7004,7 @@ Transform:
   - {fileID: 5308269179404399577}
   - {fileID: 5781053863177813716}
   - {fileID: 2362944254249587204}
-  - {fileID: 4836519912446788736}
+  - {fileID: 3269515497784174976}
   - {fileID: 2265965153020825579}
   m_Father: {fileID: 7606703006654187315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7211,13 +7211,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2741548034950915320}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.691513, z: 0, w: 0.72236407}
-  m_LocalPosition: {x: -0.276, y: 2.043, z: 0.573}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.64974505, z: -0, w: 0.7601522}
+  m_LocalPosition: {x: -0.14, y: 1.0301487, z: 0.221}
+  m_LocalScale: {x: 0.50423336, y: 0.50423336, z: 0.50423336}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 387539667466505038}
-  m_Father: {fileID: 4836519912446788736}
+  m_Father: {fileID: 3269515497784174976}
   m_LocalEulerAnglesHint: {x: 0, y: -87.5, z: 0}
 --- !u!1 &2959081950638009735
 GameObject:
@@ -12785,7 +12785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decoyCollider: {fileID: 3127749633891507988}
   paperController: {fileID: 8519304569507476490}
-  grandmaCharacterTexture: {fileID: 349554297266234919}
+  grandmaCharacterTexture: {fileID: 7065454042022363747}
   book: {fileID: 1226318799688420585}
   paper: {fileID: 5434490304741208603}
 --- !u!1 &5615065793448480944
@@ -23412,203 +23412,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4900063162133824861}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &4941711310766465899
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 393599966210488245}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5127
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5127
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5127
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.11
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9984138
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.056302696
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 6.455
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      propertyPath: m_Name
-      value: GrandmaPlaceholder
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 190598980895485740}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 349554297266234919}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 597159167570939378}
-  m_SourcePrefab: {fileID: 100100000, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1, type: 3}
---- !u!4 &4836519912446788736 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-    type: 3}
-  m_PrefabInstance: {fileID: 4941711310766465899}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5212095855608127034 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d4f13ca61d2edf4fa92cd0f77a839d1,
-    type: 3}
-  m_PrefabInstance: {fileID: 4941711310766465899}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &349554297266234919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5212095855608127034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poses:
-  - name: Pose1
-    subPoses:
-    - name: Standing
-      delayToNextPose: 7
-      texture: {fileID: 2800000, guid: df8253045f06ae84e9f8b72a5ced9443, type: 3}
-      description: Just grandma standing around
-    - name: Thinking
-      delayToNextPose: 3
-      texture: {fileID: 2800000, guid: 0930d2e693c8f9544bf6dd70d76426f9, type: 3}
-      description: Grandma thinking about a solution
-    - name: Idea
-      delayToNextPose: 2
-      texture: {fileID: 2800000, guid: aef4b8488a6109143bc31244b9127d32, type: 3}
-      description: Grandma having an idea
-    - name: Book reveal
-      delayToNextPose: 8
-      texture: {fileID: 2800000, guid: 2c0e92fa32b8d514faeaee850956d411, type: 3}
-      description: Grandma revealing the book
-    description: The poses when entering the scene
-  - name: Pose2
-    subPoses:
-    - name: Paper flying out
-      delayToNextPose: 4
-      texture: {fileID: 2800000, guid: 9413d56bfbdc3c34b8ffe84960ce51b1, type: 3}
-      description: When the paper flies around
-    - name: Tasking the player
-      delayToNextPose: 2
-      texture: {fileID: 2800000, guid: aef4b8488a6109143bc31244b9127d32, type: 3}
-      description: When grandma says to collect the paper
-    description: The poses when the book flies open and papers fly out
-  - name: Pose3
-    subPoses:
-    - name: Standing
-      delayToNextPose: 0
-      texture: {fileID: 2800000, guid: fc727cf15b375bb4d9cc08c525a222f9, type: 3}
-      description: Listening to Eden talk about the amount of paper
-    description: Listening to Eden talk about the amount of paper
-  - name: Pose4
-    subPoses:
-    - name: Thinking
-      delayToNextPose: 0
-      texture: {fileID: 2800000, guid: 0930d2e693c8f9544bf6dd70d76426f9, type: 3}
-      description: Saying this might be too big a book
-    description: Going "hmmm" this book might be too big
-  - name: Pose5
-    subPoses:
-    - name: Thinking
-      delayToNextPose: 0.8
-      texture: {fileID: 2800000, guid: 0930d2e693c8f9544bf6dd70d76426f9, type: 3}
-      description: Thinking
-    - name: Idea
-      delayToNextPose: 3
-      texture: {fileID: 2800000, guid: aef4b8488a6109143bc31244b9127d32, type: 3}
-      description: Knowing what to do
-    - name: Nature talk
-      delayToNextPose: 3
-      texture: {fileID: 2800000, guid: 2c0e92fa32b8d514faeaee850956d411, type: 3}
-      description: '"Nature is a powerful ally"'
-    - name: Nature talk
-      delayToNextPose: 3
-      texture: {fileID: 2800000, guid: fc727cf15b375bb4d9cc08c525a222f9, type: 3}
-      description: '"Nature is a powerful ally"'
-    description: Ending the scene and pointing the player towards mother wolf
-  material: {fileID: 2100000, guid: 9b9e6c0b3827d1148aee58a86adf0286, type: 2}
---- !u!114 &597159167570939378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5212095855608127034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b79a73349016aaf4093291ee6a0c3ba4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1001 &4995817303454888927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24986,6 +24789,188 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8482746226875312711}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8818147978475848529
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 393599966210488245}
+    m_Modifications:
+    - target: {fileID: 4034156754759459526, guid: 6470018c0a2a6f2439aff82e661c19da,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_Grandma
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287022710613519057, guid: 6470018c0a2a6f2439aff82e661c19da,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287022710613519057, guid: 6470018c0a2a6f2439aff82e661c19da,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287022710613519057, guid: 6470018c0a2a6f2439aff82e661c19da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287022710613519057, guid: 6470018c0a2a6f2439aff82e661c19da,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287022710613519057, guid: 6470018c0a2a6f2439aff82e661c19da,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287022710613519057, guid: 6470018c0a2a6f2439aff82e661c19da,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287022710613519057, guid: 6470018c0a2a6f2439aff82e661c19da,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287022710613519057, guid: 6470018c0a2a6f2439aff82e661c19da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287022710613519057, guid: 6470018c0a2a6f2439aff82e661c19da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287022710613519057, guid: 6470018c0a2a6f2439aff82e661c19da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6287022710613519057, guid: 6470018c0a2a6f2439aff82e661c19da,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 190598980895485740}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4034156754759459526, guid: 6470018c0a2a6f2439aff82e661c19da,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7065454042022363747}
+    - targetCorrespondingSourceObject: {fileID: 4034156754759459526, guid: 6470018c0a2a6f2439aff82e661c19da,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1313160114294563486}
+  m_SourcePrefab: {fileID: 100100000, guid: 6470018c0a2a6f2439aff82e661c19da, type: 3}
+--- !u!4 &3269515497784174976 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6287022710613519057, guid: 6470018c0a2a6f2439aff82e661c19da,
+    type: 3}
+  m_PrefabInstance: {fileID: 8818147978475848529}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5592466798895161751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4034156754759459526, guid: 6470018c0a2a6f2439aff82e661c19da,
+    type: 3}
+  m_PrefabInstance: {fileID: 8818147978475848529}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7065454042022363747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5592466798895161751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poses:
+  - name: Pose1
+    subPoses:
+    - name: Standing
+      delayToNextPose: 7
+      texture: {fileID: 2800000, guid: df8253045f06ae84e9f8b72a5ced9443, type: 3}
+      description: Just grandma standing around
+    - name: Thinking
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: 0930d2e693c8f9544bf6dd70d76426f9, type: 3}
+      description: Grandma thinking about a solution
+    - name: Idea
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: aef4b8488a6109143bc31244b9127d32, type: 3}
+      description: Grandma having an idea
+    - name: Book reveal
+      delayToNextPose: 8
+      texture: {fileID: 2800000, guid: 2c0e92fa32b8d514faeaee850956d411, type: 3}
+      description: Grandma revealing the book
+    description: The poses when entering the scene
+  - name: Pose2
+    subPoses:
+    - name: Paper flying out
+      delayToNextPose: 4
+      texture: {fileID: 2800000, guid: 9413d56bfbdc3c34b8ffe84960ce51b1, type: 3}
+      description: When the paper flies around
+    - name: Tasking the player
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: aef4b8488a6109143bc31244b9127d32, type: 3}
+      description: When grandma says to collect the paper
+    description: The poses when the book flies open and papers fly out
+  - name: Pose3
+    subPoses:
+    - name: Standing
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: fc727cf15b375bb4d9cc08c525a222f9, type: 3}
+      description: Listening to Eden talk about the amount of paper
+    description: Listening to Eden talk about the amount of paper
+  - name: Pose4
+    subPoses:
+    - name: Thinking
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 0930d2e693c8f9544bf6dd70d76426f9, type: 3}
+      description: Saying this might be too big a book
+    description: Going "hmmm" this book might be too big
+  - name: Pose5
+    subPoses:
+    - name: Thinking
+      delayToNextPose: 0.8
+      texture: {fileID: 2800000, guid: 0930d2e693c8f9544bf6dd70d76426f9, type: 3}
+      description: Thinking
+    - name: Idea
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: aef4b8488a6109143bc31244b9127d32, type: 3}
+      description: Knowing what to do
+    - name: Nature talk
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: 2c0e92fa32b8d514faeaee850956d411, type: 3}
+      description: '"Nature is a powerful ally"'
+    - name: Nature talk
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: fc727cf15b375bb4d9cc08c525a222f9, type: 3}
+      description: '"Nature is a powerful ally"'
+    description: Ending the scene and pointing the player towards mother wolf
+  material: {fileID: 2100000, guid: 9b9e6c0b3827d1148aee58a86adf0286, type: 2}
+--- !u!114 &1313160114294563486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5592466798895161751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79a73349016aaf4093291ee6a0c3ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1001 &8847871809119799194
 PrefabInstance:
   m_ObjectHideFlags: 0

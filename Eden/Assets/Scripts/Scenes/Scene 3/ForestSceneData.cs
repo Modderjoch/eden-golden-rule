@@ -191,6 +191,11 @@ public class ForestSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         flowerPacks.SetActive(true);
 
+        foreach(Transform t in flowerPacks.GetComponentsInChildren<Transform>())
+        {
+            t.gameObject.SetActive(true);
+        }
+
         // Then we subscribe to new events
         seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsChosen += StartSeedThrowing;
     }
@@ -238,7 +243,7 @@ public class ForestSceneData : GameSceneData
         audioManager.OnVoiceOverFinished -= OnSceneExit;
 
         // Then we activate new objects and call the needed methods
-        popUp.PopUpEntry("Well done!", 3);
+        //popUp.PopUpEntry("Well done!", 3);
         gameManager.NextScene();
         gameManager.Compass.SetInteger("sceneprogress", 3);
         Debug.Log("Finished scene");
