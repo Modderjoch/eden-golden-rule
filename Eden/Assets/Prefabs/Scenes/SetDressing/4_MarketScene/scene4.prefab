@@ -854,6 +854,8 @@ MonoBehaviour:
   - {fileID: 3643882418549375836}
   - {fileID: 3082289926636408744}
   - {fileID: 2171989523639737261}
+  - {fileID: 8907463812686125476}
+  hillelTextureReplacing: {fileID: 8907463812686125476}
 --- !u!1 &4964741806071315066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1958,6 +1960,7 @@ Transform:
   - {fileID: 1705474458933571447}
   - {fileID: 96365666738615037}
   - {fileID: 560703656061333926}
+  - {fileID: 7993522711780232611}
   - {fileID: 7668329500802535122}
   - {fileID: 5684811481626110763}
   - {fileID: 1608738709958912329}
@@ -5011,6 +5014,280 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2399913792716260820, guid: ca143c748da8d284398354ccd594dc75,
     type: 3}
   m_PrefabInstance: {fileID: 2964419084240453635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3309414555296341359
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5136771923415555811}
+    m_Modifications:
+    - target: {fileID: 2576090213988112603, guid: 38edf0167cf850c4d8b486d7ba643126,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_Hillel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828938035852710092, guid: 38edf0167cf850c4d8b486d7ba643126,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828938035852710092, guid: 38edf0167cf850c4d8b486d7ba643126,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828938035852710092, guid: 38edf0167cf850c4d8b486d7ba643126,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828938035852710092, guid: 38edf0167cf850c4d8b486d7ba643126,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828938035852710092, guid: 38edf0167cf850c4d8b486d7ba643126,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828938035852710092, guid: 38edf0167cf850c4d8b486d7ba643126,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828938035852710092, guid: 38edf0167cf850c4d8b486d7ba643126,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828938035852710092, guid: 38edf0167cf850c4d8b486d7ba643126,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828938035852710092, guid: 38edf0167cf850c4d8b486d7ba643126,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828938035852710092, guid: 38edf0167cf850c4d8b486d7ba643126,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2576090213988112603, guid: 38edf0167cf850c4d8b486d7ba643126,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8907463812686125476}
+  m_SourcePrefab: {fileID: 100100000, guid: 38edf0167cf850c4d8b486d7ba643126, type: 3}
+--- !u!1 &1021608375561815476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2576090213988112603, guid: 38edf0167cf850c4d8b486d7ba643126,
+    type: 3}
+  m_PrefabInstance: {fileID: 3309414555296341359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8907463812686125476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021608375561815476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poses:
+  - name: ENGLISH
+    languageID: en-US
+    subPoses: []
+    description: 
+  - name: Angry
+    languageID: en-US
+    subPoses:
+    - name: Empty
+      delayToNextPose: 6
+      texture: {fileID: 2800000, guid: b344e2afd62430d4cbbe5564f8133884, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: d1b3fb6f72a62074ea9cd1335a61db47, type: 3}
+      description: 
+    description: 
+  - name: Explaining
+    languageID: en-US
+    subPoses:
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: a66d5115573867049bab8a07449c9c24, type: 3}
+      description: 
+    description: 
+  - name: Standing on leg
+    languageID: en-US
+    subPoses:
+    - name: 
+      delayToNextPose: 4
+      texture: {fileID: 2800000, guid: d1b3fb6f72a62074ea9cd1335a61db47, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 5
+      texture: {fileID: 2800000, guid: 9b9d9c844d3a5434d81698faf526d1bb, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 7.5
+      texture: {fileID: 2800000, guid: 29301fd84a49bbb4e91292bfd06e91c2, type: 3}
+      description: 
+    description: 
+  - name: Listening
+    languageID: en-US
+    subPoses:
+    - name: 
+      delayToNextPose: 10
+      texture: {fileID: 2800000, guid: 29301fd84a49bbb4e91292bfd06e91c2, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 5
+      texture: {fileID: 2800000, guid: a66d5115573867049bab8a07449c9c24, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 5
+      texture: {fileID: 2800000, guid: d1b3fb6f72a62074ea9cd1335a61db47, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 21
+      texture: {fileID: 2800000, guid: dcaa7ffcfa3804040a27fe76b4b81b6d, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 543a71bce06c818479e784cd34b136dc, type: 3}
+      description: 
+    description: 
+  - name: Giving
+    languageID: en-US
+    subPoses:
+    - name: 
+      delayToNextPose: 9
+      texture: {fileID: 2800000, guid: a66d5115573867049bab8a07449c9c24, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: d1b3fb6f72a62074ea9cd1335a61db47, type: 3}
+      description: 
+    description: 
+  - name: Standing on leg again
+    languageID: en-US
+    subPoses:
+    - name: 
+      delayToNextPose: 6
+      texture: {fileID: 2800000, guid: a66d5115573867049bab8a07449c9c24, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 29301fd84a49bbb4e91292bfd06e91c2, type: 3}
+      description: 
+    description: 
+  - name: DUTCH
+    languageID: nl-NL
+    subPoses: []
+    description: 
+  - name: Angry
+    languageID: nl-NL
+    subPoses:
+    - name: Empty
+      delayToNextPose: 5
+      texture: {fileID: 2800000, guid: b344e2afd62430d4cbbe5564f8133884, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: d1b3fb6f72a62074ea9cd1335a61db47, type: 3}
+      description: 
+    description: 
+  - name: Explaining
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: a66d5115573867049bab8a07449c9c24, type: 3}
+      description: 
+    description: 
+  - name: Standing on leg
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 7
+      texture: {fileID: 2800000, guid: d1b3fb6f72a62074ea9cd1335a61db47, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 4.5
+      texture: {fileID: 2800000, guid: 9b9d9c844d3a5434d81698faf526d1bb, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 29301fd84a49bbb4e91292bfd06e91c2, type: 3}
+      description: 
+    description: 
+  - name: Listening
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 20
+      texture: {fileID: 2800000, guid: 29301fd84a49bbb4e91292bfd06e91c2, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 9
+      texture: {fileID: 2800000, guid: a66d5115573867049bab8a07449c9c24, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 5
+      texture: {fileID: 2800000, guid: d1b3fb6f72a62074ea9cd1335a61db47, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 24
+      texture: {fileID: 2800000, guid: dcaa7ffcfa3804040a27fe76b4b81b6d, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 543a71bce06c818479e784cd34b136dc, type: 3}
+      description: 
+    description: 
+  - name: Giving
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 8
+      texture: {fileID: 2800000, guid: a66d5115573867049bab8a07449c9c24, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: d1b3fb6f72a62074ea9cd1335a61db47, type: 3}
+      description: 
+    description: 
+  - name: Standing on leg again
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 6.5
+      texture: {fileID: 2800000, guid: a66d5115573867049bab8a07449c9c24, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 29301fd84a49bbb4e91292bfd06e91c2, type: 3}
+      description: 
+    description: 
+  material: {fileID: 2100000, guid: ebfa8b790ec9c3e409f3a7fb403b8c85, type: 2}
+--- !u!4 &7993522711780232611 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4828938035852710092, guid: 38edf0167cf850c4d8b486d7ba643126,
+    type: 3}
+  m_PrefabInstance: {fileID: 3309414555296341359}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3343263162130065461
 PrefabInstance:

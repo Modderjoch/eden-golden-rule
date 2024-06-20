@@ -9,6 +9,7 @@ public class MarketSceneData : GameSceneData
 {
     [Header("Additional Objects")]
     [SerializeField] private List<CharacterTextureReplacing> characterTextures = new List<CharacterTextureReplacing>();
+    [SerializeField] private CharacterTextureReplacing hillelTextureReplacing;
     private Bracelet bracelet;
 
     private PopUpScript popUp;
@@ -152,6 +153,7 @@ public class MarketSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart5" + LocalizationSettings.SelectedLocale.Formatter);
+        hillelTextureReplacing.SetPose("Giving" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartGratitudeVoiceOver;
