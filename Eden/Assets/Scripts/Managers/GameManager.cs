@@ -87,8 +87,6 @@ public class GameManager : MonoBehaviour
 
     protected void Awake()
     {
-        SetLanguage("en-US");
-
         trackedImageManager = FindObjectOfType<ARTrackedImageManager>();
         uiManager = UIManager.Instance;
 

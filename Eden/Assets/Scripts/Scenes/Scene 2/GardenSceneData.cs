@@ -79,12 +79,21 @@ public class GardenSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         gameManager.QRScanningUI.SetActive(false);
-        grandmaCharacterTexture.SetPose("Pose1");
+        grandmaCharacterTexture.SetPose("Pose1" + LocalizationSettings.SelectedLocale.Formatter);
         audioManager.Play("Confirm");
 
         rotateEnvironment = true;
         CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
-        CoroutineHandler.Instance.StartCoroutine(OpenBook(12f, true));
+
+        if(LocalizationSettings.SelectedLocale.Formatter.ToString() == "en-US")
+        {
+            CoroutineHandler.Instance.StartCoroutine(OpenBook(12f, true));
+        }
+        else
+        {
+            CoroutineHandler.Instance.StartCoroutine(OpenBook(14f, true));
+        }
+
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartPaperCollection;
@@ -106,7 +115,7 @@ public class GardenSceneData : GameSceneData
         paperAnimation.SetActive(true);
         paperController.BlowPapers();
         Destroy(decoyCollider);
-        grandmaCharacterTexture.SetPose("Pose2");
+        grandmaCharacterTexture.SetPose("Pose2" + LocalizationSettings.SelectedLocale.Formatter);
         paper.SetActive(false);
 
         // Then we subscribe to new events
@@ -125,8 +134,17 @@ public class GardenSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart3" + LocalizationSettings.SelectedLocale.Formatter);
-        grandmaCharacterTexture.SetPose("Pose3");
-        CoroutineHandler.Instance.StartCoroutine(OpenBook(6.5f, false));
+        grandmaCharacterTexture.SetPose("Pose3" + LocalizationSettings.SelectedLocale.Formatter);
+
+        if(LocalizationSettings.SelectedLocale.Formatter.ToString() == "en-US")
+        {
+            CoroutineHandler.Instance.StartCoroutine(OpenBook(6.5f, false));
+        }
+        else
+        {
+            CoroutineHandler.Instance.StartCoroutine(OpenBook(3f, false));
+        }
+
         paper.SetActive(true);
 
         // Then we subscribe to new events
@@ -142,7 +160,7 @@ public class GardenSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart4" + LocalizationSettings.SelectedLocale.Formatter);
-        grandmaCharacterTexture.SetPose("Pose4");
+        grandmaCharacterTexture.SetPose("Pose4" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartMotherWolfVoiceOver;
@@ -157,7 +175,7 @@ public class GardenSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart5" + LocalizationSettings.SelectedLocale.Formatter);
-        grandmaCharacterTexture.SetPose("Pose5");
+        grandmaCharacterTexture.SetPose("Pose5" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += OnSceneExit;
@@ -174,7 +192,6 @@ public class GardenSceneData : GameSceneData
         //popUp.PopUpEntry(LocalizationSettings.StringDatabase.GetLocalizedStringAsync("FindMotherWolf").Result, 4);
         gameManager.NextScene();
         gameManager.Compass.SetInteger("sceneprogress", 2);
-        grandmaCharacterTexture.SetPose("Pose1");
         Debug.Log("Finished scene");
 
         // Then we subscribe to new events

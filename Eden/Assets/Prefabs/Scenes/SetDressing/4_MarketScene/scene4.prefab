@@ -2411,7 +2411,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poses:
+  - name: ENGLISH
+    languageID: 
+    subPoses: []
+    description: '
+
+'
   - name: Angry
+    languageID: en-US
     subPoses:
     - name: Angry
       delayToNextPose: 1
@@ -2443,6 +2450,7 @@ MonoBehaviour:
       description: 
     description: Start of the scene, where the family fights
   - name: Explaining
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 0
@@ -2454,6 +2462,7 @@ MonoBehaviour:
       description: 
     description: Explaining the fight
   - name: Listening
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 16
@@ -2465,6 +2474,7 @@ MonoBehaviour:
       description: 
     description: Explaining the fight
   - name: Standing on leg
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 10
@@ -2476,9 +2486,96 @@ MonoBehaviour:
       description: 
     description: Explaining the fight
   - name: Standing on leg again
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 6
+      texture: {fileID: 2800000, guid: 01c5102fe6f202b429810d8614108338, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 180830788258ca243aa6560d3da2453b, type: 3}
+      description: 
+    description: Explaining the fight
+  - name: DUTCH
+    languageID: 
+    subPoses: []
+    description: '
+
+'
+  - name: Angry
+    languageID: nl-NL
+    subPoses:
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: be56b61ab0666b74f85c27a4574923b4, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: ec0b45f1434151841abe0eb955ddca63, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 9eb8d07f0c3fa8c4d84622d0eb22b6fc, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: a769f4fbb963c2f45b3c069f309b52a6, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 112d31e0d6bc114488c95f2fbc8837bd, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 27e291324137e134bae597b415009a11, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 670c89c576f29314ca9129f1228ae7d7, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Explaining
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: a769f4fbb963c2f45b3c069f309b52a6, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 3.5
+      texture: {fileID: 2800000, guid: 27e291324137e134bae597b415009a11, type: 3}
+      description: 
+    description: Explaining the fight
+  - name: Standing on leg
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 11
+      texture: {fileID: 2800000, guid: 27e291324137e134bae597b415009a11, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 180830788258ca243aa6560d3da2453b, type: 3}
+      description: 
+    description: Explaining the fight
+  - name: Listening
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 26
+      texture: {fileID: 2800000, guid: 180830788258ca243aa6560d3da2453b, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 01c5102fe6f202b429810d8614108338, type: 3}
+      description: 
+    description: Explaining the fight
+  - name: Standing on leg again
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 7
       texture: {fileID: 2800000, guid: 01c5102fe6f202b429810d8614108338, type: 3}
       description: 
     - name: 
@@ -3534,7 +3631,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poses:
+  - name: ENGLISH
+    languageID: 
+    subPoses: []
+    description: 
   - name: Angry
+    languageID: en-US
     subPoses:
     - name: Angry
       delayToNextPose: 1
@@ -3566,6 +3668,7 @@ MonoBehaviour:
       description: 
     description: Start of the scene, where the family fights
   - name: Listening
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 13
@@ -3577,6 +3680,7 @@ MonoBehaviour:
       description: 
     description: Start of the scene, where the family fights
   - name: Standing on leg
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 9.25
@@ -3588,9 +3692,82 @@ MonoBehaviour:
       description: 
     description: Start of the scene, where the family fights
   - name: Standing on leg again
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 6
+      texture: {fileID: 2800000, guid: bb5a73b4cf89c9e418ee4865c7f84407, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 52c5daa9130630c4d86f561d0e78b172, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: DUTCH
+    languageID: 
+    subPoses: []
+    description: 
+  - name: Angry
+    languageID: nl-NL
+    subPoses:
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 80d7e8ae07ce7644b8e542b5cc58a16f, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 73109792db161684594e3d974c8369b8, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 31bfe7f52a8fcf14188152748a4ae807, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 6b9995cedb7c310408702c6d307b92f4, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: cbd709ae32d6d594dafb3ed92ef6ffac, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 41b05fea6adcf504aa98801c15438b9e, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 2e5e4d121ccd0af45a3c34bf66341d5c, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Standing on leg
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 11.5
+      texture: {fileID: 2800000, guid: 2e5e4d121ccd0af45a3c34bf66341d5c, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 52c5daa9130630c4d86f561d0e78b172, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Listening
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 28
+      texture: {fileID: 2800000, guid: 52c5daa9130630c4d86f561d0e78b172, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: bb5a73b4cf89c9e418ee4865c7f84407, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Standing on leg again
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 7
       texture: {fileID: 2800000, guid: bb5a73b4cf89c9e418ee4865c7f84407, type: 3}
       description: 
     - name: 
@@ -7398,7 +7575,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poses:
+  - name: ENGLISH
+    languageID: 
+    subPoses: []
+    description: Standing on one leg
   - name: Angry
+    languageID: en-US
     subPoses:
     - name: Angry
       delayToNextPose: 1
@@ -7430,6 +7612,7 @@ MonoBehaviour:
       description: 
     description: Start of the scene, where the family fights
   - name: Explaining
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 4.5
@@ -7440,18 +7623,8 @@ MonoBehaviour:
       texture: {fileID: 2800000, guid: 432c80fb4da9cf14ebb7a04834cc6958, type: 3}
       description: 
     description: Explaining why they fight
-  - name: Listening
-    subPoses:
-    - name: 
-      delayToNextPose: 9
-      texture: {fileID: 2800000, guid: 18f95e6b62fcbfa4d932feb82220707c, type: 3}
-      description: 
-    - name: 
-      delayToNextPose: 0
-      texture: {fileID: 2800000, guid: d894b9d140792af41ad2088afd6013d2, type: 3}
-      description: 
-    description: Standing on one leg
   - name: Standing on leg
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 10
@@ -7462,10 +7635,107 @@ MonoBehaviour:
       texture: {fileID: 2800000, guid: 18f95e6b62fcbfa4d932feb82220707c, type: 3}
       description: 
     description: Standing on one leg
+  - name: Listening
+    languageID: en-US
+    subPoses:
+    - name: 
+      delayToNextPose: 9
+      texture: {fileID: 2800000, guid: 18f95e6b62fcbfa4d932feb82220707c, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: d894b9d140792af41ad2088afd6013d2, type: 3}
+      description: 
+    description: Standing on one leg
   - name: Standing on leg again
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 6
+      texture: {fileID: 2800000, guid: d894b9d140792af41ad2088afd6013d2, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 18f95e6b62fcbfa4d932feb82220707c, type: 3}
+      description: 
+    description: Standing on one leg
+  - name: DUTCH
+    languageID: 
+    subPoses: []
+    description: Standing on one leg
+  - name: Angry
+    languageID: nl-NL
+    subPoses:
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 6e68e12c43cc98a42a84036845b0d4c0, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: a51c86c3c2b6e224882c9f704a32dcaa, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 66926d214af833d44b8fb113638452ed, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 432c80fb4da9cf14ebb7a04834cc6958, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 50b275d442f404747a97fbede41fdb10, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: a151cca0588ff644ea0d42e691f9275c, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 62dc234c3f15ffa478d57394512c2217, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Explaining
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 6.5
+      texture: {fileID: 2800000, guid: 62dc234c3f15ffa478d57394512c2217, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 432c80fb4da9cf14ebb7a04834cc6958, type: 3}
+      description: 
+    description: Explaining why they fight
+  - name: Standing on leg
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 11.5
+      texture: {fileID: 2800000, guid: 432c80fb4da9cf14ebb7a04834cc6958, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 18f95e6b62fcbfa4d932feb82220707c, type: 3}
+      description: 
+    description: Standing on one leg
+  - name: Listening
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 20
+      texture: {fileID: 2800000, guid: 18f95e6b62fcbfa4d932feb82220707c, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: d894b9d140792af41ad2088afd6013d2, type: 3}
+      description: 
+    description: Standing on one leg
+  - name: Standing on leg again
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 7
       texture: {fileID: 2800000, guid: d894b9d140792af41ad2088afd6013d2, type: 3}
       description: 
     - name: 
@@ -7836,7 +8106,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poses:
+  - name: ENGLISH
+    languageID: 
+    subPoses: []
+    description: '
+
+'
   - name: Angry
+    languageID: en-US
     subPoses:
     - name: Angry
       delayToNextPose: 1
@@ -7868,6 +8145,7 @@ MonoBehaviour:
       description: 
     description: Start of the scene, where the family fights
   - name: Explaining
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 3
@@ -7882,6 +8160,7 @@ MonoBehaviour:
 
 '
   - name: Listening
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 15
@@ -7896,6 +8175,7 @@ MonoBehaviour:
 
 '
   - name: Standing on leg
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 9.5
@@ -7910,9 +8190,108 @@ MonoBehaviour:
 
 '
   - name: Standing on leg again
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 6
+      texture: {fileID: 2800000, guid: bc15ac7a0f3fec34dadb06421759a43d, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 6d2960cf69012744890b5b49bf3c74a7, type: 3}
+      description: 
+    description: 'Explaining why they fight
+
+
+'
+  - name: DUTCH
+    languageID: 
+    subPoses: []
+    description: '
+
+'
+  - name: Angry
+    languageID: nl-NL
+    subPoses:
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 58a3391ead86e8646913b936a3fe6a1c, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 20384414304e2714f9efaf9bbe68c51a, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 81edf7aa8544b714fb29342517541329, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 2c8f133f6a6195f43a99898343ebfb55, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 6eb6684e157616a4fb278629a4ce449f, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: b8683ee69a59e8d4eb5d4387e8fc3f2a, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 9133995204f8ad241a88102170ea45d9, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Explaining
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 4
+      texture: {fileID: 2800000, guid: 9133995204f8ad241a88102170ea45d9, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 6eb6684e157616a4fb278629a4ce449f, type: 3}
+      description: 
+    description: 'Explaining why they fight
+
+
+'
+  - name: Standing on leg
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 11.75
+      texture: {fileID: 2800000, guid: 6eb6684e157616a4fb278629a4ce449f, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 6d2960cf69012744890b5b49bf3c74a7, type: 3}
+      description: 
+    description: 'Explaining why they fight
+
+
+'
+  - name: Listening
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 28
+      texture: {fileID: 2800000, guid: 6d2960cf69012744890b5b49bf3c74a7, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: bc15ac7a0f3fec34dadb06421759a43d, type: 3}
+      description: 
+    description: 'Explaining why they fight
+
+
+'
+  - name: Standing on leg again
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 7
       texture: {fileID: 2800000, guid: bc15ac7a0f3fec34dadb06421759a43d, type: 3}
       description: 
     - name: 
@@ -8783,7 +9162,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poses:
+  - name: ENGLISH
+    languageID: 
+    subPoses: []
+    description: 
   - name: Angry
+    languageID: en-US
     subPoses:
     - name: Angry
       delayToNextPose: 1
@@ -8815,6 +9199,7 @@ MonoBehaviour:
       description: 
     description: Start of the scene, where the family fights
   - name: Explaining
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 7.5
@@ -8826,6 +9211,7 @@ MonoBehaviour:
       description: 
     description: Explaining why they fight
   - name: Listening
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 11
@@ -8837,6 +9223,7 @@ MonoBehaviour:
       description: 
     description: Explaining why they fight
   - name: Standing on leg
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 9.75
@@ -8848,9 +9235,102 @@ MonoBehaviour:
       description: 
     description: Explaining why they fight
   - name: Standing on leg again
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 6
+      texture: {fileID: 2800000, guid: 6e415e016dd947f4eb2e74ef3cfca60c, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 2830ba7ee6ed29048bf7406f0de53cec, type: 3}
+      description: 
+    description: Explaining why they fight
+  - name: DUTCH
+    languageID: 
+    subPoses:
+    - name: 
+      delayToNextPose: 6
+      texture: {fileID: 2800000, guid: 6e415e016dd947f4eb2e74ef3cfca60c, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 2830ba7ee6ed29048bf7406f0de53cec, type: 3}
+      description: 
+    description: Explaining why they fight
+  - name: Angry
+    languageID: nl-NL
+    subPoses:
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 7bc6b5e46cffb9f41b5cef61d2aa145e, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 06f4cff9f442ca34fbfd8eb56de853c3, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 69f464981bdcf1f439ccb30ab7e3f1d7, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 3a84d4bc251154042b585fd5a2f9ab89, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 8cb9ccb1a799e09408922d8aef0364e0, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: ef75a6d108003f647a9dd8a3f925dc03, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 951598086f338af44beb5045d769f28f, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Explaining
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 10
+      texture: {fileID: 2800000, guid: 951598086f338af44beb5045d769f28f, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: ef75a6d108003f647a9dd8a3f925dc03, type: 3}
+      description: 
+    description: Explaining why they fight
+  - name: Standing on leg
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 11.25
+      texture: {fileID: 2800000, guid: ef75a6d108003f647a9dd8a3f925dc03, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 2830ba7ee6ed29048bf7406f0de53cec, type: 3}
+      description: 
+    description: Explaining why they fight
+  - name: Listening
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 23
+      texture: {fileID: 2800000, guid: 2830ba7ee6ed29048bf7406f0de53cec, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 6e415e016dd947f4eb2e74ef3cfca60c, type: 3}
+      description: 
+    description: Explaining why they fight
+  - name: Standing on leg again
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 7
       texture: {fileID: 2800000, guid: 6e415e016dd947f4eb2e74ef3cfca60c, type: 3}
       description: 
     - name: 
@@ -9699,7 +10179,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poses:
+  - name: ENGLISH
+    languageID: 
+    subPoses: []
+    description: 
   - name: Angry
+    languageID: en-US
     subPoses:
     - name: Angry
       delayToNextPose: 1
@@ -9731,6 +10216,7 @@ MonoBehaviour:
       description: 
     description: Start of the scene, where the family fights
   - name: Listening
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 14
@@ -9742,6 +10228,7 @@ MonoBehaviour:
       description: 
     description: Start of the scene, where the family fights
   - name: Standing on leg
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 9.25
@@ -9753,9 +10240,82 @@ MonoBehaviour:
       description: 
     description: Start of the scene, where the family fights
   - name: Standing on leg again
+    languageID: en-US
     subPoses:
     - name: 
       delayToNextPose: 6
+      texture: {fileID: 2800000, guid: aa2ac5f66ea2e4746ac4f86786f25017, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: e47483c07950078489a7654d9ea5b705, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: DUTCH
+    languageID: 
+    subPoses: []
+    description: 
+  - name: Angry
+    languageID: nl-NL
+    subPoses:
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 738aceabc83fb974dbea5508267113c4, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: fb41432c2d629d84bbbf2e29465cdfcf, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 2a1fb24e20c9cc34a827967bd412d4f4, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 464d09a94007efc43ae9bea2071ef83a, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 5f87a88e77acd0c4c898ab590f5ae8f4, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 5faadaaf5e81acd4d8124ffac455094b, type: 3}
+      description: 
+    - name: Angry
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 12d4450477b31fe4b882b01d2baa5139, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Standing on leg
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 11
+      texture: {fileID: 2800000, guid: 12d4450477b31fe4b882b01d2baa5139, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: e47483c07950078489a7654d9ea5b705, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Listening
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 28
+      texture: {fileID: 2800000, guid: e47483c07950078489a7654d9ea5b705, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: aa2ac5f66ea2e4746ac4f86786f25017, type: 3}
+      description: 
+    description: Start of the scene, where the family fights
+  - name: Standing on leg again
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 7
       texture: {fileID: 2800000, guid: aa2ac5f66ea2e4746ac4f86786f25017, type: 3}
       description: 
     - name: 

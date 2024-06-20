@@ -76,7 +76,7 @@ public class MarketSceneData : GameSceneData
         rotateEnvironment = true;
         CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
 
-        SetPoseForCharacters("Angry");
+        SetPoseForCharacters("Angry" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartBreadFamilyVoiceOver;
@@ -91,7 +91,7 @@ public class MarketSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
-        SetPoseForCharacters("Explaining");
+        SetPoseForCharacters("Explaining" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartRevealVoiceOver;
@@ -106,7 +106,7 @@ public class MarketSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart3" + LocalizationSettings.SelectedLocale.Formatter);
-        SetPoseForCharacters("Standing on leg");
+        SetPoseForCharacters("Standing on leg" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartGoldenRuleVoiceOver;
@@ -121,7 +121,7 @@ public class MarketSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart4" + LocalizationSettings.SelectedLocale.Formatter);
-        SetPoseForCharacters("Listening");
+        SetPoseForCharacters("Listening" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartBraceletInteraction;
@@ -166,7 +166,7 @@ public class MarketSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("MarketScenePart6" + LocalizationSettings.SelectedLocale.Formatter);
-        SetPoseForCharacters("Standing on leg again");
+        SetPoseForCharacters("Standing on leg again" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += OnSceneExit;

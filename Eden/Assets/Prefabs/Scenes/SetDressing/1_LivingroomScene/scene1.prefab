@@ -3655,22 +3655,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poses:
+  - name: ENGLISH
+    languageID: 
+    subPoses: []
+    description: 
   - name: Entry
+    languageID: en-US
     subPoses:
     - name: Happy
       delayToNextPose: 4
       texture: {fileID: 2800000, guid: ea4883233789a6545ac3b6c8d9f9e533, type: 3}
       description: 
     - name: Idle
-      delayToNextPose: 19
+      delayToNextPose: 20
       texture: {fileID: 2800000, guid: 164cb6d46f78fda4684eafa304b189ba, type: 3}
       description: 
     - name: Compass mention
-      delayToNextPose: 7
+      delayToNextPose: 0
       texture: {fileID: 2800000, guid: ede485971c095314c929f66053467c5b, type: 3}
       description: 
     description: Entering the scene and listening to Eden talk
   - name: Exit
+    languageID: en-US
     subPoses:
     - name: Idle
       delayToNextPose: 3
@@ -3678,6 +3684,42 @@ MonoBehaviour:
       description: 
     - name: Pointing
       delayToNextPose: 7
+      texture: {fileID: 2800000, guid: ede485971c095314c929f66053467c5b, type: 3}
+      description: 
+    - name: Happy
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: ea4883233789a6545ac3b6c8d9f9e533, type: 3}
+      description: 
+    description: 
+  - name: DUTCH
+    languageID: 
+    subPoses: []
+    description: 
+  - name: Entry
+    languageID: nl-NL
+    subPoses:
+    - name: Happy
+      delayToNextPose: 4
+      texture: {fileID: 2800000, guid: ea4883233789a6545ac3b6c8d9f9e533, type: 3}
+      description: 
+    - name: Idle
+      delayToNextPose: 28
+      texture: {fileID: 2800000, guid: 164cb6d46f78fda4684eafa304b189ba, type: 3}
+      description: 
+    - name: Compass mention
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: ede485971c095314c929f66053467c5b, type: 3}
+      description: 
+    description: Entering the scene and listening to Eden talk
+  - name: Exit
+    languageID: nl-NL
+    subPoses:
+    - name: Idle
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 164cb6d46f78fda4684eafa304b189ba, type: 3}
+      description: 
+    - name: Pointing
+      delayToNextPose: 11
       texture: {fileID: 2800000, guid: ede485971c095314c929f66053467c5b, type: 3}
       description: 
     - name: Happy

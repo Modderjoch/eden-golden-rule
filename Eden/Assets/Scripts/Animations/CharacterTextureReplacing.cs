@@ -13,6 +13,14 @@ public class CharacterTextureReplacing : MonoBehaviour
     private Dictionary<Texture, float> textures = new Dictionary<Texture, float>();
     private Coroutine changeTextureCoroutine;
 
+    protected void Awake()
+    {
+        for (int i = 0; i < poses.Count; i++)
+        {
+            poses[i].name = poses[i].name + poses[i].languageID;
+        }
+    }
+
     public void SetPose(string pose)
     {
         textures.Clear();
@@ -50,6 +58,7 @@ public class CharacterTextureReplacing : MonoBehaviour
 public class CharacterPose
 {
     public string name;
+    public string languageID;
     public List<CharacterSubPose> subPoses;
     [TextArea(3, 10)]
     public string description;

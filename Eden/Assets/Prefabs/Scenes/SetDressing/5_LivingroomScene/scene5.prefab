@@ -1036,6 +1036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poses:
   - name: Entry
+    languageID: 
     subPoses:
     - name: Happy
       delayToNextPose: 4

@@ -64,7 +64,7 @@ public class LivingRoomBeginSceneData : GameSceneData
         CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
         audioManager.PlayVoiceOver("LivingRoomBeginScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         audioManager.Play("Confirm");
-        motherTextureReplacing.SetPose("Entry");
+        motherTextureReplacing.SetPose("Entry" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartCompassCollection;
@@ -95,7 +95,7 @@ public class LivingRoomBeginSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("LivingRoomBeginScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
-        motherTextureReplacing.SetPose("Exit");
+        motherTextureReplacing.SetPose("Exit" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += OnSceneExit;
