@@ -78316,7 +78316,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3324231055835455009}
-  - {fileID: 6151050964049283058}
+  - {fileID: 3439376543707235338}
   - {fileID: 948692239973673115}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78332,6 +78332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cfe4f438fa424a4aa963a3c72f379ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  edenTextureReplacing: {fileID: 7715548455413732890}
   itemForTreeRate: 1.96
   grassLerpDuration: 3
   grassMaterial: {fileID: 2100000, guid: f84c0bedee6b3db4b8c104d0523ee769, type: 2}
@@ -92556,6 +92557,300 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4684196522104728316}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4781252634539390925
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1266772199479067022}
+    m_Modifications:
+    - target: {fileID: 946526299296725968, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_Eden
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892811631507591494, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892811631507591494, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892811631507591494, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892811631507591494, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.084
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.319
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.124
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 946526299296725968, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7715548455413732890}
+  m_SourcePrefab: {fileID: 100100000, guid: ff1e0d9f3fadc81429e48edfdba0f10f, type: 3}
+--- !u!4 &3439376543707235338 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4781252634539390925}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5726563698608933917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 946526299296725968, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4781252634539390925}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7715548455413732890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5726563698608933917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poses:
+  - name: ENGLISH
+    languageID: 
+    subPoses: []
+    description: 
+  - name: Entry
+    languageID: en-US
+    subPoses:
+    - name: 
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: 3a517744ebbe7724cb3b5c42f8eb0139, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: f47bbfde2fe0d154fbf3876f01d495c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 264d67ac08805f94a85745f49d7420bf, type: 3}
+      description: 
+    description: 
+  - name: Wolf
+    languageID: en-US
+    subPoses:
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 3a517744ebbe7724cb3b5c42f8eb0139, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 15.2
+      texture: {fileID: 2800000, guid: f47bbfde2fe0d154fbf3876f01d495c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 9e599380a06d73e4a847921bfc0aaf38, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: 5f01edeaeaefdc14d84a5fe5f51834c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: cf5fbc9e770fac14ab50c9750ae69248, type: 3}
+      description: 
+    description: 
+  - name: Exit
+    languageID: en-US
+    subPoses:
+    - name: 
+      delayToNextPose: 7
+      texture: {fileID: 2800000, guid: f47bbfde2fe0d154fbf3876f01d495c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 5f01edeaeaefdc14d84a5fe5f51834c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 12
+      texture: {fileID: 2800000, guid: cf5fbc9e770fac14ab50c9750ae69248, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 965190f1f71746d45bbe1e6bf12ceee2, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 6
+      texture: {fileID: 2800000, guid: b889b292e3b8df0408241668bda994de, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0.7
+      texture: {fileID: 2800000, guid: e72954995165f4e43bb77db862f48771, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0.7
+      texture: {fileID: 2800000, guid: 4a4e729e783b5964a9c99d9b17e76c05, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0.7
+      texture: {fileID: 2800000, guid: eb3d1b2eb8bd6bb4f905c8bccbd33323, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 264d67ac08805f94a85745f49d7420bf, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: dddac232c9262f84a824be8621ec49ef, type: 3}
+      description: 
+    description: 
+  - name: DUTCH
+    languageID: 
+    subPoses: []
+    description: 
+  - name: Entry
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 5
+      texture: {fileID: 2800000, guid: 3a517744ebbe7724cb3b5c42f8eb0139, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: f47bbfde2fe0d154fbf3876f01d495c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 264d67ac08805f94a85745f49d7420bf, type: 3}
+      description: 
+    description: 
+  - name: Wolf
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 878d3ccbd3ef7a64494cc0edffa6afce, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 24
+      texture: {fileID: 2800000, guid: f47bbfde2fe0d154fbf3876f01d495c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 9e599380a06d73e4a847921bfc0aaf38, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: 5f01edeaeaefdc14d84a5fe5f51834c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: cf5fbc9e770fac14ab50c9750ae69248, type: 3}
+      description: 
+    description: 
+  - name: Exit
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 9
+      texture: {fileID: 2800000, guid: f47bbfde2fe0d154fbf3876f01d495c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 4
+      texture: {fileID: 2800000, guid: 5f01edeaeaefdc14d84a5fe5f51834c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 12
+      texture: {fileID: 2800000, guid: cf5fbc9e770fac14ab50c9750ae69248, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 965190f1f71746d45bbe1e6bf12ceee2, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 12.5
+      texture: {fileID: 2800000, guid: b889b292e3b8df0408241668bda994de, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: e72954995165f4e43bb77db862f48771, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 4a4e729e783b5964a9c99d9b17e76c05, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: eb3d1b2eb8bd6bb4f905c8bccbd33323, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 264d67ac08805f94a85745f49d7420bf, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: dddac232c9262f84a824be8621ec49ef, type: 3}
+      description: 
+    description: 
+  material: {fileID: 2100000, guid: 04c897ba41bca684f9ffa3456cccb18e, type: 2}
 --- !u!1001 &4838611773632902936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93833,123 +94128,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5875799644715585146}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &5969052082609987609
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1266772199479067022}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.110657156
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.110657156
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.110657156
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.282
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.127
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.70710784
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.70710576
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 04c897ba41bca684f9ffa3456cccb18e, type: 2}
-    - target: {fileID: 919132149155446097, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_Name
-      value: EdenPlaceholder
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1952965520802516489}
-  m_SourcePrefab: {fileID: 100100000, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d, type: 3}
---- !u!4 &6151050964049283058 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-    type: 3}
-  m_PrefabInstance: {fileID: 5969052082609987609}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6779954763401993544 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-    type: 3}
-  m_PrefabInstance: {fileID: 5969052082609987609}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1952965520802516489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6779954763401993544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b79a73349016aaf4093291ee6a0c3ba4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1001 &6192631113377689238
 PrefabInstance:
   m_ObjectHideFlags: 0

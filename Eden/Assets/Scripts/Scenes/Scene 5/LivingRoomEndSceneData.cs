@@ -16,6 +16,7 @@ public class LivingRoomEndSceneData : GameSceneData
     private bool rotateEnvironment = false;
 
     [SerializeField] CharacterTextureReplacing motherTextureReplacing;
+    [SerializeField] CharacterTextureReplacing edenTextureReplacing;
 
 
     protected void Update()
@@ -61,7 +62,8 @@ public class LivingRoomEndSceneData : GameSceneData
         CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
         audioManager.PlayVoiceOver("LivingRoomEndScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         audioManager.Play("Confirm");
-        motherTextureReplacing.SetPose("Entry");
+        motherTextureReplacing.SetPose("Entry" + LocalizationSettings.SelectedLocale.Formatter);
+        edenTextureReplacing.SetPose("Entry" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartSongVoiceOver;

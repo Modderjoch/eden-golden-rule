@@ -8299,6 +8299,16 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.29803923
       objectReference: {fileID: 0}
+    - target: {fileID: 2481132138410306097, guid: c18278d5b2063eb47ac4fc590cd71418,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001875909382459323, guid: c18278d5b2063eb47ac4fc590cd71418,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3006186829367769114, guid: c18278d5b2063eb47ac4fc590cd71418,
         type: 3}
       propertyPath: m_AnchorMax.x
