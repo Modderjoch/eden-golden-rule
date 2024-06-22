@@ -169,7 +169,7 @@ Transform:
   - {fileID: 7225889670838311951}
   - {fileID: 8508476268967406196}
   - {fileID: 6357069605212347637}
-  - {fileID: 5757549790988546691}
+  - {fileID: 8739551390848099553}
   - {fileID: 1307206869123724713}
   m_Father: {fileID: 3772284650398211015}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -405,6 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   motherTextureReplacing: {fileID: 8548757352661215630}
+  edenTextureReplacing: {fileID: 8864659055841203864}
 --- !u!1 &6839538604968436861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poses:
   - name: Entry
-    languageID: 
+    languageID: en-US
     subPoses:
     - name: Happy
       delayToNextPose: 4
@@ -1045,6 +1046,26 @@ MonoBehaviour:
     - name: Idle
       delayToNextPose: 24
       texture: {fileID: 2800000, guid: 164cb6d46f78fda4684eafa304b189ba, type: 3}
+      description: 
+    - name: One leg
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 81698fd50a7c8074b9bdb5dbdc0611ad, type: 3}
+      description: 
+    description: Entering the scene and listening to Eden talk
+  - name: Entry
+    languageID: nl-NL
+    subPoses:
+    - name: Happy
+      delayToNextPose: 4
+      texture: {fileID: 2800000, guid: ea4883233789a6545ac3b6c8d9f9e533, type: 3}
+      description: 
+    - name: One leg
+      delayToNextPose: 26
+      texture: {fileID: 2800000, guid: 164cb6d46f78fda4684eafa304b189ba, type: 3}
+      description: 
+    - name: Idle
+      delayToNextPose: 14
+      texture: {fileID: 2800000, guid: ede485971c095314c929f66053467c5b, type: 3}
       description: 
     - name: One leg
       delayToNextPose: 0
@@ -1318,6 +1339,160 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7442968826333834569, guid: 551e8f4330d5c2c419dff6af6a480a02,
     type: 3}
   m_PrefabInstance: {fileID: 1013860443711142791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1488557194610759462
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1838832228432604968}
+    m_Modifications:
+    - target: {fileID: 946526299296725968, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_Eden
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 946526299296725968, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8864659055841203864}
+  m_SourcePrefab: {fileID: 100100000, guid: ff1e0d9f3fadc81429e48edfdba0f10f, type: 3}
+--- !u!1 &1840518994885684470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 946526299296725968, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1488557194610759462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8864659055841203864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840518994885684470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poses:
+  - name: Entry
+    languageID: en-US
+    subPoses:
+    - name: 
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: 5f01edeaeaefdc14d84a5fe5f51834c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 4
+      texture: {fileID: 2800000, guid: e72954995165f4e43bb77db862f48771, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 5
+      texture: {fileID: 2800000, guid: 4a4e729e783b5964a9c99d9b17e76c05, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 5
+      texture: {fileID: 2800000, guid: eb3d1b2eb8bd6bb4f905c8bccbd33323, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 11
+      texture: {fileID: 2800000, guid: cf5fbc9e770fac14ab50c9750ae69248, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 5186681624f228c429bf038906925e41, type: 3}
+      description: 
+    description: Entering the scene and listening to Eden talk
+  - name: Entry
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 4.25
+      texture: {fileID: 2800000, guid: 5f01edeaeaefdc14d84a5fe5f51834c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 4
+      texture: {fileID: 2800000, guid: e72954995165f4e43bb77db862f48771, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 5
+      texture: {fileID: 2800000, guid: 4a4e729e783b5964a9c99d9b17e76c05, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 5
+      texture: {fileID: 2800000, guid: eb3d1b2eb8bd6bb4f905c8bccbd33323, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 27
+      texture: {fileID: 2800000, guid: cf5fbc9e770fac14ab50c9750ae69248, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 5186681624f228c429bf038906925e41, type: 3}
+      description: 
+    description: Entering the scene and listening to Eden talk
+  material: {fileID: 2100000, guid: 04c897ba41bca684f9ffa3456cccb18e, type: 2}
+--- !u!4 &8739551390848099553 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1488557194610759462}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1585209152374121120
 PrefabInstance:
@@ -4758,118 +4933,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4494245285767221152, guid: dce0f0142511cce4897a8eede5a98770,
     type: 3}
   m_PrefabInstance: {fileID: 5093356435901096255}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5218638954580039016
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1838832228432604968}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.78
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.7
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_Name
-      value: EdenPlaceholder
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7896805575403498644}
-  m_SourcePrefab: {fileID: 100100000, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d, type: 3}
---- !u!1 &4948679370984089657 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-    type: 3}
-  m_PrefabInstance: {fileID: 5218638954580039016}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7896805575403498644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4948679370984089657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b79a73349016aaf4093291ee6a0c3ba4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
---- !u!4 &5757549790988546691 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-    type: 3}
-  m_PrefabInstance: {fileID: 5218638954580039016}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5648904502718618262
 PrefabInstance:

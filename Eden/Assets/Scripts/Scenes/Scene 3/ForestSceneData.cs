@@ -10,6 +10,7 @@ using UnityEngine.Localization.Settings;
 public class ForestSceneData : GameSceneData
 {
     [Header("Additional Objects")]
+    [SerializeField] CharacterTextureReplacing edenTextureReplacing;
     private GameObject trashProgress;
     private GameObject swipeArea;
     private GameObject seedSpawnpoint;
@@ -125,6 +126,7 @@ public class ForestSceneData : GameSceneData
         audioManager.PlayVoiceOver("ForestScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         gameManager.QRScanningUI.SetActive(false);
         audioManager.Play("Confirm");
+        edenTextureReplacing.SetPose("Entry" + LocalizationSettings.SelectedLocale.Formatter);
 
         rotateEnvironment = true;
         CoroutineHandler.Instance.StartCoroutine(DisableRotation(.1f));
@@ -142,6 +144,7 @@ public class ForestSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("ForestScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
+        edenTextureReplacing.SetPose("Wolf" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartTrashPicking;
@@ -230,6 +233,7 @@ public class ForestSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("ForestScenePart4" + LocalizationSettings.SelectedLocale.Formatter);
+        edenTextureReplacing.SetPose("Exit" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += OnSceneExit;
@@ -280,13 +284,13 @@ public class ForestSceneData : GameSceneData
     {
         int currentScore = trashProgressScript.ReturnCurrentScore();
 
-        if (currentScore > 0 && currentScore <= 5)
+        if (currentScore > 0)
         {
             particleSystemsBase[0].Stop();
             particleSystemsBase[1].Stop();
             particleSystemsBase[2].Stop();
         }
-        else if (currentScore > 5 && currentScore <= 10)
+        if (currentScore > 5)
         {
             particleSystemsBase[3].Stop();
             particleSystemsBase[4].Stop();
@@ -298,41 +302,41 @@ public class ForestSceneData : GameSceneData
             particleSystemsExtra[2].Stop();
             particleSystemsExtra[3].Stop();
         }
-        else if (currentScore > 10 && currentScore <= 15)
+        if (currentScore > 10)
         {
             particleSystemsExtra[4].Stop();
             particleSystemsExtra[5].Stop();
             particleSystemsExtra[6].Stop();
         }
-        else if (currentScore > 15 && currentScore <= 20)
+        if (currentScore > 15)
         {
             treeSwitcher[0].ActivateTransition();
             treeSwitcher[1].ActivateTransition();
         }
-        else if (currentScore > 20 && currentScore <= 25)
+        if (currentScore > 20)
         {
             treeSwitcher[2].ActivateTransition();
             treeSwitcher[10].ActivateTransition();
         }
-        else if (currentScore > 25 && currentScore <= 30)
+        if (currentScore > 25)
         {
             treeSwitcher[3].ActivateTransition();
         }
-        else if (currentScore > 30 && currentScore <= 35)
+        if (currentScore > 30)
         {
             treeSwitcher[4].ActivateTransition();
             treeSwitcher[5].ActivateTransition();
         }
-        else if (currentScore > 35 && currentScore <= 40)
+        if (currentScore > 35)
         {
             treeSwitcher[6].ActivateTransition();
         }
-        else if (currentScore > 40 && currentScore <= 45)
+        if (currentScore > 40)
         {
             treeSwitcher[7].ActivateTransition();
             treeSwitcher[11].ActivateTransition();
         }
-        else if (currentScore > 45 && currentScore <= 50)
+        if (currentScore > 45)
         {
             treeSwitcher[8].ActivateTransition();
             treeSwitcher[9].ActivateTransition();

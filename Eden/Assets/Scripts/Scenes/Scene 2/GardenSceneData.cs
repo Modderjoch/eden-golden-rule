@@ -14,6 +14,7 @@ public class GardenSceneData : GameSceneData
     [SerializeField] private GameObject decoyCollider;
     [SerializeField] private PaperController paperController;
     [SerializeField] private CharacterTextureReplacing grandmaCharacterTexture;
+    [SerializeField] private CharacterTextureReplacing edenCharacterTexture;
     [SerializeField] private GameObject book;
     [SerializeField] private GameObject paper;
 
@@ -80,6 +81,8 @@ public class GardenSceneData : GameSceneData
         audioManager.PlayVoiceOver("GardenScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         gameManager.QRScanningUI.SetActive(false);
         grandmaCharacterTexture.SetPose("Pose1" + LocalizationSettings.SelectedLocale.Formatter);
+        edenCharacterTexture.SetPose("Pose1" + LocalizationSettings.SelectedLocale.Formatter);
+
         audioManager.Play("Confirm");
 
         rotateEnvironment = true;
@@ -116,6 +119,8 @@ public class GardenSceneData : GameSceneData
         paperController.BlowPapers();
         Destroy(decoyCollider);
         grandmaCharacterTexture.SetPose("Pose2" + LocalizationSettings.SelectedLocale.Formatter);
+        edenCharacterTexture.SetPose("Pose2" + LocalizationSettings.SelectedLocale.Formatter);
+
         paper.SetActive(false);
 
         // Then we subscribe to new events
@@ -135,8 +140,9 @@ public class GardenSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart3" + LocalizationSettings.SelectedLocale.Formatter);
         grandmaCharacterTexture.SetPose("Pose3" + LocalizationSettings.SelectedLocale.Formatter);
+        edenCharacterTexture.SetPose("Pose3" + LocalizationSettings.SelectedLocale.Formatter);
 
-        if(LocalizationSettings.SelectedLocale.Formatter.ToString() == "en-US")
+        if (LocalizationSettings.SelectedLocale.Formatter.ToString() == "en-US")
         {
             CoroutineHandler.Instance.StartCoroutine(OpenBook(6.5f, false));
         }
@@ -161,6 +167,7 @@ public class GardenSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart4" + LocalizationSettings.SelectedLocale.Formatter);
         grandmaCharacterTexture.SetPose("Pose4" + LocalizationSettings.SelectedLocale.Formatter);
+        edenCharacterTexture.SetPose("Pose4" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartMotherWolfVoiceOver;
@@ -176,6 +183,7 @@ public class GardenSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("GardenScenePart5" + LocalizationSettings.SelectedLocale.Formatter);
         grandmaCharacterTexture.SetPose("Pose5" + LocalizationSettings.SelectedLocale.Formatter);
+        edenCharacterTexture.SetPose("Pose5" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += OnSceneExit;

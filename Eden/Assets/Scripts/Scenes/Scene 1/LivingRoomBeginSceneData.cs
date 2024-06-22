@@ -9,6 +9,7 @@ public class LivingRoomBeginSceneData : GameSceneData
 {
     [Header("Additional Objects")]
     [SerializeField] CharacterTextureReplacing motherTextureReplacing;
+    [SerializeField] CharacterTextureReplacing edenTextureReplacing;
     private Compass compass;
 
     private PopUpScript popUp;
@@ -65,6 +66,7 @@ public class LivingRoomBeginSceneData : GameSceneData
         audioManager.PlayVoiceOver("LivingRoomBeginScenePart1" + LocalizationSettings.SelectedLocale.Formatter);
         audioManager.Play("Confirm");
         motherTextureReplacing.SetPose("Entry" + LocalizationSettings.SelectedLocale.Formatter);
+        edenTextureReplacing.SetPose("Entry" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += StartCompassCollection;
@@ -96,6 +98,7 @@ public class LivingRoomBeginSceneData : GameSceneData
         // Then we activate new objects and call the needed methods
         audioManager.PlayVoiceOver("LivingRoomBeginScenePart2" + LocalizationSettings.SelectedLocale.Formatter);
         motherTextureReplacing.SetPose("Exit" + LocalizationSettings.SelectedLocale.Formatter);
+        edenTextureReplacing.SetPose("Exit" + LocalizationSettings.SelectedLocale.Formatter);
 
         // Then we subscribe to new events
         audioManager.OnVoiceOverFinished += OnSceneExit;

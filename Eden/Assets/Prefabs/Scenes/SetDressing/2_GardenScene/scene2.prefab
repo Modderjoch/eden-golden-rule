@@ -7003,7 +7003,7 @@ Transform:
   - {fileID: 1297390680965900499}
   - {fileID: 5308269179404399577}
   - {fileID: 5781053863177813716}
-  - {fileID: 2362944254249587204}
+  - {fileID: 4002919129484981054}
   - {fileID: 3269515497784174976}
   - {fileID: 2265965153020825579}
   m_Father: {fileID: 7606703006654187315}
@@ -12786,6 +12786,7 @@ MonoBehaviour:
   decoyCollider: {fileID: 3127749633891507988}
   paperController: {fileID: 8519304569507476490}
   grandmaCharacterTexture: {fileID: 7065454042022363747}
+  edenCharacterTexture: {fileID: 2314634374132699123}
   book: {fileID: 1226318799688420585}
   paper: {fileID: 5434490304741208603}
 --- !u!1 &5615065793448480944
@@ -21971,118 +21972,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2689746718652928883}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2828370769953011183
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 393599966210488245}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2611173
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2611173
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.2611173
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.59
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.83
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      propertyPath: m_Name
-      value: EdenPlaceholder
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4483980162049454521}
-  m_SourcePrefab: {fileID: 100100000, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d, type: 3}
---- !u!4 &2362944254249587204 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2828370769953011183}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3134802119537232062 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c2ff8db4efbd6b4a9c65fe647bbd64d,
-    type: 3}
-  m_PrefabInstance: {fileID: 2828370769953011183}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4483980162049454521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3134802119537232062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b79a73349016aaf4093291ee6a0c3ba4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1001 &3035623582642454836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24144,6 +24033,310 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6474484019288530884}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6515667368649457913
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 393599966210488245}
+    m_Modifications:
+    - target: {fileID: 946526299296725968, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_Eden
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892811631507591494, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892811631507591494, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892811631507591494, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 946526299296725968, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2314634374132699123}
+  m_SourcePrefab: {fileID: 100100000, guid: ff1e0d9f3fadc81429e48edfdba0f10f, type: 3}
+--- !u!4 &4002919129484981054 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7917738598557152199, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6515667368649457913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6291229976386730793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 946526299296725968, guid: ff1e0d9f3fadc81429e48edfdba0f10f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6515667368649457913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2314634374132699123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291229976386730793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596cee503ffc934fb8d1474f74b8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poses:
+  - name: ENGLISH
+    languageID: en-US
+    subPoses: []
+    description: 
+  - name: Pose1
+    languageID: en-US
+    subPoses:
+    - name: Hey grandma!
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 5f01edeaeaefdc14d84a5fe5f51834c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 4
+      texture: {fileID: 2800000, guid: e72954995165f4e43bb77db862f48771, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: f47bbfde2fe0d154fbf3876f01d495c8, type: 3}
+      description: 
+    description: 
+  - name: Pose2
+    languageID: en-US
+    subPoses:
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 9e599380a06d73e4a847921bfc0aaf38, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 4
+      texture: {fileID: 2800000, guid: cf5fbc9e770fac14ab50c9750ae69248, type: 3}
+      description: 
+    description: 
+  - name: Pose3
+    languageID: en-US
+    subPoses:
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 9e599380a06d73e4a847921bfc0aaf38, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 5f01edeaeaefdc14d84a5fe5f51834c8, type: 3}
+      description: 
+    description: 
+  - name: Pose4
+    languageID: en-US
+    subPoses:
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: f47bbfde2fe0d154fbf3876f01d495c8, type: 3}
+      description: 
+    description: 
+  - name: Pose5
+    languageID: en-US
+    subPoses:
+    - name: 
+      delayToNextPose: 7.5
+      texture: {fileID: 2800000, guid: f47bbfde2fe0d154fbf3876f01d495c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: 5f01edeaeaefdc14d84a5fe5f51834c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: cf5fbc9e770fac14ab50c9750ae69248, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0.7
+      texture: {fileID: 2800000, guid: e72954995165f4e43bb77db862f48771, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0.7
+      texture: {fileID: 2800000, guid: 4a4e729e783b5964a9c99d9b17e76c05, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0.7
+      texture: {fileID: 2800000, guid: eb3d1b2eb8bd6bb4f905c8bccbd33323, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 264d67ac08805f94a85745f49d7420bf, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: b889b292e3b8df0408241668bda994de, type: 3}
+      description: 
+    description: 
+  - name: DUTCH
+    languageID: en-US
+    subPoses: []
+    description: 
+  - name: Pose1
+    languageID: nl-NL
+    subPoses:
+    - name: Hey grandma!
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 5f01edeaeaefdc14d84a5fe5f51834c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 4
+      texture: {fileID: 2800000, guid: e72954995165f4e43bb77db862f48771, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: f47bbfde2fe0d154fbf3876f01d495c8, type: 3}
+      description: 
+    description: 
+  - name: Pose2
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 9e599380a06d73e4a847921bfc0aaf38, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 4
+      texture: {fileID: 2800000, guid: cf5fbc9e770fac14ab50c9750ae69248, type: 3}
+      description: 
+    description: 
+  - name: Pose3
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 9e599380a06d73e4a847921bfc0aaf38, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: 5f01edeaeaefdc14d84a5fe5f51834c8, type: 3}
+      description: 
+    description: 
+  - name: Pose4
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: f47bbfde2fe0d154fbf3876f01d495c8, type: 3}
+      description: 
+    description: 
+  - name: Pose5
+    languageID: nl-NL
+    subPoses:
+    - name: 
+      delayToNextPose: 8.5
+      texture: {fileID: 2800000, guid: f47bbfde2fe0d154fbf3876f01d495c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 3
+      texture: {fileID: 2800000, guid: 5f01edeaeaefdc14d84a5fe5f51834c8, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 1.5
+      texture: {fileID: 2800000, guid: cf5fbc9e770fac14ab50c9750ae69248, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: e72954995165f4e43bb77db862f48771, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: 4a4e729e783b5964a9c99d9b17e76c05, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 1
+      texture: {fileID: 2800000, guid: eb3d1b2eb8bd6bb4f905c8bccbd33323, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 2
+      texture: {fileID: 2800000, guid: 264d67ac08805f94a85745f49d7420bf, type: 3}
+      description: 
+    - name: 
+      delayToNextPose: 0
+      texture: {fileID: 2800000, guid: b889b292e3b8df0408241668bda994de, type: 3}
+      description: 
+    description: 
+  material: {fileID: 2100000, guid: 04c897ba41bca684f9ffa3456cccb18e, type: 2}
 --- !u!1001 &6679321492472336175
 PrefabInstance:
   m_ObjectHideFlags: 0
