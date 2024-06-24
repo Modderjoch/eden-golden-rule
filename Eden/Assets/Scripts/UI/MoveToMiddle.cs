@@ -8,10 +8,12 @@ using UnityEngine;
 public class MoveToMiddle : MonoBehaviour
 {
     public bool MiddleMove => moveToMiddle;
+    public Vector2 StartingPosition => startingPosition;
 
     private bool moveToMiddle = false;
     private RectTransform rectTransform;
     private Vector2 targetPosition;
+    private Vector2 startingPosition;
     public float speed = 5f;
 
     public GameObject[] otherPacks;
@@ -23,6 +25,9 @@ public class MoveToMiddle : MonoBehaviour
     protected void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
+
+        startingPosition = rectTransform.anchoredPosition;
+
         targetPosition = new Vector2(0, -400);
     }
 
@@ -53,19 +58,16 @@ public class MoveToMiddle : MonoBehaviour
         moveToMiddle = true;
     }
 
+    public void ResetToStartingPosition()
+    {
+        rectTransform.anchoredPosition = startingPosition;
+    }
+
     public void DeactivateOtherPacks()
     {
         for (int i = 0; i < otherPacks.Length; i++)
         {
             otherPacks[i].gameObject.SetActive(false);
-        }
-    }
-
-    public void ActivateOtherPacks()
-    {
-        for (int i = 0; i < otherPacks.Length; i++)
-        {
-            otherPacks[i].gameObject.SetActive(true);
         }
     }
 }

@@ -17,6 +17,11 @@ public class resetSceneProgressValue : StateMachineBehaviour
     {
         if(GameManager.Instance.CurrentSceneIndex <= 4)
         {
+            if (GameManager.Instance.CurrentSceneIndex < 4)
+            {
+                isGameOver = false;
+            }
+
             if (isGameOver)
             {
                 return;
@@ -24,9 +29,6 @@ public class resetSceneProgressValue : StateMachineBehaviour
             if(GameManager.Instance.CurrentSceneIndex == 4)
             {
                 isGameOver = true;
-            }else if(GameManager.Instance.CurrentSceneIndex < 4)
-            {
-                isGameOver = false;
             }
 
             GameManager.Instance.QRScanningUI.SetActive(true);
