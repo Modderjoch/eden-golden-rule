@@ -193,11 +193,7 @@ public class ForestSceneData : GameSceneData
 
         // Then we activate new objects and call the needed methods
         flowerPacks.SetActive(true);
-
-        foreach(Transform t in flowerPacks.GetComponentsInChildren<Transform>())
-        {
-            t.gameObject.SetActive(true);
-        }
+        flowerPacks.GetComponent<EnablePacks>().EnablePacksNow();
 
         // Then we subscribe to new events
         seedSpawnpoint.GetComponent<SpawnSeed>().OnSeedsChosen += StartSeedThrowing;

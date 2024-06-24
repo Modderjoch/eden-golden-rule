@@ -2267,6 +2267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 246233065}
+  - component: {fileID: 246233066}
   m_Layer: 5
   m_Name: FlowerPacks
   m_TagString: Untagged
@@ -2298,6 +2299,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &246233066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246233064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e259a09c64ebae9478022605749079bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  packs:
+  - {fileID: 1248950680}
+  - {fileID: 1920220867}
+  - {fileID: 423618551}
+  - {fileID: 759421274}
+  - {fileID: 1585298527}
 --- !u!1 &268269223
 GameObject:
   m_ObjectHideFlags: 0
@@ -3191,7 +3210,6 @@ GameObject:
   m_Component:
   - component: {fileID: 423618552}
   - component: {fileID: 423618554}
-  - component: {fileID: 423618555}
   - component: {fileID: 409695569}
   m_Layer: 5
   m_Name: GreenPack
@@ -3239,27 +3257,6 @@ MonoBehaviour:
   - {fileID: 1920220867}
   - {fileID: 759421274}
   - {fileID: 1585298527}
---- !u!95 &423618555
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423618551}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &487519594
 GameObject:
   m_ObjectHideFlags: 0

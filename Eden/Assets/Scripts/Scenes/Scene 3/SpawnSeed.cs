@@ -57,15 +57,17 @@ public class SpawnSeed : MonoBehaviour
     {
         animator.SetTrigger("Open");
 
-        AnimatorStateInfo animationState = animator.GetCurrentAnimatorStateInfo(0);
-        float animationDuration = animationState.length;
+        //AnimatorStateInfo animationState = animator.GetCurrentAnimatorStateInfo(0);
+        //float animationDuration = animationState.normalizedTime;
 
-        CoroutineHandler.Instance.StartCoroutine(SeedPackOpened(animationDuration));
+        CoroutineHandler.Instance.StartCoroutine(SeedPackOpened(1.9f));
     }
 
     private IEnumerator SeedPackOpened(float time)
     {
         yield return new WaitForSeconds(time);
+
+        moveToMiddle.gameObject.SetActive(false);
 
         OnSeedsChosen.Invoke();
     }
