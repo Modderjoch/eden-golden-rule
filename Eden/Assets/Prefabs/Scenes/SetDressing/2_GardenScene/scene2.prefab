@@ -25156,7 +25156,7 @@ MonoBehaviour:
       description: '"Nature is a powerful ally"'
     - name: Nature talk
       delayToNextPose: 3
-      texture: {fileID: 2800000, guid: fc727cf15b375bb4d9cc08c525a222f9, type: 3}
+      texture: {fileID: 2800000, guid: df8253045f06ae84e9f8b72a5ced9443, type: 3}
       description: '"Nature is a powerful ally"'
     description: Ending the scene and pointing the player towards mother wolf
   - name: DUTCH
